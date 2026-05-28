@@ -1,11 +1,13 @@
 -- =============================================================
--- Preview-Branch-Seed.
--- Diese Datei läuft NUR auf Preview-Branches, niemals in
--- Produktion (siehe Supabase-Branching-Dokumentation).
--- Enthält fiktive Beispiel-Listings mit ausgedachten Kontakten,
--- damit Pull-Request-Previews realistische UI-Daten zeigen.
--- Echte Universitäten/Gruppen liegen in der Migration
--- 20260101000003_seed_universities.sql.
+-- Beispiel-Listings (fiktiv, ausgedachte Kontakte).
+-- Solange noch keine echten Importer-Daten und keine echten
+-- Einreichungen existieren, sorgt diese Migration dafür, dass
+-- die UI sofort etwas zu zeigen hat.
+--
+-- ENTFERNEN, sobald echte Daten fließen — durch eine neue
+-- Migration, die diese Listings per `delete` bereinigt. Niemals
+-- diese Datei selbst löschen, sonst wird sie auf bereits
+-- migrierten Datenbanken nicht wiederholt angewendet.
 -- =============================================================
 
 insert into listings

@@ -68,10 +68,11 @@ beim Push automatisch angewendet.
 | `supabase/migrations/20260101000001_init.sql` | Produktion + Preview | Schema, Enums, Indizes, Views |
 | `supabase/migrations/20260101000002_rls.sql` | Produktion + Preview | RLS-Policies + Aggregat-Funktionen |
 | `supabase/migrations/20260101000003_seed_universities.sql` | Produktion + Preview | Echte Universitäten + Beispiel-Gruppen |
-| `supabase/seed.sql` | **Nur Preview-Branches** | Fiktive Beispiel-Listings für PR-Previews |
+| `supabase/migrations/20260101000004_seed_example_listings.sql` | Produktion + Preview | Fiktive Beispiel-Listings — übergangsweise, bis echte Importer-Daten fließen |
 
-Die Beispiel-Listings landen nie in Produktion. Echte Stellen kommen
-über das Einreichungsformular oder den Importer.
+Die fiktiven Beispiel-Listings werden entfernt, sobald echte Stellen aus dem
+Einreichungsformular oder den Importern in der DB liegen (per neuer Migration
+mit `delete`-Statements; nie durch Löschen der Seed-Migration selbst).
 
 ---
 
