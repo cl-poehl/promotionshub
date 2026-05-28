@@ -140,7 +140,7 @@ export default async function NewListingPage({
 
         <button
           type="submit"
-          className="rounded-md bg-sky-700 px-5 py-2.5 text-white font-medium"
+          className="rounded-md bg-indigo-700 hover:bg-indigo-800 px-5 py-2.5 text-white font-medium"
         >
           Zur Prüfung einreichen
         </button>

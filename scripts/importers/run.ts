@@ -75,7 +75,23 @@ export async function runImporter(label: string, sources: ImporterSource[]): Pro
       }
     }
 
-    // 2) Listings upserten — eines pro Forschungsbereich.
+    // 2) Veraltete scraped-Listings dieser Gruppe entfernen, die nicht mehr im
+    //    Source-Manifest stehen. Source-of-truth = diese Datei. User-Submissions
+    //    (source='submitted') und Anpassungen mit anderen Quellen bleiben unberührt.
+    const desiredTitles = source.researchAreas.map((a) => a.title);
+    const { data: existing } = await supabase
+      .from("listings")
+      .select("id, title")
+      .eq("group_id", groupId)
+      .eq("source", "scraped");
+    const stale = (existing ?? []).filter((l: any) => !desiredTitles.includes(l.title));
+    if (stale.length > 0) {
+      const { error } = await supabase.from("listings").delete().in("id", stale.map((s: any) => s.id));
+      if (error) console.error(`  ✗ Veraltete Listings löschen: ${error.message}`);
+      else console.log(`  − ${stale.length} veraltete(s) Listing(s) entfernt`);
+    }
+
+    // 3) Listings upserten — eines pro Forschungsbereich.
     for (const area of source.researchAreas) {
       const { data: existingListing } = await supabase
         .from("listings")
@@ -88,12 +104,15 @@ export async function runImporter(label: string, sources: ImporterSource[]): Pro
         group_id: groupId,
         supervisor_id: null as string | null,
         title: area.title,
-        description: `${area.description}\n\nQuelle: ${source.sourceUrl}`,
+        // description ist source-of-truth (enthält bereits per-AG Quell-URL,
+        // gesetzt entweder im build_sources.py oder im manuellen Eintrag).
+        description: area.description,
         thesis_type: area.thesis_type,
         funding: area.funding ?? "unknown",
         expected_duration_months: area.expected_duration_months ?? null,
         source: "scraped" as const,
-        application_contact: source.applicationContact,
+        // per-AG-Kontakt bevorzugt, Fallback auf Klinik-Default
+        application_contact: area.applicationContact ?? source.applicationContact,
         status: "published" as const,
         promoted: false,
         promotion_expires_at: null as string | null,

@@ -1,0 +1,66 @@
+# TU-Dresden-Quellen für discover.py
+# Pro Klinik die beste bekannte Index-Seite (Forschungs- oder
+# Doktoranden-Subpage). Wenn unbekannt → Klinik-Root.
+# Der Crawler folgt von dort den AG-Links eine Ebene tiefer.
+
+# === Bereits bekannte Promotionsseiten ===
+- slug: vtg
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg/studium_Weiterbildung/moeglichkeiten-einer-medizinische-doktorarbeit
+- slug: gyn
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/lehre/studierende/promotionen
+- slug: psy
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/stellenausschreibung-und-promotionen
+- slug: pso
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/angebote-fuer-abschlussarbeiten-promotionen
+- slug: psm
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psm/Karriere/Doktoranden
+- slug: oupc
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/forschung/promotion
+
+# === Forschungs-Übersichtsseiten mit AG-Listen ===
+- slug: mk1
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/forschung-und-innovation/arbeitsgruppen-der-mk1
+
+# === Klinik-Roots (Crawler entdeckt forschung/AGs-Links von hier) ===
+- slug: mk3
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3
+- slug: neurologie
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie
+- slug: neurochirurgie
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie
+- slug: hno
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno
+- slug: der
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der
+- slug: augenheilkunde
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde
+- slug: str
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str
+- slug: nuk
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk
+- slug: uro
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro
+- slug: ane
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/ane
+- slug: kik
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik
+- slug: kch
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch
+- slug: kjp
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp
+- slug: mkg
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie
+- slug: rad
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/rad
+- slug: nra
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra
+- slug: pat
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat
+- slug: klinchem
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin
+- slug: kge
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge
+- slug: mikrobio
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/institut-fuer-medizinische-mikrobiologie-und-virologie
+- slug: infekt
+  index: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-infektiologie
