@@ -1,0 +1,205 @@
+/**
+ * In-Memory-Fallback. Spiegelt das SQL-Seed.
+ * Greift, wenn keine Supabase-Env-Vars gesetzt sind, damit
+ * `npm run dev` ohne weitere Schritte sofort funktioniert.
+ */
+
+import type {
+  Group,
+  Listing,
+  University,
+} from "@/lib/supabase/types";
+
+export const mockUniversities: University[] = [
+  {
+    id: "11111111-1111-1111-1111-111111111111",
+    name: "Charité – Universitätsmedizin Berlin",
+    city: "Berlin",
+    state: "Berlin",
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "22222222-2222-2222-2222-222222222222",
+    name: "Ludwig-Maximilians-Universität München",
+    city: "München",
+    state: "Bayern",
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "33333333-3333-3333-3333-333333333333",
+    name: "Universität Heidelberg",
+    city: "Heidelberg",
+    state: "Baden-Württemberg",
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "44444444-4444-4444-4444-444444444444",
+    name: "Medizinische Hochschule Hannover",
+    city: "Hannover",
+    state: "Niedersachsen",
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "55555555-5555-5555-5555-555555555555",
+    name: "Universität Hamburg / UKE",
+    city: "Hamburg",
+    state: "Hamburg",
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "66666666-6666-6666-6666-666666666666",
+    name: "Universität zu Köln",
+    city: "Köln",
+    state: "Nordrhein-Westfalen",
+    created_at: new Date().toISOString(),
+  },
+  {
+    id: "77777777-7777-7777-7777-777777777777",
+    name: "Technische Universität München",
+    city: "München",
+    state: "Bayern",
+    created_at: new Date().toISOString(),
+  },
+];
+
+export const mockGroups: Group[] = [
+  { id: "a0000000-0000-0000-0000-000000000001", university_id: "11111111-1111-1111-1111-111111111111", name: "AG Kardiovaskuläre Forschung", specialty: "Kardiologie", public_url: "https://www.charite.de", created_at: new Date().toISOString() },
+  { id: "a0000000-0000-0000-0000-000000000002", university_id: "11111111-1111-1111-1111-111111111111", name: "Institut für Medizinische Immunologie", specialty: "Immunologie", public_url: "https://www.charite.de", created_at: new Date().toISOString() },
+  { id: "a0000000-0000-0000-0000-000000000003", university_id: "22222222-2222-2222-2222-222222222222", name: "Klinik für Neurologie – AG Schlaganfallforschung", specialty: "Neurologie", public_url: "https://www.lmu.de", created_at: new Date().toISOString() },
+  { id: "a0000000-0000-0000-0000-000000000004", university_id: "33333333-3333-3333-3333-333333333333", name: "Nationales Centrum für Tumorerkrankungen (NCT)", specialty: "Onkologie", public_url: "https://www.nct-heidelberg.de", created_at: new Date().toISOString() },
+  { id: "a0000000-0000-0000-0000-000000000005", university_id: "44444444-4444-4444-4444-444444444444", name: "Institut für Transplantationsforschung", specialty: "Transplantation", public_url: "https://www.mh-hannover.de", created_at: new Date().toISOString() },
+  { id: "a0000000-0000-0000-0000-000000000006", university_id: "55555555-5555-5555-5555-555555555555", name: "Zentrum für Psychosoziale Medizin", specialty: "Psychiatrie", public_url: "https://www.uke.de", created_at: new Date().toISOString() },
+  { id: "a0000000-0000-0000-0000-000000000007", university_id: "66666666-6666-6666-6666-666666666666", name: "Klinik für Allgemein-, Viszeral- und Tumorchirurgie", specialty: "Chirurgie", public_url: "https://www.uk-koeln.de", created_at: new Date().toISOString() },
+];
+
+const day = 24 * 60 * 60 * 1000;
+const now = Date.now();
+
+export const mockListings: Listing[] = [
+  {
+    id: "b0000000-0000-0000-0000-000000000001",
+    group_id: "a0000000-0000-0000-0000-000000000001",
+    supervisor_id: null,
+    title: "Rolle von SGLT2-Inhibitoren bei diastolischer Herzinsuffizienz",
+    description:
+      "Experimentelle Doktorarbeit mit Maus-Modellen. Etablierte Methodik (Echokardiographie, Histologie). Erfahrung mit Tierversuchen wünschenswert, aber nicht erforderlich. TVT-Modul wird gestellt.",
+    thesis_type: "experimental",
+    funding: "stipend",
+    expected_duration_months: 18,
+    posted_at: new Date(now - 3 * day).toISOString(),
+    source: "submitted",
+    application_contact: "doktorarbeiten@charite-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 3 * day).toISOString(),
+  },
+  {
+    id: "b0000000-0000-0000-0000-000000000002",
+    group_id: "a0000000-0000-0000-0000-000000000002",
+    supervisor_id: null,
+    title: "T-Zell-Antworten nach mRNA-Impfung bei immunsupprimierten Patient:innen",
+    description:
+      "Klinisch-experimentelle Arbeit. Patient:innenrekrutierung läuft, Probenbank vorhanden. Geeignet ab 6. Semester. Mind. 12 Monate Vollzeit-Phase erforderlich.",
+    thesis_type: "experimental",
+    funding: "paid",
+    expected_duration_months: 24,
+    posted_at: new Date(now - 10 * day).toISOString(),
+    source: "submitted",
+    application_contact: "immunologie@charite-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 10 * day).toISOString(),
+  },
+  {
+    id: "b0000000-0000-0000-0000-000000000003",
+    group_id: "a0000000-0000-0000-0000-000000000003",
+    supervisor_id: null,
+    title: "Retrospektive Analyse: Thrombolyse-Outcomes 2018–2024",
+    description:
+      "Statistische Doktorarbeit. Datensatz vollständig vorhanden, Auswertung mit R/SPSS. Sehr gut neben dem Studium machbar. Statistik-Kurs wird intern angeboten.",
+    thesis_type: "statistical",
+    funding: "unpaid",
+    expected_duration_months: 12,
+    posted_at: new Date(now - 1 * day).toISOString(),
+    source: "submitted",
+    application_contact: "neuro-promotion@klinikum-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 1 * day).toISOString(),
+  },
+  {
+    id: "b0000000-0000-0000-0000-000000000004",
+    group_id: "a0000000-0000-0000-0000-000000000004",
+    supervisor_id: null,
+    title: "Single-Cell-Sequencing bei kolorektalen Karzinomen",
+    description:
+      "Anspruchsvolles experimentelles Projekt. Idealerweise 18–24 Monate Vollzeit. Mentoring durch PostDoc, wöchentliche Lab-Meetings. Publikation als Erstautor:in realistisch.",
+    thesis_type: "experimental",
+    funding: "stipend",
+    expected_duration_months: 24,
+    posted_at: new Date(now - 6 * day).toISOString(),
+    source: "submitted",
+    application_contact: "nct-doktoranden@nct-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 6 * day).toISOString(),
+  },
+  {
+    id: "b0000000-0000-0000-0000-000000000005",
+    group_id: "a0000000-0000-0000-0000-000000000005",
+    supervisor_id: null,
+    title: "Langzeit-Outcomes nach Lebertransplantation – Register-Auswertung",
+    description:
+      "Klinische Doktorarbeit auf Basis des deutschen Transplantationsregisters. Strukturiert, klare Fragestellung, regelmäßige Treffen.",
+    thesis_type: "clinical",
+    funding: "unpaid",
+    expected_duration_months: 12,
+    posted_at: new Date(now - 15 * day).toISOString(),
+    source: "submitted",
+    application_contact: "transplant@mhh-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 15 * day).toISOString(),
+  },
+  {
+    id: "b0000000-0000-0000-0000-000000000006",
+    group_id: "a0000000-0000-0000-0000-000000000006",
+    supervisor_id: null,
+    title: "Psychosoziale Belastung von Angehörigen Demenzkranker",
+    description:
+      "Mixed-Methods-Arbeit. Interviews + Fragebogen. Datenerhebung ca. 6 Monate.",
+    thesis_type: "clinical",
+    funding: "unpaid",
+    expected_duration_months: 18,
+    posted_at: new Date(now - 2 * day).toISOString(),
+    source: "submitted",
+    application_contact: "psyche-doktorarbeit@uke-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 2 * day).toISOString(),
+  },
+  {
+    id: "b0000000-0000-0000-0000-000000000007",
+    group_id: "a0000000-0000-0000-0000-000000000007",
+    supervisor_id: null,
+    title: "Postoperative Komplikationen nach Pankreasresektion – Risikomodell",
+    description:
+      "Statistische Arbeit, Modellentwicklung. Daten aus Klinikregister, Auswertung mit Python. Vorkenntnisse hilfreich, aber nicht zwingend.",
+    thesis_type: "statistical",
+    funding: "unpaid",
+    expected_duration_months: 12,
+    posted_at: new Date(now - 20 * day).toISOString(),
+    source: "submitted",
+    application_contact: "chirurgie-doktorarbeit@uk-koeln-beispiel.de",
+    promoted: false,
+    promotion_expires_at: null,
+    status: "published",
+    created_at: new Date(now - 20 * day).toISOString(),
+  },
+];
