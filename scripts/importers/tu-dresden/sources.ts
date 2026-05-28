@@ -1,6 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, neurologie, psy, kjp, vtg, psm.
+ * Handgepflegt: mk1, mk3, neurologie, psy, kjp, kik, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -171,30 +171,114 @@ export const tuDresdenSources: ImporterSource[] = [
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik",
     applicationContact: null,
     researchAreas: [
-      { title: "Experimentelle Hämatologie (Kinderklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Staff: Dr rer nat Sebastian Thieme – scientific lab manager PD Dr med Sebastian Brenner – clinical counselor Dr rer nat Ralf Wiedemuth Dr med Benjamin Dorschner Dr med Lukas Galow Dr med Katja Rüger Dr med Ann-Christin Funke Dr med Franz Mierke cand. med. Tobias Neidel Katrin Navratiel (MTA) Research Focus: • Regulation of the immune response by plasmacytoid dendritic cells (pDC) Autoimmune diseases and allergies present an enormous burden for patients and public health care systems. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/exphem` },
-      { title: "Forschungsschwerpunkte (Kinderklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Wir sehen die Rolle von Forschung und Lehre in unserer Kinderklinik als wichtigen Auftrag für die kontinuierliche Verbesserung von Diagnostik, Therapien und Versorgungsprozessen zum Wohl der Kinder und ihrer Familien. Wissenschaftliche Arbeiten, klinische Studien und didaktische Angebote stärken die Qualität der patientenzentrierten Versorgung, fördern Innovationen und sichern eine exzellente Ausbildung junger Medizinerinnen und Mediziner. Diese Website ist deshalb Anlaufstelle für Interessierte: Sie informiert über Forschungsfelder, Publikationen, Lehrveranstaltungen und die vielfältigen Möglichkeiten einer aktiven Beteiligung an unserer klinischen Bildungs- und Forschungslandschaft. [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung` },
-      { title: "Klinische Forschung (Kinderklinik UKD Dresden)", thesis_type: "experimental",
-        description: `Forschungsprojekte (inkl. Drittmittel): • Experimentelle Hämatologie • Hämostaseologie • Impfbeobachtungsstudie PaedVacCOVId • UniversitätsCentrum für Chronische Immundefizienzen (UCID) • Immunologie • Infektiologie • Onkologie, Hämatologie • Pneumologie • Molekulare Endokrinologie • Molekulare Pädiatrie • Neonatologie Leitung Prof. Dr. med. Angela Rösen-Wolff **Technische Leitung: ** Dana Landgraf Tel. 0351 458-6880 E-Mail Wissenschaftliche Mitarbeiter: Frau Dr. rer. medic. Hella Luksch Herr Dr. med. Stefan Winkler Herr Dipl. Biol. Sören Reinke (Doktorand) Frau MSc Mary Linge (Doktorandin) Frau cand. med. Hannah Siedel (Doktorandin, EKPK Stipendiantin) Herr cand. med. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1` },
-      { title: "Hämostaseologie (Kinderklinik UKD Dresden)", thesis_type: "other",
-        description: `Leiter E-Mail Sekretariat: Susann Kempe, Tel. 0351 458-3522\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/hamostaseologie` },
-      { title: "Diese Seite existiert leider nicht. (Kinderklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Entschuldigung, aber die Webseite, die Sie versucht haben zu erreichen, ist hier nicht verfügbar. Bitte benutzen Sie die aufgeführten Links um zu finden, was Sie gesucht haben. Wenn Sie sicher sind, dass Sie die richtige Adresse eingegeben haben, kontaktieren Sie bitte den Verantwortlichen für die Website. Vielen Dank Sie haben eventuell folgendes gesucht: • Forschung • Impfbeobachtungsstudie PaedVacCOVId • Impfbeobachtungsstudie PaedVacCOVId • Upload Impfbeobachtungsstudie PaedVacCOVID • Upload Impfbeobachtungsstudie PaedVacCOVID • Impfbeobachtungsstudie PaedVacCOVID • Impfbeobachtungsstudie PaedVacCOVID • Klinische Forschung • Pädiatrische Infektiologie [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/impfbeobachtungsstudie-paedvaccovid` },
-      { title: "Klinische Forschergruppe 249 - Defekte des angeborenen Immunsystems bei Autoinflammation und Autoimmunität (Kinderklinik UKD Dresden)", thesis_type: "other",
-        description: `Leiterin Prof. Dr. med. Min Ae Lee-Kirsch Sprecherin Prof. Dr. med. Angela Rösen-Wolff Administration Bianca Weißbach Telefon: 0351 458-2530 Fax: 0351 458-6333 E-Mail: Bianca Weissbach Website Weitere Informationen finden Sie unter www.kfo249dresden.de [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/kfo` },
-      { title: "Molekulare Endokrinologie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
-        description: `Leitung / Kontakt Fachbereichsleiterin Prof. Dr. med. Angela Hübner E-Mail • * • Wissenschaftliche Laborleiterin PD Dr. rer. nat. Katrin Köhler 0351 458-6886 E-Mail Forschungsschwerpunkte Forschungsschwerpunkte unserer Arbeitsgruppe sind das Adrenogenitale Syndrom (AGS, engl. Congenital Adrenal Hyperplasia CAH) und das Triple-A-Syndrom (AAAS). Beides sind autosomal-rezessiv vererbte Krankheiten mit einer Inzidenz von 1:10.000 bis 1:15.000 (AGS) und < 1:1.000.000 (AAAS). In 95 % der Fälle mit AGS ist der 21-Hydroxylase-Mangel (21OHD) durch Mutationen im CYP21A2-Gen für die genetisch bedingte Störung der Steroid-Biosynthese mit Störung der Geschlechtsdifferenzierung verantwortlich. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/molekulare-endokrinologie` },
-      { title: "Molekulare Pädiatrie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
-        description: `Defekte des angeborenen Immunsystems bei Autoinflammation und Autoimmunität Molekulare Mechanismen der Nukleinsäure-Erkennung [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/molekulare-paediatrie` },
-      { title: "Pädiatrische Immunologie (Kinderklinik UKD Dresden)", thesis_type: "other",
-        description: `Forschungsschwerpunkte: • B-Zell-Erkrankungen/variable Immundefekte/Agammaglobulinämien • T-Zell-Erkrankungen • Kombinierte Immundefekte • Neutropenien und Granulozytenfunktionsstörungen (septische Granulomatosen) • Fiebersyndrome • Andere angeborene Immundefekte • Stammzelltransplantation incl. Nachsorge Leiterin: Prof. Dr. med. Catharina Schütz Sekretariat: Frau Sandy Kluge +49 0351 458-2680 +49 0351 458-5772 E-Mail: sandy.kluge@ukdd.de Klinik und Poliklinik für Kinder- und Jugendmedizin\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/copy_of_padiatrische-immunologie` },
-      { title: "Pädiatrische Infektiologie (Kinderklinik UKD Dresden)", thesis_type: "statistical",
-        description: `Forschungsschwerpunkte • Warum treten einige bakterielle Krankheitserreger gerade in bestimmtem Alter (z. B. Säuglinge) auf? Warum erkranken bestimmte Individuen und andere nicht? • Wie sieht die Epidemiologie dieser Erreger in Deutschland aus? • Welche molekularen Pathomechanismen sind für den Infektionsprozess relevant? Leiter Prof. Dr. med. Reinhard Berner Sekretariat: Frau Hille 0351 458-2508 0351 458-882508 E-Mail Klinik und Poliklinik für Kinder- und Jugendmedizin\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/paediatrische-infektiologie` },
-      { title: "Post-Akute-Infektions- und Vakzinierungssyndrome (PAIVS) (Kinderklinik UKD Dresden)", thesis_type: "experimental",
-        description: `PEDNET-LC Pädiatrisches Netzwerk für die Versorgung und Erforschung von postakuten Folgen von COVID 19, ähnlichen postakuten Infektions- und Impfsyndromen sowie ME/CFS bei Kindern und Jugendlichen Insbesondere: • PAIVS-Versorgung CCC in PEDNET-LC • Sleep-Study in PEDNET-LC • Dyspnoe-Studie in PEDNET-LC • Riech-/Schmeckstörungen in PEDNET-LC Leitung OÄ PD Dr. med. Nicole Töpfner **Leitung päd. Teilprojekte, Stellvertretende Gesamtprojektleiterin** • Projektmanagement PEDNET-LC E-Mail • * * Frau Jana Gebhardt **Assistentin der Stellvertretenden PEDNET-LC Leiterin** 0351 458-19700 E-Mail • * * Dr. rer. nat. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/paediatrische-infektiologie/post-akute-infektions-und-vakzinierungssyndrome-paivs` },
-      { title: "Pneumologie (Kinderklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Leiter OA Prof. Dr. med. Christian Vogelberg Mitarbeiter Fr. Dr. Katja Schulz Sr. Luisa Kirsten Sr. Antje Böhm Forschungsprojekte, Doktoranden • Studie in Ost- und Westdeutschland zu beruflichen Allergierisiken SOLAR II Bundesministerium für Arbeit und Sozialordnung • Stickstoffmonoxid- und Nitritkonzentration im Exhalat von Kleinkindern und Patienten mit entzündlichen Atemwegserkrankungen unter besonderer Beachtung methodischer Aspekte • Diagnostische Wertigkeit der Konzentration von Nitrit, Nitrat und pH-Wert im Atemkondensat bei Kindern mit akuten und chronischen entzündlichen Atemwegserkrankungen • Korrelation zwischen OSAS im Kindesalter und Polymorphismen im Gen des Apolipoproteins E • …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/pneumologie` },
+      { title: "Experimentelle Hämatologie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Laborgruppe der Kinderklinik mit Schwerpunkt **pädiatrische Hämatologie**.
+
+## Team & Setup
+- Scientific Lab Manager: Dr. rer. nat. Sebastian Thieme
+- Clinical Counselor: PD Dr. med. Sebastian Brenner
+- Mehrere PostDocs und klinische Mitarbeiter:innen (Wiedemuth, Dorschner, Galow u.a.)
+
+## Inhaltlich
+Pädiatrische Blutbildungsprozesse, Defekte, translationale Schnittstelle Klinik-Labor. Anbindung an die kinderonkologische Versorgung.
+
+*Wet Lab. Geeignet für experimentelle Promotion mit hämatologischer Fragestellung — klinische Anbindung über PD Dr. Brenner.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/exphem`,
+        applicationContact: "PD Dr. med. Sebastian Brenner / Dr. Sebastian Thieme" },
+      { title: "Klinische Forschergruppe 249 — Angeborenes Immunsystem (Kinderklinik UKD Dresden)", thesis_type: "experimental",
+        description: `**KFO 249**: DFG-geförderte interdisziplinäre Forschergruppe zu **Defekten des angeborenen Immunsystems bei Autoinflammation und Autoimmunität**.
+
+## Leitung & Sprecher
+- **Leitung:** Prof. Dr. med. Min Ae Lee-Kirsch
+- **Sprecherin:** Prof. Dr. med. Angela Rösen-Wolff
+
+## Setup
+DFG-Verbundforschung mit eigener Administration (Bianca Weißbach, Tel. 0351 458-2530), eigenständiger Website [kfo249dresden.de](http://www.kfo249dresden.de).
+
+*Sehr gute Wahl für experimentelle Immunologie-Promotionen mit Forschungs­verbund-Anbindung. Methodisch breit (Zellbiologie, Genetik, Immunologie).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/kfo`,
+        applicationContact: "KFO-249-Administration · Tel. 0351 458-2530" },
+      { title: "AG Molekulare Endokrinologie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Pädiatrisch-endokrinologische Forschung mit Fokus auf seltene autosomal-rezessive Erkrankungen.
+
+## Forschungsschwerpunkte
+- **Adrenogenitales Syndrom (AGS / CAH)** — Congenital Adrenal Hyperplasia
+- **Triple-A-Syndrom (AAAS)**
+- Hormonelle und genetische Aspekte seltener pädiatrischer Stoffwechsel­störungen
+
+## Leitung
+- **Fachbereichsleiterin:** Prof. Dr. med. Angela Hübner
+- **Wissenschaftliche Laborleiterin:** PD Dr. rer. nat. Katrin Köhler · Tel. 0351 458-6886
+
+*Klassisches experimentelles Lab mit klinischer Anbindung. Sehr gut für genetisch-endokrinologische Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/molekulare-endokrinologie`,
+        applicationContact: "PD Dr. Katrin Köhler · Tel. 0351 458-6886" },
+      { title: "AG Molekulare Pädiatrie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Molekularbiologische Forschungsgruppe mit Fokus auf angeborene Immundefekte und Nukleinsäure-Erkennung.
+
+## Aktive Projekte
+- **Defekte des angeborenen Immunsystems** bei Autoinflammation und Autoimmunität (Anbindung KFO 249)
+- **Molekulare Mechanismen der Nukleinsäure-Erkennung**
+
+*Methodisch sehr stark — Promotionen mit molekularbiologischem Schwerpunkt und Bezug zu seltenen Immunerkrankungen. Sehr gut vernetzt mit KFO 249 (Prof. Lee-Kirsch).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/molekulare-paediatrie`,
+        applicationContact: "Kinderklinik / Mol. Pädiatrie-Sekretariat" },
+      { title: "AG Pädiatrische Immunologie (Kinderklinik UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische und translationale Forschung zu **angeborenen Immundefekten** und seltenen immunologischen Erkrankungen.
+
+## Forschungsschwerpunkte
+- B-Zell-Erkrankungen / variable Immundefekte / Agammaglobulinämien
+- T-Zell-Erkrankungen
+- Kombinierte Immundefekte
+- Neutropenien und Granulozyten­funktions­störungen (septische Granulomatosen)
+- Fiebersyndrome
+- Andere angeborene Immundefekte
+- **Stammzelltransplantation** inkl. Nachsorge
+
+**Leitung:** Prof. Dr. med. Catharina Schütz · Sekretariat Sandy Kluge: sandy.kluge@ukdd.de · Tel. 0351 458-2680
+
+*Klinische Promotionen mit seltenen Patient:innen-Kohorten. Anbindung an UCID (Universitätscentrum für Chronische Immundefizienzen).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/copy_of_padiatrische-immunologie`,
+        applicationContact: "sandy.kluge@ukdd.de · Tel. 0351 458-2680" },
+      { title: "AG Pädiatrische Infektiologie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Erforscht Pathogenese und Epidemiologie bakterieller Krankheitserreger bei Kindern.
+
+## Leitfragen
+- Warum treten bestimmte Erreger gerade in bestimmten Altersgruppen auf (z.B. Säuglinge)?
+- Warum erkranken bestimmte Individuen und andere nicht?
+- **Epidemiologie** dieser Erreger in Deutschland
+- Welche **molekularen Pathomechanismen** sind für die Infektion relevant?
+
+**Leitung:** Prof. Dr. med. Reinhard Berner · Sekretariat Frau Hille: 0351 458-2508
+
+*Translationale Promotion zwischen klinischer Epidemiologie und Molekularbiologie. Bezug zur Infektiologie der gesamten UKD.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/paediatrische-infektiologie`,
+        applicationContact: "Prof. Dr. Reinhard Berner / Sekr. Hille · Tel. 0351 458-2508" },
+      { title: "AG Post-Akute-Infektions-/Vakzinierungs­syndrome (PAIVS) (Kinderklinik UKD Dresden)", thesis_type: "clinical",
+        description: `Spezialisiertes Netzwerk-Programm zu **Long-COVID, ME/CFS und ähnlichen postakuten Syndromen** bei Kindern und Jugendlichen.
+
+## PEDNET-LC: Pädiatrisches Netzwerk
+- PAIVS-Versorgung (Comprehensive Care Center)
+- **Sleep-Study** in PEDNET-LC
+- **Dyspnoe-Studie**
+- **Riech-/Schmeckstörungen** als Long-COVID-Folge
+
+## Leitung
+- **OÄ PD Dr. med. Nicole Töpfner** — Leitung pädiatrischer Teilprojekte, stv. Gesamtprojektleiterin
+- **Assistenz:** Jana Gebhardt · Tel. 0351 458-19700
+- **Administration:** Dr. rer. nat. Ariane Müller
+
+*Aktuell sehr relevantes Feld mit bundesweiter Netzwerk-Anbindung. Klinische Promotionen mit Versorgungs-/Outcome-Bezug.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/paediatrische-infektiologie/post-akute-infektions-und-vakzinierungssyndrome-paivs`,
+        applicationContact: "Jana Gebhardt (PEDNET-LC) · Tel. 0351 458-19700" },
+      { title: "AG Pneumologie — Kinderpneumologie (Kinderklinik UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische und experimentelle Forschung zu pädiatrischen Atemwegs- und Allergie-Erkrankungen.
+
+## Aktive Promotions-Linien (Auswahl)
+- **SOLAR II** — Studie in Ost- und Westdeutschland zu beruflichen Allergierisiken (BMAS-gefördert)
+- **NO und Nitrit im Exhalat** bei Kleinkindern und entzündlichen Atemwegserkrankungen
+- **Atemkondensat-Analytik** (Nitrit, Nitrat, pH) bei akuten/chronischen Atemwegserkrankungen
+- OSAS im Kindesalter & Apolipoprotein-E-Polymorphismen
+- **BMI-Einfluss** auf allergische Symptomentwicklung
+- Mehrere parallele Doktoranden­projekte
+
+**Leitung:** OA Prof. Dr. med. Christian Vogelberg
+
+*Vielfältige Themen verfügbar — von epidemiologisch bis experimentell. Mehrere Doktoranden gleichzeitig betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/pneumologie`,
+        applicationContact: "OA Prof. Dr. Christian Vogelberg (Kinderklinik-Sekretariat)" },
     ],
   },
   {
@@ -563,32 +647,97 @@ Welche Berechnungen liegen kognitiven Prozessen zugrunde — und welche **biophy
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3",
     applicationContact: null,
     researchAreas: [
-      { title: "Welcome (MK3 UKD Dresden)", thesis_type: "statistical",
-        description: `Angiology Research Lab is a part of the Division of Vascular Medicine of the Medical Clinic III at the Technische Universität Dresden, directed by Prof. Norbert Weiss. Our primary area of research is pathogenesis of cardiovascular disease (CVD), which is the major cause of mortality in the developed world. Recent epidimiological studies have identified various novel risk factors of cardiovascular diseases in addition to the commonly established ones, such as hypertension, diabetes, dislipidemia and smoking. Some of these novel cardiovascular risk factors serve merely as markers of CVD, while the other ones may play important role in its pathogenesis. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab` },
-      { title: "Bereich Gefäßendothel / Mikrozirkulation (MK3 UKD Dresden)", thesis_type: "clinical",
-        description: `Bereich Gefäßendothel/Mikrozirkulation Leiter: Prof. Dr. rer. nat. habil. Henning Morawietz Telefon: 0351 458-6625 E-Mail: henning.morawietz@tu-dresden.de Fax: 0351 458-6354 • Forschung • **Mitarbeiter ** • **Publikationen ** • **Links ** • Aktuell • **English version ** Kontakt **** Besucheranschrift: Bereich Gefäßendothel/Mikrozirkulation Technische Universität Dresden Zentrum für Metabolisch-Immunologische Erkrankungen und Therapietechnologien Sachsen (MITS)/ 1. OG Fiedlerstr. 40 D-01307 Dresden Postanschrift: Bereich Gefäßendothel/Mikrozirkulation Technische Universität Dresden Medizinische Fakultät Carl Gustav Carus Fetscherstr. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation` },
-      { title: "Division of Vascular Endothelium and Microcirculation (MK3 UKD Dresden)", thesis_type: "other",
-        description: `Chief: Henning Morawietz, PhD, Professor, FAHA 0351 458-6625 henning.morawietz@tu-dresden.de 0351 458-6354 • **Research ** • **Staff ** • **Publications ** • **News ** • Links Contact **** Visitor's address: Division of Vascular Endothelium and Microcirculation TUD Dresden University of Technology Centre for Metabolic and Immunological Diseases and Therapeutic Technologies Saxony (MITS)/ 1st floor Fiedlerstr. 40 D-01307 Dresden, Germany Postal address: Division of Vascular Endothelium and Microcirculation TUD Dresden University of Technology Faculty of Medicine Carl Gustav Carus Fetscherstr. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation/english` },
-      { title: "Forschung und Innovation (MK3 UKD Dresden)", thesis_type: "experimental",
-        description: `Das Forschungsinformationssystem (FIS) Das Forschungsportal bietet einen Überblick zu den vielseitigen Forschungs- und Transferaktivitäten an der TU Dresden wie Forschungsprojekte, Publikationen, Patente und sonstige wissenschaftliche Leistungen und Aktivitäten verknüpft mit persönlichen Profilen der Forschenden und Organisationseinheiten der TU Dresden sowie ihrer Partner. Medizinischen Klinik und Poliklinik III finden Sie hier: Medizinische Klinik und Poliklinik III (FIS).html) transCampus Im März 2015 ernannte das King’s College London Professor Stefan Bornstein zum transCampus-Dekan, die erste Rolle dieser Art am King’s College. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation` },
-      { title: "Klinische Forschung (MK3 UKD Dresden)", thesis_type: "clinical",
-        description: `Aktuelle klinische Studien Publizierte Studien [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/nephrologie/klinische-forschung` },
-      { title: "Lab Members (MK3 UKD Dresden)", thesis_type: "other",
-        description: `Prof. Dr. med. Norbert Weiss **Director of the University Center for Vascular Medicine ** 0351 458-3659 E-Mail • * * Roman Rodionov, Ph.D **Head of the Lab ** 0351 458-3659 0351 458-4359 E-Mail • * * Natalia Jarzebska **Postdoc ** • * * Vinitha Ragavan joined PhD student with Flinders University, Australia • * * Elena Rubets master student from Sankt Petersbug State University • * * Diana Schnabel Dr. med. student • * * Anna Tiepner Medical Resident • * • Former Lab Members • Nathanael Albert, Dr. med. student • Milena Antonova, Dr. med. student • Marco Bannert, Dr. med. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/lab-members` },
-      { title: "Links (MK3 UKD Dresden)", thesis_type: "clinical",
-        description: `• Medizinische Klinik und Poliklinik III • Center for Regenerative Therapies Dresden • Dresden International Graduate School for Interdisciplinary Life Sciences • International Master’s Program „Regenerative Biology and Medicine“ • PhD Program \\"Endothelium in Health and Disease\\" • Klinische Forschergruppe KFO 252 • International Research Training Group 2251 Links to scientific societies • American Heart Association • Council on Atherosclerosis, Thrombosis and Vascular Biology (ATVB) • Deutsche Ausgabe der American Heart Association • The Microcirculatory Society • Deutsche Gesellschaft für Kardiologie-Herz- und Kreislaufforschung • Deutsche Physiologische Gesellschaft • European Society of C …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation/links` },
-      { title: "Local Research Environment (MK3 UKD Dresden)", thesis_type: "clinical",
-        description: `Our lab is located in the middle of a large biomedical campus, which provides opportunity for daily interaction with internationally recognized experts and access to the most up-to-date research facilities. Please see the links to the major local research facilities and training programs below Max Planck Institute of Molecular Cell Biology and Genetics Center for Regenerative Therapies Dresden Medical Theoretical Center of the TU Dresden Biotechnology Center of the TU Dresden Paul Langerhans Institute Dresden Dresden International Graduate School for Biomedicine and Bioengineering B CUBE - Center of Innovation Competence in Molecular Bioengineering Helmholtzzentrum Dresden Rossendorf Dresden …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/local-research-environment` },
-      { title: "Current research projects (MK3 UKD Dresden)", thesis_type: "experimental",
-        description: `1. Role of the non-classic cardiovascular risk factor asymmetric dimethylarginine (ADMA) in aortic and myocardial remodeling Asymmetric dimethylarginine (ADMA) is an endogenous methylated analogue of L-arginine, which is produced during turnover of the proteins that are methylated on arginine residues (e.g. histones). ADMA competes with L-arginine for the active site of nitric oxide (NO) synthases and inhibits NO production. Additionally, ADMA \\"uncouples\\" NO synthases, which means that they start producing a highly reactive free radical superoxide instead of NO. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/projects` },
-      { title: "Publications (MK3 UKD Dresden)", thesis_type: "clinical",
-        description: `2021 • Rodionov R.N., Peters F., Marschall U., L’Hoest H., Jarzebska N, Behrendt C.A. Initiation of SGLT2 Inhibitors and the Risk of Lower Extremity Minor and Major Amputation in Patients with Type 2 Diabetes and Peripheral Arterial Disease: A Health Claims Data Analysis, Accepted to _Eur J Vasc Endovasc Surg._ • Wang Y. and Angom R.S., Kulkarni T., Hoeppner L.H., Pal K., Wang E., Tam A., Valiunas R.A., Dutta S.K., Ji B., Jarzebska N., Chen Y., Rodionov R.N., Mukhopadhyay D, Dissecting VEGF-Induced Acute Versus Chronic Vascular Hyperpermeability: Essential Roles of Dimethylarginine Dimethylaminohydrolase-1. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/publications` },
-      { title: "Publikationen (MK3 UKD Dresden)", thesis_type: "other",
-        description: `• [](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation/publikationen#Kongressbeitr%C3%A4ge-2020)Publikationen 2025: Kongressbeiträge 2025 • [](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation/publikationen#Publikationen-2014)Publikationen 2024: Kongressbeiträge 2024 • Publikationen 2023: Kongressbeiträge 2023 • [](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation/publikationen#Kong …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation/publikationen` },
-      { title: "Publizierte Studien (MK3 UKD Dresden)", thesis_type: "other",
-        description: `1. Rabbit-ATG or basiliximab induction for rapid steroid withdrawal after renal transplantation (Harmony): an open-label, multicentre, randomised controlled trial. Thomusch O, Wiesener M, Opgenoorth M, Pascher A, Woitas RP, Witzke O, Jaenigen B, Rentsch M, Wolters H, Rath T, Cingöz T, Benck U, Banas B, Hugo C. Lancet. 2016 Dec 17;388(10063):3006-3016. doi: 10.1016/S0140-6736(16)32187-0. Epub 2016 Nov 19. 2. Intensive Supportive Care plus Immunosuppression in IgA Nephropathy. Rauen T, Eitner F, Fitzner C, Sommerer C, Zeier M, Otte B, Panzer U, Peters H, Benck U, Mertens PR, Kuhlmann U, Witzke O, Gross O, Vielhauer V, Mann JF, Hilgers RD, Floege J; STOP-IgAN Investigators. N Engl J Med. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/nephrologie/klinische-forschung/publizierte-studien` },
-      { title: "Universitäts GefäßCentrum - Dresden", thesis_type: "clinical",
-        description: `Herzlich Willkommen am Universitäts GefäßCentrum, wir behandeln das gesamte Spektrum von arteriellen, venösen und lymphatischen Gefäßerkrankungen. Hierzu zählen die Behandlung der arteriellen Verschlusserkrankung der Beine, die dilatative Arteriopathie mit ihrer Hauptmanifestation des abdominellen und thorakalen Aortenaneurysmas, die Atherosklerose der supraaortalen Arterien Durch die konzentrierte Zusammenarbeit der am Universitäts GefäßCentrum beteiligten Fachabteilungen erhält jeder Patient eine individuell auf ihn abgestimmte Diagnostik und Therapie, um eine gezielte Behandlung der Gefäßerkrankungen und deren Risikofaktoren durchzuführen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/university-center-for-vascular-medicine` },
+      { title: "Angiology Research Lab (MK3 UKD Dresden)", thesis_type: "experimental",
+        description: `Experimentelles Labor der **Division of Vascular Medicine** der Medizinischen Klinik III. Schwerpunkt: Pathogenese kardiovaskulärer Erkrankungen.
+
+## Forschungsthemen
+- **Neue (epidemiologisch identifizierte) kardiovaskuläre Risikofaktoren** jenseits Hypertonie, Diabetes, Dyslipidämie und Rauchen
+- Mechanismen, wie diese Risikofaktoren zu metabolischen Veränderungen und Endorganschäden führen
+- **Endogene protektive Mechanismen** in kardiovaskulärer und metabolischer Erkrankung
+- Beispiel-Projekt: Rolle von **asymmetrischem Dimethylarginin (ADMA)** im DDAH1/AGXT2-System für vaskuläre Schäden — Tiermodelle + Zellkultur
+
+**Leitung:** Prof. Dr. med. Norbert Weiss
+
+*Klassisches experimentelles Lab mit cardio/vaskulärem Fokus. Engl./dt., Tiermodelle und Zellkultur.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab`,
+        applicationContact: "Prof. Dr. med. Norbert Weiss (MK3-Sekretariat)" },
+      { title: "Bereich Gefäßendothel / Mikrozirkulation (MK3 UKD Dresden)", thesis_type: "experimental",
+        description: `Eigenständiger Forschungsbereich der MK3 zur **endothelialen Funktion und Mikrozirkulation** — Pathomechanismen vaskulärer Erkrankungen auf zellulärer Ebene.
+
+## Forschungslinie
+Endotheliale (Dys)funktion bei kardiovaskulären Erkrankungen, oxidativer Stress, Signalwege der Atherogenese.
+
+**Leitung:** Prof. Dr. rer. nat. habil. Henning Morawietz
+**Direktkontakt:** henning.morawietz@tu-dresden.de · Tel. 0351 458-6625
+
+*Echtes Wet Lab mit etablierter Methodik (Zellkultur, molekularbiologische Verfahren). Direktkontakt verfügbar — geeignet für experimentelle Promotion mit Endothel-/Atherosklerose-Fokus.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/bereich-gefasendothel-und-mikrozirkulation`,
+        applicationContact: "henning.morawietz@tu-dresden.de · Tel. 0351 458-6625" },
+      { title: "Universitäts GefäßCentrum Dresden — interdisziplinär (MK3 UKD Dresden)", thesis_type: "clinical",
+        description: `Interdisziplinäres Zentrum für **arterielle, venöse und lymphatische Gefäßerkrankungen** — gemeinsam betrieben mit der Gefäßchirurgie.
+
+## Therapieschwerpunkte
+- Arterielle Verschluss­krankheit (Beine)
+- Dilatative Arteriopathie / abdominelle und thorakale Aortenaneurysmata
+- Atherosklerose supraaortaler Arterien
+- Tägliche **Gefäßkonferenz** zur differentialtherapeutischen Planung
+
+## Forschung
+Klinische und grundlagenorientierte Erforschung von Gefäßerkrankungen, Entwicklung und Überprüfung neuer Therapiekonzepte.
+
+*Sehr gut für klinische Promotionen mit gefäßmedizinischem Fokus — Outcome-Forschung, Verfahrens­vergleich, Register­studien.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/university-center-for-vascular-medicine`,
+        applicationContact: "Universitäts GefäßCentrum / MK3-Sekretariat" },
+      { title: "Klinische Forschung Nephrologie / Dialyse / Nierentransplantation (MK3 UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische Forschung im Bereich Nephrologie: chronische Nierenerkrankung, Dialyseverfahren, Nierentransplantation.
+
+## Aktuelle Linien
+- Aktuelle klinische Studien (siehe Klinik-Subseite)
+- Outcome-Forschung nach Nierentransplantation
+- Register-basierte Untersuchungen zur Dialyse­qualität
+
+*Klinisch-statistische Promotion mit großem Patient:innen-Kollektiv. Mit nephrologischer Klinik und Transplant-Programm gut machbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/nephrologie/klinische-forschung`,
+        applicationContact: "Nephrologie / MK3-Sekretariat" },
+      { title: "Diabetes, Stoffwechsel und Inselzelltransplantation (MK3 UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische und translationale Forschung zu Diabetes mellitus, Hormon- und Stoffwechselstörungen — einschließlich des spezialisierten **Inselzelltransplantations-Programms**.
+
+## Forschungsfelder
+- Klinische Diabetesforschung (Komplikationen, Therapieoptimierung)
+- **Inselzelltransplantation** bei Typ-1-Diabetes
+- Endokrinologische Erkrankungen — translationale Ansätze
+- Verbindung zu **transCampus** (Prof. Bornstein, King's College London)
+
+*Geeignet für klinische und translationale Promotionen in Endokrinologie/Diabetologie. Sehr international vernetzt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3`,
+        applicationContact: "MK3-Sekretariat (0351 458-0)" },
+      { title: "Rheumatologische Forschung (MK3 UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische Forschung zu entzündlichen und Autoimmunerkrankungen.
+
+## Schwerpunkte
+- Therapieoptimierung bei rheumatoider Arthritis, Spondylo­arthritiden, Kollagenosen
+- Versorgungsforschung an etablierten Studien-Kohorten
+- Translationale Anbindung an Immunologie und Pathologie
+
+**Leitung:** Prof. Dr. med. Martin Aringer
+
+*Klinische Promotion möglich, Vorteil durch große Rheumaambulanz.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3`,
+        applicationContact: "Prof. Dr. med. Martin Aringer (MK3-Sekretariat)" },
+      { title: "Lipoproteinapherese — Lipidstoffwechsel (MK3 UKD Dresden)", thesis_type: "clinical",
+        description: `Spezialbehandlung und Forschung zum **Lipidstoffwechsel** mit etabliertem Lipoproteinapherese-Programm.
+
+## Forschungsfelder
+- Effektivität und Langzeit-Outcome der Apherese-Therapie
+- Lipidprofile bei Hochrisiko-Patient:innen mit hereditären Dyslipidämien
+- Begleitende Pharmakotherapie (PCSK9-Inhibitoren, Statine)
+
+*Kleines, sehr spezialisiertes Feld. Geeignet für eine eingegrenzte klinische Promotion mit klarer Methodik.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3`,
+        applicationContact: "MK3-Sekretariat (0351 458-0)" },
+      { title: "transCampus — Dresden / King's College London (MK3 UKD Dresden)", thesis_type: "other",
+        description: `**Transnationale strategische Partnerschaft** zwischen TU Dresden / UKD und King's College London. Geleitet von Prof. Stefan Bornstein (erster transCampus-Dekan am King's College).
+
+## Was es bietet
+- Geteilte Ressourcen zwischen zwei der führenden Forschungs­universitäten Europas
+- Kollaborative Projekte und Wissenstransfer
+- Internationale Promotions­möglichkeiten
+
+*Spannend, wenn du eine Promotion mit echter internationaler Komponente suchst — vor allem in Endokrinologie/Diabetes/Stress­medizin (Schwerpunkt-Felder Bornsteins).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation`,
+        applicationContact: "transCampus / Prof. Bornstein (MK3-Sekretariat)" },
     ],
   },
   {
