@@ -5,13 +5,23 @@ import { z } from "zod";
 import { DATA_MODE } from "@/lib/data";
 import { flags } from "@/lib/flags";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { uuidish } from "@/lib/validation";
 
 const Score = z.coerce.number().int().min(1).max(5);
 
 const ReviewInput = z.object({
-  group_id: z.string().uuid(),
-  thesis_type: z.enum(["experimental", "clinical", "statistical", "other"]),
-  year_started: z.coerce.number().int().min(2000).max(new Date().getFullYear()),
+  group_id: z
+    .string()
+    .min(1, "Bitte eine Gruppe auswählen.")
+    .pipe(uuidish("Ungültige Gruppe — bitte aus der Liste wählen.")),
+  thesis_type: z.enum(["experimental", "clinical", "statistical", "other"], {
+    errorMap: () => ({ message: "Bitte einen Thesis-Typ wählen." }),
+  }),
+  year_started: z.coerce
+    .number({ invalid_type_error: "Bitte ein Startjahr wählen." })
+    .int()
+    .min(2000)
+    .max(new Date().getFullYear()),
   year_ended: z
     .union([z.literal(""), z.coerce.number().int().min(2000).max(new Date().getFullYear() + 5)])
     .transform((v) => (v === "" ? null : v)),
@@ -21,7 +31,7 @@ const ReviewInput = z.object({
   project_delivered: Score,
   would_recommend: Score,
   free_text: z.string().trim().max(3000).optional().or(z.literal("")),
-  truthful: z.literal("on"),
+  truthful: z.literal("on", { errorMap: () => ({ message: "Bitte Bestätigung ankreuzen." }) }),
 });
 
 export type SubmitReviewResult = { ok: true } | { ok: false; error: string };
