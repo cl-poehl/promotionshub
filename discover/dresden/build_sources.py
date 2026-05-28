@@ -28,6 +28,387 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "neurologie": [
+        dict(
+            title="AG Akgün — Neuroimmunologisches Labor (Neurologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Translationale neuroimmunologische Forschung: Mechanismen von Erkrankungen wie Multipler Sklerose, therapeutische Modulation und **Biomarker für die klinische Praxis**.
+
+## Methoden im Labor
+Zellkultur, FACS, automatisierte ELISA, automatische Zellsortierung, **Real-time Deformability Cytometry (RT-DC)**, HD1-Analyzing, molekulare Messverfahren, Immunhistochemie — an murinen und humanen Bioproben.
+
+## Aktiv
+Sehr großes Team mit ~18 aktuellen Doktorand:innen — gleichzeitig betreut, also Mentorenstruktur etabliert.
+
+**Leitung:** Prof. Dr. med. Katja Akgün
+
+*Sehr gute Wahl für klassisches Wet-Lab-Promotionsprojekt in der Neuroimmunologie. Mehrere Monate Vollzeit-Labor erforderlich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neuroimmunologie/ag-akguen",
+            contact="Prof. Dr. med. Katja Akgün (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="AG Barlinn — Hämorrhagischer Schlaganfall (Neurologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinische Forschung zu **hämorrhagischem Schlaganfall** und irreversiblem Hirnfunktionsausfall.
+
+## Laufende Projekte
+- **DOAC-HE:** Impact of DOAC plasma levels on hematoma expansion
+- **DOAC-EVT:** DOAC-Spiegel vor endovaskulärer Therapie bei Verschluss großer Gefäße
+- **DETECT-IVE:** Automatisiertes Screening auf Hirnschäden — interventionelle Cluster-RCT
+- **VISTA-BD:** Visually-Assisted Neurological Assessment für die Beurteilung des Hirntods (Pilotstudie)
+
+**Leitung:** Prof. Dr. med. Kristian Barlinn
+
+[Publikationen auf PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Barlinn+K&sort=date)
+
+*Geeignet für klinische Promotionen mit Schlaganfall-Schwerpunkt — Mitarbeit an laufenden Multicenter-RCTs möglich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-barlinn",
+            contact="Prof. Dr. med. Kristian Barlinn (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="AG Huttner-Vaid — Neurale Regeneration (Neurologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""**Decoding the Neurogenic Blueprint** — integriert vergleichende Entwicklungsbiologie, adulte Neurogenese und regenerative Biologie zu einem einheitlichen Konzept.
+
+## Forschungsfokus
+- Zerebrovaskuläre Erkrankungen, insbesondere Schlaganfall
+- Endogene Reparatur­mechanismen, die noch nicht für vollständige Erholung ausreichen
+- Konservierte regulatorische Netzwerke neuraler Stamm-/Vorläuferzellen
+- **Ziel:** therapeutische Strategien für Neuroregeneration
+
+## Modellsysteme
+Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus entwicklungs- und evolutionsbiologischer Perspektive.
+
+*Englisch-sprachiges Lab. Geeignet für anspruchsvolle experimentelle Promotionen an der Schnittstelle Entwicklungsbiologie / Stammzellforschung / Neurologie.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/ag-huttner-vaid",
+            contact="AG Huttner-Vaid (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="AG Pütz — Ischämischer Schlaganfall (Neurologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinische und bildgebende Forschung zum **ischämischen Schlaganfall**. Schwerpunkt: was bestimmt das Therapie-Ansprechen und Outcome.
+
+## Forschungsthemen
+- Systemische Lysetherapie und endovaskuläre Therapie
+- Pathophysiologische Vorgänge, die zu Schlaganfällen führen
+
+## Aktive Projekte (Auswahl)
+- Bildgebende Parameter bei akuter **A.-basilaris-Thrombose** (BASICS/VERITAS-Studien)
+- Einfluss peri-interventioneller **Intubationsnarkose** auf Outcome nach Thrombektomie
+- Prävalenz **tiefer Beinvenenthrombose** bei ischämischem Schlaganfall mit Rechts-Links-Shunt
+- Lambl'sche Exkreszenzen bei akutem Hirninfarkt
+- **Obstruktives Schlafapnoe-Screening** an der Neurovaskulären Untersuchungs­einheit
+
+**Leitung:** Prof. Dr. med. Volker Pütz, FESO
+
+*Sehr gut für klinisch-bildgebende Promotionen — Anbindung an internationale Studiengruppen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-puetz",
+            contact="Prof. Dr. med. Volker Pütz (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="AG Siepmann — Translationale Schlaganfall-Forschung (Neurologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinische und translationale Forschung zu zerebrovaskulären Erkrankungen, mit Schwerpunkt **akuter ischämischer Schlaganfall**.
+
+## Schlüssel-Forschungsbereiche
+- **Modulating Outcomes in Thrombectomy:** neuroprotektive Targets gegen Reperfusionsschäden, Effekt der systemischen Thrombolyse vor Thrombektomie
+- **Sekundärprävention:** verstärkte Plättchen­hemmung, Lipid-Senkung, Lifestyle-Strategien
+- **Humane Pharmakologie-Modelle:** Mikrozirkulation, sympathische Funktion, vaskuläre Reaktivität, endotheliale Funktion
+- **Heart-Brain Axis:** bidirektionale Interaktion zwischen Herz- und Hirn-Ereignissen, kardiale Schlaganfall­ursachen, autonome Funktion
+
+**Leitung:** Prof. Dr. med. Timo Siepmann, FAHA, FESO
+
+*International orientiert (englischsprachige Arbeit möglich), translationaler Stil. Geeignet für klinische bis humanphysiologische Promotionen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-siepmann",
+            contact="Prof. Dr. med. Timo Siepmann (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="Interdisziplinäres Schlaflabor (Neurologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinisches Schlaflabor mit Tagesklinik — schlafmedizinische Diagnostik und Therapie aller Schlafstörungen.
+
+## Forschungsthemen
+- Schlafstörungen als eigenständige Erkrankung **und** im Rahmen anderer Erkrankungen (internistisch, neurologisch, psychiatrisch)
+- Zusammenhänge zwischen gestörtem Schlaf und:
+  - Herz-Kreislauf-Erkrankungen (Herzinfarkt, Schlaganfall)
+  - Neurodegeneration (Demenz, Parkinson)
+  - Stoffwechselerkrankungen (Adipositas, Diabetes)
+- Diagnostik und Behandlung in der **Neurologischen Schlafambulanz**
+
+## Format
+DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und multimodaler Diagnostik (Polysomnographie etc.).
+
+*Gut für klinisch-statistische Promotionen mit Schlafmedizin-Schwerpunkt — viele Berührungspunkte zu Innerer Medizin und Psychiatrie.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/schlafmedizin/interdisziplinaeres-schlaflabor",
+            contact="Schlaflabor / Neurologie-Sekretariat (0351 458-0)",
+        ),
+        dict(
+            title="AG eHealth & Analytics — MS-Forschung (Neurologie UKD Dresden)",
+            thesis_type="statistical",
+            description="""Forschungsgruppe am **Zentrum für klinische Neurowissenschaften (ZKN)** mit Schwerpunkt MS und digital unterstütztes Patient:innen-/Krankheits­management.
+
+## Tätigkeiten
+- Digitale Werkzeuge zur Verlaufs- und Therapiemessung bei Multipler Sklerose
+- Planung und Auswertung klinischer und non-klinischer Studien
+- **Elaborierte statistische und psychometrische Verfahren**
+
+**Ansprechpartner:** Prof. Dr. med. Tjalf Ziemssen
+
+[Website eHealth & Analytics](https://zkn.uniklinikum-dresden.de/zkn/masc/ehealth)
+
+*Sehr gut für Promotionen mit Daten-Analyse-Schwerpunkt — Schnittstelle Statistik, MS-Klinik und Digital Health.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neuroimmunologie/multiple-sklerose-forschung",
+            contact="Prof. Dr. med. Tjalf Ziemssen (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="Schwerpunkt Neurodegeneration — Parkinson & Demenz (Neurologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Bündelt zwei AGs für die Erforschung neurodegenerativer Erkrankungen.
+
+## AG Parkinson-Forschung (Prof. Falkenburger)
+- Zell- und Tiermodelle, neue molekulare Behandlungsziele
+- **Seed-Amplifikationstests** zur Messung der Lewy-Pathologie in Biomaterialien (z.B. Liquor)
+- Beobachtungs- und Interventionsstudien an Patient:innen
+- **Digitale Biomarker** für Klinik und Forschung
+
+## AG Neurodegenerative Demenzen
+- Untersuchung der Pathomechanismen
+- Anbindung an klinische Studien
+
+**Ansprechpartner:** Prof. Dr. med. Björn Falkenburger
+
+*Spektrum von experimenteller Promotion (Tiermodelle, Biomarker) bis zu klinischen Studien. Sehr stark mit dem **Universitäts-ParkinsonCentrum Dresden** verzahnt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurodegeneration",
+            contact="Prof. Dr. med. Björn Falkenburger (Neurologie-Sekretariat)",
+        ),
+        dict(
+            title="Autonomes und neuroendokrines Funktionslabor (Neurologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Spezialisiertes Funktionslabor mit eigenständigem Doktoranden-Programm.
+
+## Aktive Projekte
+- **Autonome Störungen** bei extrapyramidalen Erkrankungen
+- **Pathophysiologie von Pupillenstörungen** bei verschiedenen neurologischen Erkrankungen
+
+**Hinweis der Klinik:** „Im Labor besteht die Möglichkeit, wissenschaftliche Untersuchungen für eine medizinische Doktorarbeit durchzuführen. Bitte aktuell nach momentanen Projekten nachfragen!"
+
+**Ansprechpartner:** Prof. Dr. med. T. Ziemssen
+
+[Labor-Homepage (ZKN)](https://zkn.uniklinikum-dresden.de/zkn/anf)
+
+*Klein, fokussiert, mit explizit ausgesprochener Bereitschaft, Doktorarbeiten zu betreuen — gute erste Adresse für eine Anfrage.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neuroimmunologie/autonomes-und-neuroendokrines-funktionslabor",
+            contact="Prof. Dr. med. Tjalf Ziemssen (Neurologie-Sekretariat)",
+        ),
+    ],
+    "psy": [
+        dict(
+            title="Forschungsbereich Affektive Erkrankungen (Psychiatrie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Großer Forschungsbereich rund um affektive Störungen (Depression, bipolare Erkrankungen) — von Grundlagen bis Versorgung.
+
+## Sieben Sub-AGs unter einem Dach
+- **Bipolare Störungen** (Leitung Prof. M. Bauer, PD Dr. P. Ritter)
+- **Digitale Phänotypisierung** affektiver Störungen (Dr. V. Ludwig, Prof. M. Bauer) — Smartphone- und Sensor-basierte Verlaufsmessung
+- **Entwicklungsverläufe affektiver und psychotischer Symptome** — DevTraP-Lab (PD Dr. E. Mennigen)
+- **Klinische Psychopharmakologie** (Prof. M. Bauer, PD Dr. P. Ritter)
+- **Präzisionspsychiatrie** (PD Pavol Mikolas, PhD)
+- **Suizidforschung** (Prof. U. Lewitzka)
+- **Translationale Chronopsychiatrie** (PD Dr. P. Ritter)
+
+**Bereichsleitung:** Prof. Dr. med. Dr. rer. nat. Michael Bauer
+
+*Geeignet, wenn du eine klinische, datengetriebene oder digitale Promotion in der Psychiatrie suchst — das Spektrum reicht von Patient:innen-Outcomes bis zu Smartphone-basierter Phänotypisierung.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-affektive-stoerungen",
+            contact="Prof. Dr. med. Dr. rer. nat. Michael Bauer · psy-Sekretariat",
+        ),
+        dict(
+            title="AG Dynamische Gehirnzustände und Bildgebung (Psychiatrie UKD Dresden)",
+            thesis_type="experimental",
+            description="""AG innerhalb der Sektion Systemische Neurowissenschaften, eng mit der Fakultät Psychologie und dem **Neuroimaging Center (NIC)** der TU Dresden verbunden.
+
+## Forschungsfokus
+- Hirnzustände im Kontext von **Emotionen, kognitiver Kontrolle und Sucht**
+- Wie sich Gehirnzustände auf Zeitskalen von Sekunden bis Jahren ändern
+- Entwicklung besserer Bildgebungs-Methoden (Reproduzierbarkeit, Spezifität)
+- **Machine Learning** zur Vorhersage-Optimierung
+
+**Infrastruktur:** NIC der TUD + Zentrum für Hochleistungsrechnen (ZIH)
+
+**Leitung:** Michael Marxen, PhD
+
+[Mehr auf der TUD-Gruppen-Seite](https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/brain-dynamics-group)
+
+*Geeignet, wenn dich fMRT, Machine Learning für Bildgebung und/oder Sucht-/Emotionsforschung reizen — methodisch anspruchsvoll, technische Vorkenntnisse helfen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/dynamische-gehirnzustaende-und-bildgebungsmethoden",
+            contact="Michael Marxen, PhD (Kontakt über AG-Seite)",
+        ),
+        dict(
+            title="Forschungsbereich Neurobiologie psychischer Störungen (Psychiatrie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Experimentelle Erforschung der neurobiologischen Grundlagen psychiatrischer Erkrankungen — wie genetische Risikofaktoren und Umwelteinflüsse die Gehirnentwicklung formen.
+
+## Methodenvielfalt
+- Etablierte **Tiermodelle** und neuromodulatorische Verfahren
+- Verhaltensforschung, Molekularbiologie, Biochemie, Immunologie
+- **Bildgebung (MRT)**, Pharmakotherapie, Elektrophysiologie
+- Translation: präklinische Befunde ↔ humanmedizinische Daten
+- Eigene **Labore für Neurobioanalytik** + Bioprobenaufbereitung mit dem Studienzentrum
+
+**Schwerpunkt:** präventive und krankheits­modifizierende Interventionen identifizieren
+
+**Leitung:** PD Dr. Nadine Bernhardt, PhD
+
+*Klassische experimentelle Promotion — Wet Lab + Tiermodelle + Bildgebung. Mehrere Monate Vollzeit-Labor erforderlich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-neurobiologie-psychischer-stoerungen",
+            contact="PD Dr. Nadine Bernhardt, PhD (Kontakt über AG-Seite)",
+        ),
+        dict(
+            title="AG Psychiatrische Epidemiologie und Verlaufsforschung (Psychiatrie UKD Dresden)",
+            thesis_type="statistical",
+            description="""Drei Themen unter einem Dach: Früherkennung, Evidenzbasierung, innovative Versorgungsansätze.
+
+## Forschungsachsen
+- **(A) Früherkennung:** Entstehungsprozesse psychischer Störungen bei jungen Menschen — Veränderungen in Risiko- und Frühphasen erkennen, schwere Verläufe verhindern
+- **(B) Evidenzbasierung:** Diagnostik- und Behandlungsleitlinien, Entscheidungsprozesse
+- **(C) Versorgungsinnovation:** neuartige Versorgungs­ansätze in der Psychiatrie
+
+## Methoden
+- Quantitative und qualitative Epidemiologie
+- **Langzeitbeobachtung** inkl. Smartphone-basiertem Monitoring
+- Bildgebung, qualitative Erhebungstechniken
+- **KI-basierte Analyseansätze**
+
+**Leitung:** Prof. Dr. med. Andrea Pfennig
+
+*Sehr gut für statistisch-epidemiologische Promotionen — etablierte Längsschnitt-Daten, eng verzahnt mit anderen psy-AGs am UKD.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-psychiatrische-epidemiologie-und-verlaufsforschung-1",
+            contact="Prof. Dr. med. Andrea Pfennig (Sekretariat psy)",
+        ),
+        dict(
+            title="AG Klinische Suchtforschung (Psychiatrie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Untersucht klinisch relevante Fragen rund um **stoffgebundene Suchterkrankungen** — Alkohol und Stimulanzien im Fokus.
+
+## Schwerpunkte
+- Multimodale Forschungsmethoden zu Alkohol- und Methamphetamin-Abhängigkeit
+- Klinische und soziodemografische Wirkfaktoren multimodaler Behandlungs­konzepte
+- Regionale Besonderheiten Sachsens (hohe Raten methamphetamin- und alkohol­abhängiger Menschen)
+- Internationale Vernetzung in als führend eingestuften Forschungsprojekten
+
+**Leitung:** Prof. Dr. med. habil. Maximilian Pilhatsch + PD Dr. med. Dr. rer. medic. habil. Johannes Petzold
+
+*Geeignet, wenn dich Suchtmedizin als klinisches Forschungsfeld interessiert — sowohl Outcome- als auch Therapie-Forschung möglich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-suchterkrankungen",
+            contact="Prof. Dr. M. Pilhatsch / PD Dr. J. Petzold (psy-Sekretariat)",
+        ),
+        dict(
+            title="AG Translationale Suchtforschung (Psychiatrie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Analysiert **neurobiologische, psychologische und pharmakologische** Prozesse hinter dem Gebrauch psychoaktiver Substanzen. Ziel: Grundlagenforschung + Klinik zusammenführen.
+
+## Methodischer Kern
+- **Humanlaborstudien** mit computergesteuerter Alkoholinfusion (teils als klinische Prüfungen nach AMG)
+- Präzises Steuern von Alkoholkonsum unter sicheren Bedingungen, um Medikamenten­wirkung auf Trinkverhalten zu prüfen
+- Schnelle Translation präklinischer Befunde an den Menschen
+
+## Aktuelle Themen
+- Pharmakologische Therapieansätze gegen Alkoholabhängigkeit
+- **Cannabis und Fahrsicherheit** — Kooperation mit der TUD-Professur für Kraftfahrzeugtechnik (THC-Einfluss auf kognitive + fahrtechnische Leistung)
+
+**Leitung:** Dr. med. Maik Spreer
+
+*Spannend für experimentell-translationale Promotionen — Studienteilnahme an realen Pharmastudien möglich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/translationale-suchtforschung",
+            contact="Dr. med. Maik Spreer (psy-Sekretariat)",
+        ),
+        dict(
+            title="Forschungsbereich Systemische Neurowissenschaften (Psychiatrie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Verbindet **kognitive und computationale Neurowissenschaften** mit klinischer Forschung — Schwerpunkt: Mechanismen hinter Suchterkrankungen und transdiagnostischen Defiziten.
+
+## Forschungsfragen
+- Exekutive Funktionen, motivationale, Lern- und Entscheidungsprozesse
+- Funktion neuronaler Systeme (z.B. Belohnungssystem) per **fMRT** während Aufgaben (z.B. Delay-Discounting)
+- Struktur-Funktions-Zusammenhänge per **strukturelles MRT**
+- Neuromodulatoren (Dopamin, Serotonin) per **PET** + Kombination mit fMRT
+- Transdiagnostischer Ansatz über Suchterkrankungen hinaus
+
+## Methoden
+fMRT, sMRT, PET, computationale Modellierung, Verhaltensparadigmen
+
+**Leitung:** Prof. Dr. med. Michael N. Smolka
+
+[TUD-NIC-Sektion](https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/sesyn)
+
+*Anspruchsvolle bildgebungs- und modellierungs­basierte Promotion. Methodisches Interesse an MRT/PET hilfreich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/systemische-neurowissenschaften",
+            contact="Prof. Dr. med. Michael N. Smolka (psy-Sekretariat)",
+        ),
+        dict(
+            title="AG Verlauf psychischer Störungen in Transitionsphasen (Psychiatrie UKD Dresden)",
+            thesis_type="statistical",
+            description="""Interdisziplinäre AG zur **epidemiologischen Verlaufsuntersuchung** psychischer Störungen in wichtigen Lebensübergängen.
+
+## Drei Transitionsphasen im Fokus
+- **(A) Übergang zur Elternschaft** — peripartale Psychiatrie, Schwangerschaft & Wochenbett
+- **(B) Adoleszenz → Erwachsenenalter**
+- **(C) Psychische Veränderungen bei schwerer Krankheit**
+
+## Methodik
+- Längsschnitt-, Kohorten- und Bevölkerungs­studien
+- Multi-methodaler Ansatz: individuelle, familiäre, Umwelt-Faktoren
+- Entwicklung innovativer diagnostischer Instrumente
+- Integration in die Spezialsprechstunden der Klinik
+
+**Leitung:** Prof. Dr. rer. nat. habil. Julia Martini
+
+*Geeignet für epidemiologisch-statistische Promotionen mit Lebensphasen-Bezug. Pro­motionen mit peripartal-psychiatrischem Schwerpunkt besonders gefragt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/verlauf-psychischer-stoerungen-in-transitionsphasen",
+            contact="Prof. Dr. Julia Martini (psy-Sekretariat)",
+        ),
+        dict(
+            title="Klinisches Studienzentrum für psychische Erkrankungen (Psychiatrie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Bündelt **alle klinischen Studienaktivitäten** der Psychiatrie nach CTR (EU 536/2014) und MDR (EU 2017/745). Enge Verzahnung mit der AG Klinische Psychopharmakologie.
+
+## Schwerpunkte aktiver Studien
+- Unipolare Depression
+- Bipolare Störungen
+- Therapieresistente Verläufe
+- Suchterkrankungen
+- ADHS im Erwachsenenalter
+
+## Aktuelle Lage
+Vier industrie­geförderte Studienprojekte laufen, weitere in Planung. Multidisziplinäres Team mit Studien­assistenz und regulatorischer Expertise.
+
+**Leitung:** PD Dr. med. habil. Philipp Ritter (stellv. Prof. Dr. Dr. Michael Bauer)
+
+*Geeignet, wenn du klinische Forschung im Industriestudien-Setup kennenlernen willst — auch Mitarbeit ohne eigene Doktorarbeit möglich (HiWi/Studienassistenz).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/studienzentrum",
+            contact="PD Dr. med. habil. Philipp Ritter (Studienzentrum psy)",
+        ),
+        dict(
+            title="AG Psychiatrische Versorgungsforschung (Psychiatrie UKD Dresden)",
+            thesis_type="statistical",
+            description="""Untersucht, wie die Versorgung psychisch erkrankter Menschen **unter Alltagsbedingungen** tatsächlich funktioniert.
+
+## Schwerpunkte
+- Evaluation definierter Versorgungs­strukturen und -maßnahmen
+- Qualität der Versorgung spezifischer Populationen
+- Entwicklung von Dokumentations- und Erhebungs­instrumenten
+- Aktuell: Versorgung von Menschen mit intellektueller Beeinträchtigung; Vorbereitung der **Psychiatrieberichterstattung Sachsen**
+
+## Format der Mitarbeit
+Drittmittel-finanzierte Studien sowie Master­arbeiten/Promotionen über Eigenmittel oder kleinere Eigeninitiativen.
+
+**Leitung:** apl. Prof. Dr. sc. hum. habil. Matthias Schützwohl, Dipl.-Psych.
+
+*Geeignet für klinisch-statistische Promotionen mit Public-Health-/Versorgungs-Bezug. Auch Master- und Diplomarbeiten möglich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-psychiatrische-versorgungsforschung-1",
+            contact="apl. Prof. Dr. Matthias Schützwohl (psy-Sekretariat)",
+        ),
+    ],
     "mk1": [
         dict(
             title="AG AI in Cancer (MK1 UKD Dresden)",
