@@ -28,6 +28,142 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "klinchem": [
+        dict(
+            title="IKL — Forschungsmission & 8 Disziplinen (Klin. Chemie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Das **Institut für Klinische Chemie und Laboratoriumsmedizin (IKL)** ist gleichzeitig Zentrallabor des Klinikums und Forschungsinstitut mit **9 Forschungsgruppen und 3 Core Facilities**.
+
+## Forschungsmission
+Regulation immunologischer, hämatologischer und onkologischer Prozesse über das Zusammenspiel von **Inflammation, Metabolismus, Hypoxie und Epigenetik**.
+
+## Acht miteinander verbundene Disziplinen
+- **Krankheitsbezogen:** Immunologie, Hämatologie, Onkologie, Neurologie
+- **Mechanistisch:** Inflammation, Metabolismus, Epigenetik, Hypoxie
+
+## Beispiel-Themen
+- Leukozytenrekrutierung
+- Aktivierung der angeborenen Immunität
+- Regulation der Blutbildung
+- Zellmetabolismus von Immunzellen + Hypoxie-induzierte Prozesse
+- Neurochemische Analyse endokriner Erkrankungen
+- Epigenetische Mechanismen
+
+*Einer der breitesten Forschungs-Hubs am UKD. Promotionen über alle Felder möglich — siehe Einzelgruppen unten.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research",
+            contact="IKL-Sekretariat (über die Klinik-Seite)",
+        ),
+        dict(
+            title="Pauling Lab — Computational Integrative Omics in Biomedicine (IKL UKD Dresden)",
+            thesis_type="statistical",
+            description="""Computational-Biology-Gruppe für **integrative Omics-Analyse** in der Biomedizin.
+
+## Schwerpunkte
+- Multi-Omics-Integration (Genomik, Transkriptomik, Proteomik, Metabolomik)
+- Computer-gestützte Auswertung biomedizinischer Daten
+- Schnittstelle zu klinischer Forschung
+
+**Leitung:** Dr. Josch K. Pauling
+
+*Geeignet für Promotionen mit Daten-/Informatik-Hintergrund. Programmierkenntnisse stark empfohlen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/pauling-lab-computational-integrative-omics-in-biomedicine",
+            contact="Dr. Josch K. Pauling (IKL-Sekretariat)",
+        ),
+        dict(
+            title="Menschikowski Lab — Epigenetik in der Onkologie (IKL UKD Dresden)",
+            thesis_type="experimental",
+            description="""Forschungsgruppe zur **epigenetischen Regulation** mit Schwerpunkt onkologische Mechanismen.
+
+## Themen
+- Epigenetische Modifikationen in Tumoren
+- Diagnostische Marker basierend auf epigenetischen Veränderungen
+- Translationale Anbindung an die klinische Labordiagnostik
+
+**Leitung:** Prof. Dr. Mario Menschikowski
+
+*Klassische experimentelle Promotion in einer etablierten Lab-Gruppe.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/epigenetik",
+            contact="Prof. Dr. Mario Menschikowski (IKL-Sekretariat)",
+        ),
+        dict(
+            title="Mirtschink Lab — Zellmetabolismus und Hypoxie (IKL UKD Dresden)",
+            thesis_type="experimental",
+            description="""Forschung zu Zellmetabolismus, insbesondere **Hypoxie-induzierte Prozesse** in inflammatorisch-metabolischen Erkrankungen.
+
+## Forschungsfelder
+- Metabolische Anpassung von Immunzellen
+- HIF-Pfade und Hypoxie-Signaling
+- Wechselspiel von Inflammation und Stoffwechsel
+
+**Leitung:** Prof. Dr. Peter Mirtschink
+
+*Wet Lab, methodisch stark in Zellkultur und Molekularbiologie.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/zellmetabolismus",
+            contact="Prof. Dr. Peter Mirtschink (IKL-Sekretariat)",
+        ),
+        dict(
+            title="Core Facility: Experimental Mass Spectrometry (EMS) (IKL UKD Dresden)",
+            thesis_type="experimental",
+            description="""Zentrale **Massenspektrometrie-Einheit** für Small-Molecule-Analytik und Metabolite-Profiling.
+
+## Leistungsspektrum
+- **LC-MS/MS** für kleine Moleküle in biologischen Matrizes
+- Metabolite Profiling (Steroidhormone, Neurotransmitter, etc.)
+- Methodenentwicklung für Forschungsfragen aller IKL-Gruppen + externer Kliniken
+
+**Leitung:** Dr. Mirko Peitzsch
+
+*Geeignet für Promotionen mit analytisch-methodischem Fokus oder Anwendungs­projekten, die spezifische Metabolite quantifizieren wollen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/EMS",
+            contact="Dr. Mirko Peitzsch (IKL-Sekretariat)",
+        ),
+        dict(
+            title="Core Facility: NMR-Spektroskopie — Metabolomik (IKL UKD Dresden)",
+            thesis_type="experimental",
+            description="""Zentrale Einheit für **High-throughput Metabolomik und Lipidomik** mittels Kernspinresonanz.
+
+## Anwendung
+- Screening von Körperflüssigkeiten und semi-soliden Geweben
+- Metabolomik- und Lipidomik-Profile
+- Integration mit anderen Omics-Methoden
+
+**Leitung:** Dr. Alexander Funk
+
+*Methodisch interessant für Promotionen mit chemisch-analytischem oder biostatistischem Hintergrund.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/copy_of_EMS",
+            contact="Dr. Alexander Funk (IKL-Sekretariat)",
+        ),
+        dict(
+            title="Core Facility: Dresden Integrated Liquid Biobank (DILB) (IKL UKD Dresden)",
+            thesis_type="experimental",
+            description="""**Bioprobenbank für Flüssigproben**, betrieben innerhalb der BioBank Dresden (BBD) am Nationalen Centrum für Tumorerkrankungen (NCT/UCC).
+
+## Trägerstruktur
+Gemeinsam getragen von UKD, der Carl Gustav Carus Fakultät der TU Dresden und dem **Deutschen Krebsforschungszentrum (DKFZ)**.
+
+## Wert
+Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für reproduzierbare Biomarker-Forschung.
+
+*Promotionen, die definierte Patient:innen-Kohorten und qualitätsgesicherte Bioproben brauchen, finden hier die zentrale Ressource.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/dresden-integrated-liquid-biobank-dilb",
+            contact="DILB / IKL-Sekretariat",
+        ),
+        dict(
+            title="IKL-PhD-Programme: DIGS-ILS + DSCS (Klin. Chemie UKD Dresden)",
+            thesis_type="other",
+            description="""Das IKL nimmt Doktorand:innen über **zwei strukturierte Programme** auf — getrennt nach Karriere-Track.
+
+## Basic & translational scientists
+**DIGS-ILS** — Dresden International Graduate School for Interdisciplinary Life Sciences. Themen-Ausschreibungen unter [digs-bb.de](https://www.digs-bb.de/join/phd-positions/open-projects)
+
+## Clinician & Medical Scientists
+**DSCS** — Dresden School of Clinical Science. Promotionsphase im Carus Promotionskolleg.
+
+*Wenn dich IKL-Forschung interessiert, ist der Einstieg über diese strukturierten Programme der saubere Weg. Beide Programme arbeiten kompetitiv mit Ausschreibungen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/join-us",
+            contact="DIGS-ILS / DSCS-Programmkoordination (IKL-Sekretariat)",
+        ),
+    ],
     "kik": [
         dict(
             title="Experimentelle Hämatologie (Kinderklinik UKD Dresden)",
