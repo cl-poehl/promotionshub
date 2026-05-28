@@ -46,7 +46,7 @@ function Header() {
           <Link href="/promotionen/neu">Stelle einreichen</Link>
           <Link
             href="/anmelden"
-            className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-[var(--accent-foreground)] no-underline hover:no-underline"
+            className="rounded-md bg-sky-700 px-3 py-1.5 text-white no-underline hover:no-underline"
           >
             Anmelden
           </Link>

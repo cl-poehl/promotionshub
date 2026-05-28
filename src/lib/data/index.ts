@@ -88,9 +88,10 @@ export async function searchListings(filters: ListingFilters): Promise<ListingWi
   }
 
   const supabase = await createSupabaseServerClient();
+  // Inner join, damit `eq` auf verschachtelte Spalten (Stadt, Universität) filtert.
   let query = supabase
     .from("listings")
-    .select("*, group:groups(*, university:universities(*))")
+    .select("*, group:groups!inner(*, university:universities!inner(*))")
     .eq("status", "published")
     .order("promoted", { ascending: false }) // promoted listings first IN SUCHE ONLY (§5)
     .order("posted_at", { ascending: false });
@@ -98,6 +99,8 @@ export async function searchListings(filters: ListingFilters): Promise<ListingWi
   if (filters.thesisType) query = query.eq("thesis_type", filters.thesisType);
   if (filters.funding) query = query.eq("funding", filters.funding);
   if (filters.search) query = query.ilike("title", `%${filters.search}%`);
+  if (filters.universityId) query = query.eq("group.university.id", filters.universityId);
+  if (filters.city) query = query.eq("group.university.city", filters.city);
 
   const { data, error } = await query;
   if (error) throw error;

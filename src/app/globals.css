@@ -22,15 +22,22 @@
   --font-sans: var(--font-sans);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
 
-a {
-  color: var(--accent);
-}
-a:hover {
-  text-decoration: underline;
+  /*
+   * Globale Link-Farbe mit niedriger Spezifität (0,0,1).
+   * Jede Tailwind-Textfarbe-Utility wie `text-white` (Spezifität 0,1,0)
+   * gewinnt automatisch. So bleiben buttonartige Links lesbar.
+   */
+  a {
+    color: var(--accent);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
