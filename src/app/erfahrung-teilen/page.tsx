@@ -197,7 +197,7 @@ export default async function ErfahrungTeilenPage({
         <button
           type="submit"
           disabled={DATA_MODE === "mock" || !isAuthed}
-          className="rounded-md bg-sky-700 px-5 py-2.5 text-white font-medium disabled:opacity-50"
+          className="rounded-md bg-indigo-700 hover:bg-indigo-800 px-5 py-2.5 text-white font-medium disabled:opacity-50"
         >
           Bericht absenden
         </button>
@@ -223,7 +223,7 @@ function LikertRow({ name, label, prompt }: { name: string; label: string; promp
         {[1, 2, 3, 4, 5].map((v) => (
           <label key={v} className="text-sm">
             <input type="radio" name={name} value={v} required className="sr-only peer" />
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded border border-[var(--border)] bg-white cursor-pointer peer-checked:bg-sky-700 peer-checked:text-white peer-checked:border-[var(--accent)]">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded border border-[var(--border)] bg-white cursor-pointer peer-checked:bg-indigo-700 peer-checked:text-white peer-checked:border-[var(--accent)]">
               {v}
             </span>
           </label>

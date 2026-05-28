@@ -72,7 +72,7 @@ export default async function AnmeldenPage({
         <button
           type="submit"
           disabled={DATA_MODE === "mock"}
-          className="w-full rounded-md bg-sky-700 px-4 py-2 text-white font-medium disabled:opacity-50"
+          className="w-full rounded-md bg-indigo-700 hover:bg-indigo-800 px-4 py-2 text-white font-medium disabled:opacity-50"
         >
           Anmelde-Link senden
         </button>

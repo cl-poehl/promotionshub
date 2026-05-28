@@ -31,6 +31,7 @@ export const DATA_MODE: "supabase" | "mock" = supabaseConfigured() ? "supabase" 
 export type ListingFilters = {
   universityId?: string;
   city?: string;
+  specialty?: string;
   thesisType?: ThesisType;
   funding?: FundingType;
   search?: string;
@@ -52,6 +53,57 @@ export async function listUniversities(): Promise<University[]> {
     .order("name");
   if (error) throw error;
   return data ?? [];
+}
+
+/**
+ * Liefert alle Filter-Optionen, die für die Suche relevant sind —
+ * abgeleitet aus dem aktuellen Datenbestand. UI kann damit Filter
+ * ausblenden, die nur eine Option hätten.
+ */
+export async function getFilterOptions(): Promise<{
+  universities: University[];
+  cities: string[];
+  specialties: string[];
+  fundings: FundingType[];
+}> {
+  if (DATA_MODE === "mock") {
+    const cities = Array.from(new Set(mockUniversities.map((u) => u.city))).sort((a, b) => a.localeCompare(b, "de"));
+    const specialties = Array.from(new Set(mockGroups.map((g) => g.specialty).filter(Boolean) as string[])).sort((a, b) => a.localeCompare(b, "de"));
+    const fundings = Array.from(new Set(mockListings.filter((l) => l.status === "published").map((l) => l.funding))) as FundingType[];
+    return { universities: mockUniversities, cities, specialties, fundings };
+  }
+
+  const supabase = await createSupabaseServerClient();
+
+  // Wir laden die universities + die groups (nur die mit published listings)
+  // + die distinct funding-Werte über einen Aggregat-Aufruf. Drei kleine Queries.
+  const [{ data: unis }, { data: usedGroupsRaw }, { data: usedFundingsRaw }] = await Promise.all([
+    supabase.from("universities").select("*").order("name"),
+    supabase
+      .from("groups")
+      .select("id, specialty, university_id, universities!inner(city), listings!inner(id, status)")
+      .eq("listings.status", "published"),
+    supabase.from("listings").select("funding").eq("status", "published"),
+  ]);
+
+  const usedUniIds = new Set<string>();
+  const cities = new Set<string>();
+  const specialties = new Set<string>();
+  for (const g of (usedGroupsRaw ?? []) as any[]) {
+    if (g.specialty) specialties.add(g.specialty);
+    if (g.university_id) usedUniIds.add(g.university_id);
+    if (g.universities?.city) cities.add(g.universities.city);
+  }
+
+  const universities = (unis ?? []).filter((u) => usedUniIds.has(u.id));
+  const fundings = Array.from(new Set((usedFundingsRaw ?? []).map((r: any) => r.funding))) as FundingType[];
+
+  return {
+    universities,
+    cities: Array.from(cities).sort((a, b) => a.localeCompare(b, "de")),
+    specialties: Array.from(specialties).sort((a, b) => a.localeCompare(b, "de")),
+    fundings,
+  };
 }
 
 export async function listGroups(): Promise<Group[]> {
@@ -101,6 +153,7 @@ export async function searchListings(filters: ListingFilters): Promise<ListingWi
   if (filters.search) query = query.ilike("title", `%${filters.search}%`);
   if (filters.universityId) query = query.eq("group.university.id", filters.universityId);
   if (filters.city) query = query.eq("group.university.city", filters.city);
+  if (filters.specialty) query = query.eq("group.specialty", filters.specialty);
 
   const { data, error } = await query;
   if (error) throw error;
@@ -134,6 +187,23 @@ export async function getListing(id: string): Promise<ListingWithRelations | nul
   if (!data) return null;
   const row = data as any;
   return { ...row, group: row.group ?? null, university: row.group?.university ?? null };
+}
+
+export async function getStats(): Promise<{ listings: number; groups: number; universities: number }> {
+  if (DATA_MODE === "mock") {
+    return { listings: mockListings.length, groups: mockGroups.length, universities: mockUniversities.length };
+  }
+  const supabase = await createSupabaseServerClient();
+  const [{ count: listings }, { count: groups }, { count: universities }] = await Promise.all([
+    supabase.from("listings").select("*", { count: "exact", head: true }).eq("status", "published"),
+    supabase.from("groups").select("*", { count: "exact", head: true }),
+    supabase.from("universities").select("*", { count: "exact", head: true }),
+  ]);
+  return {
+    listings: listings ?? 0,
+    groups: groups ?? 0,
+    universities: universities ?? 0,
+  };
 }
 
 export type GroupAggregate = {

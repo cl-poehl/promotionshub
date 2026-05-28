@@ -132,7 +132,7 @@ export default async function MeldungPage({
 
         <button
           type="submit"
-          className="rounded-md bg-sky-700 px-5 py-2.5 text-white font-medium"
+          className="rounded-md bg-indigo-700 hover:bg-indigo-800 px-5 py-2.5 text-white font-medium"
         >
           Meldung einreichen
         </button>

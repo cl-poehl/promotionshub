@@ -1,43 +1,111 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Design Tokens
+   ============================================================ */
 :root {
-  --background: #fafaf9;
-  --foreground: #1c1917;
-  --muted: #78716c;
-  --border: #e7e5e4;
-  --accent: #0369a1;
-  --accent-foreground: #ffffff;
-  --warning-bg: #fef3c7;
-  --warning-border: #fcd34d;
-  --warning-text: #78350f;
+  /* Neutrale Skala (stone), aber etwas wärmer für Editorial-Feel */
+  --bg: #fafaf9;            /* stone-50 */
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f5f5f4;     /* stone-100 */
+  --fg: #0c0a09;            /* stone-950 */
+  --fg-muted: #57534e;      /* stone-600 */
+  --fg-subtle: #78716c;     /* stone-500 */
+  --border: #e7e5e4;        /* stone-200 */
+  --border-strong: #d6d3d1; /* stone-300 */
+
+  /* Primär: confident indigo */
+  --primary: #4338ca;       /* indigo-700 */
+  --primary-hover: #3730a3; /* indigo-800 */
+  --primary-foreground: #ffffff;
+  --primary-subtle: #eef2ff; /* indigo-50 */
+
+  /* Akzent: emerald für positiv/health */
+  --accent: #047857;        /* emerald-700 */
+  --accent-subtle: #ecfdf5; /* emerald-50 */
+
+  /* Warnungen */
+  --warning: #b45309;        /* amber-700 */
+  --warning-subtle: #fffbeb;  /* amber-50 */
+  --warning-border: #fde68a;  /* amber-200 */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-muted: var(--fg-muted);
   --color-border: var(--border);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
 }
 
+/* ============================================================
+   Base
+   ============================================================ */
 @layer base {
-  body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  /*
-   * Globale Link-Farbe mit niedriger Spezifität (0,0,1).
-   * Jede Tailwind-Textfarbe-Utility wie `text-white` (Spezifität 0,1,0)
-   * gewinnt automatisch. So bleiben buttonartige Links lesbar.
-   */
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Display-Headlines: tighter, bolder. */
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+    letter-spacing: -0.022em;
+  }
+
+  /* Inline-Links bleiben dezent unterstrichen-bei-Hover, kein Default-Underline.
+     Niedrige Spezifität (0,0,1), damit Tailwind-Utilities IMMER gewinnen. */
   a {
-    color: var(--accent);
+    color: var(--primary);
+    text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
   }
+
+  /* Selektion mit Brand-Farbe */
+  ::selection {
+    background: var(--primary);
+    color: white;
+  }
+}
+
+/* ============================================================
+   Utility-Hilfen, die in mehreren Komponenten benutzt werden
+   ============================================================ */
+.bg-hero-gradient {
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgb(67 56 202 / 0.07), transparent 70%),
+    radial-gradient(40% 35% at 90% 20%, rgb(4 120 87 / 0.06), transparent 70%),
+    var(--bg);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(0 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(0 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 80%);
+}
+
+/* Karten-Hover mit subtilem Lift + Border-Highlight */
+.card-hover {
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.04),
+    0 8px 24px -8px rgb(0 0 0 / 0.08);
 }

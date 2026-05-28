@@ -1,6 +1,20 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import {
+  ArrowLeft,
+  BarChart3,
+  Bookmark,
+  Building2,
+  Calendar,
+  Clock,
+  ExternalLink,
+  HeartPulse,
+  Mail,
+  MapPin,
+  Microscope,
+} from "lucide-react";
 
+import { Markdown } from "@/components/Markdown";
 import { getGroupAggregate, getListing } from "@/lib/data";
 import { FUNDING_TYPES, MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE, THESIS_TYPES } from "@/lib/config";
 import { AggregateRating } from "@/components/AggregateRating";
@@ -8,6 +22,33 @@ import { AggregateRating } from "@/components/AggregateRating";
 function labelOf<T extends { key: string; label: string }>(list: readonly T[], key: string) {
   return list.find((x) => x.key === key)?.label ?? key;
 }
+
+const THESIS_META = {
+  experimental: {
+    icon: Microscope,
+    label: "Experimentell",
+    bar: "bg-violet-500",
+    chip: "bg-violet-50 text-violet-800 ring-violet-200",
+  },
+  clinical: {
+    icon: HeartPulse,
+    label: "Klinisch",
+    bar: "bg-sky-500",
+    chip: "bg-sky-50 text-sky-800 ring-sky-200",
+  },
+  statistical: {
+    icon: BarChart3,
+    label: "Statistisch",
+    bar: "bg-emerald-500",
+    chip: "bg-emerald-50 text-emerald-800 ring-emerald-200",
+  },
+  other: {
+    icon: Bookmark,
+    label: "Sonstige",
+    bar: "bg-stone-400",
+    chip: "bg-stone-100 text-stone-700 ring-stone-200",
+  },
+} as const;
 
 export default async function ListingDetailPage({
   params,
@@ -19,117 +60,258 @@ export default async function ListingDetailPage({
   if (!listing) notFound();
 
   const groupAggregate = listing.group ? await getGroupAggregate(listing.group.id) : null;
+  const aboveThreshold =
+    !!groupAggregate && groupAggregate.reviewCount >= MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE;
+
+  const thesisMeta = THESIS_META[listing.thesis_type];
+  const ThesisIcon = thesisMeta.icon;
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-10">
-      <Link href="/promotionen" className="text-sm">
-        ← Zurück zur Stellenliste
+    <div className="mx-auto max-w-5xl px-6 pt-8 pb-16">
+      <Link
+        href="/promotionen"
+        className="inline-flex items-center gap-1.5 text-sm text-stone-600 no-underline hover:text-stone-900 hover:underline underline-offset-4"
+      >
+        <ArrowLeft className="h-3.5 w-3.5" />
+        Alle Promotionsstellen
       </Link>
 
-      <header className="mt-4">
-        {listing.promoted && (
-          <span className="inline-block rounded bg-amber-100 px-2 py-0.5 text-xs text-amber-900">
-            Hervorgehoben
-          </span>
-        )}
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight">{listing.title}</h1>
-        <p className="mt-2 text-[var(--muted)]">
-          {listing.group?.name}
-          {listing.university ? ` · ${listing.university.name}` : ""}
-          {listing.university?.city ? ` · ${listing.university.city}` : ""}
-        </p>
+      {/* Hero mit farbigem Typ-Streifen */}
+      <header className="mt-6 relative">
+        <span
+          aria-hidden
+          className={`absolute -left-3 top-1 bottom-1 w-1 rounded-full ${thesisMeta.bar}`}
+        />
+        <div className="pl-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-semibold ring-1 ${thesisMeta.chip}`}
+            >
+              <ThesisIcon className="h-3.5 w-3.5" strokeWidth={2} />
+              {thesisMeta.label}
+            </span>
+            {listing.promoted && (
+              <span className="inline-flex items-center rounded-md bg-amber-100 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-amber-900 ring-1 ring-amber-200">
+                Hervorgehoben
+              </span>
+            )}
+          </div>
+          <h1 className="mt-3 font-display text-3xl sm:text-4xl font-semibold leading-tight tracking-tight text-stone-950">
+            {listing.title}
+          </h1>
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-stone-600">
+            <span className="inline-flex items-center gap-1.5">
+              <Building2 className="h-4 w-4 text-stone-400" />
+              {listing.group ? (
+                <Link
+                  href={`/gruppen/${listing.group.id}`}
+                  className="hover:underline underline-offset-4 no-underline"
+                >
+                  {listing.group.name}
+                </Link>
+              ) : "—"}
+            </span>
+            {listing.university?.name && (
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin className="h-4 w-4 text-stone-400" />
+                {listing.university.name}
+                {listing.university.city ? `, ${listing.university.city}` : ""}
+              </span>
+            )}
+          </div>
+        </div>
       </header>
 
+      {/* Quick-Facts-Streifen — nur Facts mit Aussagekraft */}
+      <QuickFacts
+        funding={listing.funding}
+        duration={listing.expected_duration_months}
+        postedAt={listing.posted_at}
+        applicationContact={listing.application_contact}
+      />
+
       <div className="mt-8 grid gap-8 md:grid-cols-3">
-        <div className="md:col-span-2 space-y-6">
-          <section>
-            <h2 className="text-lg font-semibold">Beschreibung</h2>
-            <p className="mt-2 whitespace-pre-line text-[var(--foreground)]">
-              {listing.description}
-            </p>
-          </section>
+        {/* Hauptspalte */}
+        <div className="md:col-span-2 space-y-8">
+          <article className="prose-listing">
+            <Markdown>{listing.description}</Markdown>
+          </article>
 
-          <section>
-            <h2 className="text-lg font-semibold">Eckdaten</h2>
-            <dl className="mt-2 grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <dt className="text-[var(--muted)]">Thesis-Typ</dt>
-                <dd>{labelOf(THESIS_TYPES, listing.thesis_type)}</dd>
-              </div>
-              <div>
-                <dt className="text-[var(--muted)]">Förderung</dt>
-                <dd>{labelOf(FUNDING_TYPES, listing.funding)}</dd>
-              </div>
-              {listing.expected_duration_months && (
-                <div>
-                  <dt className="text-[var(--muted)]">Erwartete Dauer</dt>
-                  <dd>{listing.expected_duration_months} Monate</dd>
-                </div>
-              )}
-              <div>
-                <dt className="text-[var(--muted)]">Eingestellt</dt>
-                <dd>{new Date(listing.posted_at).toLocaleDateString("de-DE")}</dd>
-              </div>
-            </dl>
-          </section>
-
-          {listing.application_contact && (
-            <section>
-              <h2 className="text-lg font-semibold">Bewerbung</h2>
-              <p className="mt-2 text-sm">
-                Kontakt:{" "}
-                <a href={`mailto:${listing.application_contact}`}>
-                  {listing.application_contact}
-                </a>
-              </p>
-              <p className="mt-2 text-xs text-[var(--muted)]">
-                Hinweis: PromotionsHub ist nicht Teil des Bewerbungsverfahrens.
-                Wende dich direkt an die angegebene Kontaktadresse.
-              </p>
-            </section>
-          )}
+          <ApplyBlock
+            contact={listing.application_contact}
+            sourceUrl={extractSourceUrlFromDescription(listing.description)}
+            groupPublicUrl={listing.group?.public_url ?? null}
+          />
         </div>
 
-        <aside className="md:col-span-1">
-          <div className="rounded-lg border border-[var(--border)] bg-white p-5">
-            <h3 className="text-sm font-semibold">Erfahrungen mit dieser Gruppe</h3>
-            <p className="mt-1 text-xs text-[var(--muted)]">
-              Bewertungen werden{" "}
-              <strong>unabhängig davon</strong> angezeigt, ob diese Stelle hervorgehoben ist.
+        {/* Sidebar */}
+        <aside className="md:col-span-1 space-y-4">
+          <div className="rounded-xl border border-stone-200 bg-white p-5">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-stone-500">
+              Erfahrungen
+            </h3>
+            <p className="mt-1 text-xs text-stone-500">
+              Bewertungen sind <strong>unabhängig</strong> davon, ob diese
+              Stelle hervorgehoben ist.
             </p>
+
             <div className="mt-4">
-              {groupAggregate && groupAggregate.reviewCount >= MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE ? (
+              {aboveThreshold && groupAggregate ? (
                 <AggregateRating aggregate={groupAggregate} />
               ) : (
-                <p className="text-sm text-[var(--muted)]">
-                  Noch nicht genug verifizierte Erfahrungsberichte
-                  ({groupAggregate?.reviewCount ?? 0}/{MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE}).
+                <p className="text-sm text-stone-600">
+                  Noch nicht genug verifizierte Erfahrungen
+                  {" "}({groupAggregate?.reviewCount ?? 0}/{MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE}).
                 </p>
               )}
             </div>
 
-            {listing.group && (
+            <div className="mt-5 space-y-2">
+              {listing.group && (
+                <Link
+                  href={`/gruppen/${listing.group.id}`}
+                  className="inline-flex items-center gap-1 text-sm font-medium text-indigo-700 no-underline hover:underline underline-offset-4"
+                >
+                  Gruppen-Profil ansehen
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </Link>
+              )}
               <Link
-                href={`/gruppen/${listing.group.id}`}
-                className="mt-4 inline-block text-sm"
+                href={
+                  listing.group
+                    ? `/erfahrung-teilen?gruppe=${listing.group.id}`
+                    : "/erfahrung-teilen"
+                }
+                className="block w-full rounded-md border border-indigo-700 px-3 py-2 text-center text-sm font-medium text-indigo-700 transition hover:bg-indigo-50 no-underline hover:no-underline"
               >
-                Gruppen-Profil ansehen →
+                Eigene Erfahrung teilen
               </Link>
-            )}
-
-            <Link
-              href={
-                listing.group
-                  ? `/erfahrung-teilen?gruppe=${listing.group.id}`
-                  : "/erfahrung-teilen"
-              }
-              className="mt-4 block rounded-md border border-[var(--accent)] px-3 py-2 text-center text-sm text-[var(--accent)] no-underline hover:no-underline"
-            >
-              Eigene Erfahrung teilen
-            </Link>
+            </div>
           </div>
         </aside>
       </div>
     </div>
+  );
+}
+
+/**
+ * Bewerbungs-Block: extrahiert eine erste E-Mail, ansonsten zeigt den
+ * Kontakt-Freitext, ansonsten verlinkt die Quell-Seite als Action.
+ */
+function ApplyBlock({
+  contact,
+  sourceUrl,
+  groupPublicUrl,
+}: {
+  contact: string | null;
+  sourceUrl: string | null;
+  groupPublicUrl: string | null;
+}) {
+  const targetUrl = sourceUrl ?? groupPublicUrl;
+  const email = contact?.match(/[\w.+-]+@[\w-]+\.[\w.-]+/)?.[0] ?? null;
+
+  if (!contact && !targetUrl) return null;
+
+  return (
+    <section className="rounded-xl border border-indigo-200 bg-indigo-50/60 p-5">
+      <h2 className="font-display text-base font-semibold text-stone-950 flex items-center gap-2">
+        <Mail className="h-4 w-4 text-indigo-700" />
+        Bewerbung
+      </h2>
+      {contact && (
+        <p className="mt-2 text-sm text-stone-700">
+          {email ? (
+            <>
+              <a
+                href={`mailto:${email}`}
+                className="font-medium underline underline-offset-4 text-indigo-700"
+              >
+                {email}
+              </a>
+              {contact.replace(email, "").trim() && (
+                <span className="ml-2 text-stone-600">
+                  {contact.replace(email, "").trim()}
+                </span>
+              )}
+            </>
+          ) : (
+            <span className="font-medium text-stone-800">{contact}</span>
+          )}
+        </p>
+      )}
+      {targetUrl && (
+        <a
+          href={targetUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-indigo-700 px-3.5 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-indigo-800 no-underline hover:no-underline"
+        >
+          Auf der Klinik-Seite öffnen
+          <ExternalLink className="h-3.5 w-3.5" />
+        </a>
+      )}
+      <p className="mt-3 text-xs text-stone-500">
+        PromotionsHub ist nicht Teil des Bewerbungsverfahrens. Wende dich
+        direkt an die angegebene Stelle.
+      </p>
+    </section>
+  );
+}
+
+/** Holt die im Markdown angehängte „Quelle: URL"-Zeile heraus. */
+function extractSourceUrlFromDescription(description: string): string | null {
+  const m = description.match(/Quelle:\s*(https?:\/\/\S+)/);
+  return m ? m[1] : null;
+}
+
+function Fact({ label, value }: { label: string; value: string | number }) {
+  return (
+    <div>
+      <div className="text-xs uppercase tracking-wider text-stone-500">{label}</div>
+      <div className="mt-0.5 text-sm font-medium text-stone-950">{value}</div>
+    </div>
+  );
+}
+
+function QuickFacts({
+  funding,
+  duration,
+  postedAt,
+  applicationContact,
+}: {
+  funding: string;
+  duration: number | null;
+  postedAt: string;
+  applicationContact: string | null;
+}) {
+  const facts: { label: string; value: string }[] = [];
+
+  if (duration) facts.push({ label: "Erwartete Dauer", value: `${duration} Monate` });
+
+  if (funding && funding !== "unknown") {
+    facts.push({ label: "Förderung", value: labelOf(FUNDING_TYPES, funding) });
+  }
+
+  // "Eingestellt" nur zeigen, wenn älter als ~7 Tage — sonst keine Info ("heute")
+  const ageDays = Math.floor((Date.now() - new Date(postedAt).getTime()) / 86_400_000);
+  if (ageDays >= 7) {
+    facts.push({ label: "Eingestellt", value: new Date(postedAt).toLocaleDateString("de-DE") });
+  }
+
+  if (applicationContact) {
+    facts.push({
+      label: "Bewerbung",
+      value: applicationContact.includes("@") ? "per E-Mail" : "direkt",
+    });
+  }
+
+  if (facts.length === 0) return null;
+
+  return (
+    <section className="mt-6 rounded-xl border border-stone-200 bg-white p-4 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+      {facts.map((f) => (
+        <Fact key={f.label} label={f.label} value={f.value} />
+      ))}
+    </section>
   );
 }

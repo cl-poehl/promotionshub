@@ -15,10 +15,10 @@ const ReviewInput = z.object({
     .min(1, "Bitte eine Gruppe auswählen.")
     .pipe(uuidish("Ungültige Gruppe — bitte aus der Liste wählen.")),
   thesis_type: z.enum(["experimental", "clinical", "statistical", "other"], {
-    errorMap: () => ({ message: "Bitte einen Thesis-Typ wählen." }),
+    error: "Bitte einen Thesis-Typ wählen.",
   }),
   year_started: z.coerce
-    .number({ invalid_type_error: "Bitte ein Startjahr wählen." })
+    .number({ error: "Bitte ein Startjahr wählen." })
     .int()
     .min(2000)
     .max(new Date().getFullYear()),
@@ -31,7 +31,7 @@ const ReviewInput = z.object({
   project_delivered: Score,
   would_recommend: Score,
   free_text: z.string().trim().max(3000).optional().or(z.literal("")),
-  truthful: z.literal("on", { errorMap: () => ({ message: "Bitte Bestätigung ankreuzen." }) }),
+  truthful: z.literal("on", { error: "Bitte Bestätigung ankreuzen." }),
 });
 
 export type SubmitReviewResult = { ok: true } | { ok: false; error: string };

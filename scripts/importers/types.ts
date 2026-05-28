@@ -13,6 +13,10 @@ export type ResearchArea = {
   thesis_type: ThesisType;
   funding?: FundingType;
   expected_duration_months?: number;
+  /** Per-AG-Kontakt (Email oder Tel.). Wenn null/undefined, fällt auf Source.applicationContact zurück. */
+  applicationContact?: string | null;
+  /** Per-AG-Quell-URL (z.B. AG-Subpage). Wenn null/undefined, Source.sourceUrl. */
+  sourceUrl?: string | null;
 };
 
 export type ImporterSource = {
