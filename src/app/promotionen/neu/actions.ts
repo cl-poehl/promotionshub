@@ -4,12 +4,13 @@ import { z } from "zod";
 
 import { DATA_MODE } from "@/lib/data";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { uuidish } from "@/lib/validation";
 
 const ListingInput = z.object({
   title: z.string().trim().min(10, "Titel zu kurz").max(200),
   description: z.string().trim().min(50, "Beschreibung zu kurz").max(5000),
-  university_id: z.string().uuid().optional().or(z.literal("")),
-  group_id: z.string().uuid().optional().or(z.literal("")),
+  university_id: uuidish().optional().or(z.literal("")),
+  group_id: uuidish().optional().or(z.literal("")),
   new_group_name: z.string().trim().min(2).max(200).optional().or(z.literal("")),
   thesis_type: z.enum(["experimental", "clinical", "statistical", "other"]),
   funding: z.enum(["paid", "stipend", "unpaid", "unknown"]),

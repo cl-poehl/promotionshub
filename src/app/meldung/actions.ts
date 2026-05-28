@@ -4,9 +4,10 @@ import { z } from "zod";
 
 import { DATA_MODE } from "@/lib/data";
 import { createSupabaseServerClient, createSupabaseServiceClient } from "@/lib/supabase/server";
+import { uuidish } from "@/lib/validation";
 
 const ComplaintInput = z.object({
-  target_review_id: z.string().uuid("Ungültige Bericht-ID"),
+  target_review_id: uuidish("Ungültige Bericht-ID"),
   type: z.enum(["factual_dispute", "insult", "other"]),
   claim_text: z.string().trim().min(20, "Bitte beschreibe den Vorwurf konkreter.").max(5000),
   complainant_contact: z.string().trim().min(5).max(300),
