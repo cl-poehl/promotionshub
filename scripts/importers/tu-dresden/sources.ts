@@ -1,6 +1,6 @@
 /**
- * TU-Dresden-Quellen. Generated via build_sources.py.
- * Handgepflegt: mk1, neurologie, psy, vtg, psm.
+ * TU-Dresden-Quellen. Generated.
+ * Handgepflegt: mk1, neurologie, psy, kjp, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -206,36 +206,136 @@ export const tuDresdenSources: ImporterSource[] = [
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp",
     applicationContact: null,
     researchAreas: [
-      { title: "AD(H)S & Konzentrationsprobleme (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Hier finden Sie alle aktuell an unserer Klinik durchgeführten Studien zum Störungsbild Aufmerksamkeitsdefizit-(Hyperaktivitäts-)-Störung. ADHS-Treatment & Konzentrationsprobleme bei Kindern mit körperlichen Erkrankungen Effekte verschiedener Therapieformen auf motorische und attentionale Fertigkeiten sowie Handlungskontrollfunktionen Annähernd die Hälfte der Kinder mit ADHS zeigen Beeinträchtigungen in ihren motorischen Fertigkeiten bzw. weisen eine UEMF auf. Durch ihre Verhaltensauffälligkeiten und motorische Ungeschicklichkeit kann es zum Ausschluss von sozialen Aktivitäten kommen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/ADHS` },
-      { title: "Angewandte Entwicklungsneurowissenschaften (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Der Bereich Angewandte Entwicklungsneurowissenschaften wird von Herrn Prof Dr Stefan Ehrlich geleitet und forscht schwerpunktmäßig zu den Störungsbildern • Anorexia Nervosa (Magersucht) • Schizophrenie • Autismus Bei Patientinnen mit Essstörungen untersuchen wir biologische Faktoren, die die Entstehung und Aufrechterhaltung der Erkrankung beeinflussen. Mit Hilfe der strukturellen und funktionellen Magnetresonanztomografie (fMRT) wird die Aktivierung und Konnektivität des Gehirns bei psychischen Prozessen, wie dem Empfinden von Emotionen und Belohnungen, sowohl bei gesunden Probanden als auch bei Patientinnen, untersucht. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/angewandte-entwicklungsneurowissenschaften` },
-      { title: "Autismus (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Hier finden Sie alle aktuell an unserer Klinik durchgeführten Studien zum Störungsbild Autismus-Spektrum-Störung. EVAS - Early Valid and Reliable Autism Screening Häufig kommt es vor, dass bei Patient*innen, die in spezialisierten Stellen auf Vorliegen einer Autismus-Spektrum-Störung untersucht werden, diese nicht vorliegt, sondern andere psychische oder Entwicklungsstörungen mit einzelnen Symptomen des Autismus. Dies ist einer der Gründe, warum es in Fachambulanzen immer wieder zu langen Wartezeiten für Neuvorstellungstermine kommt. Ziel des EVAS-Projektes ist es, die Zuweisung zu spezialisierten Stellen für die Diagnostik von Autismus-Spektrum-Störungen zu optimieren. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/autismus` },
-      { title: "Computational Neuroscience (KJP UKD Dresden)", thesis_type: "experimental",
-        description: `The Computational Machinery of Cognition (CMC) lab is based at the Medical Faculty of TU Dresden. The overarching research theme of our lab is understanding the computational machinery of cognitive processes. Cognition spans a wide range of functions (from perception to planning), and it is one of the most remarkable capabilities of the brain. In CMC lab we want to understand the computations underlying cognitive processes, and the biophysical machinery that implement these computations. Imagine we go to a restaurant and want to order a dish. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/computational-neuroscience` },
-      { title: "Essstörungen (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Hier finden Sie alle aktuell an unserer Klinik durchgeführten Studien zum Störungsbild Essstörungen. Neurobiologie der Anorexia Nervosa Essstörungen gehören zu den häufigsten psychischen Erkrankungen des Jugendalters. In unserer Arbeitsgruppe liegt der Forschungsschwerpunkt vor allem in der Untersuchung der bisher wenig erforschten biologischen Einflussfaktoren auf die Entstehung und Aufrechterhaltung von Anorexia nervosa (Magersucht). Wir nutzen strukturelle und funktionelle Magnetresonanz-tomografie (fMRT), um die Aktivierung des Gehirns bei psychischen Prozessen, wie das Empfinden von Emotionen und Belohnungen oder beim Lernen, aufzudecken. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/essstoerungen` },
-      { title: "Experimentelle Entwicklungspsychopathologie (KJP UKD Dresden)", thesis_type: "statistical",
-        description: `Der Forschungsbereich Experimentelle Entwicklungspsychopathologie unter Leitung des Klinikdirektors Prof. Dr. Veit Roessner befasst sich mit vielfältigen Themen des Störungsspektrums • Ticstörungen • Aufmerksamkeitsdefizit-/Hyperaktivitätsstörungen • Zwangsstörungen • Autismusspektrumsstörungen Neben Verhaltensdaten werden auch neurophysiologische und biologische Parameter von betroffenen und gesunden Kindern und Jugendlichen betrachtet und verglichen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/experimentelle-entwicklungspsychopathologie` },
-      { title: "Forschungsschwerpunkte (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `In der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie der Medizinischen Fakultät an der Technischen Universität Dresden wird hauptsächlich zu folgenden Störungsbildern geforscht, für die auch die hervorragende klinische Expertise besteht: • Tic-Störungen/Tourette Syndrom • Zwangsstörungen • Aufmerksamkeitsdefizit- (Hyperaktivitäts-) Störung • Autismus-Spektrums-Störungen • Essstörungen • Schizophrenie Für alle Themenschwerpunkte verfolgen wir einen möglichst breiten, multimethodischen Ansatz mit dem Ziel eines besseren Verständnisses der Prozesse „Vom Gen zum Verhalten“. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung` },
-      { title: "Forschungsgruppen (KJP UKD Dresden)", thesis_type: "experimental",
-        description: `Experimentelle Entwicklungspsychopathologie Kognitive Neurophysiologie Angewandte Entwicklungsneurowissenschaften Computational Neuroscience Sekretariat Forschung Ansprechpartner für alle Fragen zu unserer Forschungsabteilung. [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen` },
-      { title: "Kognitive Neurophysiologie (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Der Bereich Kognitive Neurophysiologie wird von Prof Dr Christian Beste geleitet. Der Forschungsschwerpunkt liegt auf der Untersuchung von • Handlungskontrolle • Aufmerksamkeit • Multitasking Im Rahmen unserer Forschung soll untersucht werden, inwiefern Veränderungen dieser Fähigkeiten zu Störungsbildern wie • Tourette-Syndrom • Zwangsstörungen • AD(H)SS?\\") • Autismus beitragen. Mögliche Veränderungen dieser Fähigkeiten werden bei betroffenen Kindern sowie bei gesunden Kontrollprobanden gleichen Alters mittels • Hirnstrommessung (Elektroenzephalographie/EEG) • Magnetresonanztomographie (MRT) • transkranieller Magnetstimulation (TMS) untersucht. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/kognitive-neurophysiologie` },
-      { title: "Publikationen (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `2026 Publikationen der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie des Jahres 2026. 2025 Publikationen der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie des Jahres 2025. 2024 Publikationen der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie des Jahres 2024. 2023 Publikationen der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie des Jahres 2023. 2022 Publikationen der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie des Jahres 2022. 2021 Publikationen der Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie des Jahres 2021. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/publikationen` },
-      { title: "Schizophrenie (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Hier finden Sie alle aktuell an unserer Klinik durchgeführten Studien zum Störungsbild Schizophrenie. Von Schizophrenie sind annähernd 0,7 Prozent der Weltbevölkerung betroffen (Saha et al., 2005) und die Erblichkeit der Erkrankung wird auf 80 Prozent geschätzt (Gottesman and Gould, 2003). Veränderungen im Dopamin- und Glutamatsystem konnten bereits mit der Entstehung und dem Verlauf der Krankheit in Verbindung gebracht werden. Bisher sind allerdings die exakten biochemischen Abberationen unbekannt. Ein solches Wissen ist jedoch von grundlegender Bedeutung für die Entwicklung entsprechender Pharmazeutika und einer gezielten Pharmakotherapie. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/schizophrenie` },
-      { title: "Stellenangebote Forschung (KJP UKD Dresden)", thesis_type: "other",
-        description: `Bundesfreiwilligendienstleistende*r im Bereich Forschung Forschungskoordinator/Forschungskoordinatorin (m/w/d) [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/karriere/stellenangebote-forschung` },
-      { title: "Seelische Gesundheit (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Auf dieser Seite finden Sie einen Überblick zu unseren aktuellen klinischen Studien Die Dresdner Hochschulmedizin ist führend in der Therapie komplexer, besonders schwerer oder seltener Erkrankungen. Durch die enge Verzahnung von Forschung, Lehre und Krankenversorgung können innovative Therapiemethoden und neueste Erkenntnisse aus der Forschung schnell und auf direktem Weg in die Behandlung unserer Patienten eingebracht werden. Um neue Behandlungsformen, Therapien oder Medikamente auf ihre Wirksamkeit und Verträglichkeit zu prüfen, sind klinische Studien erforderlich. Die Dresdner Hochschulmedizin führt zahlreiche solcher klinischen Studien durch. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/studien-fuer-erwachsene-teilnehmer` },
-      { title: "Tic- und Zwangsstörungen (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Hier finden Sie alle aktuell an unserer Klinik durchgeführten Studien zum Störungsbild Tic- und Zwangsstörungen. CiAO Stress - Auswirkungen chronischen Stresses auf AD(H)S und Zwangsstörungen Das Projekt untersucht, wie chronischer Stress die Anpassungsfähigkeit von Kindern und Jugendlichen mit und ohne psychische Störungen beeinflusst – insbesondere hinsichtlich der Symptome bei AD(H)S oder Zwangsstörungen. Ein Stressmanagement-Training soll helfen, Stress zu verringern und die Anpassungsfähigkeit zu verbessern. Um die Effekte zu untersuchen, wird Cortisol in Haarproben und die Leistung in verschiedenen Aufgaben gemessen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/tic-und-zwangsstudien` },
-      { title: "Weitere Projekte (KJP UKD Dresden)", thesis_type: "clinical",
-        description: `Hier finden Sie weitere Projekte zu verschiedenen Forschungsbereichen unserer Klinik. PED-Onko-SAX Seit dem 01.01.2026 entsteht im Rahmen des Projekts Ped-Onko-SAX eine digitale Plattform, die krebskranken Kinder und ihre Familien eine optimierte Versorgung ermöglichen soll. Unsere Klinik für Kinder- und Jugendpsychiatrie und -psychotherapie wird mit der Forschungsgruppe Kognitive Neurophysiologie unter Prof. Christian Beste dazu beitragen, die psychologischen Module zu entwickeln, neuropsychologische Parameter zu erfassen und den Transfer von Forschungsergebnissen in die klinische Praxis über telemedizinische Lösungen sicherzustellen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-projekte/weitere_projekte` },
+      { title: "Forschungsbereich Experimentelle Entwicklungspsychopathologie (KJP UKD Dresden)", thesis_type: "experimental",
+        description: `Breit aufgestellter Forschungsbereich des Klinik­direktors Prof. Dr. Veit Roessner — Schwerpunkt auf experimenteller Untersuchung kinder­psychiatrischer Störungsbilder.
+
+## Störungs-Schwerpunkte
+- **Ticstörungen**
+- AD(H)S
+- Zwangsstörungen
+- Autismus­spektrumsstörungen
+
+## Methoden-Mix
+- **EEG** (Neurophysiologie)
+- Neuroimmunologie
+- Psychopathologie
+- **Strukturelle und funktionelle MRT**
+- Genetik
+
+## Anbindung
+Teil von **Mental Health Dresden-Leipzig** — regionales Netzwerk TUD/Uni Leipzig/RKI mit Kohortenstudien, internationalen Kooperationen (transCampus®).
+
+**Leitung:** Prof. Dr. med. Veit Roessner
+
+*Sehr breite methodische Vielfalt — ideal für Promotionen, die EEG mit Bildgebung oder Genetik verbinden möchten.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/experimentelle-entwicklungspsychopathologie`,
+        applicationContact: "Prof. Dr. med. Veit Roessner (KJP-Sekretariat)" },
+      { title: "AG Kognitive Neurophysiologie — actionlab (KJP UKD Dresden)", thesis_type: "experimental",
+        description: `**Cognitive Neuroscience Lab** mit eigenständigem externen Auftritt ([actionlab.de](http://www.actionlab.de/)).
+
+## Forschungsfokus
+- Handlungskontrolle
+- Aufmerksamkeit
+- Multitasking
+
+## Klinischer Bezug
+Wie tragen Veränderungen dieser kognitiven Funktionen zu folgenden Störungen bei:
+- **Tourette-Syndrom**
+- Zwangsstörungen
+- AD(H)S
+- Autismus
+
+## Methodik
+Hirnstruktur- und Hirnfunktionsbildgebung (EEG, MRT), Verhaltens­paradigmen — bei betroffenen Kindern und gesunden Kontrollen gleichen Alters.
+
+**Leitung:** Prof. Dr. Christian Beste
+
+*Top-Adresse für EEG-/MRT-basierte Promotionen in der Kinderpsychiatrie. Internationaler Output.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/kognitive-neurophysiologie`,
+        applicationContact: "Prof. Dr. Christian Beste (Kontakt über AG-Seite)" },
+      { title: "AG Angewandte Entwicklungsneurowissenschaften — Ehrlich Lab (KJP UKD Dresden)", thesis_type: "experimental",
+        description: `**Ehrlich Translational Developmental Neuroscience Lab** — Forschung zu kinder- und jugendpsychiatrischen Störungsbildern mit Bildgebung und Biomarkern.
+
+## Hauptkrankheitsbilder
+- **Anorexia Nervosa (Magersucht)**
+- **Schizophrenie**
+- **Autismus**
+
+## Methodik
+- Strukturelle und funktionelle MRT
+- Aktivierung und Konnektivität in emotional-/belohnungs­bezogenen Prozessen
+- Sowohl Patient:innen als auch gesunde Probanden
+
+**Leitung:** Prof. Dr. Stefan Ehrlich
+
+[Lab-Website](https://sites.google.com/site/ehrlichtransdenlab/)
+
+*Sehr stark vernetzte Bildgebungs-AG mit Fokus auf Essstörungen — passt zur Mental Health Dresden-Leipzig-Infrastruktur.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/angewandte-entwicklungsneurowissenschaften`,
+        applicationContact: "Prof. Dr. Stefan Ehrlich (Kontakt über AG-Seite)" },
+      { title: "Klinische Studien AD(H)S & Konzentrationsprobleme (KJP UKD Dresden)", thesis_type: "clinical",
+        description: `Bündel laufender klinischer Studien zum Störungsbild **Aufmerksamkeitsdefizit-(Hyperaktivitäts-)Störung** bei Kindern und Jugendlichen.
+
+## Aktuelle Forschungslinien
+- ADHS-Treatment & Konzentrationsprobleme bei Kindern mit körperlichen Erkrankungen
+- **Effekte verschiedener Therapieformen** auf motorische und attentionale Fertigkeiten + Handlungskontroll­funktionen
+- Untersuchungen zur UEMF (Umschriebene Entwicklungsstörung motorischer Funktionen) bei ~50% der ADHS-Kinder
+
+*Klinische Promotion mit Patient:innen-Kontakt und Verhaltens­testungen. Methodisch nah an der AG Kognitive Neurophysiologie (Beste).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/ad-h-s-konzentrationsprobleme`,
+        applicationContact: "KJP Studien­koordination (Sekretariat KJP)" },
+      { title: "Klinische Studien Autismus-Spektrum-Störung (KJP UKD Dresden)", thesis_type: "clinical",
+        description: `Aktuelle Studien zum Störungsbild **Autismus-Spektrum-Störung**.
+
+## Beispiel-Projekt: EVAS
+**Early Valid and Reliable Autism Screening** — Verbesserung der Zuweisung zu spezialisierten Fachambulanzen. Ziel: Wartezeiten verkürzen und Fehldiagnosen reduzieren, indem Symptome andere psychischer/Entwicklungs­störungen sauberer abgegrenzt werden.
+
+*Klinische Promotion mit Versorgungs-/Diagnostik-Bezug. Studienleitung KJP, in Verbindung mit der AG Ehrlich (Ehrlich Lab forscht u.a. zur Autismus-Bildgebung).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/autismus`,
+        applicationContact: "KJP Studien­koordination" },
+      { title: "Klinische Studien Essstörungen — Anorexia Nervosa (KJP UKD Dresden)", thesis_type: "experimental",
+        description: `Schwerpunktforschung zu **Anorexia nervosa** — eine der häufigsten psychischen Erkrankungen des Jugendalters.
+
+## Forschungsschwerpunkt: Neurobiologie
+- Bisher wenig erforschte biologische Einfluss­faktoren auf Entstehung und Aufrechterhaltung
+- **Strukturelle und funktionelle MRT**: Aktivierung des Gehirns bei Emotionen und Belohnungsverarbeitung
+- Vergleich Patient:innen vs. gesunde Kontrollen
+
+**Anbindung:** AG Ehrlich (Angewandte Entwicklungs­neurowissenschaften).
+
+*Sehr starke Bildgebungs-Promotion mit Patient:innen-Kontakt. Eines der nationalen Zentren für die neurobiologische Erforschung von Essstörungen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/essstoerungen`,
+        applicationContact: "KJP Studien­koordination / AG Ehrlich" },
+      { title: "Klinische Studien Schizophrenie (KJP UKD Dresden)", thesis_type: "experimental",
+        description: `Studien zur **Schizophrenie** in Kindes-/Jugendalter und Frühverlauf.
+
+## Hintergrund + Fokus
+- ~0,7 % der Weltbevölkerung betroffen, Erblichkeit ~80 % (Gottesman & Gould 2003)
+- Veränderungen im **Dopamin- und Glutamatsystem** bekannt — exakte biochemische Aberrationen aber noch unklar
+- Wissen darüber ist Grundlage für **neue Pharmakotherapien**
+
+**Anbindung:** AG Ehrlich (Bildgebung), Mental Health Dresden-Leipzig.
+
+*Geeignet für Promotionen mit translational-pharmakologischem Interesse — Schnittstelle zur Erwachsenen-Psychiatrie der UKD.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/schizophrenie`,
+        applicationContact: "KJP Studien­koordination / AG Ehrlich" },
+      { title: "Klinische Studien Tic- und Zwangsstörungen (KJP UKD Dresden)", thesis_type: "clinical",
+        description: `Aktuelle klinische Studien zu Tic-Störungen, Tourette-Syndrom und Zwangsstörungen.
+
+## Beispiel-Projekt: CiAO Stress
+**Auswirkungen chronischen Stresses auf AD(H)S und Zwangsstörungen.** Untersucht wie chronischer Stress die Anpassungsfähigkeit von Kindern und Jugendlichen mit und ohne psychische Störungen beeinflusst — insbesondere Symptomausprägung bei AD(H)S/Zwangsstörungen. Inkl. Stressmanagement-Training und **Cortisol-Messungen in Haarproben**.
+
+**Anbindung:** AG Roessner (Exp. Entwicklungs­psychopathologie), AG Beste (Kognitive Neurophysiologie).
+
+*Klinische bis experimentelle Promotion (Cortisol-Analytik, kognitive Testungen). Sehr gute Wahl, wenn dich Tics/Zwänge bei Kindern fachlich reizen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/tic-und-zwangsstoerungen`,
+        applicationContact: "KJP Studien­koordination / AG Roessner" },
+      { title: "AG Computational Neuroscience — CMC Lab (KJP UKD Dresden)", thesis_type: "experimental",
+        description: `**Computational Machinery of Cognition (CMC) Lab** an der Medizinischen Fakultät der TU Dresden.
+
+## Forschungsfrage
+Welche Berechnungen liegen kognitiven Prozessen zugrunde — und welche **biophysikalische Maschinerie** im Gehirn implementiert sie?
+
+## Methodischer Ansatz
+- **Normative + biophysikalische Modellierung**
+- Test der Modelle mit neuralen und Verhaltensdaten (in Kollaboration mit Experimentier-Labs)
+- Entwicklung von **Machine-Learning-Methoden** für multi- und cross-scale-Analyse neuraler Daten
+- Schwerpunkt: perzeptuelle Entscheidungen
+
+*Englisch-sprachiges Lab, Comp-Science-/Mathe-Hintergrund hilfreich. Geeignet für rechnerisch-modellierungs­starke Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/computational-neuroscience`,
+        applicationContact: "CMC Lab (Kontakt über AG-Seite)" },
     ],
   },
   {

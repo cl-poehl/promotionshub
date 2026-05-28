@@ -28,6 +28,174 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "kjp": [
+        dict(
+            title="Forschungsbereich Experimentelle Entwicklungspsychopathologie (KJP UKD Dresden)",
+            thesis_type="experimental",
+            description="""Breit aufgestellter Forschungsbereich des Klinik­direktors Prof. Dr. Veit Roessner — Schwerpunkt auf experimenteller Untersuchung kinder­psychiatrischer Störungsbilder.
+
+## Störungs-Schwerpunkte
+- **Ticstörungen**
+- AD(H)S
+- Zwangsstörungen
+- Autismus­spektrumsstörungen
+
+## Methoden-Mix
+- **EEG** (Neurophysiologie)
+- Neuroimmunologie
+- Psychopathologie
+- **Strukturelle und funktionelle MRT**
+- Genetik
+
+## Anbindung
+Teil von **Mental Health Dresden-Leipzig** — regionales Netzwerk TUD/Uni Leipzig/RKI mit Kohortenstudien, internationalen Kooperationen (transCampus®).
+
+**Leitung:** Prof. Dr. med. Veit Roessner
+
+*Sehr breite methodische Vielfalt — ideal für Promotionen, die EEG mit Bildgebung oder Genetik verbinden möchten.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/experimentelle-entwicklungspsychopathologie",
+            contact="Prof. Dr. med. Veit Roessner (KJP-Sekretariat)",
+        ),
+        dict(
+            title="AG Kognitive Neurophysiologie — actionlab (KJP UKD Dresden)",
+            thesis_type="experimental",
+            description="""**Cognitive Neuroscience Lab** mit eigenständigem externen Auftritt ([actionlab.de](http://www.actionlab.de/)).
+
+## Forschungsfokus
+- Handlungskontrolle
+- Aufmerksamkeit
+- Multitasking
+
+## Klinischer Bezug
+Wie tragen Veränderungen dieser kognitiven Funktionen zu folgenden Störungen bei:
+- **Tourette-Syndrom**
+- Zwangsstörungen
+- AD(H)S
+- Autismus
+
+## Methodik
+Hirnstruktur- und Hirnfunktionsbildgebung (EEG, MRT), Verhaltens­paradigmen — bei betroffenen Kindern und gesunden Kontrollen gleichen Alters.
+
+**Leitung:** Prof. Dr. Christian Beste
+
+*Top-Adresse für EEG-/MRT-basierte Promotionen in der Kinderpsychiatrie. Internationaler Output.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/kognitive-neurophysiologie",
+            contact="Prof. Dr. Christian Beste (Kontakt über AG-Seite)",
+        ),
+        dict(
+            title="AG Angewandte Entwicklungsneurowissenschaften — Ehrlich Lab (KJP UKD Dresden)",
+            thesis_type="experimental",
+            description="""**Ehrlich Translational Developmental Neuroscience Lab** — Forschung zu kinder- und jugendpsychiatrischen Störungsbildern mit Bildgebung und Biomarkern.
+
+## Hauptkrankheitsbilder
+- **Anorexia Nervosa (Magersucht)**
+- **Schizophrenie**
+- **Autismus**
+
+## Methodik
+- Strukturelle und funktionelle MRT
+- Aktivierung und Konnektivität in emotional-/belohnungs­bezogenen Prozessen
+- Sowohl Patient:innen als auch gesunde Probanden
+
+**Leitung:** Prof. Dr. Stefan Ehrlich
+
+[Lab-Website](https://sites.google.com/site/ehrlichtransdenlab/)
+
+*Sehr stark vernetzte Bildgebungs-AG mit Fokus auf Essstörungen — passt zur Mental Health Dresden-Leipzig-Infrastruktur.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/angewandte-entwicklungsneurowissenschaften",
+            contact="Prof. Dr. Stefan Ehrlich (Kontakt über AG-Seite)",
+        ),
+        dict(
+            title="Klinische Studien AD(H)S & Konzentrationsprobleme (KJP UKD Dresden)",
+            thesis_type="clinical",
+            description="""Bündel laufender klinischer Studien zum Störungsbild **Aufmerksamkeitsdefizit-(Hyperaktivitäts-)Störung** bei Kindern und Jugendlichen.
+
+## Aktuelle Forschungslinien
+- ADHS-Treatment & Konzentrationsprobleme bei Kindern mit körperlichen Erkrankungen
+- **Effekte verschiedener Therapieformen** auf motorische und attentionale Fertigkeiten + Handlungskontroll­funktionen
+- Untersuchungen zur UEMF (Umschriebene Entwicklungsstörung motorischer Funktionen) bei ~50% der ADHS-Kinder
+
+*Klinische Promotion mit Patient:innen-Kontakt und Verhaltens­testungen. Methodisch nah an der AG Kognitive Neurophysiologie (Beste).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/ad-h-s-konzentrationsprobleme",
+            contact="KJP Studien­koordination (Sekretariat KJP)",
+        ),
+        dict(
+            title="Klinische Studien Autismus-Spektrum-Störung (KJP UKD Dresden)",
+            thesis_type="clinical",
+            description="""Aktuelle Studien zum Störungsbild **Autismus-Spektrum-Störung**.
+
+## Beispiel-Projekt: EVAS
+**Early Valid and Reliable Autism Screening** — Verbesserung der Zuweisung zu spezialisierten Fachambulanzen. Ziel: Wartezeiten verkürzen und Fehldiagnosen reduzieren, indem Symptome andere psychischer/Entwicklungs­störungen sauberer abgegrenzt werden.
+
+*Klinische Promotion mit Versorgungs-/Diagnostik-Bezug. Studienleitung KJP, in Verbindung mit der AG Ehrlich (Ehrlich Lab forscht u.a. zur Autismus-Bildgebung).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/autismus",
+            contact="KJP Studien­koordination",
+        ),
+        dict(
+            title="Klinische Studien Essstörungen — Anorexia Nervosa (KJP UKD Dresden)",
+            thesis_type="experimental",
+            description="""Schwerpunktforschung zu **Anorexia nervosa** — eine der häufigsten psychischen Erkrankungen des Jugendalters.
+
+## Forschungsschwerpunkt: Neurobiologie
+- Bisher wenig erforschte biologische Einfluss­faktoren auf Entstehung und Aufrechterhaltung
+- **Strukturelle und funktionelle MRT**: Aktivierung des Gehirns bei Emotionen und Belohnungsverarbeitung
+- Vergleich Patient:innen vs. gesunde Kontrollen
+
+**Anbindung:** AG Ehrlich (Angewandte Entwicklungs­neurowissenschaften).
+
+*Sehr starke Bildgebungs-Promotion mit Patient:innen-Kontakt. Eines der nationalen Zentren für die neurobiologische Erforschung von Essstörungen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/essstoerungen",
+            contact="KJP Studien­koordination / AG Ehrlich",
+        ),
+        dict(
+            title="Klinische Studien Schizophrenie (KJP UKD Dresden)",
+            thesis_type="experimental",
+            description="""Studien zur **Schizophrenie** in Kindes-/Jugendalter und Frühverlauf.
+
+## Hintergrund + Fokus
+- ~0,7 % der Weltbevölkerung betroffen, Erblichkeit ~80 % (Gottesman & Gould 2003)
+- Veränderungen im **Dopamin- und Glutamatsystem** bekannt — exakte biochemische Aberrationen aber noch unklar
+- Wissen darüber ist Grundlage für **neue Pharmakotherapien**
+
+**Anbindung:** AG Ehrlich (Bildgebung), Mental Health Dresden-Leipzig.
+
+*Geeignet für Promotionen mit translational-pharmakologischem Interesse — Schnittstelle zur Erwachsenen-Psychiatrie der UKD.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/schizophrenie",
+            contact="KJP Studien­koordination / AG Ehrlich",
+        ),
+        dict(
+            title="Klinische Studien Tic- und Zwangsstörungen (KJP UKD Dresden)",
+            thesis_type="clinical",
+            description="""Aktuelle klinische Studien zu Tic-Störungen, Tourette-Syndrom und Zwangsstörungen.
+
+## Beispiel-Projekt: CiAO Stress
+**Auswirkungen chronischen Stresses auf AD(H)S und Zwangsstörungen.** Untersucht wie chronischer Stress die Anpassungsfähigkeit von Kindern und Jugendlichen mit und ohne psychische Störungen beeinflusst — insbesondere Symptomausprägung bei AD(H)S/Zwangsstörungen. Inkl. Stressmanagement-Training und **Cortisol-Messungen in Haarproben**.
+
+**Anbindung:** AG Roessner (Exp. Entwicklungs­psychopathologie), AG Beste (Kognitive Neurophysiologie).
+
+*Klinische bis experimentelle Promotion (Cortisol-Analytik, kognitive Testungen). Sehr gute Wahl, wenn dich Tics/Zwänge bei Kindern fachlich reizen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/tic-und-zwangsstoerungen",
+            contact="KJP Studien­koordination / AG Roessner",
+        ),
+        dict(
+            title="AG Computational Neuroscience — CMC Lab (KJP UKD Dresden)",
+            thesis_type="experimental",
+            description="""**Computational Machinery of Cognition (CMC) Lab** an der Medizinischen Fakultät der TU Dresden.
+
+## Forschungsfrage
+Welche Berechnungen liegen kognitiven Prozessen zugrunde — und welche **biophysikalische Maschinerie** im Gehirn implementiert sie?
+
+## Methodischer Ansatz
+- **Normative + biophysikalische Modellierung**
+- Test der Modelle mit neuralen und Verhaltensdaten (in Kollaboration mit Experimentier-Labs)
+- Entwicklung von **Machine-Learning-Methoden** für multi- und cross-scale-Analyse neuraler Daten
+- Schwerpunkt: perzeptuelle Entscheidungen
+
+*Englisch-sprachiges Lab, Comp-Science-/Mathe-Hintergrund hilfreich. Geeignet für rechnerisch-modellierungs­starke Promotionen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/computational-neuroscience",
+            contact="CMC Lab (Kontakt über AG-Seite)",
+        ),
+    ],
     "neurologie": [
         dict(
             title="AG Akgün — Neuroimmunologisches Labor (Neurologie UKD Dresden)",
