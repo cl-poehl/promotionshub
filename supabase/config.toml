@@ -1,5 +1,6 @@
 # https://supabase.com/docs/guides/local-development/cli/config
 # Wird von der Supabase-CLI und der GitHub-Integration ausgelesen.
+# Letztes Re-Sync: 2026-05-28 (Bootstrap-Daten gelöscht via Migration 6).
 project_id = "promotionshub"
 
 [api]
