@@ -1,6 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, mk3, neurologie, psy, kjp, kik, vtg, psm.
+ * Handgepflegt: mk1, mk3, neurologie, psy, kjp, kik, klinchem, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -431,32 +431,108 @@ Welche Berechnungen liegen kognitiven Prozessen zugrunde — und welche **biophy
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin",
     applicationContact: null,
     researchAreas: [
-      { title: "Diese Seite existiert leider nicht. (Klin. Chemie UKD Dresden)", thesis_type: "clinical",
-        description: `Entschuldigung, aber die Webseite, die Sie versucht haben zu erreichen, ist hier nicht verfügbar. Bitte benutzen Sie die aufgeführten Links um zu finden, was Sie gesucht haben. Wenn Sie sicher sind, dass Sie die richtige Adresse eingegeben haben, kontaktieren Sie bitte den Verantwortlichen für die Website. Vielen Dank Sie haben eventuell folgendes gesucht: • Klinische Chemie und Laboratoriumsmedizin • Institut für Klinische Chemie und Laboratoriumsmedizin Institut für Klinische Chemie und Laboratoriumsmedizin • Institut für Klinische Chemie und Laboratoriumsmedizin • Gerinnungssprechstunde_2019_Flyer_final.pdf • Gewinnung und Transport von Untersuchungsmaterial.pdf • Klinische Chemie und Lab …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/accessibility-info "Barrierefreiheit"` },
-      { title: "Diese Seite existiert leider nicht. (Klin. Chemie UKD Dresden)", thesis_type: "clinical",
-        description: `Entschuldigung, aber die Webseite, die Sie versucht haben zu erreichen, ist hier nicht verfügbar. Bitte benutzen Sie die aufgeführten Links um zu finden, was Sie gesucht haben. Wenn Sie sicher sind, dass Sie die richtige Adresse eingegeben haben, kontaktieren Sie bitte den Verantwortlichen für die Website. Vielen Dank Sie haben eventuell folgendes gesucht: • Klinische Chemie und Laboratoriumsmedizin • Institut für Klinische Chemie und Laboratoriumsmedizin Institut für Klinische Chemie und Laboratoriumsmedizin • Institut für Klinische Chemie und Laboratoriumsmedizin • Gerinnungssprechstunde_2019_Flyer_final.pdf • Gewinnung und Transport von Untersuchungsmaterial.pdf • Klinische Chemie und Lab …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/sitemap "Übersicht"` },
-      { title: "Diagnostik (Klin. Chemie UKD Dresden)", thesis_type: "clinical",
-        description: `Leistungsverzeichnis Interne Einsender erreichen das Leistungsverzeichnis über den internen elektronischen Leistungskatalog (ixcat) bzw. direkt aus den elektronischen Anforderungsbelegen. Für externe Einsender steht das gemeinsame externe Leistungsverzeichnis über das Medizinische Versorgungszentrum (MVZ) zur Verfügung. Informationen Warngrenzen: Warngrenzen: **Informationen zu Präanalytik und Nachmeldeoptionen **: Gewinnung und Transport von Untersuchungsmaterial[](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/resolveuid/ea4a917d0e174f7e8024215ed941d218) SARSTEDT Abnahmesysteme UK Dresden Sammelurin-Gewinnung: Pa …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/diagnostik` },
-      { title: "Disciplines and Fields (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `The Interdisciplinary research done at the Institute for Clinical Chemistry and Laboratory Medicine (IKL) mainly focuses on 8 interconnected disciplines and fields. To perform investigations in the disciplines of Immunology, Hematology, Oncology, and Neurology, we leverage our experience in the fields of Inflammation, Metabolism, Epigenetics, and Hypoxia. Our research projects deal with the process of leukocyte recruitment, the activation of innate immunity cells , the regulation of blood formation, cell metabolism, especially of immune cells, and hypoxia-induced processes in various inflammatory-metabolic diseases. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/disciplines` },
-      { title: "Facilities (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `The Institute for Clinical Chemistry and Laboratory Medicine (IKL) hosts 3 research facilities that centrally provide expertise in sample screening and biobanking. • The Experimental Mass Spectrometry Unit (EMS) is led by Dr. Mirko Peitzsch. It provides expertise in LC-MS/MS based analysis of small molecules in biological matrices and for metabolite profiling. • The Nuclear Magnetic Resonance Spectroscopy (NMR) facility is led by Dr. Alexander Funk and performs high throughput metabolomic and lipidomic screening of body fluids and semi-solid tissues. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities-1` },
-      { title: "Research (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `Welcome to the Research Section of the Institute for Clinical Chemistry and Laboratory medicine (IKL) at the University Hospital Carl Gustav Carus in Dresden. IKL is also the central clinical laboratory for the hospital and simultaneously a research institute with 9 research groups and 3 core research facilities undertaking basic, translational, and clinical research. The research mission of IKL is focused on the investigation of the regulation of immunological, hematological, and oncological processes through the interaction between inflammatory, metabolic, hypoxic and (epi)genetic mechanisms. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research` },
-      { title: "Join Us (Klin. Chemie UKD Dresden)", thesis_type: "other",
-        description: `There are several routes how to join our IKL team depending on vacancies, your background and career goals . PhD and Postdoc positions Positions for scientists are advertised for prospective Doctoral and Postdoctoral researchers separately. Doctoral Positions are announced on the following webpages: • Basic and translational scientists - the Dresden International Graduate School for Interdisciplinary Life Sciences (DIGS-ILS: <https://www.digs-bb.de/join/phd-positions/open-projects>) • Clinician and Medical Scientists - Dresden School of Clinical Science (DSCS: <https://tu-dresden.de/med/mf/forschung-internationales/nachwuchsfoerderung-dscs/internefoerderprogramme> ) Technician positions Posi …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/join-us` },
-      { title: "Mitarbeitende (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `Direktorium Prof. Dr. med. Triantafyllos Chavakis Direktor Professur für Klinische Chemie und klinische Pathobiochemie 0351 458-2109 E-Mail • * * Prof. Dr. med. Peter Mirtschink Ärztlicher Leiter IKL, Geschäftsführender Oberarzt Professur für Zellmetabolismus 0351 458-15231 E-Mail • * * Dr. med. Oliver Tiebel Stellvertretender Direktor, Leitender Oberarzt Leitung Bereich Hämostaseologie & Hämatologie 0351 458-4805 E-Mail • * * Prof. Dr. rer. nat. David Poitz Koordinator Diagnostik Leitung Bereich Klinische Chemie, Molekulare Diagnostik 0351 458-12164 E-Mail • * * Prof. Dr. Ben Wielockx Koordinator Forschung Professur für Inflammatorische Erkrankungen E-Mail • * • Professuren Prof. Dr. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/mitarbeiter` },
-      { title: "News Archive (Klin. Chemie UKD Dresden)", thesis_type: "clinical",
-        description: `2024 Title — Group — Type 6th International Symposium on Trained Immunity / Innate Immune Memory — Chavakis — Conference HypoxEU Dresden Live[](https://innateimmunememory.com/) — Wielockx — Conference: DFG CRC 369: • Comprehensive characterization of patients with inflammatory bone disease with serological profiling and imaging (Z01) • Defining the role of osteomorphs in inflammatory bone loss (C05) • Innate immune training-mediated regulation of osteoclasts and inflammatory bone loss (C03) • Regulatory mechanisms linking chronic gut inflammation and bone loss (A01) IKL — Funding 2023 Title — Group — Type: BioBank Dresden in Wissenschaftsdoku Mirtschink — Documentary 2022 Title — Group SIX T …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/news` },
-      { title: "Publications (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `IKL's latest publications (2025): PMID — Title — Labs — Citation 39746149 — Proteomic and Metabolomic Signatures in Prediabetes Progressing to Diabetes or Reversing to Normoglycemia Within 1 Year — Chavakis — Diabetes Care. 2025 Jan 2:dc241412. doi: 10.2337/dc24-1412. Online ahead of print. 39746149 — Proteomic and Metabolomic Signatures in Prediabetes Progressing to Diabetes or Reversing to Normoglycemia Within 1 Year — Funk — Diabetes Care. 2025 Jan 2:dc241412. doi: 10.2337/dc24-1412. Online ahead of print. 39745823 — Long-term persistence of glycemic dysregulation in patients with a history of pheochromocytoma/paraganglioma — Bechmann — J Clin Endocrinol Metab. 2025 Jan 2:dgae901. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/publications` },
-      { title: "Qualitätsmanagement (Klin. Chemie UKD Dresden)", thesis_type: "clinical",
-        description: `Das Institut für Klinische Chemie und Laboratoriumsmedizin (IKL) hat ein Qualitätsmanagementsystem entsprechend der Richtlinie der Bundesärztekammer zur Qualitätssicherung laboratoriumsmedizinischer Untersuchungen (RiliBÄK) und der internationalen Normen DIN EN ISO 15189 („Medizinische Laboratorien – Besondere Anforderungen an die Qualität und Kompetenz“) und DIN EN ISO/IEC 17025 („Allgemeine Anforderungen an die Kompetenz von Prüf­- und Kalibrierlaboratorien“) etabliert. Akkreditierung Das IKL ist als medizinisches Laboratorium (nach DIN EN ISO 15189) und als Prüflaboratorium (nach DIN EN ISO/IEC 17025) durch die Deutsche Akkreditierungsstelle GmbH (DAkkS) akkreditiert. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/qualitatsmanagement` },
-      { title: "Suchergebnisse (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `Es wurden 0 Ergebnisse gefunden. Ergebnisse filtern Inhaltstyp • Alle/Keine auswählen • Datei • Einrichtung • Kollektion • Kontakt • Link • Nachricht • Ordner • Seite • Termin Neue Inhalte seit • Gestern • Letzte Woche • Letzter Monat • Immer Trefferliste sortieren • Relevanz • Datum (neueste zuerst) • alphabetisch Es wurde nichts gefunden. RSS Feed abonnieren [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/@@search` },
-      { title: "Team (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
-        description: `— — : ## PD Dr. Vasileia-Ismini Alexaki: ## Dr. Tiago Alves: ## PD Dr. Nicole Bechmann: — : ## Prof. Dr. Triantafyllos Chavakis: ## Dr. Kyoung-Jin Chung: ## [](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/translationale-onkologie-msnz-junior-gruppe): — — : ## Dr. Alexander Funk: ## Jun.-Prof. Dr. Lydia Kalafati: ## Prof. Dr. Mario Menschikowski: ![](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmediz\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/team-1` },
+      { title: "IKL — Forschungsmission & 8 Disziplinen (Klin. Chemie UKD Dresden)", thesis_type: "experimental",
+        description: `Das **Institut für Klinische Chemie und Laboratoriumsmedizin (IKL)** ist gleichzeitig Zentrallabor des Klinikums und Forschungsinstitut mit **9 Forschungsgruppen und 3 Core Facilities**.
+
+## Forschungsmission
+Regulation immunologischer, hämatologischer und onkologischer Prozesse über das Zusammenspiel von **Inflammation, Metabolismus, Hypoxie und Epigenetik**.
+
+## Acht miteinander verbundene Disziplinen
+- **Krankheitsbezogen:** Immunologie, Hämatologie, Onkologie, Neurologie
+- **Mechanistisch:** Inflammation, Metabolismus, Epigenetik, Hypoxie
+
+## Beispiel-Themen
+- Leukozytenrekrutierung
+- Aktivierung der angeborenen Immunität
+- Regulation der Blutbildung
+- Zellmetabolismus von Immunzellen + Hypoxie-induzierte Prozesse
+- Neurochemische Analyse endokriner Erkrankungen
+- Epigenetische Mechanismen
+
+*Einer der breitesten Forschungs-Hubs am UKD. Promotionen über alle Felder möglich — siehe Einzelgruppen unten.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research`,
+        applicationContact: "IKL-Sekretariat (über die Klinik-Seite)" },
+      { title: "Pauling Lab — Computational Integrative Omics in Biomedicine (IKL UKD Dresden)", thesis_type: "statistical",
+        description: `Computational-Biology-Gruppe für **integrative Omics-Analyse** in der Biomedizin.
+
+## Schwerpunkte
+- Multi-Omics-Integration (Genomik, Transkriptomik, Proteomik, Metabolomik)
+- Computer-gestützte Auswertung biomedizinischer Daten
+- Schnittstelle zu klinischer Forschung
+
+**Leitung:** Dr. Josch K. Pauling
+
+*Geeignet für Promotionen mit Daten-/Informatik-Hintergrund. Programmierkenntnisse stark empfohlen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/pauling-lab-computational-integrative-omics-in-biomedicine`,
+        applicationContact: "Dr. Josch K. Pauling (IKL-Sekretariat)" },
+      { title: "Menschikowski Lab — Epigenetik in der Onkologie (IKL UKD Dresden)", thesis_type: "experimental",
+        description: `Forschungsgruppe zur **epigenetischen Regulation** mit Schwerpunkt onkologische Mechanismen.
+
+## Themen
+- Epigenetische Modifikationen in Tumoren
+- Diagnostische Marker basierend auf epigenetischen Veränderungen
+- Translationale Anbindung an die klinische Labordiagnostik
+
+**Leitung:** Prof. Dr. Mario Menschikowski
+
+*Klassische experimentelle Promotion in einer etablierten Lab-Gruppe.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/epigenetik`,
+        applicationContact: "Prof. Dr. Mario Menschikowski (IKL-Sekretariat)" },
+      { title: "Mirtschink Lab — Zellmetabolismus und Hypoxie (IKL UKD Dresden)", thesis_type: "experimental",
+        description: `Forschung zu Zellmetabolismus, insbesondere **Hypoxie-induzierte Prozesse** in inflammatorisch-metabolischen Erkrankungen.
+
+## Forschungsfelder
+- Metabolische Anpassung von Immunzellen
+- HIF-Pfade und Hypoxie-Signaling
+- Wechselspiel von Inflammation und Stoffwechsel
+
+**Leitung:** Prof. Dr. Peter Mirtschink
+
+*Wet Lab, methodisch stark in Zellkultur und Molekularbiologie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/zellmetabolismus`,
+        applicationContact: "Prof. Dr. Peter Mirtschink (IKL-Sekretariat)" },
+      { title: "Core Facility: Experimental Mass Spectrometry (EMS) (IKL UKD Dresden)", thesis_type: "experimental",
+        description: `Zentrale **Massenspektrometrie-Einheit** für Small-Molecule-Analytik und Metabolite-Profiling.
+
+## Leistungsspektrum
+- **LC-MS/MS** für kleine Moleküle in biologischen Matrizes
+- Metabolite Profiling (Steroidhormone, Neurotransmitter, etc.)
+- Methodenentwicklung für Forschungsfragen aller IKL-Gruppen + externer Kliniken
+
+**Leitung:** Dr. Mirko Peitzsch
+
+*Geeignet für Promotionen mit analytisch-methodischem Fokus oder Anwendungs­projekten, die spezifische Metabolite quantifizieren wollen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/EMS`,
+        applicationContact: "Dr. Mirko Peitzsch (IKL-Sekretariat)" },
+      { title: "Core Facility: NMR-Spektroskopie — Metabolomik (IKL UKD Dresden)", thesis_type: "experimental",
+        description: `Zentrale Einheit für **High-throughput Metabolomik und Lipidomik** mittels Kernspinresonanz.
+
+## Anwendung
+- Screening von Körperflüssigkeiten und semi-soliden Geweben
+- Metabolomik- und Lipidomik-Profile
+- Integration mit anderen Omics-Methoden
+
+**Leitung:** Dr. Alexander Funk
+
+*Methodisch interessant für Promotionen mit chemisch-analytischem oder biostatistischem Hintergrund.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/copy_of_EMS`,
+        applicationContact: "Dr. Alexander Funk (IKL-Sekretariat)" },
+      { title: "Core Facility: Dresden Integrated Liquid Biobank (DILB) (IKL UKD Dresden)", thesis_type: "experimental",
+        description: `**Bioprobenbank für Flüssigproben**, betrieben innerhalb der BioBank Dresden (BBD) am Nationalen Centrum für Tumorerkrankungen (NCT/UCC).
+
+## Trägerstruktur
+Gemeinsam getragen von UKD, der Carl Gustav Carus Fakultät der TU Dresden und dem **Deutschen Krebsforschungszentrum (DKFZ)**.
+
+## Wert
+Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für reproduzierbare Biomarker-Forschung.
+
+*Promotionen, die definierte Patient:innen-Kohorten und qualitätsgesicherte Bioproben brauchen, finden hier die zentrale Ressource.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/dresden-integrated-liquid-biobank-dilb`,
+        applicationContact: "DILB / IKL-Sekretariat" },
+      { title: "IKL-PhD-Programme: DIGS-ILS + DSCS (Klin. Chemie UKD Dresden)", thesis_type: "other",
+        description: `Das IKL nimmt Doktorand:innen über **zwei strukturierte Programme** auf — getrennt nach Karriere-Track.
+
+## Basic & translational scientists
+**DIGS-ILS** — Dresden International Graduate School for Interdisciplinary Life Sciences. Themen-Ausschreibungen unter [digs-bb.de](https://www.digs-bb.de/join/phd-positions/open-projects)
+
+## Clinician & Medical Scientists
+**DSCS** — Dresden School of Clinical Science. Promotionsphase im Carus Promotionskolleg.
+
+*Wenn dich IKL-Forschung interessiert, ist der Einstieg über diese strukturierten Programme der saubere Weg. Beide Programme arbeiten kompetitiv mit Ausschreibungen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/join-us`,
+        applicationContact: "DIGS-ILS / DSCS-Programmkoordination (IKL-Sekretariat)" },
     ],
   },
   {
