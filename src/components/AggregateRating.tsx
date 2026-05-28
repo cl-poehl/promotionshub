@@ -21,7 +21,7 @@ export function AggregateRating({ aggregate }: { aggregate: GroupAggregate }) {
               </div>
               <div className="mt-1 h-1.5 w-full rounded bg-stone-100">
                 <div
-                  className="h-1.5 rounded bg-[var(--accent)]"
+                  className="h-1.5 rounded bg-sky-700"
                   style={{ width: value ? `${(Number(value) / 5) * 100}%` : "0%" }}
                 />
               </div>

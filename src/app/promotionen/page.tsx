@@ -133,7 +133,7 @@ export default async function PromotionenIndex({
         <div className="sm:col-span-2 lg:col-span-5 flex gap-2">
           <button
             type="submit"
-            className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm text-[var(--accent-foreground)]"
+            className="rounded-md bg-sky-700 px-4 py-2 text-sm text-white"
           >
             Filter anwenden
           </button>

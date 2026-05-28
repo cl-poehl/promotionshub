@@ -20,7 +20,7 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/promotionen"
-            className="inline-flex items-center rounded-md bg-[var(--accent)] px-5 py-3 text-[var(--accent-foreground)] font-medium no-underline hover:no-underline"
+            className="inline-flex items-center rounded-md bg-sky-700 px-5 py-3 text-white font-medium no-underline hover:no-underline"
           >
             Promotionsstellen durchsuchen
           </Link>
