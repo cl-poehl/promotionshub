@@ -1,6 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, mk3, neurologie, psy, kjp, kik, klinchem, vtg, psm.
+ * Handgepflegt: mk1, mk3, neurologie, psy, pso, kjp, kik, kge, klinchem, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -138,28 +138,120 @@ export const tuDresdenSources: ImporterSource[] = [
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge",
     applicationContact: null,
     researchAreas: [
-      { title: "CMTD - Core Unit für Molekulare Tumordiagnostik (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
-        description: `Das Core Unit für Molekulare Tumordiagnostik (CMTD) gehört zum Nationalen Centrum für Tumorerkrankungen am Partnerstandort Dresden (NCT Dresden). Als Direktoren fungieren Prof. Dr. Diana Le Duc(Direktorin des Instituts für Klinische Genetik) und Prof. Dr. Gustavo Baretton(Direktor des Instituts für Pathologie). Frau Prof. Dr. med. Daniela Aust (Institut für Pathologie) und Frau Dr. Doreen William(Institut für Klinische Genetik) sind als Koordinatorinnen tätig. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/nct-molekulare-tumordiagnostik` },
-      { title: "ERN GENTURIS (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `European Reference Network on GENetic TUmor RIsk Syndromes (ERN GENTURIS) Das ERN GENTURIS ist ein Europäisches Referenznetzwerk für Patienten mit seltenen familiären Tumorerkrankungen. Aktuell sind 6 deutsche Zentren an GENTURIS beteiligt: (1) Prof. Dr. Elke Holinski-Feder, Medizinisch-Genetisches Zentrum München, (2) Prof. Dr. Stefan Aretz, Institut für Humangenetik Bonn, (3) Prof. Dr. André Reis, Universitätsklinikum Erlangen, (4) Dr. Said Farschtschi, Universitätsklinikum Hamburg Eppendorf, (5) Dr. Tim Ripperger, Medizinische Hochschule Hannover und (6) Prof. Dr. Diana Le Duc, Institut für Klinische Genetik Dresden. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/ern-genturis` },
-      { title: "Forschung am Institut für Klinische Genetik (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `Wir untersuchen Veränderungen des humanen Erbguts und ergründen deren Pathomechanismen für die Diagnose und Behandlung von erblich bedingten Erkrankungen. Dabei liegen unsere Forschungsschwerpunkte auf den Gebieten der Hirnfehlbildungen, der geistigen Entwicklungsstörungen, der Hirntumore sowie der familiären und erblichen Tumorerkrankungen. Unsere Wissenschaftler arbeiten eng mit Forschern aus führenden nationalen und internationalen Einrichtungen zusammen und nutzen ihr Fachwissen in der Stammzellbiologie, Genom-Sequenzierung und -Editierung sowie Omics-Technologien, um Pathomechanismen zu verstehen und aufzuklären mit dem Ziel, die Patientenversorgung auf ein nächstes Level zu heben. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung` },
-      { title: "Forschungsgruppen (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `Am Institut für Klinische Genetik arbeiten mehrere Forschungsgruppen. Mehr über deren Forschungsschwerpunkte und unsere Beteiligung an Zentren und Konsortien erfahren Sie unter nachfolgenden Links: • AG Le Duc: \\"Translational Genomics & Big Data\\" • AG Jahn: \\"Genetische Tumorrisikosyndrome\\" • AG Abe: \\"Functional Neurogenomics\\" • [](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/hirntumore-evelin-schroeck) • Nationales Centrum für Tumorerkrankungen (NCT), Partnerstandort Dresden - Centrum für Molekulare Tumordiagnostik (CMTD) • European Reference Network on GENetic TUmor RIsk Syndroms (ERN GENTURIS) Research Groups Several r …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1` },
-      { title: "Functional Neurogenomics (Philipp Abe) (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
-        description: `Unraveling brain development & neurodevelopmental disorders Our research group investigates the mechanisms underlying neuronal specification, positioning, and circuit formation during prenatal and postnatal brain development. We employ cutting-edge tools like single-cell genomics and light-sheet microscopy to study these processes in both mouse models and human-derived models. We aim to address fundamental questions about brain function: how does such a complex organ develop, and what goes wrong in neurodevelopmental disorders? By linking gene expression to neuronal architecture, we strive to unlock key insights into the origins of these conditions and pave the way for future therapies. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/functional-neurogenomics` },
-      { title: "Forschungsziel (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `Ziel unserer Arbeitsgruppe ist es, genetische Veränderungen und betroffene Signalwege zu identifizieren, die ursächlich mit der Entstehung und malignen Progression von Tumoren assoziiert sind. Insbesondere interessieren uns chromosomale Rearrangements und Fusionsgene. Ein Fokus unserer Forschung liegt auf den primären Tumoren des zentralen Nervensystems, insbesondere den Gliomen. Die Aufklärung der Pathomechanismen in Hirntumoren soll langfristig zur Entwicklung neuer diagnostischer Möglichkeiten und Therapiestrategien führen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/hirntumore-evelin-schroeck` },
-      { title: "Forschungsziel (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `Jährlich wird bei Millionen von Menschen die Diagnose Krebs gestellt und tritt manchmal gehäuft bei mehreren Familienmitgliedern auf. Dies kann auf die Einwirkung gleicher Umweltfaktoren bzw. des gleichen Lebensstils zurückzuführen oder Zufall sein. Andererseits kann Krebs aber auch durch eine Erblichkeit bedingt sein, die zu einem höheren Risiko für Tumorerkrankungen führt und bei ca. 5-10 % aller Tumorerkrankungen vorliegt. Zusätzlich zum Auftreten der Tumorerkrankungen bei mehreren Familienmitgliedern sind genetische Tumorrisikosyndrome durch ein frühes Erkrankungsalter und eine höhere Wahrscheinlichkeit mehrerer Tumorerkrankungen bei einer Person charakterisiert. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/genetische-tumorrisikosyndrome-arne-jahn` },
-      { title: "Individualisierte Risikoberechnung für gesunde Angehörige – PRECISE-RISK (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `Individualisierte Risikoberechnungfür gesunde Angehörige – _PRECISE-RISK_ **Precisely estimating familial breast and ovarian cancer risk – even without a genetic diagnosis in the family ** In manchen Familien tritt Brust- oder Eierstockkrebs gehäuft auf – selbst wenn die genetische Untersuchung der erkrankten Person keine krankheitsverursachende Veränderung ergeben hat. Ein solch unauffälliger Befund schließt ein erhöhtes Erkrankungsrisiko für gesunde Familienangehörige nicht aus. Mit modernen Methoden können wir das persönliche Risiko heute deutlich genauer einschätzen als bisher. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/individualisierte-risikoberechnung-fuer-gesunde-angehoerige-precise-risk` },
-      { title: "Methodenspektrum (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
-        description: `Am Institut für Klinische Genetik wird mit den neusten und innovativsten Techniken und Methoden gearbeitet. Es ist unser Ziel, krankheitsverursachende Mutationen, welche unter anderem im Rahmen der institutseigenen Diagnostik zu Tage treten, grundlegend besser zu verstehen. Dabei sind deren biologische Auswirkungen auf molekularer und zellulärer Ebene bzw. deren Bedeutsamkeit für den Patienten von besonderem Interesse. Für die Forschung am Institut für Klinische Genetik wird daher auf ein breites Spektrum an Techniken und Methoden zurückgegriffen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/methoden-1` },
-      { title: "Publikationen (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `Die Publikationen des Instituts für Klinische Genetik der aktuellen Jahre finden Sie in nachfolgender Übersicht. Die Autoren unseres Instituts sind fett markiert. Bitte nutzen Sie die Direktlinks, um auf spezielle Jahre zu wechseln. ****[[2025]](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/publikationen#publikationen-des-jahres-2025) ►****[[2024]](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/publikationen#publikationen-des-jahres-2024)** — ►**[[2023] ](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/publikationen#Publikationen_2023) — ► — [  …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/publikationen` },
-      { title: "Translational Genomics & Big Data (Diana Le Duc) (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
-        description: `RESEARCH AIM We are a translational research group at the interface of human genetics, comparative and evolutionary genomics, and clinical medicine. Our research focuses on understanding the molecular mechanisms underlying neurodevelopmental disorders and overgrowth / tumor predisposition syndromes. We combine large scale sequencing, bioinformatics, and big data analysis with functional studies in cellular, patient-derived, and in vivo models to identify and validate disease-causing variants and to associate novel genes with a phenotype. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/big-data-diana-le-duc` },
+      { title: "Forschungsmission Institut für Klinische Genetik (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
+        description: `Untersucht Veränderungen des **humanen Erbguts** und deren Pathomechanismen für Diagnostik und Therapie erblich bedingter Erkrankungen.
+
+## Vier Forschungs-Schwerpunkte
+- **Hirnfehlbildungen**
+- Geistige Entwicklungsstörungen
+- Hirntumore
+- Familiäre und erbliche **Tumorerkrankungen**
+
+## Methodisches Standbein
+Stammzellbiologie, Genom-Sequenzierung, Genom-Editierung, Omics-Technologien — eng verzahnt mit der eigenen Diagnostik.
+
+## Sub-Forschungslinien (separate AGs)
+- Translational Genomics & Big Data (Le Duc)
+- Functional Neurogenomics (Abe)
+- Hirntumore / Genetik (Schröck)
+- Phäochromozytome/Paragangliome (Transregio 205)
+- CMTD am NCT — Tumordiagnostik
+- ERN GENTURIS — europäische Tumor-Risiko-Allianz
+
+*Klassisches universitäres Genetik-Institut mit starker translationaler Linie — Promotionen über alle Bereiche möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung`,
+        applicationContact: "Institut für Klinische Genetik / Sekretariat" },
+      { title: "AG Translational Genomics & Big Data — Le Duc Lab (Klin. Genetik UKD Dresden)", thesis_type: "statistical",
+        description: `Translationale Forschungsgruppe an der Schnittstelle **Humangenetik, vergleichende/evolutionäre Genomik und klinische Medizin**.
+
+## Forschungsfokus
+- Molekulare Mechanismen von **neuro­entwicklungs­störungen**
+- **Overgrowth- und Tumor-Prädispositions-Syndrome**
+- Identifikation neuer Krankheits­varianten via Large-Scale-Sequencing und Bioinformatik
+
+## Methoden-Mix
+- Large-Scale-Sequencing, Bioinformatik, Big-Data-Analyse
+- Funktionelle Studien in zellulären, Patient:innen-abgeleiteten und in-vivo-Modellen
+- **Targeted Therapeutic Interventions** (z.B. pathway-spezifische Inhibitoren)
+- Schwerpunkt: AKT/mTOR- und Wnt/β-Catenin-Pfade
+
+**Leitung:** Prof. Dr. Diana Le Duc (Institutsdirektorin)
+
+*Einer der besten Plätze für computational-experimental hybride Promotionen mit klarem klinischem Bezug.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/big-data-diana-le-duc`,
+        applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)" },
+      { title: "AG Functional Neurogenomics — Abe Lab (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
+        description: `**Unraveling brain development & neurodevelopmental disorders** — Mechanismen neuronaler Spezifizierung, Positionierung und Schaltkreis­bildung in der prä- und postnatalen Gehirnentwicklung.
+
+## Modernste Methoden
+- **Single-cell Genomics**
+- **Light-sheet Microscopy**
+- Maus-Modelle + humane Modelle
+
+## Forschungsfrage
+Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs­störungen schief? Verknüpfung von Gen­expression mit neuronaler Architektur.
+
+**Leitung:** Dr. Philipp Abe
+
+*Anspruchsvoll, englisch-sprachig. Ideale Promotion für jemand mit Interesse an Entwicklungs­neurobiologie und Single-cell-Methoden.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/functional-neurogenomics`,
+        applicationContact: "Dr. Philipp Abe (KGE-Sekretariat)" },
+      { title: "AG Hirntumore / Tumorgenetik — Schröck Lab (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
+        description: `Erforscht **genetische Veränderungen und Signalwege** bei Tumorentstehung und maligner Progression.
+
+## Forschungsschwerpunkte
+- Chromosomale **Rearrangements und Fusionsgene**
+- Primäre **ZNS-Tumore (Gliome)** — Pathomechanismen und neue Diagnostik
+- **Phäochromozytome und Paragangliome (PPGLs)** im Rahmen des Transregios 205 — Biomarker für Aggressivität und personalisiertes Management
+- Mechanismen reziproker Translokationen, chromosomaler Gewinne/Verluste
+
+**Leitung:** Prof. Dr. med. Evelin Schröck
+
+*Eine der stärksten Tumorgenetik-Gruppen in Deutschland. Sehr gut für experimentelle Onkologie-Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/hirntumore-evelin-schroeck`,
+        applicationContact: "Prof. Dr. Evelin Schröck (KGE-Sekretariat)" },
+      { title: "Core Unit Molekulare Tumordiagnostik (CMTD/NCT) (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
+        description: `Forschungs- und Diagnostik-Infrastruktur am **Nationalen Centrum für Tumorerkrankungen Dresden (NCT)**.
+
+## Was das CMTD macht
+- **NGS-basierte** molekulare Charakterisierung sporadischer und hereditärer Tumore
+- Bioinformatische Analysepipelines
+- Multi-Gen-Panel-Validierung für die schnelle Klinik-Translation
+- Liquid-Biopsy-Workflow von Tumorgewebe bis zum validierten klinischen Befund
+
+## Leitung & Koordination
+- **Direktorinnen:** Prof. Dr. Diana Le Duc (KGE) + Prof. Dr. Gustavo Baretton (Pathologie)
+- **Koordinatorinnen:** Prof. Dr. Daniela Aust + Dr. Doreen William
+
+*Sehr gute Wahl für Promotionen mit NGS- und Bioinformatik-Fokus — direkt an der translationalen Onkologie-Schnittstelle.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/nct-molekulare-tumordiagnostik`,
+        applicationContact: "Dr. Doreen William (Koordination CMTD)" },
+      { title: "ERN GENTURIS — Europäisches Netzwerk Tumor-Risiko-Syndrome (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
+        description: `Dresden ist eines der **6 deutschen Zentren** im European Reference Network on **GENetic TUmor RIsk Syndromes (GENTURIS)**.
+
+## Setup
+- 23 Länder, 51 Zentren, koordiniert vom **Radboud University Medical Center** (Nijmegen, NL)
+- Familienambulanz für Patient:innen mit dem gesamten Spektrum familiärer Krebserkrankungen
+- Internationale Leitlinien-Anbindung
+
+**Dresdener Koordinatorin:** Prof. Dr. Diana Le Duc
+
+*Klinische Promotion mit europaweiter Vernetzung — sehr gut für Register­studien und seltene-Erkrankungs-Forschung.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/ern-genturis`,
+        applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)" },
+      { title: "Methodenspektrum — NGS, Funktionelle Genetik (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
+        description: `Modernes Methoden-Portfolio des Instituts — Basis aller experimentellen Promotionen hier.
+
+## Technologien
+- **Next-Generation Sequencing (NGS)** — parallele Sequenzierung hunderter Gene für moderne Diagnostik
+- Funktionelle Analytik (zelluläre Modelle, Patient:innen-abgeleitete Linien)
+- Bioinformatik / Variant Calling und Pathway-Analyse
+- Translation in die klinische Diagnostik
+
+*Wenn du methodisch lernen willst (NGS-Pipeline, Variant Interpretation), ist KGE die richtige Adresse. Promotionen mit Bioinformatik-Anteil sehr gut machbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/methoden-1`,
+        applicationContact: "Institut für Klinische Genetik (Sekretariat)" },
+      { title: "Individualisierte Risikoberechnung für gesunde Angehörige (Klin. Genetik UKD Dresden)", thesis_type: "statistical",
+        description: `Klinisch-statistische Forschung zur **individualisierten Risikoabschätzung** bei gesunden Angehörigen von Patient:innen mit erblichen Tumor-Syndromen.
+
+## Forschungsfrage
+Welche Faktoren bestimmen das Risiko von Carrier:innen? Wie können Vorsorge- und Beratungs-Schemata personalisiert werden?
+
+*Geeignet für Promotionen mit statistisch-epidemiologischem Fokus — etablierte Patient:innen-Daten verfügbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung`,
+        applicationContact: "Institut für Klinische Genetik (Sekretariat)" },
     ],
   },
   {
@@ -1116,28 +1208,118 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso",
     applicationContact: null,
     researchAreas: [
-      { title: "Übergreifende weitere Schwerpunkte der PSO-Forschung (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Wir forschen auch arbeitsgruppenübergreifend zur patientenorientierten psychosomatischen Versorgung mit dem Ziel der Integration der psychosomatischen Medizin in die somatischen Behandlungspfade. Ein Schwerpunkt ist dabei die Mitarbeit bei der Entwicklung von S2 und S3-Leitlinien, die eines multimodalen Behandlungsansatzes unter Berücksichtigung der psychosomatischen Perspektive bedürfen, so z.B. bei Schmerzstörungen. Außerdem sind wir in multizentrischen Evaluationsprojekten mit Psychosomatischen Kliniken aus ganz Deutschland aktiv, z.B. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/uebergreifende-weitere-schwerpunkte-der-pso-forschung` },
-      { title: "Einflussfaktoren und Versorgung (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Der Bereich Einflussfaktoren und Versorgung umfasst die beiden Teilbereiche Essstörungen sowie Konsil- und Liaisondienst-Forschung. Gemeinsamer Schwerpunkt ist die Erfassung psychosozialer Einflussfaktoren sowie assoziierter psychischer Variablen bei Patienten mit Essstörungen (Schwerpunkt Anorexia nervosa, Bulimia nervosa, Binge Eating) sowie bei Patienten verschiedener medizinischer Disziplinen der Krankenhausversorgung. Ziel ist die Ableitung von Prädiktoren sowie biopsychosozialer Interventionen zur Verbesserung des Behandlungserfolges bei o.g. Patienten. Leitung PD. Dr. rer. medic. Dipl.-Psych. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/einflussfaktoren-und-versorgung` },
-      { title: "Forschergruppen (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "other",
-        description: `Zukunft erforschen ... klappt nur mit einem starken Team. Wir haben gleich mehrere. • Psychobiologie von Stress • Neuromarker • Trauma und Traumafolgestörungen • Peripartal- und Familienpsychosomatik • Psychosomatik und Zahnheilkunde • Einflussfaktoren und Versorgung • Intervention Ansprechpartnerinnen • Weitere Projekte Ansprechpartnerinnen Projekte [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen` },
-      { title: "Forschung Aktuell (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `09.03.2026 Posterpreis des Deutschen Kongresses für Psychosomatische Medizin und Psychotherapie gewonnen 26.01.2026 \\"Wechseljahre sind keine Krankheit, die behandelt werden muss\\" Von Hitzewallungen über Muskelschmerzen bis hin zu Lustlosigkeit und sogar Depressionen: Es gibt kaum etwas, was vor allem Frauen in den Wechseljahren angeblich nicht droht. Dabei sind die meisten Symptome gar nicht typisch für die Wechseljahre, sagt Kerstin Weidner. Und Männer kennen sie auch. Daten zeigen zudem: Die meisten Frauen kommen gut durch diese Zeit. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschungs-news` },
-      { title: "Intervention (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Der Bereich Interventionsforschung untersucht die Outcomes der psychotherapeutischen Behandlung in einigen Bereichen der Klinik und Poliklinik für Psychotherapie und Psychosomatik am Universitätsklinikum Dresden. Von besonderem Interesse ist dabei die Identifikation von Variablen, die mit Therapieerfolg zusammenhängen oder die Therapieabbrüche vorhersagen. Es werden beispielsweise Faktoren untersucht, die die Qualität einer therapeutischen Beziehung vermitteln. Die Forschergruppe untersucht zudem die Praktikabilität und Akzeptanz des Einsatzes von Smartglasses in der Behandlung phobischer Störungen durch Exposition in vivo. Leitung Intervention Dr. rer. medic. Dipl.-Psych. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/interventionsforschung` },
-      { title: "Neuromarker (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `[](http://www.dfg.de/) [](http://www.stiftung-hochschulmedizin.de/) Leitung Neuromarker Dr. rer. medic. Laura Schäfer Leiterin Neuromarker E-Mail [](https://www.researchgate.net/profile/Laura_Schaefer14) Publikationen Laura Schäfer hat in Leipzig und Dresden Psychologie studiert, befindet sich aktuell in Ausbildung zur Psychologischen Psychotherapeutin und arbeitet seit November 2016 als Wissenschaftliche Mitarbeiterin im Universitätsklinikum Dresden. Sie interessiert sich für Zusammenhänge zwischen Geruchswahrnehmung, neuronalen Korrelaten und psychologischen Variablen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/neuromarker` },
-      { title: "Peripartal- und Familienpsychosomatik (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Die Forschungsgruppe Peripartal- und Familienpsychosomatik beschäftigt sich mit der Entstehung und Behandlung psychischer Erkrankungen rund um Schwangerschaft und Wochenbett sowie den transgenerationalen Auswirkungen auf die Kinder. Wir forschen zur Frage der angemessenen Versorgung von Schwangeren und Müttern im Netzwerk der Professionen, zur Mutter-Kind-Interaktion im Rahmen peripartaler Störungen und zur Wirksamkeit einer interaktionszentrierten Mutter-Kind-Behandlung. Wir fragen uns, welche neurobiologischen Prozesse die Bindung vermitteln (z.B. Riechen und Berührung), warum manche Frauen ihre Schwangerschaft verheimlichen bzw. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/mutter-kind` },
-      { title: "Psychobiologie von Stress (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Die Arbeitsgruppe beschäftigt sich mit den biologischen Grundlagen psychischer Erkrankungen rund um das Stresshormonsystem. Dabei kommen u.a. Methoden zur Abbildung langfristiger Stresshormonkonzentrationen (Haarsteroidanalysen), Stresshormonanalysen im Speichel sowie experimentelle Stressinduktionsparadigmen (Trierer Sozial Stress Test) zum Einsatz. Neben der Erforschung der Rolle stress-assoziierter Biomarker für die Entwicklung und Aufrechterhaltung psychischer Erkrankungen (z.B. Posttraumatische Belastungsstörung, Generalisierte Angststörung), werden diese in ihrem Potential als Prädiktor und Korrelat einer erfolgreichen Psychotherapie untersucht (u.a. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/psychobiologe-von-stress` },
-      { title: "Psychosomatik und Zahnmedizin (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Sie fragen sich was Psyche mit Zähnen zu tun hat? Wenn Sie mal wieder auf dem Zahnfleisch gehen, sich zähneknirschend zu etwas breitschlagen lassen oder ein strahlendes Lächeln Sie verzaubert, dann spüren Sie welche hoch symbolhafte Wirkung unsere Mundhöhle hat. Das Team um Frau Dr. Lenk hat sich mit Leidenschaft an den Themen im Überschneidungsbereich von Psychosomatik und Zahnmedizin „festgebissen“. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/psychosomatik-und-zahnheilkunde` },
-      { title: "Publikationen 2026 (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Beiling P, Noack R. Gestaltung therapeutischer Allianzen bei Menschen mit zwanghafter Persönlichkeitsstörung. Schwierigkeiten, Fallstricke und Chancen. Persönlichkeitsstörungen: Theorie und Therapie 2026; 30(1): 60-75. doi: 10.21706/ptt-30-1-60 Bergunde L, Jaramillo I, Rihm L, Gao W, Weidner K, von Soest T, Schmiedgen S, Garthus-Niegel S. Associations between hair endocannabinoid concentrations and parental depressive symptoms: A longitudinal study of mothers, fathers, and their offspring up to two years postpartum. Progress in Neuropsychopharmacology & Biological Psychiatry 2026; 111649, in press. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/publikationen` },
-      { title: "Trauma und Traumafolgestörung (Psychotherapie/Psychosomatik UKD Dresden)", thesis_type: "clinical",
-        description: `Traumabedingte Störungen sind sehr belastende psychische Beschwerden und Symptome nach dem Erleben von Bedrohung von Leib und Leben z.B. durch massive Gewalt, Unfälle oder Naturkatastrophen. • * * **Arbeitsgruppe Psychotraumatologie und Stressforschung ** Die Arbeitsgruppe Trauma und Traumafolgestörung befasst sich sowohl mit biologischen Korrelaten der Erkrankung (z.B. dem Cortisolgehalt im Haar, bildgebende Verfahren) als auch mit der Erforschung von diagnostischen Verfahren (z.B. Posttraumatische Belastungsstörung PTBS und dissoziative Störungen) sowie mit Therapiewirksamkeit. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/traumafolgestoerung-1` },
+      { title: "AG Peripartal- und Familienpsychosomatik (PSO UKD Dresden)", thesis_type: "clinical",
+        description: `Forschung rund um **Schwangerschaft, Wochenbett und transgenerationale Auswirkungen** auf Kinder.
+
+## Forschungsfragen
+- Angemessene Versorgung von Schwangeren/Müttern im Netzwerk der Professionen
+- **Mutter-Kind-Interaktion** bei peripartalen Störungen
+- Wirksamkeit interaktionszentrierter Mutter-Kind-Behandlung
+- Neurobiologische Bindungs­prozesse (Riechen, Berührung)
+- Warum Frauen Schwangerschaften verheimlichen/verdrängen
+- Geburtshilfliche Faktoren für gesunden Start
+
+## Format
+**Praktikantinnen für Tagesklinik und Forschung ausdrücklich willkommen** — gute Tür-Öffner-Option für eine Promotion.
+
+**Leitung:** Prof. Dr. med. habil. Kerstin Weidner (Klinikdirektorin) · Tel. 0351 458-7089
+
+*Sehr starke klinische AG mit etablierter Tagesklinik-Infrastruktur. Geeignet für klinische und entwicklungs­psychobiologische Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/mutter-kind`,
+        applicationContact: "Prof. Dr. Kerstin Weidner · Tel. 0351 458-7089" },
+      { title: "AG Psychobiologie von Stress (PSO UKD Dresden)", thesis_type: "experimental",
+        description: `Untersucht **biologische Grundlagen psychischer Erkrankungen** rund um das Stress­hormonsystem.
+
+## Methoden im Repertoire
+- **Haarsteroidanalysen** (langfristige Stresshormon­konzentrationen)
+- Speichel-Cortisol-Analysen
+- **Trier Social Stress Test** (experimentelle Stressinduktion)
+
+## Forschungsfelder
+- Stress-assoziierte **Biomarker** bei PTBS, GAS
+- Biomarker als Prädiktor und Korrelat erfolgreicher Psychotherapie
+- Enge Zusammenarbeit mit AG Trauma und AG Peripartal-Mutter-Kind
+
+**Leitung:** Dr. rer. nat. habil. Susann Schmiedgen · Tel. 0351 458-15864
+
+*Sehr gute Wahl für experimentelle Promotion an der Schnittstelle Endokrinologie/Psychiatrie/Psychotherapie. Auch master­arbeits-tauglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/psychobiologe-von-stress`,
+        applicationContact: "Dr. rer. nat. habil. Susann Schmiedgen · Tel. 0351 458-15864" },
+      { title: "AG Trauma und Traumafolgestörung (PSO UKD Dresden)", thesis_type: "clinical",
+        description: `Zwei zusammen­arbeitende Arbeitsgruppen rund um traumabedingte Störungen.
+
+## AG Psychotraumatologie und Stressforschung
+- Biologische Korrelate (z.B. Cortisol im Haar, Bildgebung)
+- Diagnostische Verfahren (PTBS, dissoziative Störungen)
+- Therapie­wirksamkeit
+
+## AG Psychotraumatologische Versorgungsforschung und eHealth
+- Umsetzung wissenschaftlicher Erkenntnisse in die Praxis
+- Entwicklung von Tools für das Symptommanagement
+- Schwerpunkte: häusliche Gewalt, Psychosoziale Notfall­versorgung, Einsatz­folge­störungen bei Soldat:innen, Traumaambulanzen, **Traumanetz Seelische Gesundheit** (Sachsen)
+
+*Breite Spannweite — von Bildgebung über Pharmakotherapie bis Versorgungs­forschung. Sehr viele Master- und Promotions­plätze gleichzeitig.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/traumafolgestoerung-1`,
+        applicationContact: "AG Trauma (PSO-Sekretariat)" },
+      { title: "AG Einflussfaktoren und Versorgung — Essstörungen, Konsil/Liaison (PSO UKD Dresden)", thesis_type: "clinical",
+        description: `Forschungsgruppe mit zwei Teilbereichen: **Essstörungen** und **Konsil-/Liaisondienst-Forschung**.
+
+## Schwerpunkte
+- Psychosoziale Einflussfaktoren und assoziierte psychische Variablen bei:
+  - **Anorexia nervosa, Bulimia nervosa, Binge Eating**
+  - Patient:innen verschiedener somatischer Disziplinen im Krankenhaus
+- Ableitung von **Prädiktoren** und biopsychosozialen Interventionen für besseren Behandlungserfolg
+
+**Leitung:** PD Dr. rer. medic. Dipl.-Psych. Gloria-Beatrice Wintermann · Tel. 0351 458-3502
+
+*Klinisch-statistische Promotion in einem etablierten Datenfeld — gut machbar neben dem Studium.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/einflussfaktoren-und-versorgung`,
+        applicationContact: "PD Dr. Gloria-Beatrice Wintermann · Tel. 0351 458-3502" },
+      { title: "AG Interventionsforschung — Smartglasses & Phobie-Therapie (PSO UKD Dresden)", thesis_type: "experimental",
+        description: `Untersucht **Outcomes psychotherapeutischer Behandlung** und welche Faktoren mit Therapieerfolg oder -abbrüchen zusammenhängen.
+
+## Aktuelle Highlights
+- Variablen rund um die Qualität therapeutischer Beziehung
+- **Smartglasses-Einsatz** für Exposition in vivo bei phobischen Störungen — Praktikabilität und Akzeptanz
+
+**Leitung:** Dr. rer. medic. Dipl.-Psych. René Noack · Tel. 0351 458-5990
+
+*Innovative Themen (Digital-Therapie, AR) mit etablierter wissenschaftlicher Methodik. Master- und Promotions­arbeiten möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/interventionsforschung`,
+        applicationContact: "Dr. René Noack · Tel. 0351 458-5990" },
+      { title: "AG Neuromarker (PSO UKD Dresden)", thesis_type: "experimental",
+        description: `DFG-/BMBF-/DAAD-/Stiftung Hochschulmedizin-geförderte Forschungsgruppe zu **Biomarkern psychischer Erkrankungen**.
+
+## Stack-Profil
+- Drittmittel-stark (mehrere parallele Förderlinien)
+- Schnittstelle Neuro-/Psychobiologie und Klinik
+- Sammelt und validiert messbare biologische Marker
+
+**Leitung:** Dr. rer. medic. Laura Schäfer
+
+*Methodisch anspruchsvoll, gut etablierte Drittmittel-Infrastruktur. Eintragen-mailen-für-Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/neuromarker`,
+        applicationContact: "Dr. Laura Schäfer (PSO-Sekretariat)" },
+      { title: "AG Psychosomatik und Zahnmedizin (PSO UKD Dresden)", thesis_type: "clinical",
+        description: `Interdisziplinäre AG am Überschneidungsfeld **Psychosomatik / Zahnmedizin** — bundesweit ungewöhnlich.
+
+## Forschungs-Spektrum
+- Psychosoziale Risiko-Indikatoren chronischer Parodontitis
+- Elterliche Belastungsfaktoren als Karies-Treiber bei Kleinkindern
+- **Schwerpunkt: Zahnbehandlungsphobien** — Forschung und Behandlung gemeinsam mit der Zahnklinik UKD
+
+**Leitung:** Dr. med. Dr. med. dent. Maria Lenk
+
+*Wenn dich der Bereich Zahnbehandlungs­angst / Mund-Psyche-Verbindung interessiert, bundesweit eines der besten Adressen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/psychosomatik-und-zahnheilkunde`,
+        applicationContact: "Dr. Maria Lenk (PSO-Sekretariat)" },
+      { title: "Übergreifende PSO-Versorgungs- und Leitlinien-Forschung (PSO UKD Dresden)", thesis_type: "statistical",
+        description: `Arbeitsgruppen-übergreifender Forschungs­strang zur **Integration psychosomatischer Medizin in somatische Behandlungspfade**.
+
+## Schwerpunkte
+- Mitarbeit an **S2- und S3-Leitlinien** mit multimodalem Ansatz (z.B. Schmerzstörungen)
+- **Multizentrische Evaluationsprojekte** mit Psychosomatischen Kliniken bundesweit
+- Effektivität stationärer psychosomatisch-psychotherapeutischer Behandlung
+- Störungsspezifische Therapie­module: Wirksamkeit
+- **COVID-19-Folgen** bei Beschäftigten im Gesundheitssystem (longitudinal, Prävention)
+
+**Leitung:** Prof. Dr. med. habil. Kerstin Weidner (Klinikdirektorin) · Tel. 0351 458-7089
+
+*Gut für Versorgungs- und Public-Mental-Health-orientierte Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/uebergreifende-weitere-schwerpunkte-der-pso-forschung`,
+        applicationContact: "Prof. Dr. Kerstin Weidner · Tel. 0351 458-7089" },
     ],
   },
   {
