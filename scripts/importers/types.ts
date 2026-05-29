@@ -17,6 +17,13 @@ export type ResearchArea = {
   applicationContact?: string | null;
   /** Per-AG-Quell-URL (z.B. AG-Subpage). Wenn null/undefined, Source.sourceUrl. */
   sourceUrl?: string | null;
+  /**
+   * Markiert AGs/Labs, die nach einer einzelnen Person benannt sind
+   * (z.B. „Schröck Lab", „AG Akgün"). Bewertungen dieser Listings
+   * unterliegen dem Personen-Rating-Schutz (höhere Schwelle + hinter
+   * NAMED_RATINGS_PUBLIC-Flag).
+   */
+  isPersonNamed?: boolean;
 };
 
 export type ImporterSource = {

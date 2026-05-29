@@ -113,6 +113,7 @@ export async function runImporter(label: string, sources: ImporterSource[]): Pro
         source: "scraped" as const,
         // per-AG-Kontakt bevorzugt, Fallback auf Klinik-Default
         application_contact: area.applicationContact ?? source.applicationContact,
+        is_person_named: area.isPersonNamed ?? false,
         status: "published" as const,
         promoted: false,
         promotion_expires_at: null as string | null,
