@@ -28,6 +28,109 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "der": [
+        dict(
+            title="AG Experimentelle Dermatologie — Kulms Lab (Dermatologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Grundlagenforschung zur **Tumorprogression in der Dermatoonkologie**.
+
+## Aktuelle Forschungsschwerpunkte
+- **Nucleare Caspase-8 in der Tumorprogression** — neuer molekularer Mechanismus: Caspase-8 erzeugt „de facto loss" von Wildtyp-p53 in aggressiven Krebszellen → Therapie­resistenz und Tumor-Rezidiv
+- **TRAIL** (Death Ligand) als alternative Therapie gegen malignes Melanom — Phenotyp-Switch nach subletalen Dosen, Strategien gegen Resistenz
+
+**Leitung:** Prof. Dr. rer. nat. Dagmar Kulms
+
+*Sehr gute Wahl für experimentelle onkologische Promotionen — Zellkultur und Mechanismen-Forschung.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/ExpDerm",
+            contact="Prof. Dr. Dagmar Kulms (Dermatologie-Sekretariat)",
+        ),
+        dict(
+            title="AG Experimentelle Immundermatologie — Abraham/Günther (Dermatologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Forschungsgruppe zu **angeborenen Immunmechanismen der Haut** und ihrer Rolle für Autoimmunerkrankungen.
+
+## Drittmittel-Verankerung
+- **TRR 237** „Nukleinsäure-Immunität" — DFG-Sonderforschungsbereich (Bonn / LMU / TU Dresden), Teilprojektleitung
+- **TRR 369 DIONE** — Entzündungsbedingte Knochendegeneration
+
+## Inhaltlich
+Autoinflammatorische/autoimmunologische Mechanismen bei genetischen Störungen des Nukleinsäure-Stoffwechsels mit chronisch erhöhter Typ-I-Interferon-Induktion. Rolle von Chemokinen, angeborenen Lymphozyten.
+
+**Leitung:** Dr. med. Susanne Abraham und Prof. Dr. Claudia Günther
+
+*Top-Adresse für immunologische Hautforschung mit klarem DFG-Setting.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/AG06",
+            contact="Dr. Susanne Abraham / Prof. Claudia Günther (Derm-Sekretariat)",
+        ),
+        dict(
+            title="AG Allergologie, Berufs- und Umweltdermatologie (Dermatologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Forschungsgruppe zu **allergischen, beruflich und umweltbedingten Hauterkrankungen** mit klar internationaler Vernetzung.
+
+## Highlight-Projekte
+- **HECOS** — Development of a Hand Eczema Core Outcome Set (Kooperation CS-COUSIN)
+- **TREAT Germany** — Therapie und Versorgung bei moderater bis schwerer Neurodermitis (Kooperation Prof. J. Schmitt)
+
+**Leitung:** Univ.-Prof. Dr. med. habil. Andrea Bauer, MPH
+**Team:** Dr. S. Abraham, PD Dr. P. Spornraft-Ragaller, Dipl.-Soz. H. Rönsch
+
+*Sehr gut für Promotionen mit allergologisch-epidemiologischem Fokus oder Versorgungs­forschung in der Dermatologie.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/BuD",
+            contact="Prof. Dr. Andrea Bauer (Derm-Sekretariat)",
+        ),
+        dict(
+            title="AG Dermatoonkologische Forschung — Meier Lab (Dermatologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Breit aufgestellte onkologische Forschungs­einheit mit drei klaren Linien.
+
+## Translationale experimentelle Forschung
+**Melanom-Forschungslabor:** Mechanismen der Therapieresistenz des metastasierten Melanoms, Strategien zur Überwindung — speziell Hirn­metastasen als häufigste Todesursache.
+
+## Klinische und klinisch-translationale Forschung
+Team aus Fachärzt:innen führt Translationen ans Patient:innen-Bett durch.
+
+## Skin Imaging Research Center Dresden (SIRC)
+Bildgebung an der Haut — von KI-Auswertung dermatoskopischer Aufnahmen bis innovative Diagnostik.
+
+## Versorgungsforschung
+Dr. rer. medic. Maike Bergmann.
+
+**Arbeitsgruppen­leiterin:** Univ.-Prof. Dr. med. Friedegund Meier
+
+*Sehr breites Spektrum — Promotion möglich von experimentell (Westphal) bis klinisch/SIRC (Hobelsberger).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/dermatoonkologie",
+            contact="Prof. Dr. Friedegund Meier (Derm-Sekretariat)",
+        ),
+        dict(
+            title="Dermatologische Labordiagnostik — Forschung & Lehre (Dermatologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Klinik-eigene Labordiagnostik mit Forschungs- und Lehrkomponente.
+
+## Spezialitäten
+- **Autoimmundiagnostik:** Tel. 0351 458-13154
+- **Mykologie / Andrologie:** Tel. 0351 458-12533
+
+**Leitung:** Univ.-Prof. Dr. med. Stefan Beissert
+
+*Geeignet für methodisch-orientierte Promotionen mit dermatologisch-analytischem Schwerpunkt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/derdiagnostik-ful",
+            contact="Autoimmundiagnostik · Tel. 0351 458-13154",
+        ),
+        dict(
+            title="AG Translationale Dermatologie — Bauer Lab (Dermatologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinisch-translationale Forschungsgruppe mit aktiver Studien­teilnahme.
+
+## Aktuelles Beispiel-Projekt
+- **Onychomykose-Studie BBTAF202** (2019-002098-68) — randomisierte, multizentrische, doppelblinde, Placebo-kontrollierte Phase-II-Studie zu topisch appliziertem BB2603 (Terbinafin)
+
+**Arbeitsgruppenleiter:** Univ.-Prof. Dr. med. habil. Andrea Bauer, MPH
+
+*Klinische Promotion mit Pharma-Studien-Beteiligung — gut wenn dich Drug-Trials reizen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/LaborTranslationaleDermatologie",
+            contact="Prof. Dr. Andrea Bauer (Derm-Sekretariat)",
+        ),
+    ],
     "mkg": [
         dict(
             title="Forschungsmission MKG-Chirurgie (MKG UKD Dresden)",

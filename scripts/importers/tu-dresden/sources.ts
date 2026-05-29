@@ -1,6 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, mk3, neurologie, psy, pso, kjp, kik, kge, klinchem, mkg, vtg, psm.
+ * Handgepflegt: mk1, mk3, neurologie, psy, pso, kjp, kik, kge, klinchem, mkg, der, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -45,18 +45,83 @@ export const tuDresdenSources: ImporterSource[] = [
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der",
     applicationContact: null,
     researchAreas: [
-      { title: "AG Experimentelle Dermatologie (Dermatologie UKD Dresden)", thesis_type: "other",
-        description: `Head of research • Prof. Dr. rer. nat. Dagmar Kulms Focus of research / Current projects A novel role for nuclear caspase-8 in tumor progression We have identified a novel molecular mechanism how nuclear caspase-8 generates a de facto loss of the tumor suppressor wildtype p53 in aggressive cancer cells, thereby promoting therapy resistance and tumor relapse. _more information ..._ Death ligand TRAIL as an alternative treatment option for malignant melanoma Exposure of tumor cells to sublethal drug doses may cause a phenotype switch from therapy responsive into highly proliferating metastatic and therapy resistant cancer cells. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/ExpDerm` },
-      { title: "AG Experimentelle Immundermatologie (Dermatologie UKD Dresden)", thesis_type: "clinical",
-        description: `Projekte • TRR 237Nukleinsäure-Immunität (Teilprojektleitung) TRR 237 ist ein interdisziplinärer Forschungsverbund der Universität Bonn, der LMU München und der TU Dresden, der von der Deutschen Forschungsgemeinschaft (DFG) gefördert wird._ _Projekt-Webseite (externer Link) • TRR 369 DIONE - Entzündungsbedingte Knochendegeneration _ _ Forschungsschwerpunkte Susanne Abraham und Claudia Günther sind Dermatologinnen und untersuchen mit ihrem Team den Einfluss angeborener Immunmechanismen der Haut für die Pathogenese von Autoimmunerkrankungen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/AG06` },
-      { title: "Allergologie, Berufs- und Umweltdermatologie (Dermatologie UKD Dresden)", thesis_type: "clinical",
-        description: `Die Forschungs-AG Allergologie, Berufs- und Umweltdermatologie beschäftigt sich mit der Entstehung, Prävention und Versorgung allergischer sowie umwelt- und arbeitsbedingter Hauterkrankungen. Ziel ist es, durch interdisziplinäre Ansätze neue Erkenntnisse zu gewinnen und innovative Strategien für Betroffene zu entwickeln. Leitung und Mitarbeiter der Forschungs-AG • Univ.-Prof Dr. med. habil. Andrea Bauer, MPH • Dr. med. Susanne Abraham • PD Dr. med. Petra Spornraft-Ragaller • Dipl.-Soz. Henriette Rönsch Forschungsschwerpunkte Allergologie • HECOS: Development of a Hand Eczema Core Outcome Set. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/BuD` },
-      { title: "Dermatologische Labordiagnostik (Forschung und Lehre) (Dermatologie UKD Dresden)", thesis_type: "experimental",
-        description: `Durchführung verschiedener Verfahren der dermatologischen Labordiagnostik insbesondere für Forschungs- und Lehrzwecke. Leitung • Univ.-Prof. Dr. med. Stefan Beissert Öffnungszeiten • Montag bis Donnerstag 08:00 bis 15:00 Uhr • Freitag 08:00 bis 14:00 Uhr Kontakt Autoimmundiagnostik 0351 458-13154 Mykologie/Andrologie 0351 458-12533 **Downloads ** ACHTUNG: UKD-intern bitte ausschließlich über ORBIS anfordern! Formulare hier sind nur für Anforderungen von extern. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/derdiagnostik-ful` },
-      { title: "Dermatoonkologische Forschung (Dermatologie UKD Dresden)", thesis_type: "experimental",
-        description: `Arbeitsgruppenleiterin: Univ.-Prof. Dr. med. Friedegund Meier Translationale experimentelle Forschung • Dr. rer. nat. Dana Westphal Klinische und klinisch-translationale Forschung • FOÄ Marlene Garzarolli • FOÄ Dr. med. Ricarda Rauschenberg • Dr. med. Frank Friedrich Gellrich, FA Skin Imaging Research Center Dresden (SIRC) • OÄ PD Dr. med. habil. Sarah Hobelsberger • FOA Dr. med. Frank Friedrich Gellrich • Dr. med. Lea Pöschmann • Julia Schatz Versorgungsforschung • Dr. rer. medic. Maike Bergmann Translationale experimentelle Forschung Das Melanom steht im Fokus des Forschungslabors \\"Experimentelle Dermatoonkologie\\". …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/dermatoonkologie` },
-      { title: "Translationale Dermatologie (Dermatologie UKD Dresden)", thesis_type: "clinical",
-        description: `Arbeitsgruppenleiter • Univ.-Prof Dr. med. habil. Andrea Bauer, MPH Aktuelle Projekte • Onychomykose: Studie BBTAF202 2019-002098-68: Randomisierte, multizentrische, doppelblinde, Placebo-kontrollierte Phase II-Studie zur Untersuchung von topisch appliziertem BB2603 (Terbinafin) Mitarbeiter • E. Bröse [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/LaborTranslationaleDermatologie` },
+      { title: "AG Experimentelle Dermatologie — Kulms Lab (Dermatologie UKD Dresden)", thesis_type: "experimental",
+        description: `Grundlagenforschung zur **Tumorprogression in der Dermatoonkologie**.
+
+## Aktuelle Forschungsschwerpunkte
+- **Nucleare Caspase-8 in der Tumorprogression** — neuer molekularer Mechanismus: Caspase-8 erzeugt „de facto loss\\" von Wildtyp-p53 in aggressiven Krebszellen → Therapie­resistenz und Tumor-Rezidiv
+- **TRAIL** (Death Ligand) als alternative Therapie gegen malignes Melanom — Phenotyp-Switch nach subletalen Dosen, Strategien gegen Resistenz
+
+**Leitung:** Prof. Dr. rer. nat. Dagmar Kulms
+
+*Sehr gute Wahl für experimentelle onkologische Promotionen — Zellkultur und Mechanismen-Forschung.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/ExpDerm`,
+        applicationContact: "Prof. Dr. Dagmar Kulms (Dermatologie-Sekretariat)" },
+      { title: "AG Experimentelle Immundermatologie — Abraham/Günther (Dermatologie UKD Dresden)", thesis_type: "experimental",
+        description: `Forschungsgruppe zu **angeborenen Immunmechanismen der Haut** und ihrer Rolle für Autoimmunerkrankungen.
+
+## Drittmittel-Verankerung
+- **TRR 237** „Nukleinsäure-Immunität\\" — DFG-Sonderforschungsbereich (Bonn / LMU / TU Dresden), Teilprojektleitung
+- **TRR 369 DIONE** — Entzündungsbedingte Knochendegeneration
+
+## Inhaltlich
+Autoinflammatorische/autoimmunologische Mechanismen bei genetischen Störungen des Nukleinsäure-Stoffwechsels mit chronisch erhöhter Typ-I-Interferon-Induktion. Rolle von Chemokinen, angeborenen Lymphozyten.
+
+**Leitung:** Dr. med. Susanne Abraham und Prof. Dr. Claudia Günther
+
+*Top-Adresse für immunologische Hautforschung mit klarem DFG-Setting.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/AG06`,
+        applicationContact: "Dr. Susanne Abraham / Prof. Claudia Günther (Derm-Sekretariat)" },
+      { title: "AG Allergologie, Berufs- und Umweltdermatologie (Dermatologie UKD Dresden)", thesis_type: "clinical",
+        description: `Forschungsgruppe zu **allergischen, beruflich und umweltbedingten Hauterkrankungen** mit klar internationaler Vernetzung.
+
+## Highlight-Projekte
+- **HECOS** — Development of a Hand Eczema Core Outcome Set (Kooperation CS-COUSIN)
+- **TREAT Germany** — Therapie und Versorgung bei moderater bis schwerer Neurodermitis (Kooperation Prof. J. Schmitt)
+
+**Leitung:** Univ.-Prof. Dr. med. habil. Andrea Bauer, MPH
+**Team:** Dr. S. Abraham, PD Dr. P. Spornraft-Ragaller, Dipl.-Soz. H. Rönsch
+
+*Sehr gut für Promotionen mit allergologisch-epidemiologischem Fokus oder Versorgungs­forschung in der Dermatologie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/BuD`,
+        applicationContact: "Prof. Dr. Andrea Bauer (Derm-Sekretariat)" },
+      { title: "AG Dermatoonkologische Forschung — Meier Lab (Dermatologie UKD Dresden)", thesis_type: "experimental",
+        description: `Breit aufgestellte onkologische Forschungs­einheit mit drei klaren Linien.
+
+## Translationale experimentelle Forschung
+**Melanom-Forschungslabor:** Mechanismen der Therapieresistenz des metastasierten Melanoms, Strategien zur Überwindung — speziell Hirn­metastasen als häufigste Todesursache.
+
+## Klinische und klinisch-translationale Forschung
+Team aus Fachärzt:innen führt Translationen ans Patient:innen-Bett durch.
+
+## Skin Imaging Research Center Dresden (SIRC)
+Bildgebung an der Haut — von KI-Auswertung dermatoskopischer Aufnahmen bis innovative Diagnostik.
+
+## Versorgungsforschung
+Dr. rer. medic. Maike Bergmann.
+
+**Arbeitsgruppen­leiterin:** Univ.-Prof. Dr. med. Friedegund Meier
+
+*Sehr breites Spektrum — Promotion möglich von experimentell (Westphal) bis klinisch/SIRC (Hobelsberger).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/dermatoonkologie`,
+        applicationContact: "Prof. Dr. Friedegund Meier (Derm-Sekretariat)" },
+      { title: "Dermatologische Labordiagnostik — Forschung & Lehre (Dermatologie UKD Dresden)", thesis_type: "experimental",
+        description: `Klinik-eigene Labordiagnostik mit Forschungs- und Lehrkomponente.
+
+## Spezialitäten
+- **Autoimmundiagnostik:** Tel. 0351 458-13154
+- **Mykologie / Andrologie:** Tel. 0351 458-12533
+
+**Leitung:** Univ.-Prof. Dr. med. Stefan Beissert
+
+*Geeignet für methodisch-orientierte Promotionen mit dermatologisch-analytischem Schwerpunkt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/derdiagnostik-ful`,
+        applicationContact: "Autoimmundiagnostik · Tel. 0351 458-13154" },
+      { title: "AG Translationale Dermatologie — Bauer Lab (Dermatologie UKD Dresden)", thesis_type: "clinical",
+        description: `Klinisch-translationale Forschungsgruppe mit aktiver Studien­teilnahme.
+
+## Aktuelles Beispiel-Projekt
+- **Onychomykose-Studie BBTAF202** (2019-002098-68) — randomisierte, multizentrische, doppelblinde, Placebo-kontrollierte Phase-II-Studie zu topisch appliziertem BB2603 (Terbinafin)
+
+**Arbeitsgruppenleiter:** Univ.-Prof. Dr. med. habil. Andrea Bauer, MPH
+
+*Klinische Promotion mit Pharma-Studien-Beteiligung — gut wenn dich Drug-Trials reizen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/LaborTranslationaleDermatologie`,
+        applicationContact: "Prof. Dr. Andrea Bauer (Derm-Sekretariat)" },
     ],
   },
   {
