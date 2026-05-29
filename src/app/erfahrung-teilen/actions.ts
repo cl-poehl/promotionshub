@@ -35,7 +35,23 @@ const ReviewInput = z.object({
   timeline_realism: Score,
   project_delivered: Score,
   would_recommend: Score,
-  free_text: z.string().trim().max(3000).optional().or(z.literal("")),
+  // Neue strukturierte Felder
+  promotion_status: z.enum(["ongoing", "completed", "discontinued"], {
+    error: "Bitte den Status deiner Promotion angeben.",
+  }),
+  weekly_hours: z.enum(["fulltime", "parttime_high", "parttime_low", "occasional"], {
+    error: "Bitte deinen wöchentlichen Zeitaufwand angeben.",
+  }),
+  publication_outcome: z.enum(
+    ["first_author", "coauthor", "mentioned", "none", "in_progress"],
+    { error: "Bitte deinen Publikations-Status angeben." },
+  ),
+  funding_as_promised: z.enum(["yes", "partial", "no", "na"], {
+    error: "Bitte angeben, ob die Förderung wie versprochen war.",
+  }),
+  what_went_well: z.string().trim().max(1500).optional().or(z.literal("")),
+  what_went_hard: z.string().trim().max(1500).optional().or(z.literal("")),
+  tip_for_successors: z.string().trim().max(1500).optional().or(z.literal("")),
   truthful: z.literal("on", { error: "Bitte Bestätigung ankreuzen." }),
 });
 
@@ -68,7 +84,14 @@ export async function submitReviewAction(formData: FormData): Promise<SubmitRevi
     return { ok: false, error: "Konto noch nicht verifiziert." };
   }
 
-  const freeText = data.free_text?.trim() || null;
+  const clean = (s?: string | null) => {
+    const t = s?.trim();
+    return t ? t : null;
+  };
+  const whatWell = clean(data.what_went_well);
+  const whatHard = clean(data.what_went_hard);
+  const tip = clean(data.tip_for_successors);
+  const hasAnyFreeText = whatWell || whatHard || tip;
 
   const { error } = await supabase.from("reviews").insert({
     reviewer_account_id: account.id,
@@ -83,10 +106,18 @@ export async function submitReviewAction(formData: FormData): Promise<SubmitRevi
     timeline_realism: data.timeline_realism,
     project_delivered: data.project_delivered,
     would_recommend: data.would_recommend,
-    free_text: freeText,
-    // Phase 1: Freitext bleibt grundsätzlich `pending_moderation` (oder `none`),
-    // wird nie automatisch publiziert. Anthropic-Triage in Phase 2.
-    free_text_status: freeText ? (flags.REVIEW_FREE_TEXT_ENABLED ? "pending_moderation" : "none") : "none",
+    promotion_status: data.promotion_status,
+    weekly_hours: data.weekly_hours,
+    publication_outcome: data.publication_outcome,
+    funding_as_promised: data.funding_as_promised,
+    what_went_well: whatWell,
+    what_went_hard: whatHard,
+    tip_for_successors: tip,
+    free_text: null,  // alter, unstrukturierter Freitext bleibt deprecated
+    // Strukturierte Freitexte: gehen alle in dieselbe Moderations-Pipeline.
+    free_text_status: hasAnyFreeText
+      ? (flags.REVIEW_FREE_TEXT_ENABLED ? "pending_moderation" : "none")
+      : "none",
     // Phase 1: Reviews bleiben `pending` und fließen NICHT in öffentliche Anzeige ein
     // (Aggregate würden sie zwar zählen, aber Schwellenwert sperrt die Anzeige).
     // §1 Phase 2 schaltet das auf `published` nach Verifizierung.

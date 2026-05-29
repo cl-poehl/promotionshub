@@ -1,8 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: ALLE 28 Kliniken (mk1, mk3, neurologie, neurochirurgie, psy, pso,
- * kjp, kik, kge, klinchem, mkg, der, kch, nra, uro, hno, gyn, oupc, augenheilkunde,
- * nuk, pat, str, ane, infekt, mikrobio, rad, vtg, psm).
+ * 19 Person-genannte AGs markiert (isPersonNamed: true).
  */
 
 import type { ImporterSource } from "../types";
@@ -81,7 +79,8 @@ export const tuDresdenSources: ImporterSource[] = [
 **Leitung:** Prof. Dr. rer. nat. Dagmar Kulms
 
 *Sehr gute Wahl für experimentelle onkologische Promotionen — Zellkultur und Mechanismen-Forschung.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/ExpDerm`,
-        applicationContact: "Prof. Dr. Dagmar Kulms (Dermatologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. Dagmar Kulms (Dermatologie-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Experimentelle Immundermatologie — Abraham/Günther (Dermatologie UKD Dresden)", thesis_type: "experimental",
         description: `Forschungsgruppe zu **angeborenen Immunmechanismen der Haut** und ihrer Rolle für Autoimmunerkrankungen.
 
@@ -95,7 +94,8 @@ Autoinflammatorische/autoimmunologische Mechanismen bei genetischen Störungen d
 **Leitung:** Dr. med. Susanne Abraham und Prof. Dr. Claudia Günther
 
 *Top-Adresse für immunologische Hautforschung mit klarem DFG-Setting.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/AG06`,
-        applicationContact: "Dr. Susanne Abraham / Prof. Claudia Günther (Derm-Sekretariat)" },
+        applicationContact: "Dr. Susanne Abraham / Prof. Claudia Günther (Derm-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Allergologie, Berufs- und Umweltdermatologie (Dermatologie UKD Dresden)", thesis_type: "clinical",
         description: `Forschungsgruppe zu **allergischen, beruflich und umweltbedingten Hauterkrankungen** mit klar internationaler Vernetzung.
 
@@ -126,7 +126,8 @@ Dr. rer. medic. Maike Bergmann.
 **Arbeitsgruppen­leiterin:** Univ.-Prof. Dr. med. Friedegund Meier
 
 *Sehr breites Spektrum — Promotion möglich von experimentell (Westphal) bis klinisch/SIRC (Hobelsberger).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/dermatoonkologie`,
-        applicationContact: "Prof. Dr. Friedegund Meier (Derm-Sekretariat)" },
+        applicationContact: "Prof. Dr. Friedegund Meier (Derm-Sekretariat)",
+        isPersonNamed: true },
       { title: "Dermatologische Labordiagnostik — Forschung & Lehre (Dermatologie UKD Dresden)", thesis_type: "experimental",
         description: `Klinik-eigene Labordiagnostik mit Forschungs- und Lehrkomponente.
 
@@ -147,7 +148,8 @@ Dr. rer. medic. Maike Bergmann.
 **Arbeitsgruppenleiter:** Univ.-Prof. Dr. med. habil. Andrea Bauer, MPH
 
 *Klinische Promotion mit Pharma-Studien-Beteiligung — gut wenn dich Drug-Trials reizen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/LaborTranslationaleDermatologie`,
-        applicationContact: "Prof. Dr. Andrea Bauer (Derm-Sekretariat)" },
+        applicationContact: "Prof. Dr. Andrea Bauer (Derm-Sekretariat)",
+        isPersonNamed: true },
     ],
   },
   {
@@ -297,7 +299,8 @@ Mehrere Drittmittel-Publikationen 2024–2025 zu Anti­biotika-Verbrauchsdaten u
 - Anbindung an klinische Fragestellungen der Kinderchirurgie
 
 *Wet Lab für experimentelle Promotionen — direkter Kontakt verfügbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/labor`,
-        applicationContact: "PD Dr. Michael Haase · Tel. 0351 458-13142" },
+        applicationContact: "PD Dr. Michael Haase · Tel. 0351 458-13142",
+        isPersonNamed: true },
     ],
   },
   {
@@ -348,7 +351,8 @@ Stammzellbiologie, Genom-Sequenzierung, Genom-Editierung, Omics-Technologien —
 **Leitung:** Prof. Dr. Diana Le Duc (Institutsdirektorin)
 
 *Einer der besten Plätze für computational-experimental hybride Promotionen mit klarem klinischem Bezug.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/big-data-diana-le-duc`,
-        applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)" },
+        applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Functional Neurogenomics — Abe Lab (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
         description: `**Unraveling brain development & neurodevelopmental disorders** — Mechanismen neuronaler Spezifizierung, Positionierung und Schaltkreis­bildung in der prä- und postnatalen Gehirnentwicklung.
 
@@ -363,7 +367,8 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 **Leitung:** Dr. Philipp Abe
 
 *Anspruchsvoll, englisch-sprachig. Ideale Promotion für jemand mit Interesse an Entwicklungs­neurobiologie und Single-cell-Methoden.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/functional-neurogenomics`,
-        applicationContact: "Dr. Philipp Abe (KGE-Sekretariat)" },
+        applicationContact: "Dr. Philipp Abe (KGE-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Hirntumore / Tumorgenetik — Schröck Lab (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
         description: `Erforscht **genetische Veränderungen und Signalwege** bei Tumorentstehung und maligner Progression.
 
@@ -376,7 +381,8 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 **Leitung:** Prof. Dr. med. Evelin Schröck
 
 *Eine der stärksten Tumorgenetik-Gruppen in Deutschland. Sehr gut für experimentelle Onkologie-Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/hirntumore-evelin-schroeck`,
-        applicationContact: "Prof. Dr. Evelin Schröck (KGE-Sekretariat)" },
+        applicationContact: "Prof. Dr. Evelin Schröck (KGE-Sekretariat)",
+        isPersonNamed: true },
       { title: "Core Unit Molekulare Tumordiagnostik (CMTD/NCT) (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
         description: `Forschungs- und Diagnostik-Infrastruktur am **Nationalen Centrum für Tumorerkrankungen Dresden (NCT)**.
 
@@ -616,7 +622,8 @@ Hirnstruktur- und Hirnfunktionsbildgebung (EEG, MRT), Verhaltens­paradigmen —
 [Lab-Website](https://sites.google.com/site/ehrlichtransdenlab/)
 
 *Sehr stark vernetzte Bildgebungs-AG mit Fokus auf Essstörungen — passt zur Mental Health Dresden-Leipzig-Infrastruktur.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/angewandte-entwicklungsneurowissenschaften`,
-        applicationContact: "Prof. Dr. Stefan Ehrlich (Kontakt über AG-Seite)" },
+        applicationContact: "Prof. Dr. Stefan Ehrlich (Kontakt über AG-Seite)",
+        isPersonNamed: true },
       { title: "Klinische Studien AD(H)S & Konzentrationsprobleme (KJP UKD Dresden)", thesis_type: "clinical",
         description: `Bündel laufender klinischer Studien zum Störungsbild **Aufmerksamkeitsdefizit-(Hyperaktivitäts-)Störung** bei Kindern und Jugendlichen.
 
@@ -725,7 +732,8 @@ Regulation immunologischer, hämatologischer und onkologischer Prozesse über da
 **Leitung:** Dr. Josch K. Pauling
 
 *Geeignet für Promotionen mit Daten-/Informatik-Hintergrund. Programmierkenntnisse stark empfohlen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/pauling-lab-computational-integrative-omics-in-biomedicine`,
-        applicationContact: "Dr. Josch K. Pauling (IKL-Sekretariat)" },
+        applicationContact: "Dr. Josch K. Pauling (IKL-Sekretariat)",
+        isPersonNamed: true },
       { title: "Menschikowski Lab — Epigenetik in der Onkologie (IKL UKD Dresden)", thesis_type: "experimental",
         description: `Forschungsgruppe zur **epigenetischen Regulation** mit Schwerpunkt onkologische Mechanismen.
 
@@ -737,7 +745,8 @@ Regulation immunologischer, hämatologischer und onkologischer Prozesse über da
 **Leitung:** Prof. Dr. Mario Menschikowski
 
 *Klassische experimentelle Promotion in einer etablierten Lab-Gruppe.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/epigenetik`,
-        applicationContact: "Prof. Dr. Mario Menschikowski (IKL-Sekretariat)" },
+        applicationContact: "Prof. Dr. Mario Menschikowski (IKL-Sekretariat)",
+        isPersonNamed: true },
       { title: "Mirtschink Lab — Zellmetabolismus und Hypoxie (IKL UKD Dresden)", thesis_type: "experimental",
         description: `Forschung zu Zellmetabolismus, insbesondere **Hypoxie-induzierte Prozesse** in inflammatorisch-metabolischen Erkrankungen.
 
@@ -749,7 +758,8 @@ Regulation immunologischer, hämatologischer und onkologischer Prozesse über da
 **Leitung:** Prof. Dr. Peter Mirtschink
 
 *Wet Lab, methodisch stark in Zellkultur und Molekularbiologie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/zellmetabolismus`,
-        applicationContact: "Prof. Dr. Peter Mirtschink (IKL-Sekretariat)" },
+        applicationContact: "Prof. Dr. Peter Mirtschink (IKL-Sekretariat)",
+        isPersonNamed: true },
       { title: "Core Facility: Experimental Mass Spectrometry (EMS) (IKL UKD Dresden)", thesis_type: "experimental",
         description: `Zentrale **Massenspektrometrie-Einheit** für Small-Molecule-Analytik und Metabolite-Profiling.
 
@@ -1227,7 +1237,8 @@ Mit optischen Techniken werden veränderte biochemische und mechanische Eigensch
 **Leitung:** PD Dr. rer. nat. habil. Ortrud Uckermann · Tel. 0351 458-3114
 
 *Methodisch spannend (optische Spektroskopie, Bildgebung). Geeignet für experimentell-physikalische Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-experimentelle-bildgebung-in-der-neurochurgie`,
-        applicationContact: "PD Dr. Ortrud Uckermann · Tel. 0351 458-3114" },
+        applicationContact: "PD Dr. Ortrud Uckermann · Tel. 0351 458-3114",
+        isPersonNamed: true },
       { title: "AG Translationale Neuroonkologie & Schädelbasis­tumoren (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
         description: `Translationale Onkologie der **Hirntumoren** mit klarer molekulargenetischer Linie.
 
@@ -1249,7 +1260,8 @@ Mit optischen Techniken werden veränderte biochemische und mechanische Eigensch
 **Leitung:** Prof. Dr. rer. nat. Achim Temme — Leiter der Neurochirurgischen Forschung · Tel. 0351 458-7011
 
 *Hochkarätige experimentelle Promotion mit echtem onkologischen Impact. Mehrere Doktorand:innen gleichzeitig betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-tumorimmunologie`,
-        applicationContact: "Prof. Dr. Achim Temme · Tel. 0351 458-7011" },
+        applicationContact: "Prof. Dr. Achim Temme · Tel. 0351 458-7011",
+        isPersonNamed: true },
     ],
   },
   {
@@ -1273,7 +1285,8 @@ Sehr großes Team mit ~18 aktuellen Doktorand:innen — gleichzeitig betreut, al
 **Leitung:** Prof. Dr. med. Katja Akgün
 
 *Sehr gute Wahl für klassisches Wet-Lab-Promotionsprojekt in der Neuroimmunologie. Mehrere Monate Vollzeit-Labor erforderlich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neuroimmunologie/ag-akguen`,
-        applicationContact: "Prof. Dr. med. Katja Akgün (Neurologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Katja Akgün (Neurologie-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Barlinn — Hämorrhagischer Schlaganfall (Neurologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinische Forschung zu **hämorrhagischem Schlaganfall** und irreversiblem Hirnfunktionsausfall.
 
@@ -1288,7 +1301,8 @@ Sehr großes Team mit ~18 aktuellen Doktorand:innen — gleichzeitig betreut, al
 [Publikationen auf PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Barlinn+K&sort=date)
 
 *Geeignet für klinische Promotionen mit Schlaganfall-Schwerpunkt — Mitarbeit an laufenden Multicenter-RCTs möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-barlinn`,
-        applicationContact: "Prof. Dr. med. Kristian Barlinn (Neurologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Kristian Barlinn (Neurologie-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Huttner-Vaid — Neurale Regeneration (Neurologie UKD Dresden)", thesis_type: "experimental",
         description: `**Decoding the Neurogenic Blueprint** — integriert vergleichende Entwicklungsbiologie, adulte Neurogenese und regenerative Biologie zu einem einheitlichen Konzept.
 
@@ -1302,7 +1316,8 @@ Sehr großes Team mit ~18 aktuellen Doktorand:innen — gleichzeitig betreut, al
 Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus entwicklungs- und evolutionsbiologischer Perspektive.
 
 *Englisch-sprachiges Lab. Geeignet für anspruchsvolle experimentelle Promotionen an der Schnittstelle Entwicklungsbiologie / Stammzellforschung / Neurologie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/ag-huttner-vaid`,
-        applicationContact: "AG Huttner-Vaid (Neurologie-Sekretariat)" },
+        applicationContact: "AG Huttner-Vaid (Neurologie-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Pütz — Ischämischer Schlaganfall (Neurologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinische und bildgebende Forschung zum **ischämischen Schlaganfall**. Schwerpunkt: was bestimmt das Therapie-Ansprechen und Outcome.
 
@@ -1320,7 +1335,8 @@ Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus 
 **Leitung:** Prof. Dr. med. Volker Pütz, FESO
 
 *Sehr gut für klinisch-bildgebende Promotionen — Anbindung an internationale Studiengruppen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-puetz`,
-        applicationContact: "Prof. Dr. med. Volker Pütz (Neurologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Volker Pütz (Neurologie-Sekretariat)",
+        isPersonNamed: true },
       { title: "AG Siepmann — Translationale Schlaganfall-Forschung (Neurologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinische und translationale Forschung zu zerebrovaskulären Erkrankungen, mit Schwerpunkt **akuter ischämischer Schlaganfall**.
 
@@ -1333,7 +1349,8 @@ Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus 
 **Leitung:** Prof. Dr. med. Timo Siepmann, FAHA, FESO
 
 *International orientiert (englischsprachige Arbeit möglich), translationaler Stil. Geeignet für klinische bis humanphysiologische Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-siepmann`,
-        applicationContact: "Prof. Dr. med. Timo Siepmann (Neurologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Timo Siepmann (Neurologie-Sekretariat)",
+        isPersonNamed: true },
       { title: "Interdisziplinäres Schlaflabor (Neurologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinisches Schlaflabor mit Tagesklinik — schlafmedizinische Diagnostik und Therapie aller Schlafstörungen.
 
