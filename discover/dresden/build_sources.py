@@ -28,6 +28,181 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "uro": [
+        dict(
+            title="Translational Research — Urologisches Forschungslabor (Urologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Forschungslabor der Klinik mit explizit etablierter **Doktorand:innen-Betreuung**.
+
+## Forschungs-Setup
+- Primär **translationale Projekte** in Kooperation mit forschenden Kliniker:innen
+- **Tumor-Biobank** am UCC Dresden mit umfassender Gewebe- und Flüssigprobensammlung — Voraussetzung für Patient:innen-basierte Forschung
+- Drittmittel-finanzierte experimentelle und klinische Forschung
+
+## Team
+- **Leitung:** Prof. Dr. Susanne Füssel
+- **Stellvertretung:** PD Dr. Kati Erdmann
+- Mehrere Postdocs, naturwissenschaftliche Doktorand:innen, MTAs
+
+*Sehr gute Adresse für eine experimentelle uro-onkologische Promotion — etablierte Probenbank verfügbar, vielfältige Projekte parallel betreut.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/translational-research-urologisches-forschungslabor",
+            contact="Prof. Dr. Susanne Füssel / PD Dr. Kati Erdmann (Urologie-Sekretariat)",
+        ),
+        dict(
+            title="Klinische und Versorgungsforschung Urologie — Prostatakarzinom, Inkontinenz, Steine (Urologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Mehrere klinische Forschungslinien mit aktiven Multicenter-Studien.
+
+## Prostatakarzinom
+- Tumorvorhersage durch **multiparametrische MRT der Prostata** + Fusionsbiopsie
+- Evaluation **fokaler Therapieverfahren**
+- **FOKATU**: MRT-geführte transurethrale Ultraschallablation bei lokal begrenztem Prostatakarzinom (Kooperation Strahlentherapie)
+
+## Inkontinenz
+- **ProKontinenz** — Versorgungssituation Hilfsmittel und Therapie männlicher Belastungsinkontinenz
+
+## Harnsteine
+- **RECUR** — Nationales Harnsteinregister für rezidivierende Steinerkrankungen des oberen Harntraktes
+
+*Gute Wahl für klinisch-statistische Promotionen mit fokussierter Studienteilnahme. GCP-zertifiziertes Studienteam.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/klinische-forschung-versorgungsforschung",
+            contact="Urologie-Sekretariat (klinische Studien)",
+        ),
+        dict(
+            title="Urologisches Routinelabor — Spermiogramme, Kryokonservierung (Urologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinikinternes Routinelabor — relevant für Promotionen mit andrologischem Bezug.
+
+## Leistungsspektrum
+- Urinsediment, chemische und mikrobiologische Analysen
+- **Spermiogramme nach WHO-Richtlinien**
+- Andrologische Sprechstunde
+- **Sperma-Kryokonservierung** vor Tumortherapien (Onkofertilität)
+
+*Geeignet für klinische Promotionen mit reproduktions­medizinischem Schwerpunkt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/patienten-und-einweiser/urologisches-routinelabor",
+            contact="Urologisches Routinelabor (Sekretariat)",
+        ),
+    ],
+    "hno": [
+        dict(
+            title="Ear Research Center Dresden (ERCD) — Mittelohrforschung (HNO UKD Dresden)",
+            thesis_type="experimental",
+            description="""**International führendes Mittelohr-Forschungszentrum** mit fast 30 Jahren Geschichte. Interdisziplinäres Lab aus Ingenieur:innen, Naturwissenschaftler:innen und Mediziner:innen.
+
+## Pionierleistungen
+- Erste Nutzer von **Laser Doppler Vibrometry (LDV)** und Finite-Element-Modellierung (FEM) am Mittelohr
+- Gründerort der **MEMRO**-Konferenz (International Symposium on Middle Ear Mechanics in Research and Otology)
+
+## Forschungs-Schwerpunkte
+- Schallübertragung im normalen und kranken Mittelohr
+- **Ossikuläre Prothesen** für Rekonstruktion
+- **Aktive Mittelohrimplantate** — Entwicklung und Evaluation
+- Klinik-Bezug: chirurgische Fragen aus dem OP-Alltag
+
+*Sehr gut für Promotionen mit physikalisch-technischem Interesse oder klassische klinische Otologie. Englisch-sprachiges Lab.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/ear-research-center-dresden",
+            contact="ERCD (HNO-Sekretariat)",
+        ),
+        dict(
+            title="Interdisziplinäres Zentrum für Riechen und Schmecken (HNO UKD Dresden)",
+            thesis_type="experimental",
+            description="""Etabliertes Zentrum seit 1998 — bundesweit eine der **führenden Adressen für Geruchs- und Schmecksinns­forschung**.
+
+## Aktivitäten
+- Diagnostisch-therapeutische Beratung von Patient:innen mit Riech-/Schmeckstörungen
+- Grundlagen-orientierte und klinische Forschung
+
+## Forschungsthemen
+- **Trigeminale Chemorezeption**
+- Unterschiede ortho- vs. retronasales Riechen
+- Peripherie des Riechsystems (Schleimhaut, Rezeptoren, pH, olfaktorisches Epithel)
+
+**Leitung:** Prof. Dr. med. Thomas Hummel · Klinikleitung: Prof. Dr. med. Thomas Zahnert
+
+*Sehr gut für sensorisch-physiologische Promotionen. Kooperation mit der Neuroradiologie (BOLD-fMRT olfaktorisch).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/zentrum-fur-riechen-und-schmecken",
+            contact="Prof. Dr. Thomas Hummel (HNO-Sekretariat)",
+        ),
+    ],
+    "gyn": [
+        dict(
+            title="Forschungs-Schwerpunkt Familiärer Brust-/Eierstockkrebs — genomDE (Frauenklinik UKD Dresden)",
+            thesis_type="experimental",
+            description="""Anbindung an die **Nationale Strategie für Genommedizin (genomDE)** — Genomsequenzierung bei familiärem Brust-/Eierstockkrebs.
+
+## Aktuelle Projekte
+- **INSTRUCD** — Investigating Non-coding STructural variants to Resolve Unknown Cancer Predispositions (Long-Read-Sequencing)
+- **BRCA-P-Studie** — erste internationale klinische Studie zur Prävention bei BRCA-Mutationsträger:innen
+- Genpaneluntersuchung + weiterführende genetische Diagnostik
+
+*Methodisch anspruchsvoll, Brücke Gyn-Onkologie ↔ KGE. Gut für translationale Promotionen.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/zentrum-familiaerer-brust-und-eierstockkrebs-1/forschung",
+            contact="Frauenklinik / Zentrum familiärer Brust-/Eierstockkrebs",
+        ),
+        dict(
+            title="Laboratorien Frauenklinik — Endokrinolog-Onkolog. Forschungslabor (Frauenklinik UKD Dresden)",
+            thesis_type="experimental",
+            description="""Frauenklinik-eigene Laboratorien für Forschung und Routine.
+
+## Vier Bereiche
+- Zytologisches Labor
+- Molekulargenetisches Labor
+- **IVF-Labor** (Reproduktions­medizin)
+- **Endokrinologisch-onkologisches Forschungslabor**
+
+*Geeignet für experimentelle Promotionen mit gynäkologisch-onkologischem oder reproduktions­medizinischem Schwerpunkt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/uber-uns/leistungsspektrum/laboratorien-1",
+            contact="Frauenklinik-Sekretariat",
+        ),
+        dict(
+            title="Geburtshilfe — Klinische Forschung & Hebammenstudium (Frauenklinik UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinische Forschung in der Geburtshilfe mit Anbindung an das **duale Hebammenstudium** (BSc Hebammenkunde, TU Dresden, seit WS 21/22).
+
+## Forschungsschwerpunkte
+- Klinische Studien rund um Schwangerschaft, Geburt und peripartale Versorgung
+- Vernetzung mit AG Mutter-Kind-Tagesklinik (PSO)
+
+*Klinische Promotion mit klar definiertem Patientinnen-Kollektiv. Bezug zur Versorgungsforschung möglich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/geburtshilfe/weiterbildung-forschung-und-lehre",
+            contact="Geburtshilfe / Frauenklinik-Sekretariat",
+        ),
+    ],
+    "oupc": [
+        dict(
+            title="Plastische und Handchirurgie — Forschungs-Schwerpunkte (OUPC UKD Dresden)",
+            thesis_type="experimental",
+            description="""Plastisch-handchirurgische Abteilung mit aktiven Forschungslinien und expliziter Doktorand:innen-Aufnahme.
+
+## Forschungs-Schwerpunkte
+- **Ischämie und Reperfusion** von Gewebe (extrakorporale Perfusion)
+- Perfusionsstudien im Rahmen **negativer Unterdruckbehandlung**
+- Evaluation **chronischer Schmerzsyndrome** an der Hand
+- **Adipositasforschung**
+
+## Bewerbungs-Hinweis
+„Interessenten für Promotionsarbeiten auf einem dieser Gebiete bewerben sich bitte mit Lebenslauf, Zeugnissen sowie Zertifikaten per E-Mail an `plastische-handchirurgie@uniklinikum-dresden.de`."
+
+*Explizit aufnahmebereit, gute Wahl wenn dich einer der Schwerpunkte interessiert.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/plastische-und-handchirurgie/forschung-und-lehre",
+            contact="plastische-handchirurgie@uniklinikum-dresden.de",
+        ),
+        dict(
+            title="OUC Forschungsschwerpunkte — Orthopädie/Unfallchirurgie übergreifend (OUPC UKD Dresden)",
+            thesis_type="experimental",
+            description="""Über die Plastische Chirurgie hinaus — übergreifende Forschungs­linien der ortho-/unfallchirurgischen Abteilung mit jährlich verfügbarem Publikations­bericht.
+
+## Spektrum
+- Grundlagenforschung (Biomechanik, Materialien)
+- Klinische Studien (Outcome, Verfahrensvergleich)
+- Promotion-Anfragen über das klinikeigene Formular
+
+*Anfrage über das klinikeigene Promotionsformular oder das Sekretariat des ärztlichen Direktors (siehe Klinik-Seite).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/forschung",
+            contact="OUC-Klinik-Sekretariat",
+        ),
+    ],
     "nra": [
         dict(
             title="Zerebrale Mikroangiopathien & vaskuläre Demenz (Neuroradiologie UKD Dresden)",
