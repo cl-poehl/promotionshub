@@ -1,6 +1,8 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, mk3, neurologie, neurochirurgie, psy, pso, kjp, kik, kge, klinchem, mkg, der, kch, nra, uro, hno, gyn, oupc, vtg, psm.
+ * Handgepflegt: ALLE 28 Kliniken (mk1, mk3, neurologie, neurochirurgie, psy, pso,
+ * kjp, kik, kge, klinchem, mkg, der, kch, nra, uro, hno, gyn, oupc, augenheilkunde,
+ * nuk, pat, str, ane, infekt, mikrobio, rad, vtg, psm).
  */
 
 import type { ImporterSource } from "../types";
@@ -17,8 +19,24 @@ export const tuDresdenSources: ImporterSource[] = [
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/ane",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschung in der Anästhesiologie (Anästhesie UKD Dresden)", thesis_type: "clinical",
-        description: `Schwerpunkte • Untersuchungen zur inflammatorischen Regulation und Modulation von SIRS und Multiorganversagen • Evaluierung neuer prognostischer Marker für Sepsis/SIRS bei Intensivpatientinnen und -patienten • Untersuchung zur Morbidität und Mortalität von Patientinnen und Patienten mit akutem Lungenversagen • Erkennung und Behandlung von schweren Gerinnungsstörungen • Einsatz von point-of-care (POC) Verfahren in der Anästhesie und Intensivmedizin • Differenzierte Therapieansätze beim schweren akuten Lungenversagen (ARDS) • Erprobung neuer Beatmungsformen bei Patientinnen und Patienten mit akutem Lungenversagen und zur Lungenprotektion • Effektivität und Kosten-Nutzen-Analysen verschiedener  …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/ane/forschung` },
+      { title: "Translationale Anästhesie und Intensivmedizin — Forschung (Anästhesie UKD Dresden)", thesis_type: "clinical",
+        description: `Breit aufgestellte klinisch-experimentelle Forschung der Anästhesiologie.
+
+## Forschungs-Schwerpunkte
+- Inflammatorische Regulation und Modulation von **SIRS** und Multiorganversagen
+- Neue prognostische Marker für **Sepsis/SIRS** bei Intensivpatient:innen
+- Morbidität und Mortalität bei akutem Lungenversagen
+- **Schwere Gerinnungsstörungen** — Erkennung und Behandlung
+- **Point-of-Care (POC)** Verfahren in Anästhesie und Intensivmedizin
+- Differenzierte Therapieansätze beim **schweren ARDS**
+- Neue Beatmungsformen und Lungenprotektion
+- Effektivität/Kosten-Nutzen von Regional­anästhesie­verfahren
+- **Innovative Monitoring­verfahren** (interdisziplinäre Kooperationen)
+- Differenzierte Gerinnungsdiagnostik bei Trauma, ARDS und Sepsis
+- Ingenieurwissenschaftliche Tools zur Diagnostik und Modellierung des respiratorischen Systems
+
+*Sehr viele Andockpunkte für Promotionen — Intensivmedizin/ARDS/Sepsis vorne in der Liste.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/ane/forschung`,
+        applicationContact: "AG Translationale Anästhesie und Intensivmedizin (Anästhesie-Sekretariat)" },
     ],
   },
   {
@@ -30,10 +48,18 @@ export const tuDresdenSources: ImporterSource[] = [
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschergruppen- Experimentelle Ophthalmologie (Augenklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Forschergruppe Glaukom An der Universitäts-Augenklinik Dresden ist die _Forschergruppe Glaukom_ seit Mitte des Jahres 2001 etabliert. Die wissenschaftliche Tätigkeit der Arbeitsgruppe befasst sich mit experimentellen Untersuchungen zur Pathogenese des glaukomatösen Sehnervenschadens mit besonderem Schwerpunkt auf Mikrozirkulationsstörungen im Bereich der peripapillären Netzhaut, der Aderhaut, des Sehnervenkopfes und der retrobulbären Gefäße. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde/forschung-und-lehre/copy_of_experimentelle-ophthalmologie` },
-      { title: "Forschungsschwerpunkte (Augenklinik UKD Dresden)", thesis_type: "experimental",
-        description: `Forschergruppen- Experimentelle Ophthalmologie Lehre Studenten [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde/forschung-und-lehre` },
+      { title: "Forschergruppe Glaukom — Experimentelle Ophthalmologie (Augenklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Etablierte Forschungsgruppe (seit 2001) an der Universitäts-Augenklinik Dresden zur **Pathogenese des glaukomatösen Sehnervenschadens**.
+
+## Forschungsschwerpunkt
+- Mikrozirkulationsstörungen an der peripapillären Netzhaut, Aderhaut, Sehnervenkopf und retrobulbärer Gefäße
+- Interaktionen der okulären Mikrozirkulation nach Pharmaka-Applikation, Atemgas-Inhalation, künstlicher Augeninnendruck-Erhöhung
+
+## Forschungslabor (Stand der Technik)
+**Blau-Gelb-Perimetrie, Frequency-Doubling-Perimetrie, Laser-Doppler-Flowmeter, Scanning-Laser-Doppler-Flowmeter, Scanning-Laser-Tomograph, Ocular Blood Flow-System, Farb-Duplex-Sonographie**
+
+*Experimentelles Lab mit klarem Patient:innen-Bezug. Sehr gut für Glaukom-orientierte experimentelle Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde/forschung-und-lehre/copy_of_experimentelle-ophthalmologie`,
+        applicationContact: "Forschergruppe Glaukom (Augenklinik-Sekretariat)" },
     ],
   },
   {
@@ -216,8 +242,20 @@ Dr. rer. medic. Maike Bergmann.
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-infektiologie",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschungsschwerpunkte (Infektiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Die Klinische Infektiologie des Universitätsklinikums Carl Gustav Carus in Dresden beschäftigt sich in ihrer wissenschaftlichen Arbeit mit der Evaluierung und Verbesserung der infektiologischen Versorgung im stationären Bereich. Schwerpunktmäßig erforschen wir dabei, wie der rationale Einsatz von Antibiotika gesteuert und die Versorgungsqualität insgesamt verbessert werden kann. Ziel ist es, durch einen verantwortungsbewussten Antibiotikaeinsatz die Behandlungssicherheit zu erhöhen und der Entstehung von Antibiotikaresistenzen vorzubeugen. Dazu initiieren wir selbst verschiedene Forschungsprojekte oder gehen Kooperationen mit anderen Wissenschaftler:innen bzw. Einrichtungen ein. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-infektiologie/forschung` },
+      { title: "Klinische Infektiologie — Antibiotic Stewardship und Versorgungsforschung (Infektiologie UKD Dresden)", thesis_type: "statistical",
+        description: `Forschungs-Fokus: **Verbesserung der infektiologischen Versorgung im stationären Bereich**.
+
+## Forschungslinien
+- **Antibiotic Stewardship (ABS)** — wie der rationale Antibiotika-Einsatz gesteuert wird
+- Versorgungsqualität und Behandlungssicherheit
+- Vorbeugung von **Antibiotikaresistenzen**
+- Eigeninitiierte Projekte + Kooperationen mit anderen Wissenschaftler:innen
+
+## Aktuelle Publikationen
+Mehrere Drittmittel-Publikationen 2024–2025 zu Anti­biotika-Verbrauchsdaten und Resistenz­schätzung (Rank, Kern u.a.).
+
+*Sehr gut für statistisch-epidemiologische Promotionen — Public-Health-Anteil, Versorgungs­forschung-Methoden.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-infektiologie/forschung`,
+        applicationContact: "Klinische Infektiologie (Sekretariat)" },
     ],
   },
   {
@@ -769,8 +807,18 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/institut-fuer-medizinische-mikrobiologie-und-virologie",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschungsschwerpunkte (Mikrobiologie UKD Dresden)", thesis_type: "experimental",
-        description: `Folgende Arbeitsgruppen sind in unseren Instituten tätig: • Dr. Dumke: Mykoplasmen Konsiliarlabor • Prof. Dr. Lindemann: Molekulare Retrovirologie • Dr. Schröttner: Mikrobielle Metagenomanalysen, Seltene bakterielle Pathogene • Jun. Prof. Dr. Harb: Molecular and cellular mechanisms of lung pathology • [](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/institut-fuer-medizinische-mikrobiologie-und-virologie/forschung/arbeitsgruppen/ag-harb)Dr. Petzold:Legionella - From Environment to Infection • Informationen zu Konsiliarlabor für Legionellen finden Sie hier Publikationen 2026 Zuk, M., Kurz, J., Uhle, S., Wehmeier, L., Petzold, M. , Zimmermann, S. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/institut-fuer-medizinische-mikrobiologie-und-virologie/forschung` },
+      { title: "Forschungsgruppen Mikrobiologie/Virologie (Institut UKD Dresden)", thesis_type: "experimental",
+        description: `Mehrere etablierte AGs am Institut für Medizinische Mikrobiologie und Virologie.
+
+## Arbeitsgruppen
+- **AG Dumke** — Mykoplasmen-Konsiliarlabor (national)
+- **AG Petzold** — Legionellen-Konsiliarlabor (national)
+- **AG Lindemann** — Molekulare Retrovirologie
+- **AG Schröttner** — Mikrobielle Metagenom-Analysen, seltene bakterielle Pathogene
+- **AG Harb** (Jun.-Prof.) — Molecular and cellular mechanisms of lung pathology
+
+*Spektrum von Konsiliarlaboren bis zur translationalen Lungeforschung. Für AG-spezifische Themen direkt an die jeweilige Leitung wenden.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/institut-fuer-medizinische-mikrobiologie-und-virologie/forschung`,
+        applicationContact: "AG-Leitungen (Institut-Sekretariat)" },
     ],
   },
   {
@@ -1446,12 +1494,42 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk",
     applicationContact: null,
     researchAreas: [
-      { title: "Arbeitsgruppe Radiobiologie (Nuklearmedizin UKD Dresden)", thesis_type: "experimental",
-        description: `_„Die Therapie mit offenen Radionukliden wird seit über 50 Jahren mit Erfolg bei benignen und malignen Erkrankungen angewendet und stellt eine effektive Therapie mit geringer Nebenwirkungsrate dar. Tumor-affine Radiopharmaka können diagnostisch und therapeutisch eingesetzt werden. In der vergangenen Dekade haben radiopharmazeutische Neuentwicklungen das Spektrum therapierbarer Erkrankungen erweitert, wodurch Einflussfaktoren auf die Dosis-Wirkungs-Beziehung auch für den Nuklearmediziner stärker in den Blickpunkt gerückt sind.“_ _(Auszug aus Editorial Nuklearmedizin Supplement 2010)_ Die nuklearmedizinische Therapie nutzt das Potential von Teilchenstrahlern mit kurzen Reichweiten zur Depositi …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/arbeitsgruppe-radiobiologie` },
-      { title: "Forschung- Research (Nuklearmedizin UKD Dresden)", thesis_type: "clinical",
-        description: `Forschung wird in unserer Klinik GROSS geschrieben: • Die klinische Evaluierung neuer Untersuchungs- und Behandlungsmethoden steht im Vordergrund der eigenen Projekte. Untersuchungen an einem der modernsten kombinierten PET/MRT-Geräte im PET-Zentrum des Instituts für Radiopharmazeutische Krebsforschung am Helmholtz-Zentrum Dresden-Rossendorf sowie an unserem PET/CT sind besonders hervorzuheben. • Weitere klinische Forschungsarbeiten umfassen die Durchführung und Teilnahme an klinischen Studien gemeinsam mit Kliniken und Instituten des Universitätsklinikums und der Medizinischen Fakultät sowie anderen Einrichtungen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research` },
-      { title: "MIRD 14 Dosis-Kalkulator (Nuklearmedizin UKD Dresden)", thesis_type: "other",
-        description: `Durch renale Elimination applizierter Radiopharmaka erfährt die Harnblasenwand als strahlensensibles Organ eine erhöhte Strahlenexposition. Diese ist einerseits von den physikalischen und physiologischen Eigenschaften des Radiopharmakons abhängig und wird andererseits durch Blasenfüllung und Miktionsintervall beeinflusst. Diese Faktoren werden durch das im MIRD Pamphlet 14 veröffentlichte dynamische Blasenmodell berücksichtigt. • Autor: R. Freudenberg Literatur/ References: • Thomas, SR et al. MIRD Pamphlet No. 14 Revised: A Dynamic Urinary Bladder Model for Radiation Dose Calculations. J Nucl Med 1999 (40):102S-123S • Freudenberg, R. et al. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/mird-14-dosis-kalkulator` },
+      { title: "AG Radiobiologie — Strahlenbiologische Forschung (Nuklearmedizin UKD Dresden)", thesis_type: "experimental",
+        description: `**Interdisziplinäre AG** aus Mediziner:innen, Biolog:innen, Chemiker:innen und Physiker:innen.
+
+## Forschungsfeld
+- Strahlenbiologische Aspekte der Anwendung **offener Radionuklide an Zellkulturen**
+- Dosis-Wirkungs-Beziehung neuer Radiopharmaka
+- Tumor-affine Substanzen für Diagnostik und Therapie
+- Teilchenstrahler mit kurzen Reichweiten für gezielte Tumortherapie
+
+*Klassische experimentelle Promotion an einer der spezialisiertesten Theranostics-Einrichtungen Deutschlands.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/arbeitsgruppe-radiobiologie`,
+        applicationContact: "AG Radiobiologie (Nuklearmedizin-Sekretariat)" },
+      { title: "PET/MRT-Forschung & Theranostics — Klinische Studien (Nuklearmedizin UKD Dresden)", thesis_type: "clinical",
+        description: `**„Forschung wird in unserer Klinik GROSS geschrieben\\"** — Klinik-Selbstaussage.
+
+## Schlüssel-Infrastruktur
+- Eines der modernsten **kombinierten PET/MRT-Geräte** am PET-Zentrum des **Helmholtz-Zentrum Dresden-Rossendorf** (HZDR)
+- Eigenes PET/CT am UKD
+- Theranostics Center of Excellence
+
+## Forschungs-Linien
+- Klinische Evaluation neuer Untersuchungs- und Behandlungsmethoden
+- Multizentrische Studien gemeinsam mit anderen Kliniken und Instituten
+- Radiopharmazeutische Krebsforschung mit HZDR-Anbindung
+
+*Hervorragend für klinisch-bildgebende Promotionen mit translationaler Tumortherapie-Komponente.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research`,
+        applicationContact: "Nuklearmedizin-Sekretariat" },
+      { title: "MIRD-14 Dosimetrie-Forschung — Java-Applikation (Nuklearmedizin UKD Dresden)", thesis_type: "statistical",
+        description: `Methodische Forschung zur **Strahlenexposition der Harnblasen­wand** nach Radiopharmaka-Applikation.
+
+## Schwerpunkt
+- Berechnung absorbierter Dosen für die Harnblasenwand­oberfläche bei renal eliminierten Radiopharmaka
+- Eigene Java-Applikation auf Basis des MIRD Pamphlet 14 (dynamisches Blasenmodell)
+- Autor: R. Freudenberg
+
+*Methodisch-statistische Promotion für Interessent:innen an Dosimetrie und Mathematik der Radiopharmaka.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/mird-14-dosis-kalkulator`,
+        applicationContact: "R. Freudenberg (Nuklearmedizin-Sekretariat)" },
     ],
   },
   {
@@ -1498,10 +1576,23 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschungsschwerpunkte (Pathologie UKD Dresden)", thesis_type: "other",
-        description: `Forschung Lehre [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat/forschung-und-lehre` },
-      { title: "Forschungsschwerpunkte (Pathologie UKD Dresden)", thesis_type: "clinical",
-        description: `Möglichkeit zur Forschung • Großes Volumen an Daten durch pathologisches Archiv • Mitarbeit an klinische Studien • Neueste Technologien (z.B. MALDI, NGS) und verschiedene Forschungsschwerpunkte (Tumororganoide, Tumor-Immunzellinteraktion, KI) • Interdisziplinäre Zusammenarbeit • Gute Vernetzung am gesamten Campus Forschungsnetzwerke : • nNGM • NCT/UCC • DKTK • EORTC • NATON • MassSpec Community Dresden • BioBank Dresden (TNTB) PubMed-Link zu aktuellen Publikationen: <https://pubmed.ncbi.nlm.nih.gov/collections/64442534/?sort=pubdate> Spannende Promotionsthemen, schauen Sie in den AGs nach Methoden und Themen, die Sie interessieren und schreiben Sie einfach eine E-Mail an den AG-Leiter Die Se …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat/forschung-und-lehre/forschung-1` },
+      { title: "Forschung am Institut für Pathologie — AGs und Methoden (Pathologie UKD Dresden)", thesis_type: "experimental",
+        description: `Pathologisches Institut mit aktivem Promotionsangebot.
+
+## Forschungs-Möglichkeiten
+- Großes Daten-Volumen über das **pathologische Archiv**
+- Mitarbeit an **klinischen Studien**
+- Neueste Technologien: **MALDI, NGS, Tumororganoide, Tumor-Immunzell-Interaktion, KI**
+- Interdisziplinäre Zusammenarbeit am Campus
+
+## Vernetzung
+**nNGM**, **NCT/UCC**, **DKTK**, **EORTC**, **NATON**, MassSpec Community Dresden, **BioBank Dresden (TNTB)**
+
+## Format der Anfrage
+„Spannende Promotionsthemen — schauen Sie in den AGs nach Methoden und Themen, die Sie interessieren, und schreiben Sie einfach eine E-Mail an den AG-Leiter.\\"
+
+*Klassisches Promotionsumfeld mit guter Vernetzung und Bioinformatik-Anteil möglich (KI in der Pathologie).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat/forschung-und-lehre/forschung-1`,
+        applicationContact: "AG-Leiter:innen Pathologie (siehe AG-Übersicht)" },
     ],
   },
   {
@@ -1830,8 +1921,16 @@ Drittmittel-finanzierte Studien sowie Master­arbeiten/Promotionen über Eigenmi
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/rad",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschung Radiologie (Radiologie UKD Dresden)", thesis_type: "clinical",
-        description: `In dieser Rubrik geben wir Ihnen einen Einblick in unsere wissenschaftlichen Schwerpunkte, geleisteten Publikationen und klinischen Studienaktivitäten. Erfahren Sie mehr über die neuesten Erkenntnisse und Entwicklungen unserer Einrichtung und wie wir kontinuierlich an der Verbesserung der Diagnostik und Therapie arbeiten. Publikationen [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/rad/forschung` },
+      { title: "Diagnostische und Interventionelle Radiologie — Forschung (Radiologie UKD Dresden)", thesis_type: "clinical",
+        description: `Wissenschaftliche Schwerpunkte rund um die kontinuierliche Verbesserung von **Diagnostik und Therapie** in der Radiologie.
+
+## Spektrum
+- Bildgebungs-Methoden für vielfältige klinische Fragestellungen
+- Klinische Studien-Aktivitäten
+- Mehrere Publikations­linien — siehe Klinik-Subseite
+
+*Anfrage über das Klinik-Sekretariat — auf der Klinik-Seite sind konkrete AGs und Ansprechpartner:innen aufgeführt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/rad/forschung`,
+        applicationContact: "Radiologie-Sekretariat (über Klinik-Seite)" },
     ],
   },
   {
@@ -1843,10 +1942,21 @@ Drittmittel-finanzierte Studien sowie Master­arbeiten/Promotionen über Eigenmi
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschung und Klinische Studien (Strahlentherapie UKD Dresden)", thesis_type: "clinical",
-        description: `Forschung[](http://www.oncoray.de) OncoRay ist die interdisziplinäre Forschungsplattform zur Verbesserung der Therapie von Krebserkrankungen durch biologisch individualisierte und technisch optimierte Strahlentherapie. Für weitere Informationen besuchen Sie www.oncoray.de. • * * Klinisches Studienzentrum [](http://www.oncoray.de/de/forschung/klinisches-studienzentrum/)Klinische Studien sind wissenschaftliche Untersuchungen, die dazu dienen, neue Informationen zu Erkrankungen und Krankheiten zu gewinnen, um so neue Therapiemöglichkeiten zu etablieren und individuellere Behandlungen für den einzelnen Patienten zu schaffen. Das Klinische Studienzentrum übernimmt u.a. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str/forschung-und-klinische-studien` },
-      { title: "Lehre und Ausbildung (Strahlentherapie UKD Dresden)", thesis_type: "clinical",
-        description: `Kurs \\"Bildgebende Verfahren, Strahlenbehandlung und Strahlenschutz\\" (BVSS) • 6. Semester Humanmedizin (gemeinsame Durchführung mit der Klinik für Nuklearmedizin und dem Institut für Radiologische Diagnostik) • Organisation: Dr. R. Runge, Tel. 0351 458-5481, E-Mail: roswitha runge Vorlesungen der Klinik für Strahlentherapie im Rahmen des DIPOL-Kurses _Onkologie_ • E-Mail: Lehre Onko\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str/forschung-und-lehre` },
+      { title: "OncoRay — Biologisch individualisierte Strahlentherapie (Strahlentherapie UKD Dresden)", thesis_type: "experimental",
+        description: `**OncoRay** ist die interdisziplinäre Forschungsplattform zur Verbesserung der Krebstherapie durch biologisch individualisierte und technisch optimierte Strahlentherapie. Eines der renommiertesten Programme dieser Art in Deutschland.
+
+## Klinisches Studienzentrum
+Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien durch — Innovation am Patient:innen-Bett.
+
+## Anbindung
+- Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+- TU Dresden / Medizinische Fakultät
+- NCT/UCC Dresden
+
+[oncoray.de](http://www.oncoray.de)
+
+*Eine der besten deutschen Adressen für strahlentherapeutische und tumortherapeutische Promotionen — sowohl klinisch als auch experimentell.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str/forschung-und-klinische-studien`,
+        applicationContact: "OncoRay / Strahlentherapie-Sekretariat" },
     ],
   },
   {

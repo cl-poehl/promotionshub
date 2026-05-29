@@ -28,6 +28,196 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "augenheilkunde": [
+        dict(
+            title="Forschergruppe Glaukom — Experimentelle Ophthalmologie (Augenklinik UKD Dresden)",
+            thesis_type="experimental",
+            description="""Etablierte Forschungsgruppe (seit 2001) an der Universitäts-Augenklinik Dresden zur **Pathogenese des glaukomatösen Sehnervenschadens**.
+
+## Forschungsschwerpunkt
+- Mikrozirkulationsstörungen an der peripapillären Netzhaut, Aderhaut, Sehnervenkopf und retrobulbärer Gefäße
+- Interaktionen der okulären Mikrozirkulation nach Pharmaka-Applikation, Atemgas-Inhalation, künstlicher Augeninnendruck-Erhöhung
+
+## Forschungslabor (Stand der Technik)
+**Blau-Gelb-Perimetrie, Frequency-Doubling-Perimetrie, Laser-Doppler-Flowmeter, Scanning-Laser-Doppler-Flowmeter, Scanning-Laser-Tomograph, Ocular Blood Flow-System, Farb-Duplex-Sonographie**
+
+*Experimentelles Lab mit klarem Patient:innen-Bezug. Sehr gut für Glaukom-orientierte experimentelle Promotion.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde/forschung-und-lehre/copy_of_experimentelle-ophthalmologie",
+            contact="Forschergruppe Glaukom (Augenklinik-Sekretariat)",
+        ),
+    ],
+    "nuk": [
+        dict(
+            title="AG Radiobiologie — Strahlenbiologische Forschung (Nuklearmedizin UKD Dresden)",
+            thesis_type="experimental",
+            description="""**Interdisziplinäre AG** aus Mediziner:innen, Biolog:innen, Chemiker:innen und Physiker:innen.
+
+## Forschungsfeld
+- Strahlenbiologische Aspekte der Anwendung **offener Radionuklide an Zellkulturen**
+- Dosis-Wirkungs-Beziehung neuer Radiopharmaka
+- Tumor-affine Substanzen für Diagnostik und Therapie
+- Teilchenstrahler mit kurzen Reichweiten für gezielte Tumortherapie
+
+*Klassische experimentelle Promotion an einer der spezialisiertesten Theranostics-Einrichtungen Deutschlands.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/arbeitsgruppe-radiobiologie",
+            contact="AG Radiobiologie (Nuklearmedizin-Sekretariat)",
+        ),
+        dict(
+            title="PET/MRT-Forschung & Theranostics — Klinische Studien (Nuklearmedizin UKD Dresden)",
+            thesis_type="clinical",
+            description="""**„Forschung wird in unserer Klinik GROSS geschrieben"** — Klinik-Selbstaussage.
+
+## Schlüssel-Infrastruktur
+- Eines der modernsten **kombinierten PET/MRT-Geräte** am PET-Zentrum des **Helmholtz-Zentrum Dresden-Rossendorf** (HZDR)
+- Eigenes PET/CT am UKD
+- Theranostics Center of Excellence
+
+## Forschungs-Linien
+- Klinische Evaluation neuer Untersuchungs- und Behandlungsmethoden
+- Multizentrische Studien gemeinsam mit anderen Kliniken und Instituten
+- Radiopharmazeutische Krebsforschung mit HZDR-Anbindung
+
+*Hervorragend für klinisch-bildgebende Promotionen mit translationaler Tumortherapie-Komponente.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research",
+            contact="Nuklearmedizin-Sekretariat",
+        ),
+        dict(
+            title="MIRD-14 Dosimetrie-Forschung — Java-Applikation (Nuklearmedizin UKD Dresden)",
+            thesis_type="statistical",
+            description="""Methodische Forschung zur **Strahlenexposition der Harnblasen­wand** nach Radiopharmaka-Applikation.
+
+## Schwerpunkt
+- Berechnung absorbierter Dosen für die Harnblasenwand­oberfläche bei renal eliminierten Radiopharmaka
+- Eigene Java-Applikation auf Basis des MIRD Pamphlet 14 (dynamisches Blasenmodell)
+- Autor: R. Freudenberg
+
+*Methodisch-statistische Promotion für Interessent:innen an Dosimetrie und Mathematik der Radiopharmaka.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/mird-14-dosis-kalkulator",
+            contact="R. Freudenberg (Nuklearmedizin-Sekretariat)",
+        ),
+    ],
+    "pat": [
+        dict(
+            title="Forschung am Institut für Pathologie — AGs und Methoden (Pathologie UKD Dresden)",
+            thesis_type="experimental",
+            description="""Pathologisches Institut mit aktivem Promotionsangebot.
+
+## Forschungs-Möglichkeiten
+- Großes Daten-Volumen über das **pathologische Archiv**
+- Mitarbeit an **klinischen Studien**
+- Neueste Technologien: **MALDI, NGS, Tumororganoide, Tumor-Immunzell-Interaktion, KI**
+- Interdisziplinäre Zusammenarbeit am Campus
+
+## Vernetzung
+**nNGM**, **NCT/UCC**, **DKTK**, **EORTC**, **NATON**, MassSpec Community Dresden, **BioBank Dresden (TNTB)**
+
+## Format der Anfrage
+„Spannende Promotionsthemen — schauen Sie in den AGs nach Methoden und Themen, die Sie interessieren, und schreiben Sie einfach eine E-Mail an den AG-Leiter."
+
+*Klassisches Promotionsumfeld mit guter Vernetzung und Bioinformatik-Anteil möglich (KI in der Pathologie).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat/forschung-und-lehre/forschung-1",
+            contact="AG-Leiter:innen Pathologie (siehe AG-Übersicht)",
+        ),
+    ],
+    "str": [
+        dict(
+            title="OncoRay — Biologisch individualisierte Strahlentherapie (Strahlentherapie UKD Dresden)",
+            thesis_type="experimental",
+            description="""**OncoRay** ist die interdisziplinäre Forschungsplattform zur Verbesserung der Krebstherapie durch biologisch individualisierte und technisch optimierte Strahlentherapie. Eines der renommiertesten Programme dieser Art in Deutschland.
+
+## Klinisches Studienzentrum
+Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien durch — Innovation am Patient:innen-Bett.
+
+## Anbindung
+- Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+- TU Dresden / Medizinische Fakultät
+- NCT/UCC Dresden
+
+[oncoray.de](http://www.oncoray.de)
+
+*Eine der besten deutschen Adressen für strahlentherapeutische und tumortherapeutische Promotionen — sowohl klinisch als auch experimentell.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str/forschung-und-klinische-studien",
+            contact="OncoRay / Strahlentherapie-Sekretariat",
+        ),
+    ],
+    "ane": [
+        dict(
+            title="Translationale Anästhesie und Intensivmedizin — Forschung (Anästhesie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Breit aufgestellte klinisch-experimentelle Forschung der Anästhesiologie.
+
+## Forschungs-Schwerpunkte
+- Inflammatorische Regulation und Modulation von **SIRS** und Multiorganversagen
+- Neue prognostische Marker für **Sepsis/SIRS** bei Intensivpatient:innen
+- Morbidität und Mortalität bei akutem Lungenversagen
+- **Schwere Gerinnungsstörungen** — Erkennung und Behandlung
+- **Point-of-Care (POC)** Verfahren in Anästhesie und Intensivmedizin
+- Differenzierte Therapieansätze beim **schweren ARDS**
+- Neue Beatmungsformen und Lungenprotektion
+- Effektivität/Kosten-Nutzen von Regional­anästhesie­verfahren
+- **Innovative Monitoring­verfahren** (interdisziplinäre Kooperationen)
+- Differenzierte Gerinnungsdiagnostik bei Trauma, ARDS und Sepsis
+- Ingenieurwissenschaftliche Tools zur Diagnostik und Modellierung des respiratorischen Systems
+
+*Sehr viele Andockpunkte für Promotionen — Intensivmedizin/ARDS/Sepsis vorne in der Liste.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/ane/forschung",
+            contact="AG Translationale Anästhesie und Intensivmedizin (Anästhesie-Sekretariat)",
+        ),
+    ],
+    "infekt": [
+        dict(
+            title="Klinische Infektiologie — Antibiotic Stewardship und Versorgungsforschung (Infektiologie UKD Dresden)",
+            thesis_type="statistical",
+            description="""Forschungs-Fokus: **Verbesserung der infektiologischen Versorgung im stationären Bereich**.
+
+## Forschungslinien
+- **Antibiotic Stewardship (ABS)** — wie der rationale Antibiotika-Einsatz gesteuert wird
+- Versorgungsqualität und Behandlungssicherheit
+- Vorbeugung von **Antibiotikaresistenzen**
+- Eigeninitiierte Projekte + Kooperationen mit anderen Wissenschaftler:innen
+
+## Aktuelle Publikationen
+Mehrere Drittmittel-Publikationen 2024–2025 zu Anti­biotika-Verbrauchsdaten und Resistenz­schätzung (Rank, Kern u.a.).
+
+*Sehr gut für statistisch-epidemiologische Promotionen — Public-Health-Anteil, Versorgungs­forschung-Methoden.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-infektiologie/forschung",
+            contact="Klinische Infektiologie (Sekretariat)",
+        ),
+    ],
+    "mikrobio": [
+        dict(
+            title="Forschungsgruppen Mikrobiologie/Virologie (Institut UKD Dresden)",
+            thesis_type="experimental",
+            description="""Mehrere etablierte AGs am Institut für Medizinische Mikrobiologie und Virologie.
+
+## Arbeitsgruppen
+- **AG Dumke** — Mykoplasmen-Konsiliarlabor (national)
+- **AG Petzold** — Legionellen-Konsiliarlabor (national)
+- **AG Lindemann** — Molekulare Retrovirologie
+- **AG Schröttner** — Mikrobielle Metagenom-Analysen, seltene bakterielle Pathogene
+- **AG Harb** (Jun.-Prof.) — Molecular and cellular mechanisms of lung pathology
+
+*Spektrum von Konsiliarlaboren bis zur translationalen Lungeforschung. Für AG-spezifische Themen direkt an die jeweilige Leitung wenden.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/institut-fuer-medizinische-mikrobiologie-und-virologie/forschung",
+            contact="AG-Leitungen (Institut-Sekretariat)",
+        ),
+    ],
+    "rad": [
+        dict(
+            title="Diagnostische und Interventionelle Radiologie — Forschung (Radiologie UKD Dresden)",
+            thesis_type="clinical",
+            description="""Wissenschaftliche Schwerpunkte rund um die kontinuierliche Verbesserung von **Diagnostik und Therapie** in der Radiologie.
+
+## Spektrum
+- Bildgebungs-Methoden für vielfältige klinische Fragestellungen
+- Klinische Studien-Aktivitäten
+- Mehrere Publikations­linien — siehe Klinik-Subseite
+
+*Anfrage über das Klinik-Sekretariat — auf der Klinik-Seite sind konkrete AGs und Ansprechpartner:innen aufgeführt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/rad/forschung",
+            contact="Radiologie-Sekretariat (über Klinik-Seite)",
+        ),
+    ],
     "uro": [
         dict(
             title="Translational Research — Urologisches Forschungslabor (Urologie UKD Dresden)",
