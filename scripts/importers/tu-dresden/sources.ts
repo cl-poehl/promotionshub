@@ -1,6 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, mk3, neurologie, psy, pso, kjp, kik, kge, klinchem, mkg, der, vtg, psm.
+ * Handgepflegt: mk1, mk3, neurologie, neurochirurgie, psy, pso, kjp, kik, kge, klinchem, mkg, der, kch, nra, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -182,16 +182,37 @@ Dr. rer. medic. Maike Bergmann.
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch",
     applicationContact: null,
     researchAreas: [
-      { title: "Experimentelle Forschung (Kinderchirurgie UKD Dresden)", thesis_type: "experimental",
-        description: `english Forschungsschwerpunkte: 1. Signaltransduktion nach genotoxischem Stress Tumorerkrankungen stellen auch im Kindesalter lebensbedrohliche Erkrankungen dar. Die drei Behandlungssäulen stellen Chirurgie, Chemotherapie und Strahlentherapie dar. In den letzten Jahren sind bedeutende Fortschritte in der Behandlung kindlicher Tumoren erzielt worden, sodass eine Reihe kindlicher Tumoren hohe Heilungsraten aufweisen. Unter diesem Gesichtspunkt ist es sehr wichtig, dass insbesondere bei Kindern Behandlungsspätfolgen (z.B. Bestrahlungsspätfolgen) minimiert werden. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/experimentelle-forschung-1` },
-      { title: "Forschungsschwerpunkte (Kinderchirurgie UKD Dresden)", thesis_type: "experimental",
-        description: `Forschung / Research • Klinische Forschung / Clinical Research • Experimentelle Forschung / Experimental Research • Labor / Laboratory Lehre • Hauptvorlesungen für Studierende der Human- und Zahnmedizin (4. Studienjahr) • interdisziplinäre, symptombezogene Vorlesung für Studierende der Humanmedizin • multidisziplinärer Untersuchungskurs und Blockpraktika 3. bzw. 5. Studienjahr • Tutorentätigkeit im Rahmen von POL-Kursen der Fakultät • Schwesternausbildung: Kinderkrankenschwestern, OP-Schwestern (Kinderchirurgie, Kinder-Intensivmedizin) • Durchführung von kinderchirurgischen Kolloquien für Studierende im Praktischen Jahr • [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung` },
-      { title: "Klinische Forschung (Kinderchirurgie UKD Dresden)", thesis_type: "clinical",
-        description: `english Charakterisierung prädisponierender Gene als ätiologischer Faktor für die Genese des Morbus Hirschsprung und des UNDINE-Syndroms • Ansprechpartner: Prof. Dr. Guido Fitze, Tel: 0351 358-2762 (Lebenslauf) • E-Mail: guido fitze Mutationsanalyse des _RET_ -Protoonkogens im Rahmen der MEN2-Diagnostik • Ansprechpartner: Prof. Dr. Guido Fitze, Tel: 0351 358-2762 • E-Mail: guido fitze Implementierung der endoskopischen Blasenchirurgie bei Kindern: Methodenvergleich Ureterneueinpflanzung • Ansprechpartner: OA Dr. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/klinische-forschung` },
-      { title: "Labor (Kinderchirurgie UKD Dresden)", thesis_type: "experimental",
-        description: `english[](https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/labor/laboratory) Ansprechpartner PD Dr. med. Michael Haase Facharzt für Pathologie Laborleiter 0351 458-13142 E-Mail: michael haase • * * Ivonne Kemnitz, MTA 0351 458-6889 E-Mail: ivonne kemnitz • * * • Susann Müller, Doktorandin Thema: Molekulare Funktion von Genen, die durch Bestrahlung heraufreguliert werden. • Charlotte Müller, Doktorandin Thema: Einfluß von c-Ret Mutationen auf Signalwege in humanen Neuralleistenabkömmlingen. Publikation: Müller CM, Haase MG, Kemnitz I, Fitze, G. Genetic mosaicism of a frameshift mutation in the RET gene in a family with Hirschsprung disease. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/labor` },
-      { title: "Wahlfach (Kinderchirurgie UKD Dresden)", thesis_type: "other",
-        description: `Wahlfach Kinderchirurgie Anmeldung und weitere Informationen erfolgen über das SELMA-Portal (max. 5 Teilnehmer) Ausbildungsziel • Vertiefung der Vorlesungen Kinderchirurgie in Form von Bed-side-Ausbildung • Präsentation des breiten Spektrums der Kinderchirurgie • Falldiskussionen [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/wahlfach` },
+      { title: "Klinische Forschung Kinderchirurgie — Morbus Hirschsprung & UNDINE-Syndrom (Kinderchirurgie UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische Forschungslinie zur **Charakterisierung prädisponierender Gene** als ätiologischer Faktor bei seltenen Kinderchirurgie-Erkrankungen.
+
+## Schwerpunkte
+- **Morbus Hirschsprung** — Genese und genetische Faktoren
+- **UNDINE-Syndrom** — kongenitales zentrales Hypoventilations­syndrom
+
+**Ansprechpartner:** Prof. Dr. Guido Fitze · Tel. 0351 358-2762
+
+*Klinisch-genetische Promotion an einer seltenen Erkrankung. Klare Themenstellung.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/klinische-forschung`,
+        applicationContact: "Prof. Dr. Guido Fitze · Tel. 0351 358-2762" },
+      { title: "Experimentelle Forschung Kinderchirurgie — Signaltransduktion (Kinderchirurgie UKD Dresden)", thesis_type: "experimental",
+        description: `Experimentelle Forschung zur **Signaltransduktion nach genotoxischem Stress** in pädiatrischen Tumoren.
+
+## Forschungsrahmen
+- Kindliche Tumore haben in vielen Fällen hohe Heilungsraten
+- Fokus: Mechanismen der **Therapie-Reaktion** und Resistenz
+- Verbesserung von Chemo-/Strahlentherapie-Konzepten unter Berücksichtigung von Spätfolgen
+
+*Klassische experimentelle Promotion mit pädiatrisch-onkologischem Fokus.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/experimentelle-forschung-1`,
+        applicationContact: "Kinderchirurgie-Forschung (Sekretariat)" },
+      { title: "Forschungslabor Kinderchirurgie — Haase Lab (Kinderchirurgie UKD Dresden)", thesis_type: "experimental",
+        description: `Eigenes Forschungslabor der Kinderchirurgie unter pathologischer Leitung.
+
+## Setup
+- **Laborleiter:** PD Dr. med. Michael Haase (Facharzt für Pathologie) · Tel. 0351 458-13142
+- MTA-Unterstützung (Ivonne Kemnitz, Tel. 0351 458-6889)
+- Anbindung an klinische Fragestellungen der Kinderchirurgie
+
+*Wet Lab für experimentelle Promotionen — direkter Kontakt verfügbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/labor`,
+        applicationContact: "PD Dr. Michael Haase · Tel. 0351 458-13142" },
     ],
   },
   {
@@ -1098,16 +1119,42 @@ Klinische Studien, etablierte Patient:innen-Kohorte.
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie",
     applicationContact: null,
     researchAreas: [
-      { title: "Arbeitsgruppe Translationale Bildgebung in der Neurochirurgie (Neurochirurgie UKD Dresden)", thesis_type: "clinical",
-        description: `Tumorzellen weisen im Vergleich zu regulären Zellen des Gehirns zahlreiche Veränderungen auf, z. B. hinsichtlich ihrer Genexpression, des Metabolismus, des Signallings sowie ihrer Zell- und Kernmorphologie. Die Gesamtheit dieser tumor-spezifischen Merkmale spiegelt sich in veränderten biochemischen und mechanischen Eigenschaften wieder, welche hier mittels optischer Techniken erforscht werden. Zum einen sollten neue Erkenntnisse über Mechanismen der Tumorentstehung und Invasion gewonnen werden, um neue Ansätze für die Entwicklung innovativer Therapiestrategien zu identifizieren. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-experimentelle-bildgebung-in-der-neurochurgie` },
-      { title: "Arbeitsgruppe Transnationale Neuroonkologie und Schädelbasistumoren (Neurochirurgie UKD Dresden)", thesis_type: "clinical",
-        description: `Ziel unserer Arbeitsgruppe ist es, Einblicke in molekulargenetische Veränderungen zu gewinnen, die der Tumorentstehung, dem Fortschreiten und der Behandlungsresistenz von Hirntumoren zugrunde liegen. Durch das bessere Verständnis dieser Mechanismen können therapeutische Strategien entwickelt und optimiert werden, die Patienten unmittelbar von größtem Nutzen sind. Die Arbeitsgruppe „Translationale Neuroonkologie“ identifizierte im Rahmen von umfangreichen genomischen Studien molekulare Veränderungen in primären (Gliome, Meningeome) und sekundären (Metastasen) Hirntumoren. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-translationale-Neuroonkologie` },
-      { title: "Arbeitsgruppe Experimentelle Neurochirurgie/Tumorimmunologie (Neurochirurgie UKD Dresden)", thesis_type: "clinical",
-        description: `Unsere Gruppe hat sich dem Kampf gegen Hirntumoren und Hirnmetastasen verschrieben, wobei unser Fokus auf neuartigen Immuntherapieansätzen zur Behandlung des Glioblastoms liegt. Zum einen nutzen wir hierfür Natürliche Killerzellen (NK-Zellen) des angeborenen Immunsystems, indem wir diese genetisch verändern, mit therapeutischen Antikörpern kombinieren bzw. spezifische Subpopulationen isolieren und vermehren, so dass sie die Tumorzellen besser erkennen und abtöten können. In einem anderen Ansatz nutzen wir Antigene auf der Oberfläche von Tumorzellen als Zielstruktur für Antikörper-gelenkte Therapieansätze, wie z.B. selektive Nanopartikelsysteme zur Gen- und Immuntherapie. Kontakt Prof. Dr. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-tumorimmunologie` },
-      { title: "Forschung, Lehre und PJ (Neurochirurgie UKD Dresden)", thesis_type: "clinical",
-        description: `Forschungsgruppen Unsere Klinik bündelt wissenschaftliche Expertise in drei spezialisierten Arbeitsgruppen: Tumorimmunologie, Translationale Neuroonkologie & Schädelbasistumore sowie Translationale Bildgebung in der Neurochirurgie. Lehre Im chirurgischen PJ-Tertial am UKD erwartet die Studierenden eine moderne, vielseitige Ausbildung mit der Möglichkeit individueller Schwerpunkte. [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre` },
-      { title: "Forschungsgruppen (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
-        description: `Unsere Klinik bündelt wissenschaftliche Expertise in drei spezialisierten Arbeitsgruppen: Tumorimmunologie, Translationale Neuroonkologie & Schädelbasistumore sowie Translationale Bildgebung in der Neurochirurgie. Arbeitsgruppe Tumorimmunologie Arbeitsgruppe Translationale Neuroonkologie und Schädelbasistumoren Arbeitsgruppe Translationale Bildgebung in der Neurochirurgie [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen` },
+      { title: "AG Translationale Bildgebung — Uckermann Lab (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
+        description: `Experimentelles Bildgebungs-Lab in der Neurochirurgie.
+
+## Forschungsziel
+Mit optischen Techniken werden veränderte biochemische und mechanische Eigenschaften von **Tumorzellen** im Gehirn erforscht — Genexpression, Metabolismus, Signaling, Zell-/Kern­morphologie.
+
+## Doppelter Output
+1. Neue Erkenntnisse über **Tumorentstehung und Invasion** für innovative Therapien
+2. **Intraoperative Anwendung** zur Tumorabgrenzung während der OP
+
+**Leitung:** PD Dr. rer. nat. habil. Ortrud Uckermann · Tel. 0351 458-3114
+
+*Methodisch spannend (optische Spektroskopie, Bildgebung). Geeignet für experimentell-physikalische Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-experimentelle-bildgebung-in-der-neurochurgie`,
+        applicationContact: "PD Dr. Ortrud Uckermann · Tel. 0351 458-3114" },
+      { title: "AG Translationale Neuroonkologie & Schädelbasis­tumoren (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
+        description: `Translationale Onkologie der **Hirntumoren** mit klarer molekulargenetischer Linie.
+
+## Forschungsachsen
+- Molekulare Veränderungen in **primären Hirntumoren** (Gliome, Meningeome) und **Metastasen**
+- Identifikation von **Tumormarkern** für Monitoring und **Radiogenomics**
+- Zielgerichtete und lokal-ablative Behandlungen
+- Genomische Studien als Grundlage
+
+*Translational-genomische Promotion mit klarem Klinik-Bezug.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-translationale-Neuroonkologie`,
+        applicationContact: "AG Translationale Neuroonkologie (Neurochirurgie-Sekretariat)" },
+      { title: "AG Experimentelle Neurochirurgie / Tumorimmunologie — Temme Lab (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
+        description: `Eine der **klinik-prominenten Forschungsgruppen** — Kampf gegen Hirntumoren und Hirnmetastasen mit innovativen Immuntherapien gegen **Glioblastom**.
+
+## Zwei Therapieansätze
+1. **Natürliche Killerzellen (NK-Zellen):** genetisch verändert, mit therapeutischen Antikörpern kombiniert, spezifische Subpopulationen isoliert — bessere Tumorerkennung und Zerstörung
+2. **Antigene auf Tumorzellen als Zielstrukturen:** Antikörper-gelenkte Therapie z.B. via selektive **Nanopartikelsysteme** zur Gen- und Immuntherapie
+
+**Leitung:** Prof. Dr. rer. nat. Achim Temme — Leiter der Neurochirurgischen Forschung · Tel. 0351 458-7011
+
+*Hochkarätige experimentelle Promotion mit echtem onkologischen Impact. Mehrere Doktorand:innen gleichzeitig betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-tumorimmunologie`,
+        applicationContact: "Prof. Dr. Achim Temme · Tel. 0351 458-7011" },
     ],
   },
   {
@@ -1265,20 +1312,82 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra",
     applicationContact: null,
     researchAreas: [
-      { title: "Bildgebung bei Multipler Sklerose (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Hintergrund Die Multiple Sklerose (MS) ist eine chronisch-entzündliche ZNS-Erkrankung, deren Hauptmerkmal eine, als Demyelinisierung bezeichnete, Zerstörung der Hüllstrukturen neuronaler Axone ist, die im Krankheitsverlauf zunimmt. Korrelat dieses Prozesses sind MS-Läsionen, multifokale Areale abweichenden Signals in der Magnetresonanztomographie (MRT). Abb. 1: FLAIR-Bildgebung von MS-Läsionen (hell leuchtende Bereiche), die zur Diagnostik eingesetzt werden. Die konventionelle MRT hat einen zentralen Stellenwert bei der Diagnose von MS und der Beurteilung von sub-klinischer Krankheitsaktivität, zeigt jedoch nur eine geringe Korrelation mit dem klinischen Status der Behinderung. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/bildgebung-bei-multipler-sklerose` },
-      { title: "Diagnostik und Therapie des Schlaganfalls (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Hintergrund Unsere Arbeitsgruppe beschäftigt sich in diesem Schwerpunkt mit dem hämorrhagischen und dem ischämischen Schlaganfall. Wir konnten hier in mehreren Studien den Stellenwert der MRT zur nicht-invasiven Ursachenabklärung bei Hirnblutungen zeigen. Ein weiteres wesentliches Ziel ist die Identifikation prädiktiver Faktoren bei Patient*innen mit akuten ischämischen Schlaganfällen. Hier interessiert uns v. a. der Einfluss der Kollateralversorgung auf das Outcome nach mechanischer Rekanalisation akuter Verschlüsse der intrakraniellen Gefäße. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/diagnostik-und-therapie-des-schlaganfalls` },
-      { title: "Übersicht (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Am Institut wird an mehreren Forschungsschwerpunkten geforscht. Details zu diesen Forschungsschwerpunkten finden Sie in der nachfolgenden Auflistung. Zerebrale Mikroangiopathien und vaskuläre Demenz Hintergrund Die zerebralen Mikroangiopathien als Erkrankungen der kleinen Hirngefäße stellen eine wesentliche Ursache von lakunären Schlaganfällen, Hirnblutungen und kognitiver Beeinträchtigung im höheren Lebensalter dar. Unsere Arbeitsgruppe arbeitet intensiv daran, neue MRT-Marker zu identifizieren, die die Differentialdiagnose dieser häufigen Erkrankungen erleichtern und prognostische Aussagen im Hinblick auf hierdurch bedingte Hirnblutungen und Ischämien erlauben. Mit der sog. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung` },
-      { title: "Multimodale Hirntumorbildgebung (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Hintergrund Die multimodale MRT-Bildgebung bei Tumoren des ZNS, insbesondere den Gliomen, stellt den zweiten Schwerpunkt unserer Arbeitsgruppe dar. Hier stehen das MR-basierte Tumorgrading, die exakte Definition der Tumorgrenzen und das Therapiemonitoring im Zentrum unseres wissenschaftlichen Interesses. Es gelang uns, eine neue, semiautomatisierte Methode zur MRT-basierten Gliomgradierung zu etablieren, mit der eine deutliche Verbesserung der Sensitivität und Spezifität der MRT für die Unterscheidung zwischen WHO Grad II- und Grad III-Gliomen erreicht werden kann. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/multimodale-hirntumorbildgebung` },
-      { title: "Strahlenschutz in der Computertomographie (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Hintergrund Ziel ist es, bei CT-Untersuchungen die Strahlenexposition von Patient*innen und strahlensensiblen Organen so gering wie möglich zu halten bzw. kontinuierlich zu minimieren. In Abhängigkeit der Fragestellung werden dabei Niedrigdosisprotokolle eingesetzt. Mit der Dosisreduktion ist oft eine Beeinträchtigung der Bildqualität hinsichtlich der Detailerkennbarkeit sowie der Differenzierung von grauer und weißer Hirnsubstanz verbunden, die nur in einem begrenzten Maß durch Rekonstruktionsalgorithmen (iterative Technik) kompensiert werden kann. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/strahlenschutz-in-der-computertomographie` },
-      { title: "weitere Projekte (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Hintergrund Neben diesen eigenen Forschungsschwerpunkten in den o. g. Bereichen kooperiert unser Institut mit klinikumsinternen und externen Kooperationspartnern v. a. im Bereich der psychiatrischen MR-Forschung und der Geruchs- und Geschmacksforschung (Kooperationspartner: Klinik und Poliklinik für Kinder- und Jugendpsychiatrie und –psychotherapie, Klinik und Poliklinik für Hals-Nasen-Ohrenheilkunde). Hier führen wir unter anderem voxelbasierte Morphometrie, GABA-MR-Spektroskopie, hochauflösende anatomische Untersuchungen des Bulbus olfactorius und funktionelle BOLD-basierte MR-Untersuchungen durch. Kontakt • Dr. rer.-nat. Annett Werner, Physikerin (Mail, Research Gate) [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/weitere-projekte` },
-      { title: "Zerebrale Mikroangiopathien und vaskuläre Demenz (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
-        description: `Hintergrund Die zerebralen Mikroangiopathien als Erkrankungen der kleinen Hirngefäße stellen eine wesentliche Ursache von lakunären Schlaganfällen, Hirnblutungen und kognitiver Beeinträchtigung im höheren Lebensalter dar. Unsere Arbeitsgruppe arbeitet intensiv daran, neue MRT-Marker zu identifizieren, die die Differentialdiagnose dieser häufigen Erkrankungen erleichtern und prognostische Aussagen im Hinblick auf hierdurch bedingte Hirnblutungen und Ischämien erlauben. Mit der sog. „superfiziellen Siderose“ haben wir einen wichtigen Marker der sog. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/zerebrale-mikroangiopathien-und-vaskulaere-demenz` },
+      { title: "Zerebrale Mikroangiopathien & vaskuläre Demenz (Neuroradiologie UKD Dresden)", thesis_type: "experimental",
+        description: `Forschungsgruppe zu **Erkrankungen der kleinen Hirngefäße** — wichtige Ursache lakunärer Schlaganfälle, Hirnblutungen und kognitiver Beeinträchtigung im Alter.
+
+## Highlight-Achievement
+- Etablierung der **„superfiziellen Siderose\\"** als Marker der zerebralen Amyloid­angiopathie (CAA) — mittlerweile fester Bestandteil internationaler Diagnose­kriterien
+
+## Aktuelle Forschungsachsen
+- Neue **MRT-Marker** für Differentialdiagnose
+- Prognostische Aussagen zu Blutungs- und Ischämie-Risiken
+- Korrelat-Studien Bildgebung ↔ klinisches Outcome
+
+*Sehr gute Wahl für bildgebungs-orientierte Promotionen mit klarem klinischen Impact.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/zerebrale-mikroangiopathien-und-vaskulaere-demenz`,
+        applicationContact: "Neuroradiologie-Sekretariat" },
+      { title: "Multimodale Hirntumorbildgebung — MR-Gradierung (Neuroradiologie UKD Dresden)", thesis_type: "experimental",
+        description: `Forschungsschwerpunkt zur **MRT-basierten Tumordiagnostik** im ZNS, insbesondere Gliome.
+
+## Themen
+- **MR-basiertes Tumorgrading** — neue semiautomatisierte Methode (eigene Etablierung)
+- Verbesserte Unterscheidung WHO-Grad-II ↔ Grad-III-Gliome
+- **Diffusionstensor-Bildgebung (DTI)** für die Differentialdiagnose diffuser vs. anaplastischer Astrozytome
+- **MR-Spektroskopie** zum Grading
+- Tumorgrenzen-Definition und Therapie-Monitoring
+
+*Methodisch anspruchsvoll, sehr gut für Promotionen mit physikalisch-methodischem Interesse.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/multimodale-hirntumorbildgebung`,
+        applicationContact: "Neuroradiologie-Sekretariat" },
+      { title: "Bildgebung bei Multipler Sklerose (Neuroradiologie UKD Dresden)", thesis_type: "experimental",
+        description: `Bildgebungs-Forschung zur **Multiplen Sklerose** — chronisch-entzündliche ZNS-Erkrankung mit Demyelinisierung als Hauptmerkmal.
+
+## Forschungsfeld
+- **FLAIR-Bildgebung** von MS-Läsionen
+- Konventionelle MRT als zentrales Diagnose-Werkzeug
+- Neue MRT-Sequenzen für **subklinische Krankheits­aktivität**
+- Verbesserung der Sensitivität
+
+*Klinisch-bildgebungs-orientierte Promotion mit etabliertem Patient:innen-Pool.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/bildgebung-bei-multipler-sklerose`,
+        applicationContact: "Neuroradiologie-Sekretariat" },
+      { title: "Diagnostik & Therapie des Schlaganfalls (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische und experimentelle Forschung zu **hämorrhagischem und ischämischem Schlaganfall**.
+
+## Forschungslinien
+- MRT zur nicht-invasiven Ursachenabklärung bei Hirnblutungen
+- **Prädiktive Faktoren** bei akutem ischämischem Schlaganfall — Einfluss der Kollateral­versorgung auf Outcome nach mechanischer Rekanalisation
+- **BOLD-MRT-basierte zerebrale Reservekapazität** bei Stenosen extra-/intrakranieller Gefäße
+- Anbindung an das Dresdner Universitäts-Schlaganfall-Centrum
+
+*Klinisch-imaging-orientierte Promotion — enge Verzahnung mit der Neurologie (AG Pütz/Barlinn).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/diagnostik-und-therapie-des-schlaganfalls`,
+        applicationContact: "Neuroradiologie-Sekretariat" },
+      { title: "Strahlenschutz in der Computertomographie (Neuroradiologie UKD Dresden)", thesis_type: "statistical",
+        description: `Methodische Forschung zur **Dosisreduktion** in der CT-Diagnostik.
+
+## Schwerpunkte
+- **Niedrigdosisprotokolle** je nach Fragestellung
+- Iterative Rekonstruktions­techniken zur Kompensation
+- Aktuelles: Dosisreduktion bei Beurteilung der Ventrikelweite, Protektion der Augenlinse
+
+**Kontakt:** Dr. Dirk Daubner
+
+*Eher technisch-methodische Promotion — geeignet wenn dich Strahlenphysik und Bildqualität reizen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/strahlenschutz-in-der-computertomographie`,
+        applicationContact: "Dr. Dirk Daubner (Neuroradiologie-Sekretariat)" },
+      { title: "MR-Forschung in Psychiatrie / Geruch & Geschmack (Neuroradiologie UKD Dresden)", thesis_type: "experimental",
+        description: `**Interdisziplinäre MR-Kooperationen** mit anderen UKD-Kliniken.
+
+## Kooperationspartner
+- Klinik für **Kinder- und Jugendpsychiatrie** (psychiatrische MR-Forschung)
+- Klinik für **Hals-Nasen-Ohrenheilkunde** (Geruchs- und Geschmacks­forschung)
+
+## Methodik
+- Voxel-basierte Morphometrie
+- **GABA-MR-Spektroskopie**
+- Hochauflösende anatomische Untersuchungen des Bulbus olfactorius
+- Funktionelle BOLD-basierte MR-Untersuchungen
+
+**Kontakt:** Dr. rer. nat. Annett Werner (Physikerin)
+
+*Interdisziplinäre Promotion mit Bildgebungs-Spannweite. Geeignet wenn du fMRT methodisch lernen willst.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/weitere-projekte`,
+        applicationContact: "Dr. Annett Werner (Neuroradiologie-Sekretariat)" },
     ],
   },
   {
