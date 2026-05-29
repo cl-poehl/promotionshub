@@ -5,12 +5,28 @@
 
 /**
  * Mindestanzahl unabhängiger verifizierter Bewertungen, bevor ein
- * öffentlicher namentlicher Score angezeigt wird.
+ * öffentlicher namentlicher BETREUER-Score (natürliche Person) angezeigt wird.
  *
- * ⚖️ §4 Schwellenwert-Regel. Default 4. Anpassbar per Env.
+ * ⚖️ §4 Schwellenwert-Regel — Schutz von Persönlichkeitsrechten.
+ * Default 4. Anpassbar per Env. Hinter NAMED_RATINGS_PUBLIC-Flag.
  */
 export const MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE = Number(
   process.env.MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE ?? 4,
+);
+
+/**
+ * Mindestanzahl unabhängiger Bewertungen, bevor ein öffentlicher
+ * GRUPPEN-/KLINIK-Score angezeigt wird.
+ *
+ * Gruppen/Kliniken sind juristische Einheiten, keine natürlichen
+ * Personen — Persönlichkeitsrechte greifen nicht direkt. Wir setzen
+ * trotzdem eine Untergrenze gegen Einzel-Vendetta-Risiko.
+ *
+ * ⚖️ Sollte vor öffentlichem Launch von einem Anwalt bestätigt werden.
+ * Default 2. Anpassbar per Env.
+ */
+export const MIN_REVIEWS_FOR_GROUP_SCORE = Number(
+  process.env.MIN_REVIEWS_FOR_GROUP_SCORE ?? 2,
 );
 
 /**

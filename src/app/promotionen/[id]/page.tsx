@@ -16,7 +16,7 @@ import {
 
 import { Markdown } from "@/components/Markdown";
 import { getGroupAggregate, getListing } from "@/lib/data";
-import { FUNDING_TYPES, MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE, THESIS_TYPES } from "@/lib/config";
+import { FUNDING_TYPES, MIN_REVIEWS_FOR_GROUP_SCORE, THESIS_TYPES } from "@/lib/config";
 import { AggregateRating } from "@/components/AggregateRating";
 
 function labelOf<T extends { key: string; label: string }>(list: readonly T[], key: string) {
@@ -61,7 +61,7 @@ export default async function ListingDetailPage({
 
   const groupAggregate = listing.group ? await getGroupAggregate(listing.group.id) : null;
   const aboveThreshold =
-    !!groupAggregate && groupAggregate.reviewCount >= MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE;
+    !!groupAggregate && groupAggregate.reviewCount >= MIN_REVIEWS_FOR_GROUP_SCORE;
 
   const thesisMeta = THESIS_META[listing.thesis_type];
   const ThesisIcon = thesisMeta.icon;
@@ -161,7 +161,7 @@ export default async function ListingDetailPage({
               ) : (
                 <p className="text-sm text-stone-600">
                   Noch nicht genug verifizierte Erfahrungen
-                  {" "}({groupAggregate?.reviewCount ?? 0}/{MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE}).
+                  {" "}({groupAggregate?.reviewCount ?? 0}/{MIN_REVIEWS_FOR_GROUP_SCORE}).
                 </p>
               )}
             </div>
