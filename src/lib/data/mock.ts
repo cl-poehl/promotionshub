@@ -84,6 +84,7 @@ export const mockListings: Listing[] = [
     description:
       "Experimentelle Doktorarbeit mit Maus-Modellen. Etablierte Methodik (Echokardiographie, Histologie). Erfahrung mit Tierversuchen wünschenswert, aber nicht erforderlich. TVT-Modul wird gestellt.",
     thesis_type: "experimental",
+    thesis_types_offered: ["experimental"],
     funding: "stipend",
     expected_duration_months: 18,
     posted_at: new Date(now - 3 * day).toISOString(),
@@ -103,6 +104,7 @@ export const mockListings: Listing[] = [
     description:
       "Klinisch-experimentelle Arbeit. Patient:innenrekrutierung läuft, Probenbank vorhanden. Geeignet ab 6. Semester. Mind. 12 Monate Vollzeit-Phase erforderlich.",
     thesis_type: "experimental",
+    thesis_types_offered: ["experimental"],
     funding: "paid",
     expected_duration_months: 24,
     posted_at: new Date(now - 10 * day).toISOString(),
@@ -122,6 +124,7 @@ export const mockListings: Listing[] = [
     description:
       "Statistische Doktorarbeit. Datensatz vollständig vorhanden, Auswertung mit R/SPSS. Sehr gut neben dem Studium machbar. Statistik-Kurs wird intern angeboten.",
     thesis_type: "statistical",
+    thesis_types_offered: ["statistical"],
     funding: "unpaid",
     expected_duration_months: 12,
     posted_at: new Date(now - 1 * day).toISOString(),
@@ -141,6 +144,7 @@ export const mockListings: Listing[] = [
     description:
       "Anspruchsvolles experimentelles Projekt. Idealerweise 18–24 Monate Vollzeit. Mentoring durch PostDoc, wöchentliche Lab-Meetings. Publikation als Erstautor:in realistisch.",
     thesis_type: "experimental",
+    thesis_types_offered: ["experimental"],
     funding: "stipend",
     expected_duration_months: 24,
     posted_at: new Date(now - 6 * day).toISOString(),
@@ -160,6 +164,7 @@ export const mockListings: Listing[] = [
     description:
       "Klinische Doktorarbeit auf Basis des deutschen Transplantationsregisters. Strukturiert, klare Fragestellung, regelmäßige Treffen.",
     thesis_type: "clinical",
+    thesis_types_offered: ["clinical"],
     funding: "unpaid",
     expected_duration_months: 12,
     posted_at: new Date(now - 15 * day).toISOString(),
@@ -179,6 +184,7 @@ export const mockListings: Listing[] = [
     description:
       "Mixed-Methods-Arbeit. Interviews + Fragebogen. Datenerhebung ca. 6 Monate.",
     thesis_type: "clinical",
+    thesis_types_offered: ["clinical"],
     funding: "unpaid",
     expected_duration_months: 18,
     posted_at: new Date(now - 2 * day).toISOString(),
@@ -198,6 +204,7 @@ export const mockListings: Listing[] = [
     description:
       "Statistische Arbeit, Modellentwicklung. Daten aus Klinikregister, Auswertung mit Python. Vorkenntnisse hilfreich, aber nicht zwingend.",
     thesis_type: "statistical",
+    thesis_types_offered: ["statistical"],
     funding: "unpaid",
     expected_duration_months: 12,
     posted_at: new Date(now - 20 * day).toISOString(),

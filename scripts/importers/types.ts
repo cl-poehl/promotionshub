@@ -10,7 +10,13 @@ export type ResearchArea = {
   title: string;
   /** Mehrzeilige Beschreibung der Forschungsrichtung. */
   description: string;
+  /** Primärer / häufigster Typ — wird auf Cards prominent angezeigt. */
   thesis_type: ThesisType;
+  /**
+   * Weitere Typen, die diese AG anbietet. Wird zu thesis_types_offered =
+   * [thesis_type, ...additionalThesisTypes]. Default: nur Primärtyp.
+   */
+  additionalThesisTypes?: ThesisType[];
   funding?: FundingType;
   expected_duration_months?: number;
   /** Per-AG-Kontakt (Email oder Tel.). Wenn null/undefined, fällt auf Source.applicationContact zurück. */

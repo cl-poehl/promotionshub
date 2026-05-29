@@ -102,12 +102,20 @@ export default async function ListingDetailPage({
         />
         <div className="pl-2">
           <div className="flex items-center gap-2 flex-wrap">
-            <span
-              className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-semibold ring-1 ${thesisMeta.chip}`}
-            >
-              <ThesisIcon className="h-3.5 w-3.5" strokeWidth={2} />
-              {thesisMeta.label}
-            </span>
+            {(listing.thesis_types_offered ?? [listing.thesis_type]).map((t) => {
+              const meta = THESIS_META[t];
+              if (!meta) return null;
+              const Icon = meta.icon;
+              return (
+                <span
+                  key={t}
+                  className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-semibold ring-1 ${meta.chip}`}
+                >
+                  <Icon className="h-3.5 w-3.5" strokeWidth={2} />
+                  {meta.label}
+                </span>
+              );
+            })}
             {listing.promoted && (
               <span className="inline-flex items-center rounded-md bg-amber-100 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-amber-900 ring-1 ring-amber-200">
                 Hervorgehoben

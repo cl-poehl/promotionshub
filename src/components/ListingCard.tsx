@@ -84,12 +84,19 @@ export function ListingCard({
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <span
-                className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ring-1 ${meta.chip}`}
-              >
-                <ThesisIcon className="h-3 w-3" />
-                {meta.label}
-              </span>
+              {(listing.thesis_types_offered ?? [listing.thesis_type]).map((t) => {
+                const tm = THESIS_META[t as keyof typeof THESIS_META] ?? THESIS_META.other;
+                const TIcon = tm.icon;
+                return (
+                  <span
+                    key={t}
+                    className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ring-1 ${tm.chip}`}
+                  >
+                    <TIcon className="h-3 w-3" />
+                    {tm.label}
+                  </span>
+                );
+              })}
               {listing.promoted && (
                 <span className="inline-flex items-center rounded-md bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-900 ring-1 ring-amber-200">
                   Hervorgehoben
