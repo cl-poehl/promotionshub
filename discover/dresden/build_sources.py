@@ -28,6 +28,149 @@ EXTRACTED = HERE / "extracted"
 # der crawl-Ableitung verwendet werden. Der Crawl-Output wird ignoriert.
 # ---------------------------------------------------------------------------
 MANUAL_OVERRIDES: dict[str, list[dict]] = {
+    "mkg": [
+        dict(
+            title="Forschungsmission MKG-Chirurgie (MKG UKD Dresden)",
+            thesis_type="experimental",
+            description="""Interdisziplinäre Forschung von Diagnostik und Therapie aller Erkrankungen des Mund-, Kiefer- und Gesichtsbereichs, inkl. Grundlagenforschung.
+
+## Thematische Spannweite
+- Operative Versorgung von **Kiefergelenkfortsatz-Frakturen**
+- **Tumorbiologie** der Plattenepithelkarzinome
+- Patient:innen-individuelle, vorgeformte Knochentransplantate
+- **Kaufunktionelle Rehabilitation** zahnloser Kieferareale
+
+## Stil
+Sehr interdisziplinär — direkter Bezug Klinik/Werkstoffkunde/Tissue Engineering.
+
+*Geeignet für Promotionen in fast allen Bereichen (chirurgisch-klinisch, materialwissenschaftlich, tumorbiologisch).*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung",
+            contact="MKG-Sekretariat (über Klinik-Seite)",
+        ),
+        dict(
+            title="Biomaterialien & Werkstoffkundelabor (MKG UKD Dresden)",
+            thesis_type="experimental",
+            description="""Eigenes **Werkstoffkundelabor** der UniversitätsZahnMedizin für interdisziplinäre Forschung an medizinisch genutzten Materialien.
+
+## Ausstattung
+- Probenvorbereitung und -präparation
+- Prüf- und Messgeräte, **Simulationseinheiten** für realistische Belastungen
+- **Digitale Stereomikroskopie** und Raster­elektronen­mikroskop
+- Analytisch-chemisches Labor für Bioverträglichkeits­prüfungen
+
+*Klassische experimentell-werkstoffwissenschaftliche Promotion möglich.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/biomaterialien",
+            contact="MKG-Sekretariat",
+        ),
+        dict(
+            title="Tissue Engineering — Geweberegeneration (MKG UKD Dresden)",
+            thesis_type="experimental",
+            description="""Forschungslabor mit **breiter Expertise in Knochen- und Weichgewebe­regeneration** — in vitro UND in vivo.
+
+## Modelle und Zellquellen
+- Verschiedene Tiermodelle
+- Stammzell-Isolation aus Knochenmark (MSC) und Pulpa (**hDPSC**)
+- Humane Gingivafibroblasten und Keratinozyten
+- **hDPSC mit osteogenem, chondrogenem, adipogenem und angiogenem Differenzierungs­potential**
+
+## Anwendung
+Biomaterial- und Scaffold-Entwicklung für Knochenersatz und Geweberegeneration. 2D- und 3D-Zellkultur, Kryokonservierung.
+
+*Anspruchsvolles experimentelles Lab. Geeignet für Promotion mit Zellkultur- und Regenerations-Schwerpunkt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/tissue-engineering",
+            contact="MKG-Sekretariat / Forschungslabor",
+        ),
+        dict(
+            title="Tumorforschung — Plattenepithelkarzinom (MKG UKD Dresden)",
+            thesis_type="experimental",
+            description="""Onkologische Forschung mit Fokus **Plattenepithelkarzinom** des Mund- und Rachenraumes — häufigster bösartiger MKG-Tumor.
+
+## Forschungsachsen
+- Genetische Prädispositionen via **Tumormarkergene**
+- Lokalisation, Beschaffenheit und Aktivität dieser Gene
+- Basis für neue Therapiekonzepte und genauere Prognose
+
+*Schnittstelle MKG/Onkologie/Genetik. Geeignet für translational-onkologische Promotion.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/tumorforschung",
+            contact="MKG-Sekretariat",
+        ),
+        dict(
+            title="Antiresorptiva-assoziierte Kiefernekrosen (ARONJ) (MKG UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinische Forschung zur **Antiresorptiva-assoziierten Kiefernekrose (ARONJ)** — Komplikation v.a. bei Osteoporose- und Tumor-Patient:innen.
+
+## Relevanz
+Demographischer Wandel + steigender Antiresorptiva-Einsatz → **erwartet steigende Prävalenz**. Erforschung von Pathogenese und Therapie ist daher hochaktuell.
+
+## Format
+Klinische Studien, etablierte Patient:innen-Kohorte.
+
+*Geeignet für klinische Promotion mit klar abgegrenztem Forschungs­feld.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/aronj-forschung",
+            contact="MKG-Sekretariat",
+        ),
+        dict(
+            title="Frakturforschung — Mittelgesicht und Unterkiefer (MKG UKD Dresden)",
+            thesis_type="clinical",
+            description="""Klinische Forschung zur **operativen Versorgung von Kieferbrüchen** — eine Hauptsäule der MKG-Chirurgie.
+
+## Forschungsfragen
+- **Diakapituläre Frakturen** (Frakturlinien durch das Gelenkköpfchen) als bleibende Herausforderung
+- Form und Material der Osteosynthese (Platten, Schrauben, Membranen)
+- Weiterentwicklung und Vergleich von Materialien
+- Ideale Therapie schwieriger Knochenfrakturen
+
+*Klinisch-statistische Promotion mit Outcome-Auswertungen — gut neben dem Studium machbar.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/frakturforschung",
+            contact="MKG-Sekretariat",
+        ),
+        dict(
+            title="Lippen-Kiefer-Gaumenspalten (LKGS) — Forschung (MKG UKD Dresden)",
+            thesis_type="clinical",
+            description="""Forschung zu **Lippen-Kiefer-Gaumenspalten** — eine der häufigsten angeborenen Fehlbildungen (in Europa ca. 1 von 500 Kindern).
+
+## Forschungsfragen
+- Bisher unklare **Ursachen-Mischung**: externe (Stress, Mangelernährung, Genussmittel in Schwangerschaft) und genetische Faktoren
+- 25 % der Betroffenen haben Verwandte mit LKGS → starker genetischer Anteil
+- Auswirkungen auf Nahrungsaufnahme und Sprechentwicklung
+- Verbesserung der OP-Konzepte und Nachsorge
+
+*Geeignet für klinische Promotionen mit Pädiatrie-Schnittstelle.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/lippen-kiefer-gaumenspalten-forschung-lkgs",
+            contact="MKG-Sekretariat",
+        ),
+        dict(
+            title="Alloplastische Unterkieferrekonstruktion (MKG UKD Dresden)",
+            thesis_type="clinical",
+            description="""Forschungs­linie zur **künstlichen Unterkiefer­rekonstruktion** nach Kontinuitäts­resektionen (z.B. nach Tumor-Entfernung).
+
+## Forschungsfeld
+- Material- und Verfahrens­optimierung
+- Individuelle, vorgeformte Implantate
+- Outcome-Studien
+
+*Klinische Promotion mit chirurgisch-rekonstruktivem Schwerpunkt.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte",
+            contact="MKG-Sekretariat",
+        ),
+        dict(
+            title="Aktuelle Drittmittel-Projekte MKG (Übersicht) (MKG UKD Dresden)",
+            thesis_type="experimental",
+            description="""Mehrere parallele drittmittel­geförderte Projekte — guter Indikator für hohes Forschungs­volumen und damit verfügbare Promotionsthemen.
+
+## Aktuell laufende Projekte
+- **ClotPro** — Anticoagulation-Monitoring bei MKG-Chirurgie (DRKS00028193, bis 08/2024)
+- **HNbioSUR** — Biologische Gewebemarker bei Frühstadium-Tumoren in Mundhöhle/Rachen/Kehlkopf (DRKS00011107, bis 12/2026)
+- **AktOImplant** — Bioaktive Oberflächen für MKG-Implantate (BMWK IGF BR, 07/2023–12/2025)
+- **Smile** — M-ERA.NET-Projekt zu Beschichtung und Mikrostruktur funktionalisierter Biomaterialien (07/2022–06/2025)
+- **Smaffold** — NC-gesteuerte Scaffold-Templates für Knochenaufbau (BMWi ZIM AiF)
+- **AugPlan** — weitere Drittmittelprojekte zu MKG-Themen
+
+*Sehr vielfältige Andockpunkte für Promotionen — direkt-Anfrage über das Sekretariat.*""",
+            url="https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/aktuelle%20Projekte",
+            contact="MKG-Sekretariat (Drittmittel-Projekte)",
+        ),
+    ],
     "kge": [
         dict(
             title="Forschungsmission Institut für Klinische Genetik (Klin. Genetik UKD Dresden)",
