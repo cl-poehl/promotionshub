@@ -195,8 +195,14 @@ export default async function ListingDetailPage({
 }
 
 /**
- * Bewerbungs-Block: extrahiert eine erste E-Mail, ansonsten zeigt den
- * Kontakt-Freitext, ansonsten verlinkt die Quell-Seite als Action.
+ * Bewerbungs-Block.
+ *
+ * Die Klinik-Seiten verstecken E-Mails meistens hinter cryptmail-Schutz —
+ * crawl4ai sieht sie nicht. Drei Fälle:
+ *   1. contact enthält eine E-Mail → mailto-Link, sekundäre Klinik-Seite
+ *   2. contact ohne E-Mail (nur Name/Telefon) → Primär-Action: Klinik-Seite
+ *      mit explizitem Hinweis „E-Mail dort sichtbar"
+ *   3. gar kein Kontakt → nur die Klinik-Seite, fallback
  */
 function ApplyBlock({
   contact,
@@ -209,8 +215,21 @@ function ApplyBlock({
 }) {
   const targetUrl = sourceUrl ?? groupPublicUrl;
   const email = contact?.match(/[\w.+-]+@[\w-]+\.[\w.-]+/)?.[0] ?? null;
+  const phone = contact?.match(/(?:Tel\.|\+49|0\d{2,4})[\s.\-\d]+/i)?.[0]?.trim() ?? null;
+  const restOfContact = contact
+    ? contact
+        .replace(email ?? "", "")
+        .replace(phone ?? "", "")
+        .replace(/\s*[·,]\s*$/, "")
+        .replace(/^\s*[·,]\s*/, "")
+        .trim()
+    : null;
 
   if (!contact && !targetUrl) return null;
+
+  // Wenn wir KEINE E-Mail haben aber die Klinik-Seite, wird der Klinik-Link
+  // die Primär-Action — mit Hinweis, dass dort die echte Adresse steht.
+  const linkIsPrimary = !email && !!targetUrl;
 
   return (
     <section className="rounded-xl border border-indigo-200 bg-indigo-50/60 p-5">
@@ -218,39 +237,54 @@ function ApplyBlock({
         <Mail className="h-4 w-4 text-indigo-700" />
         Bewerbung
       </h2>
+
       {contact && (
-        <p className="mt-2 text-sm text-stone-700">
-          {email ? (
-            <>
+        <div className="mt-3 space-y-1 text-sm text-stone-700">
+          {email && (
+            <p>
               <a
                 href={`mailto:${email}`}
                 className="font-medium underline underline-offset-4 text-indigo-700"
               >
                 {email}
               </a>
-              {contact.replace(email, "").trim() && (
-                <span className="ml-2 text-stone-600">
-                  {contact.replace(email, "").trim()}
-                </span>
-              )}
-            </>
-          ) : (
-            <span className="font-medium text-stone-800">{contact}</span>
+            </p>
           )}
-        </p>
+          {restOfContact && <p className="text-stone-700">{restOfContact}</p>}
+          {phone && (
+            <p className="text-stone-700">
+              <span className="text-stone-500">{email ? "Tel.: " : ""}</span>
+              {phone.replace(/^Tel\.\s*/i, "")}
+            </p>
+          )}
+        </div>
       )}
+
       {targetUrl && (
-        <a
-          href={targetUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-indigo-700 px-3.5 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-indigo-800 no-underline hover:no-underline"
-        >
-          Auf der Klinik-Seite öffnen
-          <ExternalLink className="h-3.5 w-3.5" />
-        </a>
+        <div className="mt-4">
+          <a
+            href={targetUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={
+              linkIsPrimary
+                ? "inline-flex items-center gap-2 rounded-md bg-indigo-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm ring-1 ring-indigo-800/30 transition hover:bg-indigo-800 hover:shadow no-underline hover:no-underline"
+                : "inline-flex items-center gap-1.5 rounded-md border border-indigo-300 bg-white px-3.5 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-50 no-underline hover:no-underline"
+            }
+          >
+            {linkIsPrimary ? "Zur Klinik-Seite — E-Mail dort sichtbar" : "Auf der Klinik-Seite öffnen"}
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+          {linkIsPrimary && (
+            <p className="mt-2 text-xs text-stone-500">
+              Die Klinik versteckt E-Mail-Adressen aus Anti-Spam-Gründen. Auf der
+              verlinkten Seite ist die Adresse als anklickbarer Button sichtbar.
+            </p>
+          )}
+        </div>
       )}
-      <p className="mt-3 text-xs text-stone-500">
+
+      <p className="mt-4 text-xs text-stone-500">
         PromotionsHub ist nicht Teil des Bewerbungsverfahrens. Wende dich
         direkt an die angegebene Stelle.
       </p>
