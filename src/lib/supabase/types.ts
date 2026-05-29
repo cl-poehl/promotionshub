@@ -74,6 +74,11 @@ export interface Listing {
   promoted: boolean;
   promotion_expires_at: string | null;
   status: ListingStatus;
+  /**
+   * AGs/Labs nach einer Einzelperson benannt → Bewertungen unterliegen
+   * Personen-Rating-Schutz (höhere Schwelle + NAMED_RATINGS_PUBLIC-Flag).
+   */
+  is_person_named: boolean;
   created_at: string;
 }
 
@@ -93,6 +98,8 @@ export interface Review {
   id: string;
   reviewer_account_id: string;
   group_id: string;
+  /** Optional: AG/Listing, das spezifisch bewertet wird (null = ganze Klinik). */
+  listing_id: string | null;
   supervisor_id: string | null;
   thesis_type: ThesisType;
   year_started: number;

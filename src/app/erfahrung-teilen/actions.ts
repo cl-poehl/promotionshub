@@ -14,6 +14,11 @@ const ReviewInput = z.object({
     .string()
     .min(1, "Bitte eine Gruppe auswählen.")
     .pipe(uuidish("Ungültige Gruppe — bitte aus der Liste wählen.")),
+  listing_id: z
+    .union([z.literal(""), uuidish("Ungültige AG-Auswahl.")])
+    .transform((v) => (v === "" ? null : v))
+    .optional()
+    .nullable(),
   thesis_type: z.enum(["experimental", "clinical", "statistical", "other"], {
     error: "Bitte einen Thesis-Typ wählen.",
   }),
@@ -68,6 +73,7 @@ export async function submitReviewAction(formData: FormData): Promise<SubmitRevi
   const { error } = await supabase.from("reviews").insert({
     reviewer_account_id: account.id,
     group_id: data.group_id,
+    listing_id: data.listing_id ?? null,
     supervisor_id: null,
     thesis_type: data.thesis_type,
     year_started: data.year_started,

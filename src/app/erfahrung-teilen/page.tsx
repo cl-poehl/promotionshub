@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { REVIEW_DIMENSIONS, THESIS_TYPES } from "@/lib/config";
-import { DATA_MODE, listGroups } from "@/lib/data";
+import { DATA_MODE, listGroups, searchListings } from "@/lib/data";
 import { flags } from "@/lib/flags";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { submitReviewAction } from "./actions";
@@ -19,7 +19,14 @@ export default async function ErfahrungTeilenPage({
 
   const groups = await listGroups();
   const preselectedGroup = typeof params.gruppe === "string" ? params.gruppe : "";
+  const preselectedListing = typeof params.listing === "string" ? params.listing : "";
   const error = typeof params.error === "string" ? params.error : null;
+
+  // Listings der vorgewählten Gruppe holen (damit Studierende per Klinik filtern können)
+  const allListings = preselectedGroup ? await searchListings({}) : [];
+  const groupListings = preselectedGroup
+    ? allListings.filter((l) => l.group_id === preselectedGroup)
+    : [];
 
   let isAuthed = false;
   let userEmail: string | null = null;
@@ -107,10 +114,32 @@ export default async function ErfahrungTeilenPage({
           </select>
           <p className="mt-1 text-xs text-[var(--muted)]">
             Gruppe fehlt? Reiche sie über{" "}
-            <Link href="/promotionen/neu">„Stelle einreichen“</Link> ein, dann
+            <Link href="/promotionen/neu">„Stelle einreichen"</Link> ein, dann
             wird sie wählbar.
           </p>
         </div>
+
+        {groupListings.length > 0 && (
+          <div>
+            <label className="block text-sm font-medium">Spezifische AG (optional)</label>
+            <select
+              name="listing_id"
+              defaultValue={preselectedListing}
+              className="mt-2 w-full rounded border border-[var(--border)] px-3 py-2 text-sm bg-white"
+            >
+              <option value="">Allgemein (ganze Klinik)</option>
+              {groupListings.map((l) => (
+                <option key={l.id} value={l.id}>
+                  {l.title}
+                </option>
+              ))}
+            </select>
+            <p className="mt-1 text-xs text-[var(--muted)]">
+              Wenn deine Erfahrung sich auf eine konkrete AG bezieht, wähle sie
+              hier. Sonst wird die Bewertung nur der Klinik allgemein zugeordnet.
+            </p>
+          </div>
+        )}
 
         <div className="grid gap-4 sm:grid-cols-3">
           <div>

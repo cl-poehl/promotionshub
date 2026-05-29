@@ -217,6 +217,49 @@ export type GroupAggregate = {
   };
 };
 
+/** Aggregat für ein konkretes Listing (= AG). */
+export async function getListingAggregate(listingId: string): Promise<GroupAggregate> {
+  if (DATA_MODE === "mock") {
+    return {
+      reviewCount: 0,
+      averages: {
+        supervision_quality: null,
+        responsiveness: null,
+        timeline_realism: null,
+        project_delivered: null,
+        would_recommend: null,
+      },
+    };
+  }
+
+  const supabase = await createSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_listing_aggregate", { p_listing_id: listingId });
+  if (error) throw error;
+  const row = data?.[0];
+  if (!row) {
+    return {
+      reviewCount: 0,
+      averages: {
+        supervision_quality: null,
+        responsiveness: null,
+        timeline_realism: null,
+        project_delivered: null,
+        would_recommend: null,
+      },
+    };
+  }
+  return {
+    reviewCount: Number(row.review_count),
+    averages: {
+      supervision_quality: row.avg_supervision_quality ?? null,
+      responsiveness: row.avg_responsiveness ?? null,
+      timeline_realism: row.avg_timeline_realism ?? null,
+      project_delivered: row.avg_project_delivered ?? null,
+      would_recommend: row.avg_would_recommend ?? null,
+    },
+  };
+}
+
 export async function getGroupAggregate(groupId: string): Promise<GroupAggregate> {
   if (DATA_MODE === "mock") {
     // Phase 1: keine Reviews im Mock; immer leer.

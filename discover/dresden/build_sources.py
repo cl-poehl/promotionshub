@@ -2529,6 +2529,42 @@ def klinik_kuerzel(slug: str) -> str:
     }.get(slug, slug)
 
 
+# ---------------------------------------------------------------------------
+# PERSON_NAMED_AGS: Listings, deren Titel explizit nach einer Einzelperson
+# benannt ist („Schröck Lab", „AG Akgün", „Abraham/Günther"). Bewertungen
+# dieser Listings sind faktisch Personen-Bewertungen → höhere Schwelle in
+# der UI und hinter NAMED_RATINGS_PUBLIC-Flag.
+# ---------------------------------------------------------------------------
+PERSON_NAMED_AGS: set[str] = {
+    # Dermatologie
+    "AG Dermatoonkologische Forschung — Meier Lab (Dermatologie UKD Dresden)",
+    "AG Experimentelle Dermatologie — Kulms Lab (Dermatologie UKD Dresden)",
+    "AG Experimentelle Immundermatologie — Abraham/Günther (Dermatologie UKD Dresden)",
+    "AG Translationale Dermatologie — Bauer Lab (Dermatologie UKD Dresden)",
+    # Kinderchirurgie
+    "Forschungslabor Kinderchirurgie — Haase Lab (Kinderchirurgie UKD Dresden)",
+    # Klinische Genetik
+    "AG Functional Neurogenomics — Abe Lab (Klin. Genetik UKD Dresden)",
+    "AG Hirntumore / Tumorgenetik — Schröck Lab (Klin. Genetik UKD Dresden)",
+    "AG Translational Genomics & Big Data — Le Duc Lab (Klin. Genetik UKD Dresden)",
+    # KJP
+    "AG Angewandte Entwicklungsneurowissenschaften — Ehrlich Lab (KJP UKD Dresden)",
+    # Klinische Chemie
+    "Menschikowski Lab — Epigenetik in der Onkologie (IKL UKD Dresden)",
+    "Mirtschink Lab — Zellmetabolismus und Hypoxie (IKL UKD Dresden)",
+    "Pauling Lab — Computational Integrative Omics in Biomedicine (IKL UKD Dresden)",
+    # Neurochirurgie
+    "AG Experimentelle Neurochirurgie / Tumorimmunologie — Temme Lab (Neurochirurgie UKD Dresden)",
+    "AG Translationale Bildgebung — Uckermann Lab (Neurochirurgie UKD Dresden)",
+    # Neurologie
+    "AG Akgün — Neuroimmunologisches Labor (Neurologie UKD Dresden)",
+    "AG Barlinn — Hämorrhagischer Schlaganfall (Neurologie UKD Dresden)",
+    "AG Huttner-Vaid — Neurale Regeneration (Neurologie UKD Dresden)",
+    "AG Pütz — Ischämischer Schlaganfall (Neurologie UKD Dresden)",
+    "AG Siepmann — Translationale Schlaganfall-Forschung (Neurologie UKD Dresden)",
+}
+
+
 def render_listing(area_title: str, description: str, url: str, thesis_type: str,
                    contact: str | None = None) -> str:
     title_esc = area_title.replace('"', '\\"')
@@ -2537,9 +2573,12 @@ def render_listing(area_title: str, description: str, url: str, thesis_type: str
     if contact:
         contact_esc = contact.replace('"', '\\"')
         contact_field = f',\n        applicationContact: "{contact_esc}"'
+    person_named_field = ""
+    if area_title in PERSON_NAMED_AGS:
+        person_named_field = ",\n        isPersonNamed: true"
     return (
         f"      {{ title: \"{title_esc}\", thesis_type: \"{thesis_type}\",\n"
-        f"        description: `{desc_esc}\\n\\nQuelle: {url}`{contact_field} }},"
+        f"        description: `{desc_esc}\\n\\nQuelle: {url}`{contact_field}{person_named_field} }},"
     )
 
 

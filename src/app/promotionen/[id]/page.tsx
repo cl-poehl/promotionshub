@@ -15,8 +15,14 @@ import {
 } from "lucide-react";
 
 import { Markdown } from "@/components/Markdown";
-import { getGroupAggregate, getListing } from "@/lib/data";
-import { FUNDING_TYPES, MIN_REVIEWS_FOR_GROUP_SCORE, THESIS_TYPES } from "@/lib/config";
+import { getGroupAggregate, getListing, getListingAggregate } from "@/lib/data";
+import {
+  FUNDING_TYPES,
+  MIN_REVIEWS_FOR_GROUP_SCORE,
+  MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE,
+  THESIS_TYPES,
+} from "@/lib/config";
+import { flags } from "@/lib/flags";
 import { AggregateRating } from "@/components/AggregateRating";
 
 function labelOf<T extends { key: string; label: string }>(list: readonly T[], key: string) {
@@ -59,9 +65,21 @@ export default async function ListingDetailPage({
   const listing = await getListing(id);
   if (!listing) notFound();
 
-  const groupAggregate = listing.group ? await getGroupAggregate(listing.group.id) : null;
-  const aboveThreshold =
+  const [groupAggregate, listingAggregate] = await Promise.all([
+    listing.group ? getGroupAggregate(listing.group.id) : Promise.resolve(null),
+    getListingAggregate(listing.id),
+  ]);
+  const groupAboveThreshold =
     !!groupAggregate && groupAggregate.reviewCount >= MIN_REVIEWS_FOR_GROUP_SCORE;
+
+  // Schwelle für Listing-Aggregat hängt von Person-Named-Status ab
+  const listingThreshold = listing.is_person_named
+    ? MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE
+    : MIN_REVIEWS_FOR_GROUP_SCORE;
+  // Person-Named-Listings sind hinter NAMED_RATINGS_PUBLIC versteckt
+  const listingRatingAllowed = !listing.is_person_named || flags.NAMED_RATINGS_PUBLIC;
+  const listingAboveThreshold =
+    listingRatingAllowed && listingAggregate.reviewCount >= listingThreshold;
 
   const thesisMeta = THESIS_META[listing.thesis_type];
   const ThesisIcon = thesisMeta.icon;
@@ -146,17 +164,56 @@ export default async function ListingDetailPage({
 
         {/* Sidebar */}
         <aside className="md:col-span-1 space-y-4">
+          {/* Aggregat speziell für diese AG (Listing) */}
           <div className="rounded-xl border border-stone-200 bg-white p-5">
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-stone-500">
-              Erfahrungen
+              Erfahrungen mit dieser AG
+            </h3>
+            {listing.is_person_named && (
+              <p className="mt-1 text-xs text-amber-800">
+                Diese AG ist nach einer Einzelperson benannt — Bewertungen
+                erscheinen erst nach erweitertem Personen-Rating-Verfahren.
+              </p>
+            )}
+            <div className="mt-4">
+              {listingAboveThreshold ? (
+                <AggregateRating aggregate={listingAggregate} />
+              ) : (
+                <p className="text-sm text-stone-600">
+                  {listing.is_person_named && !flags.NAMED_RATINGS_PUBLIC ? (
+                    <>Personen-Ratings derzeit nicht öffentlich.</>
+                  ) : (
+                    <>
+                      Noch nicht genug verifizierte Erfahrungen
+                      {" "}({listingAggregate.reviewCount}/{listingThreshold}).
+                    </>
+                  )}
+                </p>
+              )}
+            </div>
+            <Link
+              href={
+                listing.group
+                  ? `/erfahrung-teilen?gruppe=${listing.group.id}&listing=${listing.id}`
+                  : `/erfahrung-teilen?listing=${listing.id}`
+              }
+              className="mt-4 block w-full rounded-md bg-indigo-700 px-3 py-2 text-center text-sm font-medium text-white shadow-sm transition hover:bg-indigo-800 no-underline hover:no-underline"
+            >
+              Diese AG bewerten
+            </Link>
+          </div>
+
+          {/* Aggregat für die ganze Klinik */}
+          <div className="rounded-xl border border-stone-200 bg-white p-5">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-stone-500">
+              Erfahrungen mit der Klinik
             </h3>
             <p className="mt-1 text-xs text-stone-500">
-              Bewertungen sind <strong>unabhängig</strong> davon, ob diese
-              Stelle hervorgehoben ist.
+              Aggregat über <strong>alle AGs</strong> dieser Klinik. Bezahlung
+              hat keinen Einfluss auf die Darstellung.
             </p>
-
             <div className="mt-4">
-              {aboveThreshold && groupAggregate ? (
+              {groupAboveThreshold && groupAggregate ? (
                 <AggregateRating aggregate={groupAggregate} />
               ) : (
                 <p className="text-sm text-stone-600">
@@ -165,8 +222,7 @@ export default async function ListingDetailPage({
                 </p>
               )}
             </div>
-
-            <div className="mt-5 space-y-2">
+            <div className="mt-4 space-y-2">
               {listing.group && (
                 <Link
                   href={`/gruppen/${listing.group.id}`}
@@ -184,7 +240,7 @@ export default async function ListingDetailPage({
                 }
                 className="block w-full rounded-md border border-indigo-700 px-3 py-2 text-center text-sm font-medium text-indigo-700 transition hover:bg-indigo-50 no-underline hover:no-underline"
               >
-                Eigene Erfahrung teilen
+                Klinik allgemein bewerten
               </Link>
             </div>
           </div>
