@@ -43,30 +43,68 @@ export const REVIEW_DIMENSIONS = [
     key: "supervision_quality",
     label: "Betreuungsqualität",
     prompt: "Wie gut hast du dich betreut gefühlt?",
+    low: "ignoriert / kaum Treffen",
+    high: "exzellente Betreuung",
   },
   {
     key: "responsiveness",
     label: "Erreichbarkeit",
     prompt: "Wie erreichbar war deine Betreuungsperson?",
+    low: "Wochenlang keine Antwort",
+    high: "Antwort meist binnen 1-2 Tagen",
   },
   {
     key: "timeline_realism",
     label: "Realismus des Zeitplans",
     prompt: "War der versprochene Zeitplan realistisch?",
+    low: "Vielfach länger als angekündigt",
+    high: "Wie versprochen oder schneller",
   },
   {
     key: "project_delivered",
     label: "Datenlieferung",
     prompt: "Hat das Projekt verwertbare Daten/Ergebnisse geliefert?",
+    low: "Methodik scheiterte / kaum Daten",
+    high: "Vollständige, verwertbare Daten",
   },
   {
     key: "would_recommend",
     label: "Weiterempfehlung",
-    prompt: "Würdest du diese Gruppe weiterempfehlen?",
+    prompt: "Würdest du diese Gruppe einer Freundin / einem Freund weiterempfehlen?",
+    low: "Auf keinen Fall",
+    high: "Uneingeschränkt ja",
   },
 ] as const;
 
 export type ReviewDimensionKey = (typeof REVIEW_DIMENSIONS)[number]["key"];
+
+export const PROMOTION_STATUS = [
+  { key: "ongoing", label: "Noch laufend" },
+  { key: "completed", label: "Abgeschlossen" },
+  { key: "discontinued", label: "Abgebrochen" },
+] as const;
+
+export const WEEKLY_HOURS = [
+  { key: "fulltime", label: "Vollzeit (~35 h/Woche oder mehr)" },
+  { key: "parttime_high", label: "Tageweise (15-35 h/Woche)" },
+  { key: "parttime_low", label: "Wenige Stunden (< 15 h/Woche)" },
+  { key: "occasional", label: "Nur in Blöcken / unregelmäßig" },
+] as const;
+
+export const PUBLICATION_OUTCOME = [
+  { key: "first_author", label: "Erstautor:in-Publikation" },
+  { key: "coauthor", label: "Co-Autor:in-Publikation" },
+  { key: "mentioned", label: "Nur in Acknowledgments erwähnt" },
+  { key: "none", label: "Keine Publikation" },
+  { key: "in_progress", label: "Noch in Arbeit / eingereicht" },
+] as const;
+
+export const FUNDING_AS_PROMISED = [
+  { key: "yes", label: "Ja, wie versprochen" },
+  { key: "partial", label: "Teilweise / weniger als zugesagt" },
+  { key: "no", label: "Nein, nicht eingehalten" },
+  { key: "na", label: "Keine Förderung versprochen" },
+] as const;
 
 export const THESIS_TYPES = [
   { key: "experimental", label: "Experimentell" },
