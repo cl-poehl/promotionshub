@@ -2565,22 +2565,81 @@ PERSON_NAMED_AGS: set[str] = {
 }
 
 
+# Stichwort-Indizien je Typ. Wenn eines der Wörter in der Beschreibung
+# auftaucht, gilt der Typ als "tatsächlich von der AG angeboten".
+# Pflege so, dass keine Sammelbegriffe drin sind (z.B. NICHT "Forschung").
+TYPE_KEYWORDS: dict[str, set[str]] = {
+    "experimental": {
+        # Methoden-Schlüsselworte
+        "Wet Lab", "Wet-Lab", "Labor", "Laborzeit",
+        "Tiermodell", "Tiermodelle", "Mausmodell",
+        "Zellkultur", "Zellkulturen", "Zelltherapie",
+        "in vitro", "in-vitro", "in vivo",
+        "Mikroskop", "Mikroskopie", "Lichtmikroskopie", "Elektronen­mikroskop",
+        "Sequenzierung", "Sequencing", "NGS",
+        "Biochemie", "biochemisch", "Molekularbiologie", "molekularbiologisch",
+        "Bioprobe", "Bioproben", "Probenmaterial",
+        "FACS", "Flowzytometrie", "Flow-Zytometrie",
+        "PCR", "qPCR", "Western", "ELISA", "Immunhistochemie",
+        "Stammzell", "Stem Cell", "Stammzelle",
+        "Bildgebung", "MRT", "fMRT", "EEG", "PET",
+        "Knockout", "Knock-out", "CRISPR",
+        "Biomarker", "Pathomechanismen",
+        "Single Cell", "Single-cell",
+        "Massenspektrometrie", "Metabolomik", "Proteomik",
+    },
+    "clinical": {
+        "klinische Studie", "klinischen Studie", "klinischen Studien",
+        "Patient", "Patienten", "Patient:innen", "Patientinnen",
+        "Outcome", "Outcomes",
+        "RCT", "randomisiert", "Phase I", "Phase II", "Phase III",
+        "Versorgungs", "Versorgungsforschung",
+        "Therapie", "Therapeut",
+        "Behandlung", "Behandlungs",
+        "Kohorte", "Kohorten",
+        "prospektiv", "Patientenkohort",
+        "Studienzentrum", "Studienkoordination",
+        "Klinikregister", "Klinik-Register",
+        "Spezialambulanz",
+        "Klinikalltag", "Versorgungs-Alltag",
+    },
+    "statistical": {
+        "Statistik", "statistisch", "Versorgungs­forschung",
+        "Datenanalyse", "Datenauswertung",
+        "Register", "Registerstudie", "Register-Studie", "Registerdaten",
+        "Modellierung", "Modell", "Modelle",
+        "Epidemiologie", "epidemiologisch",
+        "Längsschnitt", "Längsschnittstudie",
+        "retrospektiv", "retrospektive",
+        "Big Data", "Big-Data",
+        "Bioinformatik", "bioinformatisch",
+        "Machine Learning", "ML-",
+        "KI", "Künstliche Intelligenz", "AI ",
+        "Algorithmus", "algorithmisch",
+        "Computational",
+        "Dosis-Wirkungs", "Dosis-Kalkulator",
+        "Prädiktor", "Prädiktoren",
+    },
+}
+
+
 def derive_additional_types(thesis_type: str, description: str) -> list[str]:
     """
-    Heuristik: die meisten Universitätsklinik-AGs bieten in der Praxis
-    mehrere Thesis-Typen an (klinisch/experimentell/statistisch). Bei
-    'other' (Förderprogramme, Karriere-Schienen) lassen wir es einzeln.
-    Wenn die Beschreibung klare Hinweise auf nur einen Typ gibt
-    ('Wet Lab', 'reines Methodenpapier'), kann man das später per
-    `additionalThesisTypes` im Override overrulen.
+    Per-Beschreibung-Heuristik: addiert nur Typen mit klarem Stichwort-
+    Beleg in der Beschreibung. Damit bleibt der Filter ein echter
+    Unterscheider.
+
+    'other' (Förderprogramme, Karriere-Schienen) bleibt einzeln.
     """
     if thesis_type == "other":
         return []
-    types = {"clinical", "experimental", "statistical"}
-    # Primär gehört nicht in additional (wird im run.ts dedupliziert,
-    # aber für Lesbarkeit hier rausziehen)
-    types.discard(thesis_type)
-    return sorted(types)
+    additional: list[str] = []
+    for ttype, keywords in TYPE_KEYWORDS.items():
+        if ttype == thesis_type:
+            continue
+        if any(kw in description for kw in keywords):
+            additional.append(ttype)
+    return sorted(additional)
 
 
 def render_listing(area_title: str, description: str, url: str, thesis_type: str,

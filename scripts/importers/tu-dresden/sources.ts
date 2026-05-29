@@ -1,12 +1,8 @@
 /**
- * TU-Dresden-Quellen. Generated.
- * 19 Person-genannte AGs markiert (isPersonNamed: true).
+ * TU-Dresden-Quellen. Per-Beschreibung-Heuristik für Mehrtypen.
  */
-
 import type { ImporterSource } from "../types";
-
 const TU_DRESDEN_ID = "88888888-8888-8888-8888-888888888888";
-
 export const tuDresdenSources: ImporterSource[] = [
   {
     slug: "ukd-ane",
@@ -34,7 +30,8 @@ export const tuDresdenSources: ImporterSource[] = [
 - Ingenieurwissenschaftliche Tools zur Diagnostik und Modellierung des respiratorischen Systems
 
 *Sehr viele Andockpunkte für Promotionen — Intensivmedizin/ARDS/Sepsis vorne in der Liste.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/ane/forschung`,
-        applicationContact: "AG Translationale Anästhesie und Intensivmedizin (Anästhesie-Sekretariat)" },
+        applicationContact: "AG Translationale Anästhesie und Intensivmedizin (Anästhesie-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
     ],
   },
   {
@@ -57,7 +54,8 @@ export const tuDresdenSources: ImporterSource[] = [
 **Blau-Gelb-Perimetrie, Frequency-Doubling-Perimetrie, Laser-Doppler-Flowmeter, Scanning-Laser-Doppler-Flowmeter, Scanning-Laser-Tomograph, Ocular Blood Flow-System, Farb-Duplex-Sonographie**
 
 *Experimentelles Lab mit klarem Patient:innen-Bezug. Sehr gut für Glaukom-orientierte experimentelle Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/augenheilkunde/forschung-und-lehre/copy_of_experimentelle-ophthalmologie`,
-        applicationContact: "Forschergruppe Glaukom (Augenklinik-Sekretariat)" },
+        applicationContact: "Forschergruppe Glaukom (Augenklinik-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -80,6 +78,7 @@ export const tuDresdenSources: ImporterSource[] = [
 
 *Sehr gute Wahl für experimentelle onkologische Promotionen — Zellkultur und Mechanismen-Forschung.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/ExpDerm`,
         applicationContact: "Prof. Dr. Dagmar Kulms (Dermatologie-Sekretariat)",
+        additionalThesisTypes: ["clinical"],
         isPersonNamed: true },
       { title: "AG Experimentelle Immundermatologie — Abraham/Günther (Dermatologie UKD Dresden)", thesis_type: "experimental",
         description: `Forschungsgruppe zu **angeborenen Immunmechanismen der Haut** und ihrer Rolle für Autoimmunerkrankungen.
@@ -107,7 +106,8 @@ Autoinflammatorische/autoimmunologische Mechanismen bei genetischen Störungen d
 **Team:** Dr. S. Abraham, PD Dr. P. Spornraft-Ragaller, Dipl.-Soz. H. Rönsch
 
 *Sehr gut für Promotionen mit allergologisch-epidemiologischem Fokus oder Versorgungs­forschung in der Dermatologie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/BuD`,
-        applicationContact: "Prof. Dr. Andrea Bauer (Derm-Sekretariat)" },
+        applicationContact: "Prof. Dr. Andrea Bauer (Derm-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG Dermatoonkologische Forschung — Meier Lab (Dermatologie UKD Dresden)", thesis_type: "experimental",
         description: `Breit aufgestellte onkologische Forschungs­einheit mit drei klaren Linien.
 
@@ -127,6 +127,7 @@ Dr. rer. medic. Maike Bergmann.
 
 *Sehr breites Spektrum — Promotion möglich von experimentell (Westphal) bis klinisch/SIRC (Hobelsberger).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/der/lehre-forschung/dermatoonkologie`,
         applicationContact: "Prof. Dr. Friedegund Meier (Derm-Sekretariat)",
+        additionalThesisTypes: ["clinical", "statistical"],
         isPersonNamed: true },
       { title: "Dermatologische Labordiagnostik — Forschung & Lehre (Dermatologie UKD Dresden)", thesis_type: "experimental",
         description: `Klinik-eigene Labordiagnostik mit Forschungs- und Lehrkomponente.
@@ -170,7 +171,8 @@ Dr. rer. medic. Maike Bergmann.
 - Genpaneluntersuchung + weiterführende genetische Diagnostik
 
 *Methodisch anspruchsvoll, Brücke Gyn-Onkologie ↔ KGE. Gut für translationale Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/zentrum-familiaerer-brust-und-eierstockkrebs-1/forschung`,
-        applicationContact: "Frauenklinik / Zentrum familiärer Brust-/Eierstockkrebs" },
+        applicationContact: "Frauenklinik / Zentrum familiärer Brust-/Eierstockkrebs",
+        additionalThesisTypes: ["clinical"] },
       { title: "Laboratorien Frauenklinik — Endokrinolog-Onkolog. Forschungslabor (Frauenklinik UKD Dresden)", thesis_type: "experimental",
         description: `Frauenklinik-eigene Laboratorien für Forschung und Routine.
 
@@ -216,7 +218,8 @@ Dr. rer. medic. Maike Bergmann.
 - Klinik-Bezug: chirurgische Fragen aus dem OP-Alltag
 
 *Sehr gut für Promotionen mit physikalisch-technischem Interesse oder klassische klinische Otologie. Englisch-sprachiges Lab.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/ear-research-center-dresden`,
-        applicationContact: "ERCD (HNO-Sekretariat)" },
+        applicationContact: "ERCD (HNO-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
       { title: "Interdisziplinäres Zentrum für Riechen und Schmecken (HNO UKD Dresden)", thesis_type: "experimental",
         description: `Etabliertes Zentrum seit 1998 — bundesweit eine der **führenden Adressen für Geruchs- und Schmecksinns­forschung**.
 
@@ -232,7 +235,8 @@ Dr. rer. medic. Maike Bergmann.
 **Leitung:** Prof. Dr. med. Thomas Hummel · Klinikleitung: Prof. Dr. med. Thomas Zahnert
 
 *Sehr gut für sensorisch-physiologische Promotionen. Kooperation mit der Neuroradiologie (BOLD-fMRT olfaktorisch).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/zentrum-fur-riechen-und-schmecken`,
-        applicationContact: "Prof. Dr. Thomas Hummel (HNO-Sekretariat)" },
+        applicationContact: "Prof. Dr. Thomas Hummel (HNO-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -257,7 +261,8 @@ Dr. rer. medic. Maike Bergmann.
 Mehrere Drittmittel-Publikationen 2024–2025 zu Anti­biotika-Verbrauchsdaten und Resistenz­schätzung (Rank, Kern u.a.).
 
 *Sehr gut für statistisch-epidemiologische Promotionen — Public-Health-Anteil, Versorgungs­forschung-Methoden.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-infektiologie/forschung`,
-        applicationContact: "Klinische Infektiologie (Sekretariat)" },
+        applicationContact: "Klinische Infektiologie (Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -289,7 +294,8 @@ Mehrere Drittmittel-Publikationen 2024–2025 zu Anti­biotika-Verbrauchsdaten u
 - Verbesserung von Chemo-/Strahlentherapie-Konzepten unter Berücksichtigung von Spätfolgen
 
 *Klassische experimentelle Promotion mit pädiatrisch-onkologischem Fokus.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kch/forschung/experimentelle-forschung-1`,
-        applicationContact: "Kinderchirurgie-Forschung (Sekretariat)" },
+        applicationContact: "Kinderchirurgie-Forschung (Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Forschungslabor Kinderchirurgie — Haase Lab (Kinderchirurgie UKD Dresden)", thesis_type: "experimental",
         description: `Eigenes Forschungslabor der Kinderchirurgie unter pathologischer Leitung.
 
@@ -333,7 +339,8 @@ Stammzellbiologie, Genom-Sequenzierung, Genom-Editierung, Omics-Technologien —
 - ERN GENTURIS — europäische Tumor-Risiko-Allianz
 
 *Klassisches universitäres Genetik-Institut mit starker translationaler Linie — Promotionen über alle Bereiche möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung`,
-        applicationContact: "Institut für Klinische Genetik / Sekretariat" },
+        applicationContact: "Institut für Klinische Genetik / Sekretariat",
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "AG Translational Genomics & Big Data — Le Duc Lab (Klin. Genetik UKD Dresden)", thesis_type: "statistical",
         description: `Translationale Forschungsgruppe an der Schnittstelle **Humangenetik, vergleichende/evolutionäre Genomik und klinische Medizin**.
 
@@ -352,6 +359,7 @@ Stammzellbiologie, Genom-Sequenzierung, Genom-Editierung, Omics-Technologien —
 
 *Einer der besten Plätze für computational-experimental hybride Promotionen mit klarem klinischem Bezug.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/big-data-diana-le-duc`,
         applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)",
+        additionalThesisTypes: ["clinical", "experimental"],
         isPersonNamed: true },
       { title: "AG Functional Neurogenomics — Abe Lab (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
         description: `**Unraveling brain development & neurodevelopmental disorders** — Mechanismen neuronaler Spezifizierung, Positionierung und Schaltkreis­bildung in der prä- und postnatalen Gehirnentwicklung.
@@ -368,6 +376,7 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 
 *Anspruchsvoll, englisch-sprachig. Ideale Promotion für jemand mit Interesse an Entwicklungs­neurobiologie und Single-cell-Methoden.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/forschungsgruppen-1/functional-neurogenomics`,
         applicationContact: "Dr. Philipp Abe (KGE-Sekretariat)",
+        additionalThesisTypes: ["statistical"],
         isPersonNamed: true },
       { title: "AG Hirntumore / Tumorgenetik — Schröck Lab (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
         description: `Erforscht **genetische Veränderungen und Signalwege** bei Tumorentstehung und maligner Progression.
@@ -397,7 +406,8 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 - **Koordinatorinnen:** Prof. Dr. Daniela Aust + Dr. Doreen William
 
 *Sehr gute Wahl für Promotionen mit NGS- und Bioinformatik-Fokus — direkt an der translationalen Onkologie-Schnittstelle.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/nct-molekulare-tumordiagnostik`,
-        applicationContact: "Dr. Doreen William (Koordination CMTD)" },
+        applicationContact: "Dr. Doreen William (Koordination CMTD)",
+        additionalThesisTypes: ["statistical"] },
       { title: "ERN GENTURIS — Europäisches Netzwerk Tumor-Risiko-Syndrome (Klin. Genetik UKD Dresden)", thesis_type: "clinical",
         description: `Dresden ist eines der **6 deutschen Zentren** im European Reference Network on **GENetic TUmor RIsk Syndromes (GENTURIS)**.
 
@@ -409,7 +419,8 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 **Dresdener Koordinatorin:** Prof. Dr. Diana Le Duc
 
 *Klinische Promotion mit europaweiter Vernetzung — sehr gut für Register­studien und seltene-Erkrankungs-Forschung.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/ern-genturis`,
-        applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)" },
+        applicationContact: "Prof. Dr. Diana Le Duc (KGE-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
       { title: "Methodenspektrum — NGS, Funktionelle Genetik (Klin. Genetik UKD Dresden)", thesis_type: "experimental",
         description: `Modernes Methoden-Portfolio des Instituts — Basis aller experimentellen Promotionen hier.
 
@@ -420,7 +431,8 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 - Translation in die klinische Diagnostik
 
 *Wenn du methodisch lernen willst (NGS-Pipeline, Variant Interpretation), ist KGE die richtige Adresse. Promotionen mit Bioinformatik-Anteil sehr gut machbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung/methoden-1`,
-        applicationContact: "Institut für Klinische Genetik (Sekretariat)" },
+        applicationContact: "Institut für Klinische Genetik (Sekretariat)",
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "Individualisierte Risikoberechnung für gesunde Angehörige (Klin. Genetik UKD Dresden)", thesis_type: "statistical",
         description: `Klinisch-statistische Forschung zur **individualisierten Risikoabschätzung** bei gesunden Angehörigen von Patient:innen mit erblichen Tumor-Syndromen.
 
@@ -428,7 +440,8 @@ Wie entwickelt sich das Gehirn — und was geht bei neurologischen Entwicklungs�
 Welche Faktoren bestimmen das Risiko von Carrier:innen? Wie können Vorsorge- und Beratungs-Schemata personalisiert werden?
 
 *Geeignet für Promotionen mit statistisch-epidemiologischem Fokus — etablierte Patient:innen-Daten verfügbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kge/forschung`,
-        applicationContact: "Institut für Klinische Genetik (Sekretariat)" },
+        applicationContact: "Institut für Klinische Genetik (Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -503,7 +516,8 @@ DFG-Verbundforschung mit eigener Administration (Bianca Weißbach, Tel. 0351 458
 **Leitung:** Prof. Dr. med. Catharina Schütz · Sekretariat Sandy Kluge: sandy.kluge@ukdd.de · Tel. 0351 458-2680
 
 *Klinische Promotionen mit seltenen Patient:innen-Kohorten. Anbindung an UCID (Universitätscentrum für Chronische Immundefizienzen).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/copy_of_padiatrische-immunologie`,
-        applicationContact: "sandy.kluge@ukdd.de · Tel. 0351 458-2680" },
+        applicationContact: "sandy.kluge@ukdd.de · Tel. 0351 458-2680",
+        additionalThesisTypes: ["experimental"] },
       { title: "AG Pädiatrische Infektiologie (Kinderklinik UKD Dresden)", thesis_type: "experimental",
         description: `Erforscht Pathogenese und Epidemiologie bakterieller Krankheitserreger bei Kindern.
 
@@ -516,7 +530,8 @@ DFG-Verbundforschung mit eigener Administration (Bianca Weißbach, Tel. 0351 458
 **Leitung:** Prof. Dr. med. Reinhard Berner · Sekretariat Frau Hille: 0351 458-2508
 
 *Translationale Promotion zwischen klinischer Epidemiologie und Molekularbiologie. Bezug zur Infektiologie der gesamten UKD.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/paediatrische-infektiologie`,
-        applicationContact: "Prof. Dr. Reinhard Berner / Sekr. Hille · Tel. 0351 458-2508" },
+        applicationContact: "Prof. Dr. Reinhard Berner / Sekr. Hille · Tel. 0351 458-2508",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG Post-Akute-Infektions-/Vakzinierungs­syndrome (PAIVS) (Kinderklinik UKD Dresden)", thesis_type: "clinical",
         description: `Spezialisiertes Netzwerk-Programm zu **Long-COVID, ME/CFS und ähnlichen postakuten Syndromen** bei Kindern und Jugendlichen.
 
@@ -547,7 +562,8 @@ DFG-Verbundforschung mit eigener Administration (Bianca Weißbach, Tel. 0351 458
 **Leitung:** OA Prof. Dr. med. Christian Vogelberg
 
 *Vielfältige Themen verfügbar — von epidemiologisch bis experimentell. Mehrere Doktoranden gleichzeitig betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kik/forschung/forschung-1/pneumologie`,
-        applicationContact: "OA Prof. Dr. Christian Vogelberg (Kinderklinik-Sekretariat)" },
+        applicationContact: "OA Prof. Dr. Christian Vogelberg (Kinderklinik-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
     ],
   },
   {
@@ -581,7 +597,8 @@ Teil von **Mental Health Dresden-Leipzig** — regionales Netzwerk TUD/Uni Leipz
 **Leitung:** Prof. Dr. med. Veit Roessner
 
 *Sehr breite methodische Vielfalt — ideal für Promotionen, die EEG mit Bildgebung oder Genetik verbinden möchten.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/experimentelle-entwicklungspsychopathologie`,
-        applicationContact: "Prof. Dr. med. Veit Roessner (KJP-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Veit Roessner (KJP-Sekretariat)",
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "AG Kognitive Neurophysiologie — actionlab (KJP UKD Dresden)", thesis_type: "experimental",
         description: `**Cognitive Neuroscience Lab** mit eigenständigem externen Auftritt ([actionlab.de](http://www.actionlab.de/)).
 
@@ -623,6 +640,7 @@ Hirnstruktur- und Hirnfunktionsbildgebung (EEG, MRT), Verhaltens­paradigmen —
 
 *Sehr stark vernetzte Bildgebungs-AG mit Fokus auf Essstörungen — passt zur Mental Health Dresden-Leipzig-Infrastruktur.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/angewandte-entwicklungsneurowissenschaften`,
         applicationContact: "Prof. Dr. Stefan Ehrlich (Kontakt über AG-Seite)",
+        additionalThesisTypes: ["clinical"],
         isPersonNamed: true },
       { title: "Klinische Studien AD(H)S & Konzentrationsprobleme (KJP UKD Dresden)", thesis_type: "clinical",
         description: `Bündel laufender klinischer Studien zum Störungsbild **Aufmerksamkeitsdefizit-(Hyperaktivitäts-)Störung** bei Kindern und Jugendlichen.
@@ -641,7 +659,8 @@ Hirnstruktur- und Hirnfunktionsbildgebung (EEG, MRT), Verhaltens­paradigmen —
 **Early Valid and Reliable Autism Screening** — Verbesserung der Zuweisung zu spezialisierten Fachambulanzen. Ziel: Wartezeiten verkürzen und Fehldiagnosen reduzieren, indem Symptome andere psychischer/Entwicklungs­störungen sauberer abgegrenzt werden.
 
 *Klinische Promotion mit Versorgungs-/Diagnostik-Bezug. Studienleitung KJP, in Verbindung mit der AG Ehrlich (Ehrlich Lab forscht u.a. zur Autismus-Bildgebung).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/autismus`,
-        applicationContact: "KJP Studien­koordination" },
+        applicationContact: "KJP Studien­koordination",
+        additionalThesisTypes: ["experimental"] },
       { title: "Klinische Studien Essstörungen — Anorexia Nervosa (KJP UKD Dresden)", thesis_type: "experimental",
         description: `Schwerpunktforschung zu **Anorexia nervosa** — eine der häufigsten psychischen Erkrankungen des Jugendalters.
 
@@ -653,7 +672,8 @@ Hirnstruktur- und Hirnfunktionsbildgebung (EEG, MRT), Verhaltens­paradigmen —
 **Anbindung:** AG Ehrlich (Angewandte Entwicklungs­neurowissenschaften).
 
 *Sehr starke Bildgebungs-Promotion mit Patient:innen-Kontakt. Eines der nationalen Zentren für die neurobiologische Erforschung von Essstörungen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/aktuelle-studien/essstoerungen`,
-        applicationContact: "KJP Studien­koordination / AG Ehrlich" },
+        applicationContact: "KJP Studien­koordination / AG Ehrlich",
+        additionalThesisTypes: ["clinical"] },
       { title: "Klinische Studien Schizophrenie (KJP UKD Dresden)", thesis_type: "experimental",
         description: `Studien zur **Schizophrenie** in Kindes-/Jugendalter und Frühverlauf.
 
@@ -689,7 +709,8 @@ Welche Berechnungen liegen kognitiven Prozessen zugrunde — und welche **biophy
 - Schwerpunkt: perzeptuelle Entscheidungen
 
 *Englisch-sprachiges Lab, Comp-Science-/Mathe-Hintergrund hilfreich. Geeignet für rechnerisch-modellierungs­starke Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/kjp/forschung/forschungsgruppen/computational-neuroscience`,
-        applicationContact: "CMC Lab (Kontakt über AG-Seite)" },
+        applicationContact: "CMC Lab (Kontakt über AG-Seite)",
+        additionalThesisTypes: ["statistical"] },
     ],
   },
   {
@@ -733,6 +754,7 @@ Regulation immunologischer, hämatologischer und onkologischer Prozesse über da
 
 *Geeignet für Promotionen mit Daten-/Informatik-Hintergrund. Programmierkenntnisse stark empfohlen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/groups/pauling-lab-computational-integrative-omics-in-biomedicine`,
         applicationContact: "Dr. Josch K. Pauling (IKL-Sekretariat)",
+        additionalThesisTypes: ["experimental"],
         isPersonNamed: true },
       { title: "Menschikowski Lab — Epigenetik in der Onkologie (IKL UKD Dresden)", thesis_type: "experimental",
         description: `Forschungsgruppe zur **epigenetischen Regulation** mit Schwerpunkt onkologische Mechanismen.
@@ -783,7 +805,8 @@ Regulation immunologischer, hämatologischer und onkologischer Prozesse über da
 **Leitung:** Dr. Alexander Funk
 
 *Methodisch interessant für Promotionen mit chemisch-analytischem oder biostatistischem Hintergrund.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/copy_of_EMS`,
-        applicationContact: "Dr. Alexander Funk (IKL-Sekretariat)" },
+        applicationContact: "Dr. Alexander Funk (IKL-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
       { title: "Core Facility: Dresden Integrated Liquid Biobank (DILB) (IKL UKD Dresden)", thesis_type: "experimental",
         description: `**Bioprobenbank für Flüssigproben**, betrieben innerhalb der BioBank Dresden (BBD) am Nationalen Centrum für Tumorerkrankungen (NCT/UCC).
 
@@ -794,7 +817,8 @@ Gemeinsam getragen von UKD, der Carl Gustav Carus Fakultät der TU Dresden und d
 Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für reproduzierbare Biomarker-Forschung.
 
 *Promotionen, die definierte Patient:innen-Kohorten und qualitätsgesicherte Bioproben brauchen, finden hier die zentrale Ressource.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinische-chemie-und-laboratoriumsmedizin/ikl-forschung-research/facilities/dresden-integrated-liquid-biobank-dilb`,
-        applicationContact: "DILB / IKL-Sekretariat" },
+        applicationContact: "DILB / IKL-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
       { title: "IKL-PhD-Programme: DIGS-ILS + DSCS (Klin. Chemie UKD Dresden)", thesis_type: "other",
         description: `Das IKL nimmt Doktorand:innen über **zwei strukturierte Programme** auf — getrennt nach Karriere-Track.
 
@@ -855,7 +879,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 **Externer Auftritt:** [ai-in-cancer.org](https://ai-in-cancer.org/)
 
 *Geeignet, wenn dich Programmieren reizt und du Medizin mit Informatik verbinden willst — auch ohne fortgeschrittene Vorkenntnisse, mit Einarbeitungszeit.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/ag-ai-in-cancer`,
-        applicationContact: "Dr. med. Jan Moritz Middeke · Tel. 0351 458-15603" },
+        applicationContact: "Dr. med. Jan Moritz Middeke · Tel. 0351 458-15603",
+        additionalThesisTypes: ["clinical"] },
       { title: "AG Improvements in clinical cellular immunotherapies (MK1 UKD Dresden)", thesis_type: "experimental",
         description: `Klinisch-experimentelle Arbeitsgruppe zu **anti-neoplastischen Immune Effector Cell Therapien (IECs)** — insbesondere CAR-T-Zellen und Makrophagen.
 
@@ -871,7 +896,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 **Kooperationen:** Sieweke Lab (CRTD / TU Dresden)
 
 *Geeignet, wenn du eine echte experimentelle Laborzeit von mehreren Monaten einplanen möchtest und translationale Onkologie reizvoll findest.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/ag-improvements-in-clinical-cellular-immunotherapies`,
-        applicationContact: "PD Dr. med. Malte von Bonin (Kontakt über die AG-Seite)" },
+        applicationContact: "PD Dr. med. Malte von Bonin (Kontakt über die AG-Seite)",
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "AG MK1-L01 — Akute Myeloische Leukämie (MK1 UKD Dresden)", thesis_type: "experimental",
         description: `Präklinisch-experimentelle **und** klinisch-translationale Forschung zur Akuten Myeloischen Leukämie (AML). Detektion und Charakterisierung neuartiger Marker und genetischer Aberrationen — sowohl bei Erstdiagnose als auch nach Rezidiv.
 
@@ -887,7 +913,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 **Kooperationen:** enge Anbindung an das [Stemcell Lab](http://stemcell-lab-mk1dresden.de) auf dem Campus.
 
 *Mehrere unterschiedliche Promotionsprojekte verfügbar — bei Interesse direkt anfragen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/ag-mk1-l01`,
-        applicationContact: "MK1-L01 · Tel. 0351 458-2699" },
+        applicationContact: "MK1-L01 · Tel. 0351 458-2699",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG Myelodysplastische Syndrome (MK1 UKD Dresden)", thesis_type: "experimental",
         description: `**Dresden MDS Working Group** — translationale Forschung zu Myelodysplastischen Syndromen mit dem Ziel, neue Therapie­strategien zu entwickeln und die Pathobiologie der Erkrankung zu verstehen.
 
@@ -904,7 +931,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 **Leitung:** Dr. med. Katja Sockel und Dr. med. Ekaterina Balaian.
 
 *Eine der renommiertesten MDS-Forschungsgruppen in Deutschland — sehr gute Wahl für eine experimentelle Onkologie-Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/ag-myelodysplastische-syndrome`,
-        applicationContact: "Dr. med. Katja Sockel / Dr. med. Ekaterina Balaian (Kontakt über AG-Seite)" },
+        applicationContact: "Dr. med. Katja Sockel / Dr. med. Ekaterina Balaian (Kontakt über AG-Seite)",
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "Dresden School of Clinical Science — Carus Promotionskolleg (MK1 UKD Dresden)", thesis_type: "other",
         description: `Strukturiertes Förderprogramm der TU Dresden für **Clinician Scientists** und **Medical Scientists**. Begleitet dich von der Promotionsphase bis zur Habilitation.
 
@@ -932,7 +960,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 
 **Mehr:** [digitalhealth.tu-dresden.de](https://digitalhealth.tu-dresden.de/)
 
-*Spannend, wenn du Medizin mit Ingenieurs-Ansätzen (KI, Nanotech, Tissue Engineering) verbinden willst — das EKFZ koordiniert auch das „Clinicum Digitale\\" für studierende.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/forschung-und-innovation/else-kroener-fresenius-zentrum-fuer-digitale-gesundheit` },
+*Spannend, wenn du Medizin mit Ingenieurs-Ansätzen (KI, Nanotech, Tissue Engineering) verbinden willst — das EKFZ koordiniert auch das „Clinicum Digitale\\" für studierende.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/forschung-und-innovation/else-kroener-fresenius-zentrum-fuer-digitale-gesundheit`,
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "Bereich Hämostaseologie — Thrombose- und Blutungsforschung (MK1 UKD Dresden)", thesis_type: "clinical",
         description: `Zwei klar abgegrenzte klinische Forschungsbereiche der Hämostaseologie. Etablierte Studien-Datensätze, daher gut neben dem Studium machbar.
 
@@ -949,7 +978,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 - Therapie der Hämophilie und anderer Blutungsstörungen
 - Registerstudien zu Alltagsdaten in der Hämophilie
 
-*Geeignet für klinisch-statistische Promotionen mit echten Patient:innendaten — vergleichsweise klar strukturiert, kein Wet Lab.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/bereich-haemostaseologie` },
+*Geeignet für klinisch-statistische Promotionen mit echten Patient:innendaten — vergleichsweise klar strukturiert, kein Wet Lab.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/bereich-haemostaseologie`,
+        additionalThesisTypes: ["experimental", "statistical"] },
       { title: "Mildred-Scheel-Nachwuchszentrum — Krebshilfe-Programm (MK1 UKD Dresden)", thesis_type: "other",
         description: `Von der **Deutschen Krebshilfe** gefördertes Clinician/Medical Scientist Programm „P² — Personalisierte Karriereplanung in der Präzisionsonkologie\\".
 
@@ -976,7 +1006,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 
 **Leitung:** Prof. Dr. rer. nat. Manja Wobus
 
-*Echtes Wet Lab. Geeignet, wenn du dich in Zellkultur, Mikroskopie und Stammzell­biologie wirklich vertiefen willst.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/stem-cell-lab-2-mk1-l11` },
+*Echtes Wet Lab. Geeignet, wenn du dich in Zellkultur, Mikroskopie und Stammzell­biologie wirklich vertiefen willst.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/stem-cell-lab-2-mk1-l11`,
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "Transplantation Immunology Lab (AG TxI) — Leukämie nach HCT (MK1 UKD Dresden)", thesis_type: "experimental",
         description: `Teil des **Exzellenzclusters**, in Kooperation mit der **DKMS**. Erforscht Biologie und Funktion von Immune Effector Cells nach Stammzelltransplantation bei Leukämie-Patient:innen — T-Zellen und Natürliche Killerzellen (NK).
 
@@ -994,7 +1025,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 **Leitung:** Prof. Dr. med. Johannes Schetelig
 
 *Anspruchsvolle experimentelle Promotion in einer renommierten Forschungsgruppe. Mehrmonatige Laborphase erforderlich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk1/fachabteilungen/haematologie/forschung-research/transplantation-immunology-lab-ag-txi`,
-        applicationContact: "johannes.schetelig@uniklinikum-dresden.de · Tel. 0351 458-15604" },
+        applicationContact: "johannes.schetelig@uniklinikum-dresden.de · Tel. 0351 458-15604",
+        additionalThesisTypes: ["clinical", "statistical"] },
     ],
   },
   {
@@ -1018,7 +1050,8 @@ Standardisierte, qualitäts­kontrollierte Probensammlung — Voraussetzung für
 **Leitung:** Prof. Dr. med. Norbert Weiss
 
 *Klassisches experimentelles Lab mit cardio/vaskulärem Fokus. Engl./dt., Tiermodelle und Zellkultur.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab`,
-        applicationContact: "Prof. Dr. med. Norbert Weiss (MK3-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Norbert Weiss (MK3-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
       { title: "Bereich Gefäßendothel / Mikrozirkulation (MK3 UKD Dresden)", thesis_type: "experimental",
         description: `Eigenständiger Forschungsbereich der MK3 zur **endothelialen Funktion und Mikrozirkulation** — Pathomechanismen vaskulärer Erkrankungen auf zellulärer Ebene.
 
@@ -1043,7 +1076,8 @@ Endotheliale (Dys)funktion bei kardiovaskulären Erkrankungen, oxidativer Stress
 Klinische und grundlagenorientierte Erforschung von Gefäßerkrankungen, Entwicklung und Überprüfung neuer Therapiekonzepte.
 
 *Sehr gut für klinische Promotionen mit gefäßmedizinischem Fokus — Outcome-Forschung, Verfahrens­vergleich, Register­studien.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/forschung-und-innovation/angiology-research-lab/university-center-for-vascular-medicine`,
-        applicationContact: "Universitäts GefäßCentrum / MK3-Sekretariat" },
+        applicationContact: "Universitäts GefäßCentrum / MK3-Sekretariat",
+        additionalThesisTypes: ["statistical"] },
       { title: "Klinische Forschung Nephrologie / Dialyse / Nierentransplantation (MK3 UKD Dresden)", thesis_type: "clinical",
         description: `Klinische Forschung im Bereich Nephrologie: chronische Nierenerkrankung, Dialyseverfahren, Nierentransplantation.
 
@@ -1053,7 +1087,8 @@ Klinische und grundlagenorientierte Erforschung von Gefäßerkrankungen, Entwick
 - Register-basierte Untersuchungen zur Dialyse­qualität
 
 *Klinisch-statistische Promotion mit großem Patient:innen-Kollektiv. Mit nephrologischer Klinik und Transplant-Programm gut machbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/mk3/nephrologie/klinische-forschung`,
-        applicationContact: "Nephrologie / MK3-Sekretariat" },
+        applicationContact: "Nephrologie / MK3-Sekretariat",
+        additionalThesisTypes: ["statistical"] },
       { title: "Diabetes, Stoffwechsel und Inselzelltransplantation (MK3 UKD Dresden)", thesis_type: "clinical",
         description: `Klinische und translationale Forschung zu Diabetes mellitus, Hormon- und Stoffwechselstörungen — einschließlich des spezialisierten **Inselzelltransplantations-Programms**.
 
@@ -1121,7 +1156,8 @@ Klinische und grundlagenorientierte Erforschung von Gefäßerkrankungen, Entwick
 Sehr interdisziplinär — direkter Bezug Klinik/Werkstoffkunde/Tissue Engineering.
 
 *Geeignet für Promotionen in fast allen Bereichen (chirurgisch-klinisch, materialwissenschaftlich, tumorbiologisch).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung`,
-        applicationContact: "MKG-Sekretariat (über Klinik-Seite)" },
+        applicationContact: "MKG-Sekretariat (über Klinik-Seite)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Biomaterialien & Werkstoffkundelabor (MKG UKD Dresden)", thesis_type: "experimental",
         description: `Eigenes **Werkstoffkundelabor** der UniversitätsZahnMedizin für interdisziplinäre Forschung an medizinisch genutzten Materialien.
 
@@ -1146,7 +1182,8 @@ Sehr interdisziplinär — direkter Bezug Klinik/Werkstoffkunde/Tissue Engineeri
 Biomaterial- und Scaffold-Entwicklung für Knochenersatz und Geweberegeneration. 2D- und 3D-Zellkultur, Kryokonservierung.
 
 *Anspruchsvolles experimentelles Lab. Geeignet für Promotion mit Zellkultur- und Regenerations-Schwerpunkt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/tissue-engineering`,
-        applicationContact: "MKG-Sekretariat / Forschungslabor" },
+        applicationContact: "MKG-Sekretariat / Forschungslabor",
+        additionalThesisTypes: ["statistical"] },
       { title: "Tumorforschung — Plattenepithelkarzinom (MKG UKD Dresden)", thesis_type: "experimental",
         description: `Onkologische Forschung mit Fokus **Plattenepithelkarzinom** des Mund- und Rachenraumes — häufigster bösartiger MKG-Tumor.
 
@@ -1156,7 +1193,8 @@ Biomaterial- und Scaffold-Entwicklung für Knochenersatz und Geweberegeneration.
 - Basis für neue Therapiekonzepte und genauere Prognose
 
 *Schnittstelle MKG/Onkologie/Genetik. Geeignet für translational-onkologische Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/tumorforschung`,
-        applicationContact: "MKG-Sekretariat" },
+        applicationContact: "MKG-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
       { title: "Antiresorptiva-assoziierte Kiefernekrosen (ARONJ) (MKG UKD Dresden)", thesis_type: "clinical",
         description: `Klinische Forschung zur **Antiresorptiva-assoziierten Kiefernekrose (ARONJ)** — Komplikation v.a. bei Osteoporose- und Tumor-Patient:innen.
 
@@ -1178,7 +1216,8 @@ Klinische Studien, etablierte Patient:innen-Kohorte.
 - Ideale Therapie schwieriger Knochenfrakturen
 
 *Klinisch-statistische Promotion mit Outcome-Auswertungen — gut neben dem Studium machbar.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/klinik-und-poliklinik-fuer-mund-kiefer-und-gesichtschirurgie/forschung/forschungsschwerpunkte/frakturforschung`,
-        applicationContact: "MKG-Sekretariat" },
+        applicationContact: "MKG-Sekretariat",
+        additionalThesisTypes: ["statistical"] },
       { title: "Lippen-Kiefer-Gaumenspalten (LKGS) — Forschung (MKG UKD Dresden)", thesis_type: "clinical",
         description: `Forschung zu **Lippen-Kiefer-Gaumenspalten** — eine der häufigsten angeborenen Fehlbildungen (in Europa ca. 1 von 500 Kindern).
 
@@ -1238,6 +1277,7 @@ Mit optischen Techniken werden veränderte biochemische und mechanische Eigensch
 
 *Methodisch spannend (optische Spektroskopie, Bildgebung). Geeignet für experimentell-physikalische Promotion.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-experimentelle-bildgebung-in-der-neurochurgie`,
         applicationContact: "PD Dr. Ortrud Uckermann · Tel. 0351 458-3114",
+        additionalThesisTypes: ["clinical"],
         isPersonNamed: true },
       { title: "AG Translationale Neuroonkologie & Schädelbasis­tumoren (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
         description: `Translationale Onkologie der **Hirntumoren** mit klarer molekulargenetischer Linie.
@@ -1249,7 +1289,8 @@ Mit optischen Techniken werden veränderte biochemische und mechanische Eigensch
 - Genomische Studien als Grundlage
 
 *Translational-genomische Promotion mit klarem Klinik-Bezug.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-translationale-Neuroonkologie`,
-        applicationContact: "AG Translationale Neuroonkologie (Neurochirurgie-Sekretariat)" },
+        applicationContact: "AG Translationale Neuroonkologie (Neurochirurgie-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "AG Experimentelle Neurochirurgie / Tumorimmunologie — Temme Lab (Neurochirurgie UKD Dresden)", thesis_type: "experimental",
         description: `Eine der **klinik-prominenten Forschungsgruppen** — Kampf gegen Hirntumoren und Hirnmetastasen mit innovativen Immuntherapien gegen **Glioblastom**.
 
@@ -1261,6 +1302,7 @@ Mit optischen Techniken werden veränderte biochemische und mechanische Eigensch
 
 *Hochkarätige experimentelle Promotion mit echtem onkologischen Impact. Mehrere Doktorand:innen gleichzeitig betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurochirurgie/forschung-und-lehre/forschungsgruppen/ag-tumorimmunologie`,
         applicationContact: "Prof. Dr. Achim Temme · Tel. 0351 458-7011",
+        additionalThesisTypes: ["clinical"],
         isPersonNamed: true },
     ],
   },
@@ -1317,6 +1359,7 @@ Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus 
 
 *Englisch-sprachiges Lab. Geeignet für anspruchsvolle experimentelle Promotionen an der Schnittstelle Entwicklungsbiologie / Stammzellforschung / Neurologie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/ag-huttner-vaid`,
         applicationContact: "AG Huttner-Vaid (Neurologie-Sekretariat)",
+        additionalThesisTypes: ["statistical"],
         isPersonNamed: true },
       { title: "AG Pütz — Ischämischer Schlaganfall (Neurologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinische und bildgebende Forschung zum **ischämischen Schlaganfall**. Schwerpunkt: was bestimmt das Therapie-Ansprechen und Outcome.
@@ -1350,6 +1393,7 @@ Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus 
 
 *International orientiert (englischsprachige Arbeit möglich), translationaler Stil. Geeignet für klinische bis humanphysiologische Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurovaskulaere-forschung/ag-siepmann`,
         applicationContact: "Prof. Dr. med. Timo Siepmann (Neurologie-Sekretariat)",
+        additionalThesisTypes: ["statistical"],
         isPersonNamed: true },
       { title: "Interdisziplinäres Schlaflabor (Neurologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinisches Schlaflabor mit Tagesklinik — schlafmedizinische Diagnostik und Therapie aller Schlafstörungen.
@@ -1366,7 +1410,8 @@ Tiermodelle + Stammzell-basierte Modelle für mammale corticale Neurogenese aus 
 DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und multimodaler Diagnostik (Polysomnographie etc.).
 
 *Gut für klinisch-statistische Promotionen mit Schlafmedizin-Schwerpunkt — viele Berührungspunkte zu Innerer Medizin und Psychiatrie.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/schlafmedizin/interdisziplinaeres-schlaflabor`,
-        applicationContact: "Schlaflabor / Neurologie-Sekretariat (0351 458-0)" },
+        applicationContact: "Schlaflabor / Neurologie-Sekretariat (0351 458-0)",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG eHealth & Analytics — MS-Forschung (Neurologie UKD Dresden)", thesis_type: "statistical",
         description: `Forschungsgruppe am **Zentrum für klinische Neurowissenschaften (ZKN)** mit Schwerpunkt MS und digital unterstütztes Patient:innen-/Krankheits­management.
 
@@ -1380,7 +1425,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 [Website eHealth & Analytics](https://zkn.uniklinikum-dresden.de/zkn/masc/ehealth)
 
 *Sehr gut für Promotionen mit Daten-Analyse-Schwerpunkt — Schnittstelle Statistik, MS-Klinik und Digital Health.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neuroimmunologie/multiple-sklerose-forschung`,
-        applicationContact: "Prof. Dr. med. Tjalf Ziemssen (Neurologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Tjalf Ziemssen (Neurologie-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Schwerpunkt Neurodegeneration — Parkinson & Demenz (Neurologie UKD Dresden)", thesis_type: "experimental",
         description: `Bündelt zwei AGs für die Erforschung neurodegenerativer Erkrankungen.
 
@@ -1397,7 +1443,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Ansprechpartner:** Prof. Dr. med. Björn Falkenburger
 
 *Spektrum von experimenteller Promotion (Tiermodelle, Biomarker) bis zu klinischen Studien. Sehr stark mit dem **Universitäts-ParkinsonCentrum Dresden** verzahnt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/neurologie/forschung/neurodegeneration`,
-        applicationContact: "Prof. Dr. med. Björn Falkenburger (Neurologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Björn Falkenburger (Neurologie-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Autonomes und neuroendokrines Funktionslabor (Neurologie UKD Dresden)", thesis_type: "experimental",
         description: `Spezialisiertes Funktionslabor mit eigenständigem Doktoranden-Programm.
 
@@ -1436,7 +1483,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Korrelat-Studien Bildgebung ↔ klinisches Outcome
 
 *Sehr gute Wahl für bildgebungs-orientierte Promotionen mit klarem klinischen Impact.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/zerebrale-mikroangiopathien-und-vaskulaere-demenz`,
-        applicationContact: "Neuroradiologie-Sekretariat" },
+        applicationContact: "Neuroradiologie-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
       { title: "Multimodale Hirntumorbildgebung — MR-Gradierung (Neuroradiologie UKD Dresden)", thesis_type: "experimental",
         description: `Forschungsschwerpunkt zur **MRT-basierten Tumordiagnostik** im ZNS, insbesondere Gliome.
 
@@ -1448,7 +1496,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Tumorgrenzen-Definition und Therapie-Monitoring
 
 *Methodisch anspruchsvoll, sehr gut für Promotionen mit physikalisch-methodischem Interesse.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/multimodale-hirntumorbildgebung`,
-        applicationContact: "Neuroradiologie-Sekretariat" },
+        applicationContact: "Neuroradiologie-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
       { title: "Bildgebung bei Multipler Sklerose (Neuroradiologie UKD Dresden)", thesis_type: "experimental",
         description: `Bildgebungs-Forschung zur **Multiplen Sklerose** — chronisch-entzündliche ZNS-Erkrankung mit Demyelinisierung als Hauptmerkmal.
 
@@ -1459,7 +1508,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Verbesserung der Sensitivität
 
 *Klinisch-bildgebungs-orientierte Promotion mit etabliertem Patient:innen-Pool.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/bildgebung-bei-multipler-sklerose`,
-        applicationContact: "Neuroradiologie-Sekretariat" },
+        applicationContact: "Neuroradiologie-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
       { title: "Diagnostik & Therapie des Schlaganfalls (Neuroradiologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinische und experimentelle Forschung zu **hämorrhagischem und ischämischem Schlaganfall**.
 
@@ -1470,7 +1520,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Anbindung an das Dresdner Universitäts-Schlaganfall-Centrum
 
 *Klinisch-imaging-orientierte Promotion — enge Verzahnung mit der Neurologie (AG Pütz/Barlinn).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nra/forschung/diagnostik-und-therapie-des-schlaganfalls`,
-        applicationContact: "Neuroradiologie-Sekretariat" },
+        applicationContact: "Neuroradiologie-Sekretariat",
+        additionalThesisTypes: ["experimental"] },
       { title: "Strahlenschutz in der Computertomographie (Neuroradiologie UKD Dresden)", thesis_type: "statistical",
         description: `Methodische Forschung zur **Dosisreduktion** in der CT-Diagnostik.
 
@@ -1521,7 +1572,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Teilchenstrahler mit kurzen Reichweiten für gezielte Tumortherapie
 
 *Klassische experimentelle Promotion an einer der spezialisiertesten Theranostics-Einrichtungen Deutschlands.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research/arbeitsgruppe-radiobiologie`,
-        applicationContact: "AG Radiobiologie (Nuklearmedizin-Sekretariat)" },
+        applicationContact: "AG Radiobiologie (Nuklearmedizin-Sekretariat)",
+        additionalThesisTypes: ["clinical", "statistical"] },
       { title: "PET/MRT-Forschung & Theranostics — Klinische Studien (Nuklearmedizin UKD Dresden)", thesis_type: "clinical",
         description: `**„Forschung wird in unserer Klinik GROSS geschrieben\\"** — Klinik-Selbstaussage.
 
@@ -1536,7 +1588,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Radiopharmazeutische Krebsforschung mit HZDR-Anbindung
 
 *Hervorragend für klinisch-bildgebende Promotionen mit translationaler Tumortherapie-Komponente.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/nuk/forschung-research`,
-        applicationContact: "Nuklearmedizin-Sekretariat" },
+        applicationContact: "Nuklearmedizin-Sekretariat",
+        additionalThesisTypes: ["experimental"] },
       { title: "MIRD-14 Dosimetrie-Forschung — Java-Applikation (Nuklearmedizin UKD Dresden)", thesis_type: "statistical",
         description: `Methodische Forschung zur **Strahlenexposition der Harnblasen­wand** nach Radiopharmaka-Applikation.
 
@@ -1581,7 +1634,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Promotion-Anfragen über das klinikeigene Formular
 
 *Anfrage über das klinikeigene Promotionsformular oder das Sekretariat des ärztlichen Direktors (siehe Klinik-Seite).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/forschung`,
-        applicationContact: "OUC-Klinik-Sekretariat" },
+        applicationContact: "OUC-Klinik-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -1609,7 +1663,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 „Spannende Promotionsthemen — schauen Sie in den AGs nach Methoden und Themen, die Sie interessieren, und schreiben Sie einfach eine E-Mail an den AG-Leiter.\\"
 
 *Klassisches Promotionsumfeld mit guter Vernetzung und Bioinformatik-Anteil möglich (KI in der Pathologie).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pat/forschung-und-lehre/forschung-1`,
-        applicationContact: "AG-Leiter:innen Pathologie (siehe AG-Übersicht)" },
+        applicationContact: "AG-Leiter:innen Pathologie (siehe AG-Übersicht)",
+        additionalThesisTypes: ["clinical", "statistical"] },
     ],
   },
   {
@@ -1672,7 +1727,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** Dr. rer. nat. habil. Susann Schmiedgen · Tel. 0351 458-15864
 
 *Sehr gute Wahl für experimentelle Promotion an der Schnittstelle Endokrinologie/Psychiatrie/Psychotherapie. Auch master­arbeits-tauglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/psychobiologe-von-stress`,
-        applicationContact: "Dr. rer. nat. habil. Susann Schmiedgen · Tel. 0351 458-15864" },
+        applicationContact: "Dr. rer. nat. habil. Susann Schmiedgen · Tel. 0351 458-15864",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG Trauma und Traumafolgestörung (PSO UKD Dresden)", thesis_type: "clinical",
         description: `Zwei zusammen­arbeitende Arbeitsgruppen rund um traumabedingte Störungen.
 
@@ -1687,7 +1743,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 - Schwerpunkte: häusliche Gewalt, Psychosoziale Notfall­versorgung, Einsatz­folge­störungen bei Soldat:innen, Traumaambulanzen, **Traumanetz Seelische Gesundheit** (Sachsen)
 
 *Breite Spannweite — von Bildgebung über Pharmakotherapie bis Versorgungs­forschung. Sehr viele Master- und Promotions­plätze gleichzeitig.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/traumafolgestoerung-1`,
-        applicationContact: "AG Trauma (PSO-Sekretariat)" },
+        applicationContact: "AG Trauma (PSO-Sekretariat)",
+        additionalThesisTypes: ["experimental", "statistical"] },
       { title: "AG Einflussfaktoren und Versorgung — Essstörungen, Konsil/Liaison (PSO UKD Dresden)", thesis_type: "clinical",
         description: `Forschungsgruppe mit zwei Teilbereichen: **Essstörungen** und **Konsil-/Liaisondienst-Forschung**.
 
@@ -1700,7 +1757,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** PD Dr. rer. medic. Dipl.-Psych. Gloria-Beatrice Wintermann · Tel. 0351 458-3502
 
 *Klinisch-statistische Promotion in einem etablierten Datenfeld — gut machbar neben dem Studium.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/einflussfaktoren-und-versorgung`,
-        applicationContact: "PD Dr. Gloria-Beatrice Wintermann · Tel. 0351 458-3502" },
+        applicationContact: "PD Dr. Gloria-Beatrice Wintermann · Tel. 0351 458-3502",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG Interventionsforschung — Smartglasses & Phobie-Therapie (PSO UKD Dresden)", thesis_type: "experimental",
         description: `Untersucht **Outcomes psychotherapeutischer Behandlung** und welche Faktoren mit Therapieerfolg oder -abbrüchen zusammenhängen.
 
@@ -1711,7 +1769,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** Dr. rer. medic. Dipl.-Psych. René Noack · Tel. 0351 458-5990
 
 *Innovative Themen (Digital-Therapie, AR) mit etablierter wissenschaftlicher Methodik. Master- und Promotions­arbeiten möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/interventionsforschung`,
-        applicationContact: "Dr. René Noack · Tel. 0351 458-5990" },
+        applicationContact: "Dr. René Noack · Tel. 0351 458-5990",
+        additionalThesisTypes: ["clinical"] },
       { title: "AG Neuromarker (PSO UKD Dresden)", thesis_type: "experimental",
         description: `DFG-/BMBF-/DAAD-/Stiftung Hochschulmedizin-geförderte Forschungsgruppe zu **Biomarkern psychischer Erkrankungen**.
 
@@ -1749,7 +1808,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** Prof. Dr. med. habil. Kerstin Weidner (Klinikdirektorin) · Tel. 0351 458-7089
 
 *Gut für Versorgungs- und Public-Mental-Health-orientierte Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/pso/forschung-und-lehre/forschergruppen/uebergreifende-weitere-schwerpunkte-der-pso-forschung`,
-        applicationContact: "Prof. Dr. Kerstin Weidner · Tel. 0351 458-7089" },
+        applicationContact: "Prof. Dr. Kerstin Weidner · Tel. 0351 458-7089",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -1793,7 +1853,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 [Mehr auf der TUD-Gruppen-Seite](https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/brain-dynamics-group)
 
 *Geeignet, wenn dich fMRT, Machine Learning für Bildgebung und/oder Sucht-/Emotionsforschung reizen — methodisch anspruchsvoll, technische Vorkenntnisse helfen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/dynamische-gehirnzustaende-und-bildgebungsmethoden`,
-        applicationContact: "Michael Marxen, PhD (Kontakt über AG-Seite)" },
+        applicationContact: "Michael Marxen, PhD (Kontakt über AG-Seite)",
+        additionalThesisTypes: ["statistical"] },
       { title: "Forschungsbereich Neurobiologie psychischer Störungen (Psychiatrie UKD Dresden)", thesis_type: "experimental",
         description: `Experimentelle Erforschung der neurobiologischen Grundlagen psychiatrischer Erkrankungen — wie genetische Risikofaktoren und Umwelteinflüsse die Gehirnentwicklung formen.
 
@@ -1809,7 +1870,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** PD Dr. Nadine Bernhardt, PhD
 
 *Klassische experimentelle Promotion — Wet Lab + Tiermodelle + Bildgebung. Mehrere Monate Vollzeit-Labor erforderlich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-neurobiologie-psychischer-stoerungen`,
-        applicationContact: "PD Dr. Nadine Bernhardt, PhD (Kontakt über AG-Seite)" },
+        applicationContact: "PD Dr. Nadine Bernhardt, PhD (Kontakt über AG-Seite)",
+        additionalThesisTypes: ["clinical"] },
       { title: "AG Psychiatrische Epidemiologie und Verlaufsforschung (Psychiatrie UKD Dresden)", thesis_type: "statistical",
         description: `Drei Themen unter einem Dach: Früherkennung, Evidenzbasierung, innovative Versorgungsansätze.
 
@@ -1827,7 +1889,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** Prof. Dr. med. Andrea Pfennig
 
 *Sehr gut für statistisch-epidemiologische Promotionen — etablierte Längsschnitt-Daten, eng verzahnt mit anderen psy-AGs am UKD.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-psychiatrische-epidemiologie-und-verlaufsforschung-1`,
-        applicationContact: "Prof. Dr. med. Andrea Pfennig (Sekretariat psy)" },
+        applicationContact: "Prof. Dr. med. Andrea Pfennig (Sekretariat psy)",
+        additionalThesisTypes: ["clinical", "experimental"] },
       { title: "AG Klinische Suchtforschung (Psychiatrie UKD Dresden)", thesis_type: "clinical",
         description: `Untersucht klinisch relevante Fragen rund um **stoffgebundene Suchterkrankungen** — Alkohol und Stimulanzien im Fokus.
 
@@ -1856,7 +1919,8 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
 **Leitung:** Dr. med. Maik Spreer
 
 *Spannend für experimentell-translationale Promotionen — Studienteilnahme an realen Pharmastudien möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/translationale-suchtforschung`,
-        applicationContact: "Dr. med. Maik Spreer (psy-Sekretariat)" },
+        applicationContact: "Dr. med. Maik Spreer (psy-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Forschungsbereich Systemische Neurowissenschaften (Psychiatrie UKD Dresden)", thesis_type: "experimental",
         description: `Verbindet **kognitive und computationale Neurowissenschaften** mit klinischer Forschung — Schwerpunkt: Mechanismen hinter Suchterkrankungen und transdiagnostischen Defiziten.
 
@@ -1875,7 +1939,8 @@ fMRT, sMRT, PET, computationale Modellierung, Verhaltensparadigmen
 [TUD-NIC-Sektion](https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/sesyn)
 
 *Anspruchsvolle bildgebungs- und modellierungs­basierte Promotion. Methodisches Interesse an MRT/PET hilfreich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/systemische-neurowissenschaften`,
-        applicationContact: "Prof. Dr. med. Michael N. Smolka (psy-Sekretariat)" },
+        applicationContact: "Prof. Dr. med. Michael N. Smolka (psy-Sekretariat)",
+        additionalThesisTypes: ["statistical"] },
       { title: "AG Verlauf psychischer Störungen in Transitionsphasen (Psychiatrie UKD Dresden)", thesis_type: "statistical",
         description: `Interdisziplinäre AG zur **epidemiologischen Verlaufsuntersuchung** psychischer Störungen in wichtigen Lebensübergängen.
 
@@ -1893,7 +1958,8 @@ fMRT, sMRT, PET, computationale Modellierung, Verhaltensparadigmen
 **Leitung:** Prof. Dr. rer. nat. habil. Julia Martini
 
 *Geeignet für epidemiologisch-statistische Promotionen mit Lebensphasen-Bezug. Pro­motionen mit peripartal-psychiatrischem Schwerpunkt besonders gefragt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/verlauf-psychischer-stoerungen-in-transitionsphasen`,
-        applicationContact: "Prof. Dr. Julia Martini (psy-Sekretariat)" },
+        applicationContact: "Prof. Dr. Julia Martini (psy-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Klinisches Studienzentrum für psychische Erkrankungen (Psychiatrie UKD Dresden)", thesis_type: "clinical",
         description: `Bündelt **alle klinischen Studienaktivitäten** der Psychiatrie nach CTR (EU 536/2014) und MDR (EU 2017/745). Enge Verzahnung mit der AG Klinische Psychopharmakologie.
 
@@ -1926,7 +1992,8 @@ Drittmittel-finanzierte Studien sowie Master­arbeiten/Promotionen über Eigenmi
 **Leitung:** apl. Prof. Dr. sc. hum. habil. Matthias Schützwohl, Dipl.-Psych.
 
 *Geeignet für klinisch-statistische Promotionen mit Public-Health-/Versorgungs-Bezug. Auch Master- und Diplomarbeiten möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/psy/forschung-und-lehre/forschungsbereiche-1/forschungsbereich-psychiatrische-versorgungsforschung-1`,
-        applicationContact: "apl. Prof. Dr. Matthias Schützwohl (psy-Sekretariat)" },
+        applicationContact: "apl. Prof. Dr. Matthias Schützwohl (psy-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -1947,7 +2014,8 @@ Drittmittel-finanzierte Studien sowie Master­arbeiten/Promotionen über Eigenmi
 - Mehrere Publikations­linien — siehe Klinik-Subseite
 
 *Anfrage über das Klinik-Sekretariat — auf der Klinik-Seite sind konkrete AGs und Ansprechpartner:innen aufgeführt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/rad/forschung`,
-        applicationContact: "Radiologie-Sekretariat (über Klinik-Seite)" },
+        applicationContact: "Radiologie-Sekretariat (über Klinik-Seite)",
+        additionalThesisTypes: ["experimental"] },
     ],
   },
   {
@@ -1973,7 +2041,8 @@ Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien dur
 [oncoray.de](http://www.oncoray.de)
 
 *Eine der besten deutschen Adressen für strahlentherapeutische und tumortherapeutische Promotionen — sowohl klinisch als auch experimentell.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/str/forschung-und-klinische-studien`,
-        applicationContact: "OncoRay / Strahlentherapie-Sekretariat" },
+        applicationContact: "OncoRay / Strahlentherapie-Sekretariat",
+        additionalThesisTypes: ["clinical"] },
     ],
   },
   {
@@ -1999,7 +2068,8 @@ Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien dur
 - Mehrere Postdocs, naturwissenschaftliche Doktorand:innen, MTAs
 
 *Sehr gute Adresse für eine experimentelle uro-onkologische Promotion — etablierte Probenbank verfügbar, vielfältige Projekte parallel betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/translational-research-urologisches-forschungslabor`,
-        applicationContact: "Prof. Dr. Susanne Füssel / PD Dr. Kati Erdmann (Urologie-Sekretariat)" },
+        applicationContact: "Prof. Dr. Susanne Füssel / PD Dr. Kati Erdmann (Urologie-Sekretariat)",
+        additionalThesisTypes: ["clinical"] },
       { title: "Klinische und Versorgungsforschung Urologie — Prostatakarzinom, Inkontinenz, Steine (Urologie UKD Dresden)", thesis_type: "clinical",
         description: `Mehrere klinische Forschungslinien mit aktiven Multicenter-Studien.
 
@@ -2015,7 +2085,8 @@ Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien dur
 - **RECUR** — Nationales Harnsteinregister für rezidivierende Steinerkrankungen des oberen Harntraktes
 
 *Gute Wahl für klinisch-statistische Promotionen mit fokussierter Studienteilnahme. GCP-zertifiziertes Studienteam.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/klinische-forschung-versorgungsforschung`,
-        applicationContact: "Urologie-Sekretariat (klinische Studien)" },
+        applicationContact: "Urologie-Sekretariat (klinische Studien)",
+        additionalThesisTypes: ["experimental", "statistical"] },
       { title: "Urologisches Routinelabor — Spermiogramme, Kryokonservierung (Urologie UKD Dresden)", thesis_type: "clinical",
         description: `Klinikinternes Routinelabor — relevant für Promotionen mit andrologischem Bezug.
 
@@ -2039,7 +2110,8 @@ Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien dur
     applicationContact: "Doktoranden-VTG@uniklinikum-dresden.de",
     researchAreas: [
       { title: "Klinische Studien (VTG-Chirurgie UKD Dresden)", thesis_type: "clinical",
-        description: `Mitarbeit an klinischen Studien der Viszeral-, Thorax- und Gefäßchirurgie. Auswertung prospektiv und retrospektiv erhobener Patient:innendaten, Studienkoordination. Geeignet für Studierende, die methodisches Arbeiten mit Patient:innendaten lernen wollen. Ansprechpartnerin: Dr. rer. nat. Sarah Zippusch (Doktoranden-Koordination VTG).\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg` },
+        description: `Mitarbeit an klinischen Studien der Viszeral-, Thorax- und Gefäßchirurgie. Auswertung prospektiv und retrospektiv erhobener Patient:innendaten, Studienkoordination. Geeignet für Studierende, die methodisches Arbeiten mit Patient:innendaten lernen wollen. Ansprechpartnerin: Dr. rer. nat. Sarah Zippusch (Doktoranden-Koordination VTG).\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg`,
+        additionalThesisTypes: ["statistical"] },
       { title: "Digitalisierung in der Medizin / Apps (VTG-Chirurgie UKD Dresden)", thesis_type: "clinical",
         description: `Doktorarbeiten zu digitalen Gesundheitsanwendungen in der Chirurgie — von Patient:innen-Apps zur prä-/postoperativen Begleitung bis zu klinischen Entscheidungs-Support-Systemen für Operateur:innen.\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg` },
       { title: "Tumorimmunologie (VTG-Chirurgie UKD Dresden)", thesis_type: "experimental",
@@ -2049,7 +2121,8 @@ Das angegliederte Studienzentrum führt klinische Studien zu neuen Therapien dur
       { title: "Inselzellforschung und -transplantation (VTG-Chirurgie UKD Dresden)", thesis_type: "experimental",
         description: `Experimentelle Doktorarbeit zur Pankreas-Inselzellforschung und Transplantationsmedizin. Etablierte Laborgruppe mit klinischer Anbindung an die Transplantationschirurgie.\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg` },
       { title: "Molekulare Marker der Aneurysmaentstehung (VTG-Chirurgie UKD Dresden)", thesis_type: "experimental",
-        description: `Experimentelle Arbeit zu Mechanismen der Aneurysmagenese auf molekularer Ebene. Patientenmaterial vorhanden, Methodik etabliert.\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg` },
+        description: `Experimentelle Arbeit zu Mechanismen der Aneurysmagenese auf molekularer Ebene. Patientenmaterial vorhanden, Methodik etabliert.\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg`,
+        additionalThesisTypes: ["clinical"] },
       { title: "Minimalinvasive Chirurgie (VTG-Chirurgie UKD Dresden)", thesis_type: "clinical",
         description: `Klinische Doktorarbeit im Bereich der minimalinvasiven Chirurgie — Outcome-Auswertungen, Methoden-Vergleiche zwischen offenen und laparoskopischen Verfahren, Lernkurven-Analysen.\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/vtg` },
     ],
