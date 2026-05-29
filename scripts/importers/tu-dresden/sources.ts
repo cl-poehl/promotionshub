@@ -1,6 +1,6 @@
 /**
  * TU-Dresden-Quellen. Generated.
- * Handgepflegt: mk1, mk3, neurologie, neurochirurgie, psy, pso, kjp, kik, kge, klinchem, mkg, der, kch, nra, vtg, psm.
+ * Handgepflegt: mk1, mk3, neurologie, neurochirurgie, psy, pso, kjp, kik, kge, klinchem, mkg, der, kch, nra, uro, hno, gyn, oupc, vtg, psm.
  */
 
 import type { ImporterSource } from "../types";
@@ -133,12 +133,36 @@ Dr. rer. medic. Maike Bergmann.
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn",
     applicationContact: "gyn.promotion@uniklinikum-dresden.de",
     researchAreas: [
-      { title: "Forschungsschwerpunkte (Frauenklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Nationale Strategie für Genommedizin Im Rahmen der Nationalen Strategie für Genommedizin besteht für bestimmte an Brustkrebs erkrankte Patientinnen und Patienten mit auffälliger Familienanamnese – wie beispielsweise Fälle von Brust- bzw. Eierstockkrebs über mehrere Generationen auf einer Seite der Familie – und unauffälliger molekulargenetischer Primärdiagnostik durch eine Genpaneluntersuchung die Möglichkeit einer weiterführenden genetischen Diagnostik im Sinne einer Genomsequenzierung. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/zentrum-familiaerer-brust-und-eierstockkrebs-1/forschung` },
-      { title: "Laboratorien (Frauenklinik UKD Dresden)", thesis_type: "experimental",
-        description: `• Zytologisches Labor • Molekulargenetisches Labor • IVF-Labor • Endokrinolog.-onkolog. Forschungslabor • [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/uber-uns/leistungsspektrum/laboratorien-1` },
-      { title: "Weiterbildung, Forschung und Lehre (Frauenklinik UKD Dresden)", thesis_type: "clinical",
-        description: `Als universitäre Einrichtung ist es unser Anspruch, medizinische Versorgung, Wissenschaft und Wissensvermittlung auf höchstem Niveau zu vereinen. In der Geburtshilfe der Uniklinik Dresden engagieren wir uns aktiv in der klinischen Forschung, begleiten die Ausbildung von Medizinstudierenden und Hebammen – etwa im Rahmen des dualen Hebammenstudiums – und fördern gezielt die Weiterentwicklung unseres gesamten Teams. Denn nicht nur unsere Patientinnen sollen bestmöglich betreut werden – auch als Fachpersonal möchten wir stetig dazulernen, Wissen weitergeben und neue Impulse setzen. Hebammenstudium Kaum eine Lebensphase ist für werdende Mütter und Familien so aufregend wie eine Schwangerschaft. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/geburtshilfe/weiterbildung-forschung-und-lehre` },
+      { title: "Forschungs-Schwerpunkt Familiärer Brust-/Eierstockkrebs — genomDE (Frauenklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Anbindung an die **Nationale Strategie für Genommedizin (genomDE)** — Genomsequenzierung bei familiärem Brust-/Eierstockkrebs.
+
+## Aktuelle Projekte
+- **INSTRUCD** — Investigating Non-coding STructural variants to Resolve Unknown Cancer Predispositions (Long-Read-Sequencing)
+- **BRCA-P-Studie** — erste internationale klinische Studie zur Prävention bei BRCA-Mutationsträger:innen
+- Genpaneluntersuchung + weiterführende genetische Diagnostik
+
+*Methodisch anspruchsvoll, Brücke Gyn-Onkologie ↔ KGE. Gut für translationale Promotionen.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/zentrum-familiaerer-brust-und-eierstockkrebs-1/forschung`,
+        applicationContact: "Frauenklinik / Zentrum familiärer Brust-/Eierstockkrebs" },
+      { title: "Laboratorien Frauenklinik — Endokrinolog-Onkolog. Forschungslabor (Frauenklinik UKD Dresden)", thesis_type: "experimental",
+        description: `Frauenklinik-eigene Laboratorien für Forschung und Routine.
+
+## Vier Bereiche
+- Zytologisches Labor
+- Molekulargenetisches Labor
+- **IVF-Labor** (Reproduktions­medizin)
+- **Endokrinologisch-onkologisches Forschungslabor**
+
+*Geeignet für experimentelle Promotionen mit gynäkologisch-onkologischem oder reproduktions­medizinischem Schwerpunkt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/uber-uns/leistungsspektrum/laboratorien-1`,
+        applicationContact: "Frauenklinik-Sekretariat" },
+      { title: "Geburtshilfe — Klinische Forschung & Hebammenstudium (Frauenklinik UKD Dresden)", thesis_type: "clinical",
+        description: `Klinische Forschung in der Geburtshilfe mit Anbindung an das **duale Hebammenstudium** (BSc Hebammenkunde, TU Dresden, seit WS 21/22).
+
+## Forschungsschwerpunkte
+- Klinische Studien rund um Schwangerschaft, Geburt und peripartale Versorgung
+- Vernetzung mit AG Mutter-Kind-Tagesklinik (PSO)
+
+*Klinische Promotion mit klar definiertem Patientinnen-Kollektiv. Bezug zur Versorgungsforschung möglich.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/gyn/zentren/geburtshilfe/weiterbildung-forschung-und-lehre`,
+        applicationContact: "Geburtshilfe / Frauenklinik-Sekretariat" },
     ],
   },
   {
@@ -150,14 +174,37 @@ Dr. rer. medic. Maike Bergmann.
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno",
     applicationContact: null,
     researchAreas: [
-      { title: "Welcome to the Ear Research Center Dresden (HNO UKD Dresden)", thesis_type: "clinical",
-        description: `The Ear Research Center Dresden (ERCD) is an interdisciplinary lab of engineers, scientists and physicians at the Clinic and Policlinic of ORL-HNS (Technische Universitaet Dresden, Faculty of Medicine) who are engaged in research of middle ear mechanics and development of therapeutic strategies for hearing impaired patients. Nearly three decades ago, our scientists were among the first to use laser Doppler Vibrometry (LDV) measurements and finite element modeling (FEM) to investigate the normal and diseased middle ear. One of the most distinguished conferences in the field, the International Symposium on Middle Ear Mechanics in Research and Otology (MEMRO) was initiated and first held here. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/ear-research-center-dresden` },
-      { title: "Forschungsschwerpunkte (HNO UKD Dresden)", thesis_type: "other",
-        description: `— Ear Research Center Dresden — Interdisziplinäres Zentrum für Riechen und Schmecken [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung` },
-      { title: "Willkommen im Interdisziplinären Zentrum für Riechen und Sch (HNO UKD Dresden)", thesis_type: "clinical",
-        description: `Entstehung / Zielsetzung Der Arbeitsbereich \\"Riechen und Schmecken\\" wurde an der Universitäts-HNO Klinik Dresden im Jahr 1998 eingerichtet, nachdem sich Prof. Dr. Hüttenbrink bereits seit 1994 im Rahmen der Arbeitsgemeinschaft Olfaktologie / Gustologie der Deustchen HNO Gesellschaft in seiner Funktion als Vorsitzender der ArGe intensiv mit dem Thema beschäftigt hatte. Seither entstand dort unter Leitung von Prof. Dr med. Thomas Hummel ein Arbeitsbereich, in dem sowohl in klinischer Hinsicht im Sinne einer diagnostisch-therapeutischen Beratung von Patienten mit Störungen des Riech- und Schmeckempfindens als auch hinsichtlich Grundlagen-orientierter bzw. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/zentrum-fur-riechen-und-schmecken` },
-      { title: "Onkologische Studien (HNO UKD Dresden)", thesis_type: "clinical",
-        description: `Kontakt OA Dr. med. Max Kemper 0351 458-2264 E-Mail [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/hno-studienabteilung/onkologische-forschung` },
+      { title: "Ear Research Center Dresden (ERCD) — Mittelohrforschung (HNO UKD Dresden)", thesis_type: "experimental",
+        description: `**International führendes Mittelohr-Forschungszentrum** mit fast 30 Jahren Geschichte. Interdisziplinäres Lab aus Ingenieur:innen, Naturwissenschaftler:innen und Mediziner:innen.
+
+## Pionierleistungen
+- Erste Nutzer von **Laser Doppler Vibrometry (LDV)** und Finite-Element-Modellierung (FEM) am Mittelohr
+- Gründerort der **MEMRO**-Konferenz (International Symposium on Middle Ear Mechanics in Research and Otology)
+
+## Forschungs-Schwerpunkte
+- Schallübertragung im normalen und kranken Mittelohr
+- **Ossikuläre Prothesen** für Rekonstruktion
+- **Aktive Mittelohrimplantate** — Entwicklung und Evaluation
+- Klinik-Bezug: chirurgische Fragen aus dem OP-Alltag
+
+*Sehr gut für Promotionen mit physikalisch-technischem Interesse oder klassische klinische Otologie. Englisch-sprachiges Lab.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/ear-research-center-dresden`,
+        applicationContact: "ERCD (HNO-Sekretariat)" },
+      { title: "Interdisziplinäres Zentrum für Riechen und Schmecken (HNO UKD Dresden)", thesis_type: "experimental",
+        description: `Etabliertes Zentrum seit 1998 — bundesweit eine der **führenden Adressen für Geruchs- und Schmecksinns­forschung**.
+
+## Aktivitäten
+- Diagnostisch-therapeutische Beratung von Patient:innen mit Riech-/Schmeckstörungen
+- Grundlagen-orientierte und klinische Forschung
+
+## Forschungsthemen
+- **Trigeminale Chemorezeption**
+- Unterschiede ortho- vs. retronasales Riechen
+- Peripherie des Riechsystems (Schleimhaut, Rezeptoren, pH, olfaktorisches Epithel)
+
+**Leitung:** Prof. Dr. med. Thomas Hummel · Klinikleitung: Prof. Dr. med. Thomas Zahnert
+
+*Sehr gut für sensorisch-physiologische Promotionen. Kooperation mit der Neuroradiologie (BOLD-fMRT olfaktorisch).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/hno/forschung/zentrum-fur-riechen-und-schmecken`,
+        applicationContact: "Prof. Dr. Thomas Hummel (HNO-Sekretariat)" },
     ],
   },
   {
@@ -1416,12 +1463,30 @@ DGSM-zertifiziert. Klinische Promotionen mit echten Patient:innen-Daten und mult
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschungsschwerpunkte (OUPC UKD Dresden)", thesis_type: "clinical",
-        description: `Der Forschungsschwerpunkt der Abteilung besteht aus folgenden Bereichen: • Ischämie und Reperfusion von Gewebe (extrakorporale Perfusion) • Perfusionsstudien an Gewebe im Rahmen der negativen Unterdruckbehandlung • Evaluation chronischer Schmerzsyndrome an der Hand • Adipositasforschung Interessenten für Promotionsarbeiten auf einem dieser Gebiete bewerben sich bitte mit Lebenslauf, Zeugnissen sowie Zertifikaten per E-Mail anplastische-handchirurgie(@)uniklinikum-dresden de. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/plastische-und-handchirurgie/forschung-und-lehre` },
-      { title: "Grundlagenforschung (OUPC UKD Dresden)", thesis_type: "other",
-        description: `Für weiterführende Informationen folgen Sie bitte den Links: • Zentrum für Translationale Knochen-, Gelenk- und Weichgewebeforschung • BoneLab Dresden [\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/forschung/Grundlagenforschung` },
-      { title: "Publikationen (OUPC UKD Dresden)", thesis_type: "clinical",
-        description: `Forschungsberichte • 2024 • 2023 • 2022 • 2021 • 2020 • 2019 • 2018 • 2017 • 2016 • 2015 • 2014 Publikationen PubMED-Links • Prof. Dr. med. Klaus-Dieter Schaser • Prof. Dr. med. Alexander Carl Disch, PhD • Prof. Dr. med. Jörg Lützner • Prof. Dr. med. Stefan Rammelt • PD Dr. med. Christine Hofbauer • PD Dr. med. Achim Biewener • Dr. med. Falk Thielemann • Dr. med Jörg Nowotny • Dr. med. Anne Postler • Dr. med. Hagen Fritzsche Leitlinien Leitlinien sind systematisch entwickelte Empfehlungen, die Ärztinnen und Patientinnen bei der Entscheidungsfindung über die angemessene Behandlung einer Krankheit unterstützen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/forschung/publikationen` },
+      { title: "Plastische und Handchirurgie — Forschungs-Schwerpunkte (OUPC UKD Dresden)", thesis_type: "experimental",
+        description: `Plastisch-handchirurgische Abteilung mit aktiven Forschungslinien und expliziter Doktorand:innen-Aufnahme.
+
+## Forschungs-Schwerpunkte
+- **Ischämie und Reperfusion** von Gewebe (extrakorporale Perfusion)
+- Perfusionsstudien im Rahmen **negativer Unterdruckbehandlung**
+- Evaluation **chronischer Schmerzsyndrome** an der Hand
+- **Adipositasforschung**
+
+## Bewerbungs-Hinweis
+„Interessenten für Promotionsarbeiten auf einem dieser Gebiete bewerben sich bitte mit Lebenslauf, Zeugnissen sowie Zertifikaten per E-Mail an \`plastische-handchirurgie@uniklinikum-dresden.de\`.\\"
+
+*Explizit aufnahmebereit, gute Wahl wenn dich einer der Schwerpunkte interessiert.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/plastische-und-handchirurgie/forschung-und-lehre`,
+        applicationContact: "plastische-handchirurgie@uniklinikum-dresden.de" },
+      { title: "OUC Forschungsschwerpunkte — Orthopädie/Unfallchirurgie übergreifend (OUPC UKD Dresden)", thesis_type: "experimental",
+        description: `Über die Plastische Chirurgie hinaus — übergreifende Forschungs­linien der ortho-/unfallchirurgischen Abteilung mit jährlich verfügbarem Publikations­bericht.
+
+## Spektrum
+- Grundlagenforschung (Biomechanik, Materialien)
+- Klinische Studien (Outcome, Verfahrensvergleich)
+- Promotion-Anfragen über das klinikeigene Formular
+
+*Anfrage über das klinikeigene Promotionsformular oder das Sekretariat des ärztlichen Direktors (siehe Klinik-Seite).*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/oupc/forschung`,
+        applicationContact: "OUC-Klinik-Sekretariat" },
     ],
   },
   {
@@ -1793,14 +1858,48 @@ Drittmittel-finanzierte Studien sowie Master­arbeiten/Promotionen über Eigenmi
     sourceUrl: "https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro",
     applicationContact: null,
     researchAreas: [
-      { title: "Forschung und Klinische Studien (Urologie UKD Dresden)", thesis_type: "clinical",
-        description: `Die Klinik und Poliklinik für Urologie bietet die Teilnahme an klinischen Studien an. Die aktuellen Studien sind hier hinterlegt. Die verschiedenen Aspekte klinischer Studien werden ausführlich und leicht verständlich erläutert sowie die Erkrankungen benannt, bei denen Studien durchgeführt werden. Das gesamte Studienteam absolviert regelmäßige GCP-Kurse. Der Klinik und Poliklinik für Urologie ist ein eigenes Forschungslabor angegliedert. Durch die enge Zusammenarbeit zwischen Klinik und Forschungslabor ist es möglich, im Rahmen translationaler Forschungsprojekte wissenschaftliche Fragestellungen mit Hilfe gesammelter klinischer Proben zu bearbeiten. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien` },
-      { title: "Klinische Forschung & Versorgungsforschung (Urologie UKD Dresden)", thesis_type: "clinical",
-        description: `Prostatakarzinom • Tumorvorhersage durch die multiparametrische MRT der Prostata und Fusionsbiopsie • Evaluierung und Entwicklung fokaler Therapieverfahren beim Prostatakarzinom und anderen urologischen Tumoren • Prospektive Studie: Pilotstudie zur Evaluation des MRT-geführten transurethralen Ultraschallablationsverfahrens bei Patienten mit lokal begrenztem Prostatakarzinom FOKATU (Kooperation mit der Klinik für Strahlentherapie) Inkontinenz • ProKontinenz - Versorgungssituation von Hilfsmitteln und Therapie der männlichen Belastungsinkontinenz Steine • RECUR (Nationales Harnsteinregister) - Aufbau eines nationalen Registers für rezidivierende Steinerkrankungen des oberen Harntraktes. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/klinische-forschung-versorgungsforschung` },
-      { title: "Translational Research - Urologisches Forschungslabor (Urologie UKD Dresden)", thesis_type: "clinical",
-        description: `Das Labor der Klinik und Poliklinik für Urologie wird von Frau Prof. Dr. Susanne Füssel und stellvertretend von Frau PD Dr. Kati Erdmann geleitet. Zum Laborteam gehören mehrere Postdocs, naturwissenschaftliche Doktorandinnen und Masterandinnen sowie Medizinstudent*innen, die im Rahmen ihrer Dissertation verschiedene Forschungsprojekte bearbeiten. Die vorrangig translationalen Projekte werden zusammen mit forschenden Kliniker*innen durchgeführt, woraus vor allem Synergien in Bezug auf relevante klinische Fragestellungen, die Anwendung adäquater experimenteller Methoden und die Interpretation der erzielten Resultate entstehen. …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/translational-research-urologisches-forschungslabor` },
-      { title: "Urologisches Routinelabor (Urologie UKD Dresden)", thesis_type: "clinical",
-        description: `Urologisches Routinelabor In unserem urologischen Routinelabor werden klinikinterne Urinproben untersucht. Dabei finden Analysen des Urinsediments sowie chemische und mikrobiologische Analysen statt. Wir bieten über unser urologisches Routinelabor ebenso die Möglichkeit, Spermiogramme nach den WHO-Richtlinien durchzuführen. • unsere andrologische Sprechstunde finden Sie hier Im Rahmen der in-vitro-Fertilisation und vor geplanten Tumortherapien können Sperma und Hodengewebe eingefroren werden (Kryokonservierung). …\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/patienten-und-einweiser/urologisches-routinelabor` },
+      { title: "Translational Research — Urologisches Forschungslabor (Urologie UKD Dresden)", thesis_type: "experimental",
+        description: `Forschungslabor der Klinik mit explizit etablierter **Doktorand:innen-Betreuung**.
+
+## Forschungs-Setup
+- Primär **translationale Projekte** in Kooperation mit forschenden Kliniker:innen
+- **Tumor-Biobank** am UCC Dresden mit umfassender Gewebe- und Flüssigprobensammlung — Voraussetzung für Patient:innen-basierte Forschung
+- Drittmittel-finanzierte experimentelle und klinische Forschung
+
+## Team
+- **Leitung:** Prof. Dr. Susanne Füssel
+- **Stellvertretung:** PD Dr. Kati Erdmann
+- Mehrere Postdocs, naturwissenschaftliche Doktorand:innen, MTAs
+
+*Sehr gute Adresse für eine experimentelle uro-onkologische Promotion — etablierte Probenbank verfügbar, vielfältige Projekte parallel betreut.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/translational-research-urologisches-forschungslabor`,
+        applicationContact: "Prof. Dr. Susanne Füssel / PD Dr. Kati Erdmann (Urologie-Sekretariat)" },
+      { title: "Klinische und Versorgungsforschung Urologie — Prostatakarzinom, Inkontinenz, Steine (Urologie UKD Dresden)", thesis_type: "clinical",
+        description: `Mehrere klinische Forschungslinien mit aktiven Multicenter-Studien.
+
+## Prostatakarzinom
+- Tumorvorhersage durch **multiparametrische MRT der Prostata** + Fusionsbiopsie
+- Evaluation **fokaler Therapieverfahren**
+- **FOKATU**: MRT-geführte transurethrale Ultraschallablation bei lokal begrenztem Prostatakarzinom (Kooperation Strahlentherapie)
+
+## Inkontinenz
+- **ProKontinenz** — Versorgungssituation Hilfsmittel und Therapie männlicher Belastungsinkontinenz
+
+## Harnsteine
+- **RECUR** — Nationales Harnsteinregister für rezidivierende Steinerkrankungen des oberen Harntraktes
+
+*Gute Wahl für klinisch-statistische Promotionen mit fokussierter Studienteilnahme. GCP-zertifiziertes Studienteam.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/forschung-und-klinische-studien/klinische-forschung-versorgungsforschung`,
+        applicationContact: "Urologie-Sekretariat (klinische Studien)" },
+      { title: "Urologisches Routinelabor — Spermiogramme, Kryokonservierung (Urologie UKD Dresden)", thesis_type: "clinical",
+        description: `Klinikinternes Routinelabor — relevant für Promotionen mit andrologischem Bezug.
+
+## Leistungsspektrum
+- Urinsediment, chemische und mikrobiologische Analysen
+- **Spermiogramme nach WHO-Richtlinien**
+- Andrologische Sprechstunde
+- **Sperma-Kryokonservierung** vor Tumortherapien (Onkofertilität)
+
+*Geeignet für klinische Promotionen mit reproduktions­medizinischem Schwerpunkt.*\n\nQuelle: https://www.uniklinikum-dresden.de/de/das-klinikum/kliniken-polikliniken-institute/uro/patienten-und-einweiser/urologisches-routinelabor`,
+        applicationContact: "Urologisches Routinelabor (Sekretariat)" },
     ],
   },
   {
