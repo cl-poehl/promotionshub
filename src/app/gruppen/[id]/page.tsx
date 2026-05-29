@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Building2, ExternalLink, MapPin } from "lucide-react";
 
 import { AggregateRating } from "@/components/AggregateRating";
-import { MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE } from "@/lib/config";
+import { MIN_REVIEWS_FOR_GROUP_SCORE } from "@/lib/config";
 import { getGroup, getGroupAggregate, getUniversity, searchListings } from "@/lib/data";
 import { ListingCard } from "@/components/ListingCard";
 
@@ -22,7 +22,7 @@ export default async function GroupPage({
     searchListings({}),
   ]);
   const groupListings = allListings.filter((l) => l.group_id === id);
-  const above = aggregate.reviewCount >= MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE;
+  const above = aggregate.reviewCount >= MIN_REVIEWS_FOR_GROUP_SCORE;
 
   return (
     <div className="mx-auto max-w-5xl px-6 pt-8 pb-16">
@@ -97,7 +97,7 @@ export default async function GroupPage({
                 <div className="text-sm text-stone-600 space-y-3">
                   <p>
                     Noch nicht genug unabhängige verifizierte Berichte
-                    ({aggregate.reviewCount}/{MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE}).
+                    ({aggregate.reviewCount}/{MIN_REVIEWS_FOR_GROUP_SCORE}).
                   </p>
                   <p>
                     Hast du in dieser Gruppe gearbeitet?{" "}
