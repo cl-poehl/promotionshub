@@ -2565,8 +2565,27 @@ PERSON_NAMED_AGS: set[str] = {
 }
 
 
+def derive_additional_types(thesis_type: str, description: str) -> list[str]:
+    """
+    Heuristik: die meisten Universitätsklinik-AGs bieten in der Praxis
+    mehrere Thesis-Typen an (klinisch/experimentell/statistisch). Bei
+    'other' (Förderprogramme, Karriere-Schienen) lassen wir es einzeln.
+    Wenn die Beschreibung klare Hinweise auf nur einen Typ gibt
+    ('Wet Lab', 'reines Methodenpapier'), kann man das später per
+    `additionalThesisTypes` im Override overrulen.
+    """
+    if thesis_type == "other":
+        return []
+    types = {"clinical", "experimental", "statistical"}
+    # Primär gehört nicht in additional (wird im run.ts dedupliziert,
+    # aber für Lesbarkeit hier rausziehen)
+    types.discard(thesis_type)
+    return sorted(types)
+
+
 def render_listing(area_title: str, description: str, url: str, thesis_type: str,
-                   contact: str | None = None) -> str:
+                   contact: str | None = None,
+                   additional_thesis_types: list[str] | None = None) -> str:
     title_esc = area_title.replace('"', '\\"')
     desc_esc = description.replace('"', '\\"').replace("\\", "\\\\").replace("`", "\\`")
     contact_field = ""
@@ -2576,9 +2595,17 @@ def render_listing(area_title: str, description: str, url: str, thesis_type: str
     person_named_field = ""
     if area_title in PERSON_NAMED_AGS:
         person_named_field = ",\n        isPersonNamed: true"
+    # Zusätzliche Thesis-Typen: per Override oder per Heuristik
+    add_types = additional_thesis_types
+    if add_types is None:
+        add_types = derive_additional_types(thesis_type, description)
+    additional_field = ""
+    if add_types:
+        types_str = ", ".join(f'"{t}"' for t in add_types)
+        additional_field = f",\n        additionalThesisTypes: [{types_str}]"
     return (
         f"      {{ title: \"{title_esc}\", thesis_type: \"{thesis_type}\",\n"
-        f"        description: `{desc_esc}\\n\\nQuelle: {url}`{contact_field}{person_named_field} }},"
+        f"        description: `{desc_esc}\\n\\nQuelle: {url}`{contact_field}{additional_field}{person_named_field} }},"
     )
 
 
@@ -2596,6 +2623,7 @@ def render_source(slug: str, data: dict) -> str:
                 o.get("url", public_url),  # per-AG URL bevorzugt, fallback Klinik-Root
                 o["thesis_type"],
                 contact=o.get("contact"),
+                additional_thesis_types=o.get("additional_thesis_types"),
             )
             for o in MANUAL_OVERRIDES[slug]
         ]

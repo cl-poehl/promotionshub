@@ -108,6 +108,9 @@ export async function runImporter(label: string, sources: ImporterSource[]): Pro
         // gesetzt entweder im build_sources.py oder im manuellen Eintrag).
         description: area.description,
         thesis_type: area.thesis_type,
+        thesis_types_offered: Array.from(
+          new Set([area.thesis_type, ...(area.additionalThesisTypes ?? [])]),
+        ),
         funding: area.funding ?? "unknown",
         expected_duration_months: area.expected_duration_months ?? null,
         source: "scraped" as const,

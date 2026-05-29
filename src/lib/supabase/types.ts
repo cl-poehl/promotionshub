@@ -66,6 +66,8 @@ export interface Listing {
   title: string;
   description: string;
   thesis_type: ThesisType;
+  /** Alle Typen, die diese AG anbietet. Filter prüft Array-Überlapp. */
+  thesis_types_offered: ThesisType[];
   funding: FundingType;
   expected_duration_months: number | null;
   posted_at: string;

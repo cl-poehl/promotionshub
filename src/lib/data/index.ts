@@ -148,7 +148,9 @@ export async function searchListings(filters: ListingFilters): Promise<ListingWi
     .order("promoted", { ascending: false }) // promoted listings first IN SUCHE ONLY (§5)
     .order("posted_at", { ascending: false });
 
-  if (filters.thesisType) query = query.eq("thesis_type", filters.thesisType);
+  // Array-Überlapp: matched, wenn das Listing den gewünschten Typ in seinem
+  // thesis_types_offered-Array hat (z.B. AG bietet experimentell+klinisch).
+  if (filters.thesisType) query = query.contains("thesis_types_offered", [filters.thesisType]);
   if (filters.funding) query = query.eq("funding", filters.funding);
   if (filters.search) query = query.ilike("title", `%${filters.search}%`);
   if (filters.universityId) query = query.eq("group.university.id", filters.universityId);

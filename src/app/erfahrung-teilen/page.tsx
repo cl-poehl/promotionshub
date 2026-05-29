@@ -14,6 +14,7 @@ import { DATA_MODE, listGroups, searchListings } from "@/lib/data";
 import { flags } from "@/lib/flags";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { submitReviewAction } from "./actions";
+import { GroupListingPicker } from "./GroupListingPicker";
 
 export const metadata = { title: "Erfahrung teilen" };
 
@@ -30,12 +31,14 @@ export default async function ErfahrungTeilenPage({
   const preselectedListing = typeof params.listing === "string" ? params.listing : "";
   const error = typeof params.error === "string" ? params.error : null;
 
-  const allListings = preselectedGroup ? await searchListings({}) : [];
-  const groupListings = preselectedGroup
-    ? allListings.filter((l) => l.group_id === preselectedGroup)
-    : [];
-  const preselectedListingObj = groupListings.find((l) => l.id === preselectedListing);
-  const isPersonNamedTarget = preselectedListingObj?.is_person_named ?? false;
+  // Wir laden alle Listings (für die Client-Komponente, die je nach Gruppe filtert)
+  const allListings = await searchListings({});
+  const listingMinis = allListings.map((l) => ({
+    id: l.id,
+    title: l.title,
+    group_id: l.group_id,
+    is_person_named: l.is_person_named,
+  }));
 
   let isAuthed = false;
   let userEmail: string | null = null;
@@ -97,14 +100,6 @@ export default async function ErfahrungTeilenPage({
         </ul>
       </div>
 
-      {isPersonNamedTarget && (
-        <div className="mt-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">
-          <strong>Hinweis:</strong> Diese AG ist nach einer Einzelperson benannt.
-          Deine Bewertung wird mit dem Personen-Rating-Schutz behandelt (höhere
-          Schwelle, zusätzliches Verfahren vor öffentlicher Anzeige).
-        </div>
-      )}
-
       {!isAuthed && DATA_MODE === "supabase" && (
         <div className="mt-6 rounded border border-amber-300 bg-amber-50 p-4 text-sm">
           Bitte zuerst <Link href="/anmelden">anmelden</Link>. Für jede Bewertung
@@ -126,43 +121,12 @@ export default async function ErfahrungTeilenPage({
       <form action={action} className="mt-8 space-y-8">
         {/* Section 1: Kontext */}
         <Section title="Kontext" icon={FileText}>
-          <Field label="Gruppe / Institut" required>
-            <select
-              name="group_id"
-              required
-              defaultValue={preselectedGroup}
-              className="form-input"
-            >
-              <option value="">Bitte wählen</option>
-              {groups.map((g) => (
-                <option key={g.id} value={g.id}>
-                  {g.name}
-                </option>
-              ))}
-            </select>
-            <Hint>
-              Gruppe fehlt? Reiche sie über{" "}
-              <Link href="/promotionen/neu">„Stelle einreichen"</Link> ein.
-            </Hint>
-          </Field>
-
-          {groupListings.length > 0 && (
-            <Field label="Spezifische AG (optional)">
-              <select name="listing_id" defaultValue={preselectedListing} className="form-input">
-                <option value="">Allgemein (ganze Klinik)</option>
-                {groupListings.map((l) => (
-                  <option key={l.id} value={l.id}>
-                    {l.title}
-                  </option>
-                ))}
-              </select>
-              <Hint>
-                Wenn deine Erfahrung sich auf eine konkrete AG bezieht, wähle
-                sie hier. Sonst wird die Bewertung nur der Klinik allgemein
-                zugeordnet.
-              </Hint>
-            </Field>
-          )}
+          <GroupListingPicker
+            groups={groups}
+            listings={listingMinis}
+            preselectedGroup={preselectedGroup}
+            preselectedListing={preselectedListing}
+          />
 
           <div className="grid gap-4 sm:grid-cols-3">
             <Field label="Thesis-Typ" required>
