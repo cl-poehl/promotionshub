@@ -1,18 +1,22 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
   Award,
   Beaker,
   BrainCircuit,
+  Check,
   CheckCircle2,
   Clock,
   GraduationCap,
   Heart,
+  Pencil,
   RefreshCcw,
+  Share2,
   Stethoscope,
   Target,
   Trophy,
@@ -26,10 +30,61 @@ import { ListingCard } from "@/components/ListingCard";
 type StepKey = "method" | "time" | "interests" | "computing" | "career" | "publication";
 const STEPS: StepKey[] = ["method", "time", "interests", "computing", "career", "publication"];
 
+/** URL-Kodierung der Antworten — kurze Keys für teilbare Links. */
+function answersToParams(a: QuizAnswers): URLSearchParams {
+  const p = new URLSearchParams();
+  p.set("m", a.methodPreference);
+  p.set("t", a.timeAvailable);
+  p.set("i", a.interests.join(","));
+  p.set("c", a.computingSkills);
+  p.set("ca", a.careerGoal);
+  p.set("pu", a.publicationImportance);
+  return p;
+}
+
+function paramsToAnswers(sp: URLSearchParams): Partial<QuizAnswers> {
+  const get = (k: string) => sp.get(k) || undefined;
+  return {
+    methodPreference: get("m") as QuizAnswers["methodPreference"] | undefined,
+    timeAvailable: get("t") as QuizAnswers["timeAvailable"] | undefined,
+    interests: sp.get("i")?.split(",").filter(Boolean),
+    computingSkills: get("c") as QuizAnswers["computingSkills"] | undefined,
+    careerGoal: get("ca") as QuizAnswers["careerGoal"] | undefined,
+    publicationImportance: get("pu") as QuizAnswers["publicationImportance"] | undefined,
+  };
+}
+
+function isComplete(a: Partial<QuizAnswers>): a is QuizAnswers {
+  return !!(
+    a.methodPreference &&
+    a.timeAvailable &&
+    a.interests &&
+    a.interests.length > 0 &&
+    a.computingSkills &&
+    a.careerGoal &&
+    a.publicationImportance
+  );
+}
+
 export function QuizFlow({ listings }: { listings: ListingWithRelations[] }) {
+  const router = useRouter();
+  const sp = useSearchParams();
+
+  // Initial state aus URL ableiten (falls geteilter Link)
+  const initial = paramsToAnswers(sp);
+  const startCompleted = isComplete(initial);
+
   const [stepIdx, setStepIdx] = useState(0);
-  const [done, setDone] = useState(false);
-  const [answers, setAnswers] = useState<Partial<QuizAnswers>>({});
+  const [done, setDone] = useState(startCompleted);
+  const [answers, setAnswers] = useState<Partial<QuizAnswers>>(initial);
+
+  useEffect(() => {
+    const fromUrl = paramsToAnswers(sp);
+    if (isComplete(fromUrl)) {
+      setAnswers(fromUrl);
+      setDone(true);
+    }
+  }, [sp]);
 
   const current = STEPS[stepIdx];
   const totalSteps = STEPS.length;
@@ -55,6 +110,11 @@ export function QuizFlow({ listings }: { listings: ListingWithRelations[] }) {
   function next() {
     if (!canAdvance) return;
     if (isLast) {
+      if (isComplete(answers)) {
+        // URL aktualisieren → Ergebnis ist teilbar
+        const params = answersToParams(answers);
+        router.replace(`/finden?${params.toString()}`, { scroll: false });
+      }
       setDone(true);
     } else {
       setStepIdx(stepIdx + 1);
@@ -67,11 +127,15 @@ export function QuizFlow({ listings }: { listings: ListingWithRelations[] }) {
     setAnswers({});
     setStepIdx(0);
     setDone(false);
+    router.replace("/finden", { scroll: false });
+  }
+  function editAnswers() {
+    setDone(false);
+    setStepIdx(0);
   }
 
-  if (done && answers.methodPreference && answers.timeAvailable && answers.interests &&
-      answers.computingSkills && answers.careerGoal && answers.publicationImportance) {
-    return <Results answers={answers as QuizAnswers} listings={listings} onRestart={restart} />;
+  if (done && isComplete(answers)) {
+    return <Results answers={answers} listings={listings} onRestart={restart} onEdit={editAnswers} />;
   }
 
   return (
@@ -304,12 +368,35 @@ function Results({
   answers,
   listings,
   onRestart,
+  onEdit,
 }: {
   answers: QuizAnswers;
   listings: ListingWithRelations[];
   onRestart: () => void;
+  onEdit: () => void;
 }) {
   const matches = useMemo(() => matchListings(listings, answers).slice(0, 8), [listings, answers]);
+  const [copied, setCopied] = useState(false);
+
+  async function share() {
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "Mein PromotionsHub-Quiz-Ergebnis",
+          text: "Diese Doktorarbeiten passen zu meinen Antworten:",
+          url,
+        });
+      } else {
+        await navigator.clipboard.writeText(url);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      }
+    } catch {
+      // User-cancelled oder Clipboard nicht verfügbar
+    }
+  }
 
   return (
     <div>
@@ -325,20 +412,45 @@ function Results({
             ? "Basierend auf deinen Antworten — sortiert nach Match-Score."
             : "Probier es mit weniger spezifischen Antworten oder schau direkt in die Liste."}
         </p>
-        <div className="mt-4 flex justify-center gap-3">
+        <div className="mt-5 flex flex-wrap justify-center gap-2">
+          <button
+            type="button"
+            onClick={onEdit}
+            className="inline-flex items-center gap-1.5 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50"
+          >
+            <Pencil className="h-3.5 w-3.5" />
+            Antworten anpassen
+          </button>
+          <button
+            type="button"
+            onClick={share}
+            className="inline-flex items-center gap-1.5 rounded-md bg-indigo-700 px-4 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-indigo-800/30 hover:bg-indigo-800"
+          >
+            {copied ? (
+              <>
+                <Check className="h-3.5 w-3.5" />
+                Link kopiert!
+              </>
+            ) : (
+              <>
+                <Share2 className="h-3.5 w-3.5" />
+                Ergebnis teilen
+              </>
+            )}
+          </button>
           <button
             type="button"
             onClick={onRestart}
             className="inline-flex items-center gap-1.5 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 hover:bg-stone-50"
           >
             <RefreshCcw className="h-3.5 w-3.5" />
-            Quiz neu starten
+            Neu starten
           </button>
           <Link
             href="/promotionen"
             className="inline-flex items-center rounded-md border border-stone-300 bg-white px-4 py-2 text-sm text-stone-700 hover:bg-stone-50 no-underline hover:no-underline"
           >
-            Alle Stellen ansehen
+            Alle Stellen
           </Link>
         </div>
       </div>
