@@ -53,6 +53,9 @@ function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-sm">
+          <Link href="/finden" className="text-stone-700 hover:text-stone-950 no-underline hover:no-underline font-medium">
+            Quiz
+          </Link>
           <Link href="/promotionen" className="text-stone-700 hover:text-stone-950 no-underline hover:no-underline">
             Stellen
           </Link>
