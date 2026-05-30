@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Building2,
   CheckCircle2,
+  Compass,
   FileSearch,
   MessageSquareQuote,
   Search,
@@ -54,20 +55,25 @@ function Hero({ stats }: { stats: { listings: number; groups: number; universiti
 
         <div className="mt-9 flex flex-wrap items-center gap-4">
           <Link
-            href="/promotionen"
+            href="/finden"
             className="inline-flex items-center gap-2 rounded-lg bg-indigo-700 px-6 py-3 text-base font-semibold text-white shadow-sm ring-1 ring-indigo-800/30 transition hover:bg-indigo-800 hover:shadow-md no-underline hover:no-underline"
           >
-            Stellen durchsuchen
-            <ArrowRight className="h-4 w-4" />
+            <Compass className="h-4 w-4" />
+            Welche Doktorarbeit passt zu mir?
           </Link>
           <Link
-            href="/erfahrung-teilen"
+            href="/promotionen"
             className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3 text-base font-semibold text-stone-900 shadow-sm transition hover:border-stone-400 hover:bg-stone-50 hover:shadow no-underline hover:no-underline"
           >
-            Eigene Erfahrung teilen
+            Alle Stellen durchsuchen
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+        <p className="mt-4 text-sm text-stone-500">
+          <Link href="/erfahrung-teilen" className="text-stone-700 hover:underline underline-offset-4">
+            …oder deine eigene Erfahrung teilen
+          </Link>
+        </p>
 
         <dl className="mt-14 grid grid-cols-3 gap-x-6 gap-y-4 max-w-xl border-t border-stone-200 pt-8">
           <Stat value={stats.listings} label="Offene Stellen" />
