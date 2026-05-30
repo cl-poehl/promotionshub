@@ -69,11 +69,15 @@ function Hero({ stats }: { stats: { listings: number; groups: number; universiti
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <p className="mt-4 text-sm text-stone-500">
-          <Link href="/erfahrung-teilen" className="text-stone-700 hover:underline underline-offset-4">
-            …oder deine eigene Erfahrung teilen
+        <div className="mt-5">
+          <Link
+            href="/erfahrung-teilen"
+            className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white/70 px-4 py-2 text-sm font-medium text-stone-800 shadow-sm transition hover:border-stone-400 hover:bg-white hover:shadow no-underline hover:no-underline"
+          >
+            <MessageSquareQuote className="h-3.5 w-3.5 text-indigo-700" />
+            Schon promoviert? Erfahrung teilen
           </Link>
-        </p>
+        </div>
 
         <dl className="mt-14 grid grid-cols-3 gap-x-6 gap-y-4 max-w-xl border-t border-stone-200 pt-8">
           <Stat value={stats.listings} label="Offene Stellen" />
