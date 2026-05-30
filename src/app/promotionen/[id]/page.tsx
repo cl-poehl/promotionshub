@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { Markdown } from "@/components/Markdown";
+import { ListingFeedback } from "./ListingFeedback";
 import { getGroupAggregate, getListing, getListingAggregate } from "@/lib/data";
 import {
   FUNDING_TYPES,
@@ -254,6 +255,8 @@ export default async function ListingDetailPage({
           </div>
         </aside>
       </div>
+
+      <ListingFeedback listingId={listing.id} />
     </div>
   );
 }
