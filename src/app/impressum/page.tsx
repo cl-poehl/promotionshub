@@ -7,7 +7,7 @@ export default function ImpressumPage() {
 
       <section className="mt-8 text-sm leading-relaxed space-y-6">
         <div>
-          <h2 className="text-xl font-semibold">Angaben gemäß § 5 TMG</h2>
+          <h2 className="text-xl font-semibold">Angaben gemäß § 5 DDG</h2>
           <p className="mt-2">
             Carl Pöhl
             <br />
@@ -26,6 +26,12 @@ export default function ImpressumPage() {
             <a href="mailto:kontakt@promotionshub.de" className="underline underline-offset-4">
               kontakt@promotionshub.de
             </a>
+            <br />
+            Für Meldungen zu Inhalten steht zusätzlich unser{" "}
+            <a href="/meldung" className="underline underline-offset-4">
+              Meldeformular
+            </a>{" "}
+            zur Verfügung.
           </p>
         </div>
 
@@ -33,46 +39,42 @@ export default function ImpressumPage() {
           <h2 className="text-xl font-semibold">
             Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
           </h2>
+          <p className="mt-2">Carl Pöhl, Oberhaslach 8, 88410 Bad Wurzach</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-semibold">
+            Zentrale Kontaktstelle nach Art. 11, 12 DSA
+          </h2>
           <p className="mt-2">
-            Carl Pöhl, Oberhaslach 8, 88410 Bad Wurzach
+            Für Behörden sowie Nutzer:innen der Plattform:{" "}
+            <a href="mailto:kontakt@promotionshub.de" className="underline underline-offset-4">
+              kontakt@promotionshub.de
+            </a>{" "}
+            (Sprachen: Deutsch, Englisch).
           </p>
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold">EU-Streitschlichtung</h2>
+          <h2 className="text-xl font-semibold">Verbraucherstreitbeilegung</h2>
           <p className="mt-2">
-            Die Europäische Kommission stellt eine Plattform zur
-            Online-Streitbeilegung (OS) bereit:{" "}
-            <a
-              href="https://ec.europa.eu/consumers/odr/"
-              className="underline underline-offset-4"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              https://ec.europa.eu/consumers/odr/
-            </a>
-            <br />
-            Wir sind nicht bereit oder verpflichtet, an
-            Streitbeilegungsverfahren vor einer
-            Verbraucherschlichtungsstelle teilzunehmen.
+            Wir sind nicht bereit und nicht verpflichtet, an
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+            teilzunehmen (§ 36 VSBG).
           </p>
         </div>
 
         <div>
           <h2 className="text-xl font-semibold">Haftung für Inhalte</h2>
           <p className="mt-2">
-            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene
-            Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
-            verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
-            jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
-            Informationen zu überwachen oder nach Umständen zu forschen, die
-            auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur
-            Entfernung oder Sperrung der Nutzung von Informationen nach den
-            allgemeinen Gesetzen bleiben hiervon unberührt. Eine
-            diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
-            Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekannt­werden
-            von entsprechenden Rechtsverletzungen entfernen wir diese Inhalte
-            umgehend — siehe{" "}
+            Für eigene Inhalte auf diesen Seiten sind wir nach den allgemeinen
+            Gesetzen verantwortlich. Für fremde, von Nutzer:innen eingestellte
+            Inhalte (insbesondere Erfahrungsberichte) gelten die
+            Haftungsprivilegien für Hosting-Dienste nach Art. 6 der Verordnung
+            (EU) 2022/2065 (Digital Services Act). Wir sind nicht verpflichtet,
+            übermittelte oder gespeicherte fremde Informationen allgemein zu
+            überwachen (Art. 8 DSA). Bei Kenntnis konkreter Rechtsverletzungen
+            entfernen wir betroffene Inhalte umgehend — siehe{" "}
             <a href="/meldung" className="underline underline-offset-4">
               Meldeformular
             </a>
