@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { CheckCircle2 } from "lucide-react";
 
 import { DATA_MODE } from "@/lib/data";
 import { sendMagicLinkAction } from "./actions";
@@ -39,9 +40,35 @@ export default async function AnmeldenPage({
         Adressen funktionieren auch — sie sind der Weg für Alumni.
       </p>
 
+      <ul className="mt-5 space-y-2 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm text-stone-700">
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+          <span>
+            <strong>Kein Passwort nötig</strong> — nichts zu merken, nichts zu
+            vergessen.
+          </span>
+        </li>
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+          <span>
+            <strong>Nur einmal pro Gerät</strong> — du bleibst angemeldet, bis
+            du dich abmeldest.
+          </span>
+        </li>
+        <li className="flex items-start gap-2">
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+          <span>
+            <strong>Sicherer als ein Passwort</strong> — der Link gilt nur
+            einmal und kann nicht geleakt oder erraten werden.
+          </span>
+        </li>
+      </ul>
+
       {sent && (
         <div className="mt-6 rounded border border-emerald-300 bg-emerald-50 p-3 text-sm text-emerald-900">
-          Wir haben dir einen Anmelde-Link gesendet. Bitte prüfe dein Postfach.
+          Wir haben dir einen Anmelde-Link gesendet — Absender{" "}
+          <strong>kontakt@promotionshub.de</strong>. Nichts angekommen? Wirf
+          einen Blick in den Spam-Ordner.
         </div>
       )}
       {error && (
