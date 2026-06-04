@@ -49,6 +49,10 @@ export default async function MeldungPage({
             unzulässige Schmähung, wird der Inhalt entfernt. Anderenfalls
             bleibt er sichtbar.
           </li>
+          <li>
+            Beide Seiten erhalten eine begründete Entscheidung (Art. 17 DSA).
+            Die Verfasser:in kann zu einer Entfernung Stellung nehmen.
+          </li>
         </ol>
       </div>
 
@@ -85,21 +89,21 @@ export default async function MeldungPage({
             <label className="flex items-start gap-2">
               <input type="radio" name="type" value="factual_dispute" required className="mt-1" />
               <span>
-                <strong>Tatsachenbehauptung bestritten</strong> — eine konkrete Aussage
+                <strong>Tatsachenbehauptung bestritten:</strong> eine konkrete Aussage
                 ist objektiv falsch.
               </span>
             </label>
             <label className="flex items-start gap-2">
               <input type="radio" name="type" value="insult" className="mt-1" />
               <span>
-                <strong>Schmähung / Beleidigung</strong> — der Bericht enthält keine
+                <strong>Schmähung / Beleidigung:</strong> der Bericht enthält keine
                 sachliche Kritik, sondern persönliche Herabsetzung.
               </span>
             </label>
             <label className="flex items-start gap-2">
               <input type="radio" name="type" value="other" className="mt-1" />
               <span>
-                <strong>Sonstiges</strong> — z.B. Datenschutz, Geheimhaltung,
+                <strong>Sonstiges:</strong> z.B. Datenschutz, Geheimhaltung,
                 Patient:innen-Bezug.
               </span>
             </label>

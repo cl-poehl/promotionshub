@@ -22,11 +22,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "PromotionsHub Dresden – Doktorarbeiten in der Medizin finden und bewerten",
+    default: "PromotionsHub Dresden: Doktorarbeiten in der Medizin finden und bewerten",
     template: "%s · PromotionsHub Dresden",
   },
   description:
-    "Offene Doktorarbeit-Stellen für Medizinstudierende in Dresden finden – und ehrliche Bewertungen der Betreuung lesen.",
+    "Offene Doktorarbeit-Stellen für Medizinstudierende in Dresden finden und ehrliche Bewertungen der Betreuung lesen.",
 };
 
 export default function RootLayout({
@@ -144,7 +144,7 @@ function Footer() {
           </div>
           <p className="mt-3 text-sm text-stone-600 max-w-xs">
             Die unabhängige Plattform für Medizinstudierende in Dresden auf der
-            Suche nach einer Doktorarbeit — mit ehrlichen Bewertungen der
+            Suche nach einer Doktorarbeit, mit ehrlichen Bewertungen der
             Betreuung.
           </p>
         </div>

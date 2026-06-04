@@ -16,7 +16,7 @@ export default function DatenschutzPage() {
         <div>
           <h2 className="text-xl font-semibold">1. Verantwortlich</h2>
           <p className="mt-1">
-            Carl Pöhl, Oberhaslach 8, 88410 Bad Wurzach —{" "}
+            Carl Pöhl, Oberhaslach 8, 88410 Bad Wurzach,{" "}
             <a href="mailto:kontakt@promotionshub.de">kontakt@promotionshub.de</a>{" "}
             (siehe <a href="/impressum">Impressum</a>).
           </p>
@@ -75,17 +75,17 @@ export default function DatenschutzPage() {
           <h2 className="text-xl font-semibold">4. Empfänger / Auftragsverarbeiter</h2>
           <ul className="mt-2 list-disc pl-5 space-y-1">
             <li>
-              <strong>Vercel Inc.</strong> (USA) — Hosting und Auslieferung der
+              <strong>Vercel Inc.</strong> (USA): Hosting und Auslieferung der
               Webseite; Server-Funktionen werden in Frankfurt (EU) ausgeführt.
               Auftragsverarbeitung mit EU-Standardvertragsklauseln; Vercel ist
               unter dem EU-US Data Privacy Framework zertifiziert.
             </li>
             <li>
-              <strong>Supabase</strong> — Datenbank und Authentifizierung;
+              <strong>Supabase</strong>: Datenbank und Authentifizierung;
               Projekt-Region: EU (Irland). Auftragsverarbeitung.
             </li>
             <li>
-              <strong>Resend</strong> (USA) — Versand der Anmelde-E-Mails;
+              <strong>Resend</strong> (USA): Versand der Anmelde-E-Mails;
               Versand erfolgt über EU-Infrastruktur (Irland).
               Auftragsverarbeitung mit EU-Standardvertragsklauseln.
             </li>
@@ -138,8 +138,8 @@ export default function DatenschutzPage() {
           </h2>
           <p className="mt-1">
             Erfahrungsberichte beziehen sich auf die berufliche Tätigkeit
-            (Betreuung von Doktorarbeiten) von Gruppen und — erst nach
-            erhöhten Schwellen und gesondertem Verfahren — einzelnen
+            (Betreuung von Doktorarbeiten) von Gruppen und, erst nach
+            erhöhten Schwellen und gesondertem Verfahren, einzelnen
             Betreuer:innen. Wenn du dich von einem Bericht betroffen siehst,
             kannst du das <a href="/meldung">Meldeformular</a> nutzen. Wir
             führen ein strukturiertes Notice-and-Takedown-Verfahren durch.
@@ -161,7 +161,7 @@ export default function DatenschutzPage() {
           <p className="mt-1">
             Zuständig ist der Landesbeauftragte für den Datenschutz und die
             Informationsfreiheit Baden-Württemberg (LfDI BW), Lautenschlagerstraße
-            20, 70173 Stuttgart —{" "}
+            20, 70173 Stuttgart,{" "}
             <a
               href="https://www.baden-wuerttemberg.datenschutz.de"
               target="_blank"

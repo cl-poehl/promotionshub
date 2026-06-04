@@ -85,7 +85,7 @@ export default async function ErfahrungTeilenPage({
             verifizierten Berichten.
           </li>
           <li>
-            <strong>AG-Bewertungen</strong> erscheinen ab 2 Berichten — wenn die
+            <strong>AG-Bewertungen</strong> erscheinen ab 2 Berichten; wenn die
             AG nach einer Einzelperson benannt ist (z.B. „Schröck Lab"),
             erst nach erweitertem Personen-Rating-Verfahren.
           </li>
@@ -94,7 +94,7 @@ export default async function ErfahrungTeilenPage({
             Bewertung angezeigt.
           </li>
           <li>
-            Freitexte werden vor Veröffentlichung geprüft — keine
+            Freitexte werden vor Veröffentlichung geprüft: keine
             Patient:innendaten, keine Namen Dritter, keine Beleidigungen.
           </li>
         </ul>

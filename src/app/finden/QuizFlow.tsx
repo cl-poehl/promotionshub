@@ -251,13 +251,13 @@ function MethodStep({ answers, setAnswers }: StepProps) {
 
 function TimeStep({ answers, setAnswers }: StepProps) {
   const options = [
-    { key: "fulltime", title: "Vollzeit-Block möglich", desc: "Mehrere Monate ohne andere Verpflichtungen — z.B. Freisemester" },
+    { key: "fulltime", title: "Vollzeit-Block möglich", desc: "Mehrere Monate ohne andere Verpflichtungen, z.B. Freisemester" },
     { key: "parttime", title: "1-2 Tage pro Woche", desc: "Neben dem Studium, kontinuierlich übers Semester" },
     { key: "minimal", title: "Nur wenig", desc: "Abende und Wochenenden, kein Lab-Zugang außerhalb der Bürozeiten" },
   ] as const;
   return (
     <div>
-      <StepHeader icon={Clock} title="Wie viel Zeit hast du wirklich?" subtitle="Sei ehrlich — das filtert grundsätzlich passende Methodik mit." />
+      <StepHeader icon={Clock} title="Wie viel Zeit hast du wirklich?" subtitle="Sei ehrlich, das filtert grundsätzlich passende Methodik mit." />
       <div className="grid gap-3">
         {options.map((o) => (
           <OptionCard key={o.key} selected={answers.timeAvailable === o.key} onClick={() => setAnswers({ ...answers, timeAvailable: o.key })}>
@@ -278,7 +278,7 @@ function InterestStep({ answers, setAnswers }: StepProps) {
   };
   return (
     <div>
-      <StepHeader icon={Heart} title="Was interessiert dich fachlich?" subtitle="Mehrfachauswahl — wähle alle, die dich reizen. Mind. eines." />
+      <StepHeader icon={Heart} title="Was interessiert dich fachlich?" subtitle="Mehrfachauswahl: Wähle alle, die dich reizen. Mind. eines." />
       <div className="grid gap-3 sm:grid-cols-2">
         {INTEREST_CATEGORIES.map((cat) => (
           <OptionCard key={cat.key} selected={current.includes(cat.key)} onClick={() => toggle(cat.key)}>
@@ -322,7 +322,7 @@ function ComputingStep({ answers, setAnswers }: StepProps) {
 function CareerStep({ answers, setAnswers }: StepProps) {
   const options = [
     { key: "clinic", title: "Klinik", desc: "Nach der Promotion direkt klinisch arbeiten" },
-    { key: "academic", title: "Akademische Karriere", desc: "Forschung weitermachen — Postdoc, Habilitation, Lehrstuhl" },
+    { key: "academic", title: "Akademische Karriere", desc: "Forschung weitermachen: Postdoc, Habilitation, Lehrstuhl" },
     { key: "industry", title: "Industrie / Beratung", desc: "Pharma, Med-Tech, Consulting, Start-up" },
     { key: "unsure", title: "Weiß ich noch nicht", desc: "Optionen offen halten, breite Erfahrung sammeln" },
   ] as const;
@@ -343,9 +343,9 @@ function CareerStep({ answers, setAnswers }: StepProps) {
 
 function PublicationStep({ answers, setAnswers }: StepProps) {
   const options = [
-    { key: "low", title: "Hauptsache fertig", desc: "Titel reicht — Publikation wäre nice, aber nicht entscheidend" },
+    { key: "low", title: "Hauptsache fertig", desc: "Titel reicht. Publikation wäre nice, aber nicht entscheidend" },
     { key: "medium", title: "Wäre schön", desc: "Co-Autor:in würde mich freuen, aber kein Muss" },
-    { key: "high", title: "Sehr wichtig", desc: "Erstautor:in-Publikation im Idealfall — Forschungslebenslauf bauen" },
+    { key: "high", title: "Sehr wichtig", desc: "Erstautor:in-Publikation im Idealfall, um den Forschungslebenslauf zu bauen" },
   ] as const;
   return (
     <div>
@@ -409,7 +409,7 @@ function Results({
         </h2>
         <p className="mt-2 text-stone-600">
           {matches.length > 0
-            ? "Basierend auf deinen Antworten — sortiert nach Match-Score."
+            ? "Basierend auf deinen Antworten, sortiert nach Match-Score."
             : "Probier es mit weniger spezifischen Antworten oder schau direkt in die Liste."}
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-2">

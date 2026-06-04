@@ -4,7 +4,7 @@ import { searchListings } from "@/lib/data";
 import { QuizFlow } from "./QuizFlow";
 
 export const metadata = {
-  title: "Doktorarbeit finden — Quiz",
+  title: "Quiz: Welche Doktorarbeit passt zu mir?",
   description:
     "Beantworte sechs kurze Fragen und finde die passende Doktorarbeit für deinen Stil, deine Zeit und dein Karriere-Ziel.",
 };
@@ -26,7 +26,7 @@ export default async function FindenPage() {
           Sechs Fragen, eine Minute Zeit, danach eine sortierte Liste der
           Stellen, die zu deinem Stil, deiner Zeit und deinem Karriere-Ziel
           passen.{" "}
-          <strong className="text-stone-900">Kein Login nötig</strong> — deine
+          <strong className="text-stone-900">Kein Login nötig:</strong> deine
           Antworten verlassen deinen Browser nicht.
         </p>
       </header>

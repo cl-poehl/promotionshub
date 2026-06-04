@@ -48,7 +48,7 @@ function Hero({ stats }: { stats: { listings: number; groups: number; universiti
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
           PromotionsHub bündelt offene medizinische Doktorarbeit-Stellen der
-          Dresdner Hochschulmedizin — und sammelt ehrliche Bewertungen der
+          Dresdner Hochschulmedizin und sammelt ehrliche Bewertungen der
           Gruppen und Betreuer:innen dahinter. Damit dein Bauchgefühl nicht
           das einzige ist, worauf du dich verlassen musst.
         </p>
@@ -104,12 +104,12 @@ function HowItWorks() {
     {
       icon: Search,
       title: "Suchen und filtern",
-      body: "Offene Doktorarbeiten nach Stadt, Universität, Fachgebiet und Thesis-Typ — gebündelt aus den fragmentierten Fakultäts-Börsen.",
+      body: "Offene Doktorarbeiten nach Stadt, Universität, Fachgebiet und Thesis-Typ, gebündelt aus den fragmentierten Fakultäts-Börsen.",
     },
     {
       icon: MessageSquareQuote,
       title: "Erfahrungen lesen",
-      body: "Was sagen ehemalige und aktuelle Doktorand:innen über die Betreuung? Strukturierte, verifizierte Bewertungen — keine Hörensagen.",
+      body: "Was sagen ehemalige und aktuelle Doktorand:innen über die Betreuung? Strukturierte, verifizierte Bewertungen statt Hörensagen.",
     },
     {
       icon: ShieldCheck,
@@ -204,7 +204,7 @@ function Trust() {
       icon: FileSearch,
       title: "Fairer Umgang mit Kritik",
       body:
-        "Definiertes Notice-and-Takedown-Verfahren — keine Lösch-auf-Zuruf, aber auch keine Schmähkritik.",
+        "Definiertes Notice-and-Takedown-Verfahren: keine Löschung auf Zuruf, aber auch keine Schmähkritik.",
     },
   ];
 

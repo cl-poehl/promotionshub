@@ -33,7 +33,7 @@ export const INTEREST_CATEGORIES: InterestCategory[] = [
   {
     key: "onkologie",
     label: "Onkologie & Tumorforschung",
-    description: "Krebsforschung in allen Disziplinen — Klinik, Labor und Bildgebung",
+    description: "Krebsforschung in allen Disziplinen: Klinik, Labor und Bildgebung",
     specialties: [],
     keywords: [
       "Onkolog", "onkolog", "Tumor", "tumor", "Karzinom", "karzinom",

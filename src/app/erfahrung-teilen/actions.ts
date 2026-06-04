@@ -13,7 +13,7 @@ const ReviewInput = z.object({
   group_id: z
     .string()
     .min(1, "Bitte eine Gruppe auswählen.")
-    .pipe(uuidish("Ungültige Gruppe — bitte aus der Liste wählen.")),
+    .pipe(uuidish("Ungültige Gruppe. Bitte aus der Liste wählen.")),
   listing_id: z
     .union([z.literal(""), uuidish("Ungültige AG-Auswahl.")])
     .transform((v) => (v === "" ? null : v))
