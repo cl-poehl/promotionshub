@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import Link from "next/link";
 
+import { signOutAction } from "@/app/auth/actions";
+import { DATA_MODE } from "@/lib/data";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -41,7 +45,21 @@ export default function RootLayout({
   );
 }
 
-function Header() {
+async function getSessionEmail(): Promise<string | null> {
+  if (DATA_MODE === "mock") return null;
+  try {
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    return user?.email ?? null;
+  } catch {
+    return null;
+  }
+}
+
+async function Header() {
+  const email = await getSessionEmail();
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
@@ -68,12 +86,31 @@ function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/anmelden"
-            className="inline-flex items-center rounded-md bg-indigo-700 px-4 py-2 text-sm font-medium text-white shadow-sm ring-1 ring-indigo-800/30 transition hover:bg-indigo-800 hover:shadow no-underline hover:no-underline"
-          >
-            Anmelden
-          </Link>
+          {email ? (
+            <>
+              <span
+                className="hidden sm:inline max-w-[180px] truncate text-sm text-stone-600"
+                title={email}
+              >
+                {email}
+              </span>
+              <form action={signOutAction}>
+                <button
+                  type="submit"
+                  className="inline-flex items-center rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium text-stone-700 shadow-sm transition hover:border-stone-400 hover:bg-stone-50 cursor-pointer"
+                >
+                  Abmelden
+                </button>
+              </form>
+            </>
+          ) : (
+            <Link
+              href="/anmelden"
+              className="inline-flex items-center rounded-md bg-indigo-700 px-4 py-2 text-sm font-medium text-white shadow-sm ring-1 ring-indigo-800/30 transition hover:bg-indigo-800 hover:shadow no-underline hover:no-underline"
+            >
+              Anmelden
+            </Link>
+          )}
         </div>
       </div>
     </header>
