@@ -53,7 +53,9 @@ export default function AgbPage() {
             betroffener Personen werden in einem definierten Verfahren bearbeitet
             (siehe <a href="/meldung">Meldeformular</a>). Wir behalten uns vor,
             Beiträge zu entfernen, die gegen geltendes Recht oder diese
-            Bedingungen verstoßen.
+            Bedingungen verstoßen. Wird ein Beitrag entfernt oder eingeschränkt,
+            informieren wir die Verfasser:in mit Begründung (Art. 17 DSA);
+            eine erneute Stellungnahme ist möglich.
           </p>
         </div>
 
@@ -72,16 +74,20 @@ export default function AgbPage() {
           <p className="mt-1">
             PromotionsHub ist nicht Vertragspartner zwischen Stellenanbieter und
             Bewerber:in. Für die Richtigkeit eingereichter Stellen übernehmen
-            wir keine Gewähr. Für nutzergenerierte Inhalte haften wir nach den
-            allgemeinen Vorschriften (§ 10 TMG, Host-Provider-Privileg).
+            wir keine Gewähr. Für nutzergenerierte Inhalte gelten die
+            Haftungsprivilegien für Hosting-Dienste nach Art. 6 der Verordnung
+            (EU) 2022/2065 (Digital Services Act).
           </p>
         </div>
 
         <div>
           <h2 className="text-xl font-semibold">7. Schlussbestimmungen</h2>
           <p className="mt-1">
-            Es gilt deutsches Recht, ausschließlicher Gerichtsstand ist – soweit
-            gesetzlich zulässig – der Sitz des Anbieters.
+            Es gilt deutsches Recht. Gegenüber Verbraucher:innen gelten die
+            gesetzlichen Gerichtsstände; ist der/die Nutzer:in Kaufmann/-frau,
+            juristische Person des öffentlichen Rechts oder
+            öffentlich-rechtliches Sondervermögen, ist Gerichtsstand der Sitz
+            des Anbieters.
           </p>
         </div>
       </section>
