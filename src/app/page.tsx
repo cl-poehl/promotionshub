@@ -37,7 +37,7 @@ function Hero({ stats }: { stats: { listings: number; groups: number; universiti
       <div className="relative mx-auto max-w-6xl px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
         <span className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-800">
           <Sparkles className="h-3.5 w-3.5" />
-          Für Medizinstudierende in Deutschland
+          Für Medizinstudierende in Dresden
         </span>
 
         <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight max-w-3xl text-stone-950">
@@ -47,10 +47,10 @@ function Hero({ stats }: { stats: { listings: number; groups: number; universiti
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
-          PromotionsHub bündelt offene medizinische Doktorarbeit-Stellen aus
-          ganz Deutschland — und sammelt ehrliche Bewertungen der Gruppen und
-          Betreuer:innen dahinter. Damit dein Bauchgefühl nicht das einzige
-          ist, worauf du dich verlassen musst.
+          PromotionsHub bündelt offene medizinische Doktorarbeit-Stellen der
+          Dresdner Hochschulmedizin — und sammelt ehrliche Bewertungen der
+          Gruppen und Betreuer:innen dahinter. Damit dein Bauchgefühl nicht
+          das einzige ist, worauf du dich verlassen musst.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center gap-4">
