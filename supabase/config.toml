@@ -59,6 +59,23 @@ otp_expiry = 3600
 # subject = "Dein Anmelde-Link für PromotionsHub"
 # content_path = "./templates/magic-link.html"
 
+# Eigenes SMTP via Resend — umgeht das 2-Mails/h-Limit des
+# Supabase-Default-Versands. Passwort = Resend-API-Key, kommt aus
+# der Env (lokal: .env.local, config push liest die Shell-Env).
+[auth.email.smtp]
+enabled = true
+host = "smtp.resend.com"
+port = 465
+user = "resend"
+pass = "env(SMTP_PASS)"
+admin_email = "kontakt@promotionshub.de"
+sender_name = "PromotionsHub"
+
+# Default bleibt auch mit eigenem SMTP bei 2 Mails/h — explizit anheben.
+# Resend-Free erlaubt 3.000/Monat ≈ 100/Tag; 30/h ist dafür ein sicherer Wert.
+[auth.rate_limit]
+email_sent = 30
+
 [edge_runtime]
 enabled = false
 policy = "oneshot"
