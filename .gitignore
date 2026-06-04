@@ -42,3 +42,4 @@ next-env.d.ts
 discover/dresden/.venv/
 discover/dresden/output/
 discover/dresden/generated_sources.txt
+supabase/.temp/
