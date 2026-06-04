@@ -22,11 +22,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "PromotionsHub – Doktorarbeiten in der Medizin finden und bewerten",
-    template: "%s · PromotionsHub",
+    default: "PromotionsHub Dresden – Doktorarbeiten in der Medizin finden und bewerten",
+    template: "%s · PromotionsHub Dresden",
   },
   description:
-    "Offene Doktorarbeit-Stellen für Medizinstudierende in Deutschland finden – und ehrliche Bewertungen der Betreuung lesen.",
+    "Offene Doktorarbeit-Stellen für Medizinstudierende in Dresden finden – und ehrliche Bewertungen der Betreuung lesen.",
 };
 
 export default function RootLayout({
@@ -66,7 +66,7 @@ async function Header() {
         <Link href="/" className="group flex items-center gap-2 no-underline hover:no-underline">
           <Logo />
           <span className="font-display font-semibold text-[17px] tracking-tight text-[var(--fg)]">
-            PromotionsHub
+            PromotionsHub <span className="text-indigo-700">Dresden</span>
           </span>
         </Link>
 
@@ -138,11 +138,14 @@ function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <Logo />
-            <span className="font-display font-semibold text-[17px] tracking-tight">PromotionsHub</span>
+            <span className="font-display font-semibold text-[17px] tracking-tight">
+              PromotionsHub <span className="text-indigo-700">Dresden</span>
+            </span>
           </div>
           <p className="mt-3 text-sm text-stone-600 max-w-xs">
-            Die unabhängige Plattform für Medizinstudierende auf der Suche nach
-            einer Doktorarbeit — mit ehrlichen Bewertungen der Betreuung.
+            Die unabhängige Plattform für Medizinstudierende in Dresden auf der
+            Suche nach einer Doktorarbeit — mit ehrlichen Bewertungen der
+            Betreuung.
           </p>
         </div>
 
@@ -165,7 +168,7 @@ function Footer() {
 
       <div className="border-t border-[var(--border)]">
         <div className="mx-auto max-w-6xl px-6 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-stone-500">
-          <p>© {new Date().getFullYear()} PromotionsHub</p>
+          <p>© {new Date().getFullYear()} PromotionsHub Dresden</p>
           <p>Unabhängig. Bezahlung beeinflusst keine Bewertung.</p>
         </div>
       </div>
