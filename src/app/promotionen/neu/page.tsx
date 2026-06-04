@@ -60,7 +60,7 @@ export default async function NewListingPage({
           required
           type="textarea"
           rows={6}
-          hint="Methodik, Zeitaufwand, Vorkenntnisse, Förderung — was Studierende für die Entscheidung brauchen."
+          hint="Methodik, Zeitaufwand, Vorkenntnisse, Förderung: alles, was Studierende für die Entscheidung brauchen."
         />
 
         <Select label="Universität" name="university_id" required>
@@ -82,7 +82,7 @@ export default async function NewListingPage({
             className="mt-2 w-full rounded border border-[var(--border)] px-3 py-2 text-sm bg-white"
             defaultValue=""
           >
-            <option value="">— Neue Gruppe (Namen unten eintragen) —</option>
+            <option value="">Neue Gruppe (Namen unten eintragen)</option>
             {groups.map((g) => (
               <option key={g.id} value={g.id}>
                 {g.name}

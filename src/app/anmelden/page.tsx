@@ -37,28 +37,28 @@ export default async function AnmeldenPage({
       <p className="mt-2 text-xs text-[var(--muted)]">
         Universitätsadressen (z.B. <code>@uni-…</code>, <code>@charite.de</code>)
         werden automatisch als „verifizierte/r Studierende/r“ erkannt. Persönliche
-        Adressen funktionieren auch — sie sind der Weg für Alumni.
+        Adressen funktionieren auch: Sie sind der Weg für Alumni.
       </p>
 
       <ul className="mt-5 space-y-2 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm text-stone-700">
         <li className="flex items-start gap-2">
           <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
           <span>
-            <strong>Kein Passwort nötig</strong> — nichts zu merken, nichts zu
+            <strong>Kein Passwort nötig:</strong> nichts zu merken, nichts zu
             vergessen.
           </span>
         </li>
         <li className="flex items-start gap-2">
           <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
           <span>
-            <strong>Nur einmal pro Gerät</strong> — du bleibst angemeldet, bis
+            <strong>Nur einmal pro Gerät:</strong> du bleibst angemeldet, bis
             du dich abmeldest.
           </span>
         </li>
         <li className="flex items-start gap-2">
           <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
           <span>
-            <strong>Sicherer als ein Passwort</strong> — der Link gilt nur
+            <strong>Sicherer als ein Passwort:</strong> der Link gilt nur
             einmal und kann nicht geleakt oder erraten werden.
           </span>
         </li>
@@ -66,7 +66,7 @@ export default async function AnmeldenPage({
 
       {sent && (
         <div className="mt-6 rounded border border-emerald-300 bg-emerald-50 p-3 text-sm text-emerald-900">
-          Wir haben dir einen Anmelde-Link gesendet — Absender{" "}
+          Wir haben dir einen Anmelde-Link gesendet. Absender ist{" "}
           <strong>kontakt@promotionshub.de</strong>. Nichts angekommen? Wirf
           einen Blick in den Spam-Ordner.
         </div>
@@ -96,6 +96,24 @@ export default async function AnmeldenPage({
           />
         </label>
 
+        <label
+          htmlFor="terms"
+          className="flex items-start gap-2.5 text-xs text-stone-600 cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+            className="mt-0.5 h-4 w-4 accent-indigo-700"
+          />
+          <span>
+            Ich akzeptiere die <Link href="/agb">Nutzungsbedingungen</Link> und
+            habe die <Link href="/datenschutz">Datenschutzhinweise</Link> zur
+            Kenntnis genommen.
+          </span>
+        </label>
+
         <button
           type="submit"
           disabled={DATA_MODE === "mock"}
@@ -104,12 +122,6 @@ export default async function AnmeldenPage({
           Anmelde-Link senden
         </button>
       </form>
-
-      <p className="mt-6 text-xs text-[var(--muted)]">
-        Mit der Anmeldung akzeptierst du unsere{" "}
-        <Link href="/agb">AGB</Link> und nimmst die{" "}
-        <Link href="/datenschutz">Datenschutzhinweise</Link> zur Kenntnis.
-      </p>
     </div>
   );
 }

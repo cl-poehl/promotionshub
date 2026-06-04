@@ -17,6 +17,13 @@ export async function sendMagicLinkAction(
   const parsed = EmailInput.safeParse({ email: formData.get("email") });
   if (!parsed.success) return { ok: false, error: "Ungültige E-Mail-Adresse." };
 
+  if (formData.get("terms") !== "on") {
+    return {
+      ok: false,
+      error: "Bitte akzeptiere die Nutzungsbedingungen.",
+    };
+  }
+
   const supabase = await createSupabaseServerClient();
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";

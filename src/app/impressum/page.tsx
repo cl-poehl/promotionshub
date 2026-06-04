@@ -74,7 +74,7 @@ export default function ImpressumPage() {
             (EU) 2022/2065 (Digital Services Act). Wir sind nicht verpflichtet,
             übermittelte oder gespeicherte fremde Informationen allgemein zu
             überwachen (Art. 8 DSA). Bei Kenntnis konkreter Rechtsverletzungen
-            entfernen wir betroffene Inhalte umgehend — siehe{" "}
+            entfernen wir betroffene Inhalte umgehend, siehe{" "}
             <a href="/meldung" className="underline underline-offset-4">
               Meldeformular
             </a>

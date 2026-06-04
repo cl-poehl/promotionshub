@@ -180,7 +180,7 @@ export default async function ListingDetailPage({
             </h3>
             {listing.is_person_named && (
               <p className="mt-1 text-xs text-amber-800">
-                Diese AG ist nach einer Einzelperson benannt — Bewertungen
+                Diese AG ist nach einer Einzelperson benannt. Bewertungen
                 erscheinen erst nach erweitertem Personen-Rating-Verfahren.
               </p>
             )}
@@ -339,7 +339,7 @@ function ApplyBlock({
                 : "inline-flex items-center gap-1.5 rounded-md border border-indigo-300 bg-white px-3.5 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-50 no-underline hover:no-underline"
             }
           >
-            {linkIsPrimary ? "Zur Klinik-Seite — E-Mail dort sichtbar" : "Auf der Klinik-Seite öffnen"}
+            {linkIsPrimary ? "Zur Klinik-Seite (E-Mail dort sichtbar)" : "Auf der Klinik-Seite öffnen"}
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
           {linkIsPrimary && (
