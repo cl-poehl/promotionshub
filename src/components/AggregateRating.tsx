@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { GraduationCap, Star } from "lucide-react";
 
 import { REVIEW_DIMENSIONS } from "@/lib/config";
 import type { GroupAggregate } from "@/lib/data";
@@ -26,6 +26,16 @@ export function AggregateRating({ aggregate }: { aggregate: GroupAggregate }) {
             Basis: {aggregate.reviewCount}{" "}
             {aggregate.reviewCount === 1 ? "Bewertung" : "Bewertungen"}
           </p>
+          {aggregate.verifiedStudentCount > 0 && (
+            <p
+              className="mt-1.5 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-800"
+              title="Anzahl der Berichte, die über eine erkannte Universitäts-E-Mail-Adresse abgegeben wurden"
+            >
+              <GraduationCap className="h-3.5 w-3.5" />
+              {aggregate.verifiedStudentCount} von {aggregate.reviewCount}{" "}
+              über Uni-Adresse verifiziert
+            </p>
+          )}
         </div>
       </div>
 

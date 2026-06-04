@@ -51,6 +51,7 @@ export default async function SupervisorPage({
 
   const aggregate = {
     reviewCount,
+    verifiedStudentCount: row ? Number(row.verified_student_count ?? 0) : 0,
     averages: {
       supervision_quality: row?.avg_supervision_quality ?? null,
       responsiveness: row?.avg_responsiveness ?? null,
