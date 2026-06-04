@@ -203,17 +203,18 @@ export default async function ErfahrungTeilenPage({
 
         {/* Section 4: Likert-Bewertungen */}
         <Section title="Deine Bewertung" icon={null}>
-          <p className="text-xs text-stone-500 mb-1">1 = sehr schlecht, 5 = sehr gut</p>
-          <div className="rounded-lg border border-stone-200 bg-white p-5 space-y-5">
+          <p className="text-xs text-stone-500 -mt-2">1 = sehr schlecht, 5 = sehr gut</p>
+          <div className="divide-y divide-stone-100">
             {REVIEW_DIMENSIONS.map((dim) => (
-              <LikertRow
-                key={dim.key}
-                name={dim.key}
-                label={dim.label}
-                prompt={dim.prompt}
-                low={dim.low}
-                high={dim.high}
-              />
+              <div key={dim.key} className="py-5 first:pt-0 last:pb-0">
+                <LikertRow
+                  name={dim.key}
+                  label={dim.label}
+                  prompt={dim.prompt}
+                  low={dim.low}
+                  high={dim.high}
+                />
+              </div>
             ))}
           </div>
         </Section>
@@ -257,27 +258,32 @@ export default async function ErfahrungTeilenPage({
         )}
 
         {/* Bestätigung + Submit */}
-        <div className="flex items-start gap-2 text-sm">
-          <input type="checkbox" id="truthful" name="truthful" required className="mt-1" />
-          <label htmlFor="truthful" className="text-stone-600">
-            Ich bestätige, dass mein Bericht auf eigener, selbst erlebter
-            Erfahrung beruht.
-          </label>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-4">
-          <button
-            type="submit"
-            disabled={DATA_MODE === "mock" || !isAuthed}
-            className="inline-flex items-center rounded-md bg-indigo-700 px-5 py-2.5 text-base font-semibold text-white shadow-sm ring-1 ring-indigo-800/30 transition hover:bg-indigo-800 disabled:opacity-50"
+        <div className="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 shadow-sm space-y-5">
+          <label
+            htmlFor="truthful"
+            className="flex items-start gap-2.5 text-sm text-stone-700 cursor-pointer"
           >
-            Bericht absenden
-          </button>
-          {isAuthed && userEmail && (
-            <p className="text-xs text-stone-500">
-              Angemeldet als <code className="bg-stone-100 px-1 rounded">{userEmail}</code>
-            </p>
-          )}
+            <input type="checkbox" id="truthful" name="truthful" required className="mt-0.5 h-4 w-4" />
+            <span>
+              Ich bestätige, dass mein Bericht auf eigener, selbst erlebter
+              Erfahrung beruht.
+            </span>
+          </label>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <button
+              type="submit"
+              disabled={DATA_MODE === "mock" || !isAuthed}
+              className="inline-flex items-center rounded-lg bg-indigo-700 px-6 py-3 text-base font-semibold text-white shadow-sm ring-1 ring-indigo-800/30 transition hover:bg-indigo-800 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+            >
+              Bericht absenden
+            </button>
+            {isAuthed && userEmail && (
+              <p className="text-xs text-stone-500">
+                Angemeldet als <code className="bg-stone-100 px-1 rounded">{userEmail}</code>
+              </p>
+            )}
+          </div>
         </div>
       </form>
 
@@ -285,17 +291,45 @@ export default async function ErfahrungTeilenPage({
         {`
           .form-input {
             width: 100%;
-            border-radius: 0.375rem;
+            border-radius: 0.5rem;
             border: 1px solid #d6d3d1;
-            background: white;
-            padding: 0.5rem 0.75rem;
+            background: #fff;
+            padding: 0.625rem 0.875rem;
             font-size: 0.875rem;
+            line-height: 1.4;
             color: #1c1917;
+            box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04);
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+          }
+          .form-input:hover:not(:disabled):not(:focus) {
+            border-color: #a8a29e;
           }
           .form-input:focus {
             outline: none;
             border-color: #4338ca;
-            box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.2);
+            box-shadow:
+              0 0 0 3px rgba(99, 102, 241, 0.18),
+              0 1px 2px rgba(28, 25, 23, 0.04);
+          }
+          .form-input::placeholder {
+            color: #a8a29e;
+          }
+          select.form-input {
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 2.5rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2378716c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            cursor: pointer;
+          }
+          textarea.form-input {
+            resize: vertical;
+            min-height: 5rem;
+          }
+          input[type="radio"],
+          input[type="checkbox"] {
+            accent-color: #4338ca;
           }
         `}
       </style>
@@ -315,12 +349,16 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="space-y-4">
-      <h2 className="font-display text-base font-semibold text-stone-950 flex items-center gap-2">
-        {Icon && <Icon className="h-4 w-4 text-indigo-700" />}
+    <section className="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 shadow-sm">
+      <h2 className="font-display text-base font-semibold text-stone-950 flex items-center gap-2.5">
+        {Icon && (
+          <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-50 ring-1 ring-indigo-100">
+            <Icon className="h-4 w-4 text-indigo-700" />
+          </span>
+        )}
         {title}
       </h2>
-      {children}
+      <div className="mt-5 space-y-5">{children}</div>
     </section>
   );
 }
@@ -369,9 +407,9 @@ function RadioGroup({
         {options.map((o) => (
           <label
             key={o.key}
-            className="flex items-start gap-2 rounded-md border border-stone-200 bg-white p-3 cursor-pointer hover:border-stone-300 has-[input:checked]:border-indigo-600 has-[input:checked]:bg-indigo-50/50 transition"
+            className="flex items-start gap-2.5 rounded-lg border border-stone-200 bg-white px-3.5 py-3 cursor-pointer shadow-sm transition hover:border-stone-300 hover:bg-stone-50/60 has-[input:checked]:border-indigo-600 has-[input:checked]:bg-indigo-50/60 has-[input:checked]:ring-1 has-[input:checked]:ring-indigo-600/30"
           >
-            <input type="radio" name={name} value={o.key} required={required} className="mt-1" />
+            <input type="radio" name={name} value={o.key} required={required} className="mt-0.5" />
             <span className="text-sm text-stone-800 flex items-center gap-1.5">
               {Icon && <Icon className="h-3.5 w-3.5 text-stone-400 hidden sm:block" />}
               {o.label}
@@ -409,7 +447,7 @@ function LikertRow({
           {[1, 2, 3, 4, 5].map((v) => (
             <label key={v} className="text-sm">
               <input type="radio" name={name} value={v} required className="sr-only peer" />
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded border border-stone-300 bg-white cursor-pointer transition peer-checked:bg-indigo-700 peer-checked:text-white peer-checked:border-indigo-700 hover:border-stone-400">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-white font-medium cursor-pointer shadow-sm transition-all duration-150 hover:border-indigo-400 hover:bg-indigo-50 hover:scale-105 peer-checked:bg-indigo-700 peer-checked:text-white peer-checked:border-indigo-700 peer-checked:shadow-md peer-checked:scale-110 peer-focus-visible:ring-2 peer-focus-visible:ring-indigo-500 peer-focus-visible:ring-offset-2">
                 {v}
               </span>
             </label>
