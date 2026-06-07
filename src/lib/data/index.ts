@@ -10,6 +10,11 @@
  * DB nichts persistiert werden kann.
  */
 
+import {
+  MIN_REVIEWS_FOR_GROUP_SCORE,
+  MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE,
+} from "@/lib/config";
+import { flags } from "@/lib/flags";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { mockGroups, mockListings, mockUniversities } from "@/lib/data/mock";
 import type {
@@ -257,6 +262,75 @@ export async function getGroupAggregate(groupId: string): Promise<GroupAggregate
   const row = data?.[0];
   if (!row) return EMPTY_AGGREGATE;
   return mapAggregateRow(row);
+}
+
+export type LeaderboardGroup = {
+  groupId: string;
+  name: string;
+  specialty: string | null;
+  reviewCount: number;
+  verifiedStudentCount: number;
+  overall: number;
+};
+
+export type LeaderboardListing = {
+  listingId: string;
+  title: string;
+  groupName: string;
+  isPersonNamed: boolean;
+  reviewCount: number;
+  verifiedStudentCount: number;
+  overall: number;
+};
+
+/** Bestbewertete Kliniken/Institute (ab Schwellenwert). */
+export async function getTopGroups(limit = 10): Promise<LeaderboardGroup[]> {
+  if (DATA_MODE === "mock") return [];
+
+  const supabase = await createSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_top_groups", {
+    p_min_reviews: MIN_REVIEWS_FOR_GROUP_SCORE,
+    p_limit: limit,
+  });
+  if (error) throw error;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (data ?? []).map((row: any) => ({
+    groupId: row.group_id,
+    name: row.name,
+    specialty: row.specialty ?? null,
+    reviewCount: Number(row.review_count),
+    verifiedStudentCount: Number(row.verified_student_count ?? 0),
+    overall: Number(row.overall),
+  }));
+}
+
+/** Bestbewertete AGs. Personen-benannte AGs nur in Phase 2 + erhöhte Schwelle. */
+export async function getTopListings(limit = 10): Promise<LeaderboardListing[]> {
+  if (DATA_MODE === "mock") return [];
+
+  const supabase = await createSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_top_listings", {
+    p_min_reviews: MIN_REVIEWS_FOR_GROUP_SCORE,
+    p_limit: limit * 2, // Puffer, weil personen-benannte ggf. rausfallen
+  });
+  if (error) throw error;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (data ?? [])
+    .map((row: any) => ({
+      listingId: row.listing_id,
+      title: row.title,
+      groupName: row.group_name,
+      isPersonNamed: Boolean(row.is_person_named),
+      reviewCount: Number(row.review_count),
+      verifiedStudentCount: Number(row.verified_student_count ?? 0),
+      overall: Number(row.overall),
+    }))
+    .filter(
+      (l: LeaderboardListing) =>
+        !l.isPersonNamed ||
+        (flags.NAMED_RATINGS_PUBLIC && l.reviewCount >= MIN_REVIEWS_FOR_PUBLIC_NAMED_SCORE),
+    )
+    .slice(0, limit);
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
