@@ -79,10 +79,9 @@ function Hero({ stats }: { stats: { listings: number; groups: number; universiti
           </Link>
         </div>
 
-        <dl className="mt-14 grid grid-cols-3 gap-x-6 gap-y-4 max-w-xl border-t border-stone-200 pt-8">
+        <dl className="mt-14 flex flex-wrap gap-x-12 gap-y-4 border-t border-stone-200 pt-8">
           <Stat value={stats.listings} label="Offene Stellen" />
           <Stat value={stats.groups} label="Forschungsgruppen" />
-          <Stat value={stats.universities} label="Universitäten" />
         </dl>
       </div>
     </section>
