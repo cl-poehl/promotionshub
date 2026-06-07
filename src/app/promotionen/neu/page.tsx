@@ -41,6 +41,9 @@ export default async function NewListingPage({
   }
 
   const [universities, groups] = await Promise.all([listUniversities(), listGroups()]);
+  // Pilot-Phase: Dresden vorauswählen, andere Fakultäten sind trotzdem wählbar.
+  const dresdenId =
+    universities.find((u) => u.city === "Dresden")?.id ?? "";
 
   async function action(formData: FormData) {
     "use server";
@@ -127,11 +130,11 @@ export default async function NewListingPage({
 
         {/* Section 2: Zuordnung */}
         <Section title="Klinik / Institut" icon={Building2}>
-          <Select label="Universität" name="university_id" required>
+          <Select label="Universität" name="university_id" required defaultValue={dresdenId}>
             <option value="">Bitte wählen</option>
             {universities.map((u) => (
               <option key={u.id} value={u.id}>
-                {u.name}
+                {u.name} ({u.city})
               </option>
             ))}
           </Select>
@@ -358,11 +361,13 @@ function Select({
   label,
   name,
   required,
+  defaultValue = "",
   children,
 }: {
   label: string;
   name: string;
   required?: boolean;
+  defaultValue?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -371,7 +376,7 @@ function Select({
         {label} {required && <span className="text-red-600">*</span>}
       </label>
       <div className="mt-1.5">
-        <select name={name} required={required} className="form-input" defaultValue="">
+        <select name={name} required={required} className="form-input" defaultValue={defaultValue}>
           {children}
         </select>
       </div>
