@@ -77,6 +77,9 @@ async function Header() {
           <Link href="/promotionen" className="text-stone-700 hover:text-stone-950 no-underline hover:no-underline">
             Stellen
           </Link>
+          <Link href="/bestenliste" className="text-stone-700 hover:text-stone-950 no-underline hover:no-underline">
+            Bestenliste
+          </Link>
           <Link href="/erfahrung-teilen" className="text-stone-700 hover:text-stone-950 no-underline hover:no-underline">
             Erfahrung teilen
           </Link>
@@ -151,6 +154,7 @@ function Footer() {
 
         <FooterColumn title="Plattform">
           <Link href="/promotionen">Stellen durchsuchen</Link>
+          <Link href="/bestenliste">Bestenliste</Link>
           <Link href="/promotionen/neu">Stelle einreichen</Link>
           <Link href="/erfahrung-teilen">Erfahrung teilen</Link>
         </FooterColumn>
