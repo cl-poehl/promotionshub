@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { Award, Clock, FileText, Info, Wallet } from "lucide-react";
+import { Award, Clock, FileText, GraduationCap, Info, Mail, Wallet } from "lucide-react";
 
 import {
   FUNDING_AS_PROMISED,
@@ -10,6 +10,7 @@ import {
   THESIS_TYPES,
   WEEKLY_HOURS,
 } from "@/lib/config";
+import { classifyEmail } from "@/lib/auth/university-email";
 import { DATA_MODE, listGroups, searchListings } from "@/lib/data";
 import { flags } from "@/lib/flags";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -105,6 +106,30 @@ export default async function ErfahrungTeilenPage({
           Bitte zuerst <Link href="/anmelden">anmelden</Link>. Für jede Bewertung
           ist eine verifizierte E-Mail-Adresse erforderlich.
         </div>
+      )}
+      {isAuthed && userEmail && (
+        classifyEmail(userEmail) === "university" ? (
+          <div className="mt-6 flex items-start gap-2.5 rounded-lg border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900">
+            <GraduationCap className="mt-0.5 h-4 w-4 shrink-0" />
+            <p>
+              <strong>Uni-Adresse erkannt</strong> ({userEmail}): Dein Bericht
+              zählt als Bericht einer verifizierten Studierenden / eines
+              verifizierten Studierenden und wird in den Bewertungen
+              entsprechend ausgewiesen.
+            </p>
+          </div>
+        ) : (
+          <div className="mt-6 flex items-start gap-2.5 rounded-lg border border-stone-200 bg-stone-50 p-4 text-sm text-stone-700">
+            <Mail className="mt-0.5 h-4 w-4 shrink-0 text-stone-500" />
+            <p>
+              Du bist mit einer <strong>persönlichen Adresse</strong> angemeldet
+              ({userEmail}): Dein Bericht zählt als „per E-Mail verifiziert".
+              Das ist der richtige Weg für Alumni. Wenn du noch eine
+              Uni-Adresse hast, melde dich damit an, dann wird dein Bericht
+              als „verifizierte:r Studierende:r" ausgewiesen.
+            </p>
+          </div>
+        )
       )}
       {DATA_MODE === "mock" && (
         <div className="mt-6 rounded border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
@@ -468,8 +493,10 @@ function SuccessView() {
     <div className="mx-auto max-w-xl px-6 py-16 text-center">
       <h1 className="font-display text-2xl font-semibold">Danke für deinen Bericht!</h1>
       <p className="mt-3 text-stone-600">
-        Wir haben deinen Erfahrungsbericht erhalten. Er fließt in die
-        aggregierte Statistik ein, sobald genug unabhängige Berichte vorliegen.
+        Deine Bewertungs-Scores fließen ab sofort in die aggregierte Statistik
+        ein. Öffentlich sichtbar wird die Bewertung, sobald genug unabhängige
+        Berichte vorliegen (ab 2 pro Klinik bzw. AG). Deine Freitexte werden
+        vor Veröffentlichung von uns geprüft.
       </p>
       <div className="mt-6 flex justify-center gap-3">
         <Link
