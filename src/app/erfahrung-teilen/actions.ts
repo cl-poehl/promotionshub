@@ -118,10 +118,13 @@ export async function submitReviewAction(formData: FormData): Promise<SubmitRevi
     free_text_status: hasAnyFreeText
       ? (flags.REVIEW_FREE_TEXT_ENABLED ? "pending_moderation" : "none")
       : "none",
-    // Phase 1: Reviews bleiben `pending` und fließen NICHT in öffentliche Anzeige ein
-    // (Aggregate würden sie zwar zählen, aber Schwellenwert sperrt die Anzeige).
-    // §1 Phase 2 schaltet das auf `published` nach Verifizierung.
-    status: "pending",
+    // Strukturierte Scores gehen sofort live: 1-5-Skalen sind Meinungs-
+    // äußerungen ohne Tatsachenbehauptung, die Schwellen (N>=2 Klinik,
+    // N>=4 Person) schützen vor Einzelmeinungs-Pranger. Freitexte bleiben
+    // unabhängig davon in pending_moderation und werden nirgends gerendert,
+    // bis sie freigegeben sind. Deckt sich mit DSE/AGB („Freitexte werden
+    // vor Veröffentlichung geprüft").
+    status: "published",
   });
 
   if (error) {
