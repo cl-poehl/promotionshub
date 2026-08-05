@@ -3,7 +3,10 @@
 import { z } from "zod";
 
 import { DATA_MODE } from "@/lib/data";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import {
+  createSupabaseServerClient,
+  createSupabaseServiceClient,
+} from "@/lib/supabase/server";
 import { uuidish } from "@/lib/validation";
 
 const ListingInput = z.object({
@@ -41,20 +44,39 @@ export async function submitListingAction(formData: FormData): Promise<SubmitRes
   const supabase = await createSupabaseServerClient();
 
   // Falls eine neue Gruppe genannt ist, anlegen (nur wenn university_id existiert).
+  // groups hat keine öffentliche INSERT-Policy (RLS), daher läuft die Anlage
+  // über den Service-Role-Client. Sicher, weil serverseitig, validiert und der
+  // einzige Weg. Eine Gruppe ohne veröffentlichtes Listing taucht nirgends auf,
+  // bis das zugehörige (pending) Listing manuell freigegeben ist.
   let groupId = data.group_id || null;
   if (!groupId && data.new_group_name && data.university_id) {
-    const { data: created, error } = await supabase
+    const admin = createSupabaseServiceClient();
+    // Doppelanlage vermeiden: existiert die Gruppe (Name + Uni) schon?
+    const { data: existingGroup } = await admin
       .from("groups")
-      .insert({
-        university_id: data.university_id,
-        name: data.new_group_name,
-        specialty: null,
-        public_url: null,
-      })
       .select("id")
-      .single();
-    if (error) return { ok: false, error: "Gruppe konnte nicht angelegt werden." };
-    groupId = created.id;
+      .eq("university_id", data.university_id)
+      .ilike("name", data.new_group_name)
+      .maybeSingle();
+
+    if (existingGroup) {
+      groupId = existingGroup.id;
+    } else {
+      const { data: created, error } = await admin
+        .from("groups")
+        .insert({
+          university_id: data.university_id,
+          name: data.new_group_name,
+          specialty: null,
+          public_url: null,
+        })
+        .select("id")
+        .single();
+      if (error || !created) {
+        return { ok: false, error: "Gruppe konnte nicht angelegt werden." };
+      }
+      groupId = created.id;
+    }
   }
 
   if (!groupId) {
