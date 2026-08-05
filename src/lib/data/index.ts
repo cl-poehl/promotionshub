@@ -114,9 +114,28 @@ export async function getFilterOptions(): Promise<{
 export async function listGroups(): Promise<Group[]> {
   if (DATA_MODE === "mock") return mockGroups;
   const supabase = await createSupabaseServerClient();
-  const { data, error } = await supabase.from("groups").select("*").order("name");
+  // Nur Gruppen mit mindestens einem veröffentlichten Listing. Das schließt
+  // per Nutzer-Einreichung frisch angelegte (noch ungeprüfte) Gruppen aus den
+  // Dropdowns aus, bis ihr Listing freigegeben ist — verhindert, dass erfundene
+  // AGs in „Erfahrung teilen" / „Stelle einreichen" auftauchen oder bewertet
+  // werden können.
+  const { data, error } = await supabase
+    .from("groups")
+    .select("*, listings!inner(id)")
+    .eq("listings.status", "published")
+    .order("name");
   if (error) throw error;
-  return data ?? [];
+  // !inner liefert die Gruppe pro Listing mehrfach → nach id deduplizieren.
+  const seen = new Set<string>();
+  const groups: Group[] = [];
+  for (const row of data ?? []) {
+    if (seen.has(row.id)) continue;
+    seen.add(row.id);
+    // eingebettetes listings-Feld für den Group-Typ entfernen
+    const { listings: _listings, ...group } = row as Group & { listings: unknown };
+    groups.push(group as Group);
+  }
+  return groups;
 }
 
 export async function getGroup(id: string): Promise<Group | null> {
